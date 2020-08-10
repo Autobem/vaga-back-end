@@ -11,10 +11,10 @@ Vamos ao teste!
 ## Cadastro de veículos
 
 O objetivo é criar uma web api para cadastro de veículos utilizando .net Core 3.1.
-A web api deve conter o crud básico (buscar, adicionar, atualizar e remover) de veículos e seus respectivos proprietários.
-Seria interessante que os veículos e seus proprietários tivessem seus dados armazenados em tabelas distintas ligadas (chave estrangeira).
-Seria interessante a utilização de Entity Framework com repositórios destinados para cada entidade ou um repositório genérico para atender todas (fica a critério).
-Dependendo do tamanho da base, pode ser interessante uma solução de indexação para maior agilidade nas pesquisas.
+- A web api deve conter o crud básico (buscar, adicionar, atualizar e remover) de veículos e seus respectivos proprietários.
+- Seria interessante que os veículos e seus proprietários tivessem seus dados armazenados em tabelas distintas ligadas (chave estrangeira).
+- Seria interessante a utilização de Entity Framework com repositórios destinados para cada entidade ou um repositório genérico para atender todas (fica a critério).
+- Dependendo do tamanho da base, pode ser interessante uma solução de indexação para maior agilidade nas pesquisas.
 
 ## Regras
 

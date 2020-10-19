@@ -20,8 +20,11 @@ O objetivo é criar uma web api para cadastro de veículos utilizando .net Core 
 
 Para o desafio ficar mais interessante, decidimos criar umas regras básicas:
 - Deve ser usada a arquitetura DDD para a estrutura do projeto.
+- É necessário conter, no mínimo, duas entidades relacionadas (podem haver mais, caso julgue necessário).
+- Não se deve receber ou retornar a própria entidade em uma requisição/resposta json. Seria interessante a utilização de DTO ou similar (Pode-se usar AutoMapper para facilitar o processo).
 - Devem ser criados casos de teste para todos os elementos da api (a escolha do framework de testes é livre).
-- A api deve utilizar uma base de dados para persistência de dados (SQL Server, LocalDB, SQLite, MySQL ou qualquer outro, deste que utilizando EF Core).
+- A api deve utilizar uma base de dados para persistência de informações (SQL Server, LocalDB, SQLite, MySQL ou qualquer outro, deste que utilizando EF Core).
+- Seria interessante a utilicação de repositórios e serviços via injeção de dependências (a utilização de abstracts para agilizar o processo seria interessante).
 - A api não deve ter acesso livre. Deve ser utilizado algum método de identificação utilizando OAuth 2.0.
 - É permitido utilizar pacotes nuget ou similares para agilidade (inclusive pacotes de autoria própria).
 

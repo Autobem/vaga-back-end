@@ -1,0 +1,629 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/VehicleRegistration.API.csproj": {}
+  },
+  "projects": {
+    "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/VehicleRegistration.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/VehicleRegistration.API.csproj",
+        "projectName": "VehicleRegistration.API",
+        "projectPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/VehicleRegistration.API.csproj",
+        "packagesPath": "/Users/pedromapelli/.nuget/packages/",
+        "outputPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/pedromapelli/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/VehicleRegistration.Infrastructure.CrossCutting.IOC.csproj": {
+                "projectPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/VehicleRegistration.Infrastructure.CrossCutting.IOC.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Application.DTO/VehicleRegistration.Application.DTO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Application.DTO/VehicleRegistration.Application.DTO.csproj",
+        "projectName": "VehicleRegistration.Application.DTO",
+        "projectPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Application.DTO/VehicleRegistration.Application.DTO.csproj",
+        "packagesPath": "/Users/pedromapelli/.nuget/packages/",
+        "outputPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Application.DTO/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/pedromapelli/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain.Core/VehicleRegistration.Domain.Core.csproj": {
+                "projectPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain.Core/VehicleRegistration.Domain.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Application/VehicleRegistration.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Application/VehicleRegistration.Application.csproj",
+        "projectName": "VehicleRegistration.Application",
+        "projectPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Application/VehicleRegistration.Application.csproj",
+        "packagesPath": "/Users/pedromapelli/.nuget/packages/",
+        "outputPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/pedromapelli/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Application.DTO/VehicleRegistration.Application.DTO.csproj": {
+                "projectPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Application.DTO/VehicleRegistration.Application.DTO.csproj"
+              },
+              "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain.Core/VehicleRegistration.Domain.Core.csproj": {
+                "projectPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain.Core/VehicleRegistration.Domain.Core.csproj"
+              },
+              "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.Adapter/VehicleRegistration.Infrastructure.CrossCutting.Adapter.csproj": {
+                "projectPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.Adapter/VehicleRegistration.Infrastructure.CrossCutting.Adapter.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain.Core/VehicleRegistration.Domain.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain.Core/VehicleRegistration.Domain.Core.csproj",
+        "projectName": "VehicleRegistration.Domain.Core",
+        "projectPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain.Core/VehicleRegistration.Domain.Core.csproj",
+        "packagesPath": "/Users/pedromapelli/.nuget/packages/",
+        "outputPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain.Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/pedromapelli/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain/VehicleRegistration.Domain.csproj": {
+                "projectPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain/VehicleRegistration.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain.Services/VehicleRegistration.Domain.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain.Services/VehicleRegistration.Domain.Services.csproj",
+        "projectName": "VehicleRegistration.Domain.Services",
+        "projectPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain.Services/VehicleRegistration.Domain.Services.csproj",
+        "packagesPath": "/Users/pedromapelli/.nuget/packages/",
+        "outputPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain.Services/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/pedromapelli/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain.Core/VehicleRegistration.Domain.Core.csproj": {
+                "projectPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain.Core/VehicleRegistration.Domain.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain/VehicleRegistration.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain/VehicleRegistration.Domain.csproj",
+        "projectName": "VehicleRegistration.Domain",
+        "projectPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain/VehicleRegistration.Domain.csproj",
+        "packagesPath": "/Users/pedromapelli/.nuget/packages/",
+        "outputPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/pedromapelli/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.Adapter/VehicleRegistration.Infrastructure.CrossCutting.Adapter.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.Adapter/VehicleRegistration.Infrastructure.CrossCutting.Adapter.csproj",
+        "projectName": "VehicleRegistration.Infrastructure.CrossCutting.Adapter",
+        "projectPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.Adapter/VehicleRegistration.Infrastructure.CrossCutting.Adapter.csproj",
+        "packagesPath": "/Users/pedromapelli/.nuget/packages/",
+        "outputPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.Adapter/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/pedromapelli/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Application.DTO/VehicleRegistration.Application.DTO.csproj": {
+                "projectPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Application.DTO/VehicleRegistration.Application.DTO.csproj"
+              },
+              "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain/VehicleRegistration.Domain.csproj": {
+                "projectPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain/VehicleRegistration.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/VehicleRegistration.Infrastructure.CrossCutting.IOC.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/VehicleRegistration.Infrastructure.CrossCutting.IOC.csproj",
+        "projectName": "VehicleRegistration.Infrastructure.CrossCutting.IOC",
+        "projectPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/VehicleRegistration.Infrastructure.CrossCutting.IOC.csproj",
+        "packagesPath": "/Users/pedromapelli/.nuget/packages/",
+        "outputPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/pedromapelli/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Application/VehicleRegistration.Application.csproj": {
+                "projectPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Application/VehicleRegistration.Application.csproj"
+              },
+              "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain.Services/VehicleRegistration.Domain.Services.csproj": {
+                "projectPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain.Services/VehicleRegistration.Domain.Services.csproj"
+              },
+              "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.Adapter/VehicleRegistration.Infrastructure.CrossCutting.Adapter.csproj": {
+                "projectPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.Adapter/VehicleRegistration.Infrastructure.CrossCutting.Adapter.csproj"
+              },
+              "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.Repository/VehicleRegistration.Infrastructure.Repository.csproj": {
+                "projectPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.Repository/VehicleRegistration.Infrastructure.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/VehicleRegistration.Infrastructure.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/VehicleRegistration.Infrastructure.Data.csproj",
+        "projectName": "VehicleRegistration.Infrastructure.Data",
+        "projectPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/VehicleRegistration.Infrastructure.Data.csproj",
+        "packagesPath": "/Users/pedromapelli/.nuget/packages/",
+        "outputPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/pedromapelli/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain/VehicleRegistration.Domain.csproj": {
+                "projectPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain/VehicleRegistration.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.Repository/VehicleRegistration.Infrastructure.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.Repository/VehicleRegistration.Infrastructure.Repository.csproj",
+        "projectName": "VehicleRegistration.Infrastructure.Repository",
+        "projectPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.Repository/VehicleRegistration.Infrastructure.Repository.csproj",
+        "packagesPath": "/Users/pedromapelli/.nuget/packages/",
+        "outputPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.Repository/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/pedromapelli/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain.Core/VehicleRegistration.Domain.Core.csproj": {
+                "projectPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Domain.Core/VehicleRegistration.Domain.Core.csproj"
+              },
+              "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/VehicleRegistration.Infrastructure.Data.csproj": {
+                "projectPath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/VehicleRegistration.Infrastructure.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

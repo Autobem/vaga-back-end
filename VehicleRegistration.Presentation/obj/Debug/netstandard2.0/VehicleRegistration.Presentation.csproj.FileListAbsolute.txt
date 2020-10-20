@@ -1,0 +1,14 @@
+C:\Users\Pedro Mapelli\source\repos\VehicleRegistration\VehicleRegistration.Presentation\bin\Debug\netstandard2.0\VehicleRegistration.Presentation.deps.json
+C:\Users\Pedro Mapelli\source\repos\VehicleRegistration\VehicleRegistration.Presentation\bin\Debug\netstandard2.0\VehicleRegistration.Presentation.dll
+C:\Users\Pedro Mapelli\source\repos\VehicleRegistration\VehicleRegistration.Presentation\obj\Debug\netstandard2.0\VehicleRegistration.Presentation.AssemblyInfoInputs.cache
+C:\Users\Pedro Mapelli\source\repos\VehicleRegistration\VehicleRegistration.Presentation\obj\Debug\netstandard2.0\VehicleRegistration.Presentation.AssemblyInfo.cs
+C:\Users\Pedro Mapelli\source\repos\VehicleRegistration\VehicleRegistration.Presentation\obj\Debug\netstandard2.0\VehicleRegistration.Presentation.csprojAssemblyReference.cache
+C:\Users\Pedro Mapelli\source\repos\VehicleRegistration\VehicleRegistration.Presentation\bin\Debug\netstandard2.0\VehicleRegistration.Application.dll
+C:\Users\Pedro Mapelli\source\repos\VehicleRegistration\VehicleRegistration.Presentation\bin\Debug\netstandard2.0\VehicleRegistration.Application.DTO.dll
+C:\Users\Pedro Mapelli\source\repos\VehicleRegistration\VehicleRegistration.Presentation\bin\Debug\netstandard2.0\VehicleRegistration.Domain.Core.dll
+C:\Users\Pedro Mapelli\source\repos\VehicleRegistration\VehicleRegistration.Presentation\bin\Debug\netstandard2.0\VehicleRegistration.Domain.dll
+C:\Users\Pedro Mapelli\source\repos\VehicleRegistration\VehicleRegistration.Presentation\bin\Debug\netstandard2.0\VehicleRegistration.Domain.Services.dll
+C:\Users\Pedro Mapelli\source\repos\VehicleRegistration\VehicleRegistration.Presentation\bin\Debug\netstandard2.0\VehicleRegistration.Infrastructure.CrossCutting.Adapter.dll
+C:\Users\Pedro Mapelli\source\repos\VehicleRegistration\VehicleRegistration.Presentation\bin\Debug\netstandard2.0\VehicleRegistration.Infrastructure.CrossCutting.IOC.dll
+C:\Users\Pedro Mapelli\source\repos\VehicleRegistration\VehicleRegistration.Presentation\bin\Debug\netstandard2.0\VehicleRegistration.Infrastructure.Data.dll
+C:\Users\Pedro Mapelli\source\repos\VehicleRegistration\VehicleRegistration.Presentation\bin\Debug\netstandard2.0\VehicleRegistration.Infrastructure.Repository.dll

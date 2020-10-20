@@ -1,0 +1,36 @@
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.deps.json
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.AssemblyInfoInputs.cache
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.AssemblyInfo.cs
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.csprojAssemblyReference.cache
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.pdb
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/bin/Debug/netstandard2.0/VehicleRegistration.Domain.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/bin/Debug/netstandard2.0/VehicleRegistration.Domain.pdb
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.csproj.CoreCompileInputs.cache
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.csproj.CopyComplete
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.pdb
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.Data/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.deps.json
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.Data/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.Data/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.pdb
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.Data/bin/Debug/netstandard2.0/VehicleRegistration.Domain.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.Data/bin/Debug/netstandard2.0/VehicleRegistration.Domain.pdb
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.Data/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.csprojAssemblyReference.cache
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.Data/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.AssemblyInfoInputs.cache
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.Data/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.AssemblyInfo.cs
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.Data/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.csproj.CoreCompileInputs.cache
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.Data/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.csproj.CopyComplete
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.Data/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.Data/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.pdb
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.deps.json
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.pdb
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/bin/Debug/netstandard2.0/VehicleRegistration.Domain.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/bin/Debug/netstandard2.0/VehicleRegistration.Domain.pdb
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.csprojAssemblyReference.cache
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.AssemblyInfoInputs.cache
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.AssemblyInfo.cs
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.csproj.CoreCompileInputs.cache
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.csproj.CopyComplete
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.Data/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.pdb

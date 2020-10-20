@@ -1,0 +1,100 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/": {
+      "VehicleRegistration.Application/1.0.0": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "VehicleRegistration.Application.DTO": "1.0.0",
+          "VehicleRegistration.Domain.Core": "1.0.0",
+          "VehicleRegistration.Infrastructure.CrossCutting.Adapter": "1.0.0"
+        },
+        "runtime": {
+          "VehicleRegistration.Application.dll": {}
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "NETStandard.Library/2.0.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "VehicleRegistration.Application.DTO/1.0.0": {
+        "dependencies": {
+          "VehicleRegistration.Domain.Core": "1.0.0"
+        },
+        "runtime": {
+          "VehicleRegistration.Application.DTO.dll": {}
+        }
+      },
+      "VehicleRegistration.Domain/1.0.0": {
+        "runtime": {
+          "VehicleRegistration.Domain.dll": {}
+        }
+      },
+      "VehicleRegistration.Domain.Core/1.0.0": {
+        "dependencies": {
+          "VehicleRegistration.Domain": "1.0.0"
+        },
+        "runtime": {
+          "VehicleRegistration.Domain.Core.dll": {}
+        }
+      },
+      "VehicleRegistration.Infrastructure.CrossCutting.Adapter/1.0.0": {
+        "dependencies": {
+          "VehicleRegistration.Application.DTO": "1.0.0",
+          "VehicleRegistration.Domain": "1.0.0"
+        },
+        "runtime": {
+          "VehicleRegistration.Infrastructure.CrossCutting.Adapter.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "VehicleRegistration.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "VehicleRegistration.Application.DTO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "VehicleRegistration.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "VehicleRegistration.Domain.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "VehicleRegistration.Infrastructure.CrossCutting.Adapter/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

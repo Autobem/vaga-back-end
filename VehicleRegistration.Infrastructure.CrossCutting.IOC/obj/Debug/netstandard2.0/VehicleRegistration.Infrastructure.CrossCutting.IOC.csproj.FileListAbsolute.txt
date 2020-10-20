@@ -1,0 +1,78 @@
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Application.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Application.DTO.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Domain.Core.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Domain.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Domain.Services.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Repository.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.csprojAssemblyReference.cache
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.AssemblyInfoInputs.cache
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.AssemblyInfo.cs
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.deps.json
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.pdb
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.Adapter.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Application.pdb
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Domain.Services.pdb
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.Adapter.pdb
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Repository.pdb
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Application.DTO.pdb
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Domain.pdb
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Domain.Core.pdb
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.pdb
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.csproj.CoreCompileInputs.cache
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.csproj.CopyComplete
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.pdb
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.deps.json
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.pdb
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Application.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Application.DTO.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Domain.Core.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Domain.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Domain.Services.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.Adapter.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Repository.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Application.pdb
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Domain.Services.pdb
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.Adapter.pdb
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Repository.pdb
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Application.DTO.pdb
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Domain.pdb
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Domain.Core.pdb
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.pdb
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.csprojAssemblyReference.cache
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.AssemblyInfoInputs.cache
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.AssemblyInfo.cs
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.csproj.CoreCompileInputs.cache
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.csproj.CopyComplete
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.pdb
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.deps.json
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.pdb
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Application.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Application.DTO.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Domain.Core.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Domain.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Domain.Services.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.Adapter.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Repository.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Application.pdb
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Domain.Services.pdb
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.Adapter.pdb
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Repository.pdb
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Application.DTO.pdb
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Domain.pdb
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Domain.Core.pdb
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/bin/Debug/netstandard2.0/VehicleRegistration.Infrastructure.Data.pdb
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.csprojAssemblyReference.cache
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.AssemblyInfoInputs.cache
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.AssemblyInfo.cs
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.csproj.CoreCompileInputs.cache
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.csproj.CopyComplete
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Infrastructure.CrossCutting.IOC/obj/Debug/netstandard2.0/VehicleRegistration.Infrastructure.CrossCutting.IOC.pdb

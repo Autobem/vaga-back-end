@@ -1,0 +1,12 @@
+-- register.dbo.Users definition
+
+-- Drop table
+
+-- DROP TABLE register.dbo.Users GO
+
+CREATE TABLE register.dbo.Users (
+	Id int IDENTITY(0,1) NOT NULL,
+	Login varchar(100) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	Password varchar(100) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	DateRegister datetime NOT NULL
+) GO;

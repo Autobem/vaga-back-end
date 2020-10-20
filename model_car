@@ -1,0 +1,21 @@
+-- register.dbo.Cars definition
+
+-- Drop table
+
+-- DROP TABLE register.dbo.Cars GO
+
+CREATE TABLE register.dbo.Cars (
+	Id int IDENTITY(0,1) NOT NULL,
+	Brand varchar(100) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	Value decimal(38,0) NOT NULL,
+	Color varchar(100) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	ClientId int NOT NULL,
+	DateRegister datetime NOT NULL,
+	Name varchar(100) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+	CONSTRAINT Cars_PK PRIMARY KEY (Id)
+) GO;
+
+
+-- register.dbo.Cars foreign keys
+
+ALTER TABLE register.dbo.Cars ADD CONSTRAINT Cars_FK FOREIGN KEY (ClientId) REFERENCES register.dbo.Clients(Id) GO;

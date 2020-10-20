@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "jY/JEPNrN5XGq30BK89B3Fw95qaB+xpmrFetqULxT73MdZpAabDcmvgN1lt0r+wkzhtQdxzhPaC69QxAUfoK2g==",
+  "success": true,
+  "projectFilePath": "/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.Application/VehicleRegistration.Application.csproj",
+  "expectedPackageFiles": [
+    "/Users/pedromapelli/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/pedromapelli/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

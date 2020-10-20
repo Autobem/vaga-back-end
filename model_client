@@ -1,0 +1,15 @@
+-- register.dbo.Clients definition
+
+-- Drop table
+
+-- DROP TABLE register.dbo.Clients GO
+
+CREATE TABLE register.dbo.Clients (
+	Id int IDENTITY(0,1) NOT NULL,
+	Name varchar(100) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	LastName varchar(100) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	Email varchar(100) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	DateRegister datetime NOT NULL,
+	Active bit NOT NULL,
+	CONSTRAINT Clients_PK PRIMARY KEY (Id)
+) GO;

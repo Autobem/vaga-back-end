@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VehicleRegistration.Application.DTO\VehicleRegistration.Application.DTO.csproj" />
+    <ProjectReference Include="..\VehicleRegistration.Domain\VehicleRegistration.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,254 @@
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/appsettings.Development.json
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/appsettings.json
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.API.exe
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.csprojAssemblyReference.cache
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.AssemblyInfoInputs.cache
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.AssemblyInfo.cs
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.RazorTargetAssemblyInfo.cache
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/staticwebassets/VehicleRegistration.API.StaticWebAssets.Manifest.cache
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/staticwebassets/VehicleRegistration.API.StaticWebAssets.xml
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.OpenApi.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.Swagger.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerGen.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerUI.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.csproj.CopyComplete
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Autofac.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Bcl.HashCode.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Abstractions.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.SqlServer.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Memory.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.Abstractions.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Options.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Primitives.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Identity.Client.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.JsonWebTokens.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/System.Collections.Immutable.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/System.Configuration.ConfigurationManager.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/System.Runtime.Caching.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/sni.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/sni.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/sni.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Application.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Application.DTO.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Domain.Core.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Domain.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Domain.Services.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Infrastructure.CrossCutting.Adapter.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Infrastructure.CrossCutting.IOC.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Infrastructure.Data.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Infrastructure.Repository.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.API.deps.json
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.API.runtimeconfig.json
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.API.runtimeconfig.dev.json
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.API.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.API.pdb
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Autofac.Extensions.DependencyInjection.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Infrastructure.CrossCutting.IOC.pdb
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Application.pdb
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Application.DTO.pdb
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Domain.pdb
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Domain.Core.pdb
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Domain.Services.pdb
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Infrastructure.CrossCutting.Adapter.pdb
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Infrastructure.Data.pdb
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Infrastructure.Repository.pdb
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.csproj.CoreCompileInputs.cache
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.MvcApplicationPartsAssemblyInfo.cs
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.MvcApplicationPartsAssemblyInfo.cache
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.dll
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.pdb
+C:/Users/Pedro Mapelli/source/repos/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.genruntimeconfig.cache
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/appsettings.Development.json
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/appsettings.json
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.API.exe
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.API.deps.json
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.API.runtimeconfig.json
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.API.runtimeconfig.dev.json
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.API.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.API.pdb
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Autofac.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Autofac.Extensions.DependencyInjection.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Bcl.HashCode.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Abstractions.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.SqlServer.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Memory.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.Abstractions.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Options.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Primitives.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Identity.Client.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.JsonWebTokens.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.OpenApi.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.Swagger.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerGen.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerUI.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/System.Collections.Immutable.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/System.Configuration.ConfigurationManager.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/System.Runtime.Caching.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/sni.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/sni.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/sni.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Application.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Application.DTO.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Domain.Core.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Domain.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Domain.Services.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Infrastructure.CrossCutting.Adapter.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Infrastructure.CrossCutting.IOC.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Infrastructure.Data.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Infrastructure.Repository.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Infrastructure.CrossCutting.IOC.pdb
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Application.pdb
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Application.DTO.pdb
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Domain.pdb
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Domain.Core.pdb
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Domain.Services.pdb
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Infrastructure.CrossCutting.Adapter.pdb
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Infrastructure.Data.pdb
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Infrastructure.Repository.pdb
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.csprojAssemblyReference.cache
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.AssemblyInfoInputs.cache
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.AssemblyInfo.cs
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.csproj.CoreCompileInputs.cache
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.MvcApplicationPartsAssemblyInfo.cs
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.MvcApplicationPartsAssemblyInfo.cache
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.RazorTargetAssemblyInfo.cache
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.csproj.CopyComplete
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/staticwebassets/VehicleRegistration.API.StaticWebAssets.Manifest.cache
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/staticwebassets/VehicleRegistration.API.StaticWebAssets.xml
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.dll
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.pdb
+C:/Users/Pedro Mapelli/Desktop/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.genruntimeconfig.cache
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/appsettings.Development.json
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/appsettings.json
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.API.deps.json
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.API.runtimeconfig.json
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.API.runtimeconfig.dev.json
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.API.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.API.pdb
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Autofac.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Autofac.Extensions.DependencyInjection.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Bcl.HashCode.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.SqlServer.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Memory.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Options.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Primitives.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.Identity.Client.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Microsoft.OpenApi.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.Swagger.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/System.Collections.Immutable.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/System.Configuration.ConfigurationManager.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/System.Runtime.Caching.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/sni.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/sni.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/sni.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Application.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Application.DTO.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Domain.Core.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Domain.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Domain.Services.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Infrastructure.CrossCutting.Adapter.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Infrastructure.CrossCutting.IOC.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Infrastructure.Data.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Infrastructure.Repository.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Infrastructure.CrossCutting.IOC.pdb
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Application.pdb
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Application.DTO.pdb
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Domain.pdb
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Domain.Core.pdb
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Domain.Services.pdb
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Infrastructure.CrossCutting.Adapter.pdb
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Infrastructure.Data.pdb
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/bin/Debug/netcoreapp3.1/VehicleRegistration.Infrastructure.Repository.pdb
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.csprojAssemblyReference.cache
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.AssemblyInfoInputs.cache
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.AssemblyInfo.cs
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.csproj.CoreCompileInputs.cache
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.MvcApplicationPartsAssemblyInfo.cs
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.MvcApplicationPartsAssemblyInfo.cache
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.RazorTargetAssemblyInfo.cache
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.csproj.CopyComplete
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/staticwebassets/VehicleRegistration.API.StaticWebAssets.Manifest.cache
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/staticwebassets/VehicleRegistration.API.StaticWebAssets.xml
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.dll
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.pdb
+/Users/pedromapelli/Documentos/VehicleRegistration/VehicleRegistration.API/obj/Debug/netcoreapp3.1/VehicleRegistration.API.genruntimeconfig.cache

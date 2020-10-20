@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VehicleRegistration.Application\VehicleRegistration.Application.csproj" />
+    <ProjectReference Include="..\VehicleRegistration.Domain.Services\VehicleRegistration.Domain.Services.csproj" />
+    <ProjectReference Include="..\VehicleRegistration.Infrastructure.CrossCutting.Adapter\VehicleRegistration.Infrastructure.CrossCutting.Adapter.csproj" />
+    <ProjectReference Include="..\VehicleRegistration.Infrastructure.Repository\VehicleRegistration.Infrastructure.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

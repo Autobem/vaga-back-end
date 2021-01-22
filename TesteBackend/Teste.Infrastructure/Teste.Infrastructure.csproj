@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Teste.Application\Teste.Application.csproj" />
+    <ProjectReference Include="..\Teste.Domain.Core\Teste.Domain.Core.csproj" />
+    <ProjectReference Include="..\Teste.Domain.Services\Teste.Domain.Services.csproj" />
+    <ProjectReference Include="..\Teste.Domain\Teste.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

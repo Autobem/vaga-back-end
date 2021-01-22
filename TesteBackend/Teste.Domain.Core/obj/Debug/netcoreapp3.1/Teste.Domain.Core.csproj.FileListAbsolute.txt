@@ -1,0 +1,12 @@
+C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain.Core\bin\Debug\netcoreapp3.1\Teste.Domain.Core.deps.json
+C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain.Core\bin\Debug\netcoreapp3.1\Teste.Domain.Core.dll
+C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain.Core\bin\Debug\netcoreapp3.1\Teste.Domain.Core.pdb
+C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain.Core\bin\Debug\netcoreapp3.1\Teste.Domain.dll
+C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain.Core\bin\Debug\netcoreapp3.1\Teste.Domain.pdb
+C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain.Core\obj\Debug\netcoreapp3.1\Teste.Domain.Core.csprojAssemblyReference.cache
+C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain.Core\obj\Debug\netcoreapp3.1\Teste.Domain.Core.AssemblyInfoInputs.cache
+C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain.Core\obj\Debug\netcoreapp3.1\Teste.Domain.Core.AssemblyInfo.cs
+C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain.Core\obj\Debug\netcoreapp3.1\Teste.Domain.Core.csproj.CoreCompileInputs.cache
+C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain.Core\obj\Debug\netcoreapp3.1\Teste.Domain.Core.csproj.CopyComplete
+C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain.Core\obj\Debug\netcoreapp3.1\Teste.Domain.Core.dll
+C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain.Core\obj\Debug\netcoreapp3.1\Teste.Domain.Core.pdb

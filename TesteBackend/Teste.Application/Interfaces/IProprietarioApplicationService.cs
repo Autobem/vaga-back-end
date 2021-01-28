@@ -1,14 +1,15 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Teste.Application.Dtos;
 
 namespace Teste.Application.Interfaces
 {
     public interface IProprietarioApplicationService
     {
-        void Adicionar(ProprietarioDto proprietarioDto);
-        void Atualizar(ProprietarioDto proprietarioDto);
-        void Remover(int id);
-        ProprietarioDto ObterPorId(int id);
-        IEnumerable<ProprietarioDto> ObterTodos();
+        Task<bool> Adicionar(ProprietarioDto proprietarioDto);
+        Task<bool> Atualizar(ProprietarioDto proprietarioDto);
+        Task<bool> Remover(int id);
+        Task<ProprietarioDto> ObterPorId(int id);
+        Task<IEnumerable<ProprietarioDto>> ObterTodos();
     }
 }

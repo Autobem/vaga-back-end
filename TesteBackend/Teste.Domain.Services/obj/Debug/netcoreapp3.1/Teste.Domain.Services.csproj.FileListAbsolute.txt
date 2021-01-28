@@ -8,7 +8,7 @@ C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain.Services
 C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain.Services\obj\Debug\netcoreapp3.1\Teste.Domain.Services.csprojAssemblyReference.cache
 C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain.Services\obj\Debug\netcoreapp3.1\Teste.Domain.Services.AssemblyInfoInputs.cache
 C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain.Services\obj\Debug\netcoreapp3.1\Teste.Domain.Services.AssemblyInfo.cs
-C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain.Services\obj\Debug\netcoreapp3.1\Teste.Domain.Services.csproj.CoreCompileInputs.cache
 C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain.Services\obj\Debug\netcoreapp3.1\Teste.Domain.Services.csproj.CopyComplete
 C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain.Services\obj\Debug\netcoreapp3.1\Teste.Domain.Services.dll
 C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain.Services\obj\Debug\netcoreapp3.1\Teste.Domain.Services.pdb
+C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain.Services\obj\Debug\netcoreapp3.1\Teste.Domain.Services.csproj.CoreCompileInputs.cache

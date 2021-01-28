@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Threading.Tasks;
 using Teste.Application.Dtos;
 using Teste.Application.Interfaces;
+using Teste.Domain.Core.Interfaces.Repositories;
 using Teste.Domain.Core.Interfaces.Services;
 using Teste.Domain.Entities;
 
@@ -12,47 +12,47 @@ namespace Teste.Application
     public class VeiculoApplicationService : IVeiculoApplicationService
     {
         private readonly IVeiculoService _veiculoService;
+        private readonly IVeiculoRepository _veiculoRepository;
         private readonly IMapper _mapper;
 
-        public VeiculoApplicationService(IVeiculoService veiculoService, IMapper mapper)
+        public VeiculoApplicationService(IVeiculoService veiculoService,
+            IVeiculoRepository veiculoRepository,
+            IMapper mapper)
         {
             _veiculoService = veiculoService;
+            _veiculoRepository = veiculoRepository;
             _mapper = mapper;
         }
 
-        public void Adicionar(VeiculoDto veiculoDto)
+        public async Task<bool> Adicionar(VeiculoDto veiculoDto)
         {
             var veiculo = _mapper.Map<Veiculo>(veiculoDto);
-            _veiculoService.Adicionar(veiculo);
+            return await _veiculoService.Adicionar(veiculo);
         }
 
-        public void Atualizar(VeiculoDto veiculoDto)
+        public async Task<bool> Atualizar(VeiculoDto veiculoDto)
         {
             var veiculo = _mapper.Map<Veiculo>(veiculoDto);
-            _veiculoService.Atualizar(veiculo);
+            return await _veiculoService.Atualizar(veiculo);
         }
 
-        public VeiculoDto ObterPorId(int id)
+        public async Task<VeiculoDto> ObterPorId(int id)
         {
-            var veiculo = _veiculoService.ObterPorId(id);
+            var veiculo = await _veiculoRepository.ObterPorId(id);
             var veiculoDto = _mapper.Map<VeiculoDto>(veiculo);
             return veiculoDto;
         }
 
-        public IEnumerable<VeiculoDto> ObterTodos()
+        public async Task<IEnumerable<VeiculoDto>> ObterTodos()
         {
-            var veiculos = _veiculoService.ObterTodos();
+            var veiculos = await _veiculoRepository.ObterTodos();
             var veiculosDto = _mapper.Map<IEnumerable<VeiculoDto>>(veiculos);
             return veiculosDto;
         }
 
-        public void Remover(int id)
+        public async Task<bool> Remover(int id)
         {
-            var veiculo = _veiculoService.ObterPorId(id);
-            if(veiculo != null)
-            {
-                _veiculoService.Remover(id);
-            }
+            return await _veiculoService.Remover(id);
         }
     }
 }

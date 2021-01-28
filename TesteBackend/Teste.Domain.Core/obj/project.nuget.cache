@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "DwxCOUZ7x0tO5gdmg60hzIAIz7H/QVIVxEyrMC0ETzprrCVAoAd8Xcwb4xztpt4IMc3LMvx7rQ4H7UUFMBwxxA==",
+  "dgSpecHash": "EHLF9IehTsG8yXNLDNbsZqwW7TS9aMjEn5+6HyPnr0fBpdrpoVvZFSC90KAFDH5iN0crM/t2WvsqDDKa1oV+7Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Renat\\Documents\\GitHub\\vaga-back-end\\TesteBackend\\Teste.Domain.Core\\Teste.Domain.Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Renat\\.nuget\\packages\\fluentvalidation\\9.4.0\\fluentvalidation.9.4.0.nupkg.sha512"
+  ],
   "logs": []
 }

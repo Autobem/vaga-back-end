@@ -1,65 +1,65 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Teste.Application.Dtos;
 using Teste.Application.Interfaces;
+using Teste.Domain.Core.Interfaces.Services;
 
 namespace API.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController]
-    public class VeiculoController : ControllerBase
+    public class VeiculoController : MainController
     {
         private readonly IVeiculoApplicationService _veiculoApplicationService;
 
-        public VeiculoController(IVeiculoApplicationService veiculoApplicationService)
+        public VeiculoController(IVeiculoApplicationService veiculoApplicationService,
+            INotificador notificador) : base(notificador)
         {
             _veiculoApplicationService = veiculoApplicationService;
         }
 
-        //TODO: implementar respostas personalizadas para cada Action.
-
         [HttpGet]
-        public ActionResult<IEnumerable<VeiculoDto>> Obtertodos()
+        public async Task<IEnumerable<VeiculoDto>> Obtertodos()
         {
-            var veiculosDto = _veiculoApplicationService.ObterTodos();
-            return Ok(veiculosDto);
+            return await _veiculoApplicationService.ObterTodos();
         }
 
         [HttpGet("{id:int}")]
-        public ActionResult<VeiculoDto> ObterPorId(int id)
+        public async Task<ActionResult<VeiculoDto>> ObterPorId(int id)
         {
-            var veiculoDto = _veiculoApplicationService.ObterPorId(id);
+            var veiculoDto = await _veiculoApplicationService.ObterPorId(id);
             if (veiculoDto == null) return NotFound();
-            return Ok(veiculoDto);
+            return veiculoDto;
         }
 
         [HttpPost]
-        public ActionResult<VeiculoDto> Adicionar(VeiculoDto veiculoDto)
+        public async Task<ActionResult<VeiculoDto>> Adicionar(VeiculoDto veiculoDto)
         {
-            if (!ModelState.IsValid) return BadRequest();
-            _veiculoApplicationService.Adicionar(veiculoDto);
-            return Ok(veiculoDto);
+            if (!ModelState.IsValid) return CustomResponse(ModelState);
+            await _veiculoApplicationService.Adicionar(veiculoDto);
+            return CustomResponse(veiculoDto);
         }
 
-        [HttpPut]
-        public ActionResult<VeiculoDto> Atualizar(VeiculoDto veiculoDto)
+        [HttpPut("{id:int}")]
+        public async Task<ActionResult<VeiculoDto>> Atualizar(int id, VeiculoDto veiculoDto)
         {
-            if (!ModelState.IsValid) return BadRequest();
-            _veiculoApplicationService.Atualizar(veiculoDto);
-            return Ok(veiculoDto);
+            if (id != veiculoDto.Id)
+            {
+                NotificarErro("O id informado não é o mesmo que foi passado na query");
+                return CustomResponse(veiculoDto);
+            }
+            if (!ModelState.IsValid) return CustomResponse(ModelState);
+            await _veiculoApplicationService.Atualizar(veiculoDto);
+            return CustomResponse(veiculoDto);
         }
 
         [HttpDelete("{id:int}")]
-        public ActionResult<VeiculoDto> Remover(int id)
+        public async Task<ActionResult<VeiculoDto>> Remover(int id)
         {
-            var veiculoDto = _veiculoApplicationService.ObterPorId(id);
+            var veiculoDto = await _veiculoApplicationService.ObterPorId(id);
             if (veiculoDto == null) return NotFound();
-            _veiculoApplicationService.Remover(id);
-            return Ok(veiculoDto);
+            await _veiculoApplicationService.Remover(id);
+            return CustomResponse(veiculoDto);
         }
     }
 }

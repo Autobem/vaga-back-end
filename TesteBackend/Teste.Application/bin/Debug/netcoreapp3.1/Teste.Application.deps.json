@@ -10,7 +10,8 @@
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.0",
           "Teste.Domain": "1.0.0",
-          "Teste.Domain.Core": "1.0.0"
+          "Teste.Domain.Core": "1.0.0",
+          "Teste.Domain.Services": "1.0.0"
         },
         "runtime": {
           "Teste.Application.dll": {}
@@ -38,6 +39,14 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {
             "assemblyVersion": "8.0.0.0",
             "fileVersion": "8.1.0.0"
+          }
+        }
+      },
+      "FluentValidation/9.4.0": {
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.4.0.0"
           }
         }
       },
@@ -72,6 +81,9 @@
       },
       "System.Reflection.Emit/4.7.0": {},
       "Teste.Domain/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "9.4.0"
+        },
         "runtime": {
           "Teste.Domain.dll": {}
         }
@@ -82,6 +94,15 @@
         },
         "runtime": {
           "Teste.Domain.Core.dll": {}
+        }
+      },
+      "Teste.Domain.Services/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "9.4.0",
+          "Teste.Domain.Core": "1.0.0"
+        },
+        "runtime": {
+          "Teste.Domain.Services.dll": {}
         }
       }
     }
@@ -105,6 +126,13 @@
       "sha512": "sha512-dQyGCAYcHbGuimVvCMu4Ea2S1oYOlgO9XfVdClmY5wgygJMZoS57emPzH0qNfknmtzMm4QbDO9i237W5IDjU1A==",
       "path": "automapper.extensions.microsoft.dependencyinjection/8.1.0",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512"
+    },
+    "FluentValidation/9.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MfOKZJoGX2B7sh0tEB8BU6pRL/ECvSKiNcrK9QsZ3aQYTVQKL9Fw0FR8qh4Wy9+DIQz9didDiMm0HfCOt6S62A==",
+      "path": "fluentvalidation/9.4.0",
+      "hashPath": "fluentvalidation.9.4.0.nupkg.sha512"
     },
     "Microsoft.CSharp/4.7.0": {
       "type": "package",
@@ -147,6 +175,11 @@
       "sha512": ""
     },
     "Teste.Domain.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Teste.Domain.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

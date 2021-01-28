@@ -1,42 +1,56 @@
-﻿using System.Collections.Generic;
+﻿using System.Linq;
+using System.Threading.Tasks;
 using Teste.Domain.Core.Interfaces.Repositories;
 using Teste.Domain.Core.Interfaces.Services;
 using Teste.Domain.Entities;
+using Teste.Domain.Entities.Validations;
 
 namespace Teste.Domain.Services
 {
-    public class ProprietarioService : IProprietarioService
+    public class ProprietarioService : ServiceBase, IProprietarioService
     {
         private readonly IProprietarioRepository _proprietarioRepository;
 
-        public ProprietarioService(IProprietarioRepository proprietarioRepository)
+        public ProprietarioService(IProprietarioRepository proprietarioRepository,
+            INotificador notificador) : base(notificador)
         {
             _proprietarioRepository = proprietarioRepository;
         }
 
-        public void Adicionar(Proprietario proprietario)
+        public async Task<bool> Adicionar(Proprietario proprietario)
         {
-            _proprietarioRepository.Adicionar(proprietario);
+            if (!ExecutarValidacao(new ProprietarioValidation(), proprietario)) return false;
+            if (_proprietarioRepository.Buscar(p => p.Cpf == proprietario.Cpf).Result.Any())
+            {
+                Notificar("Já existe um proprietário com o CPF informado.");
+                return false;
+            }
+            await _proprietarioRepository.Adicionar(proprietario);
+            return true;
         }
 
-        public void Atualizar(Proprietario proprietario)
+        public async Task<bool> Atualizar(Proprietario proprietario)
         {
-            _proprietarioRepository.Atualizar(proprietario);
+            if (!ExecutarValidacao(new ProprietarioValidation(), proprietario)) return false;
+
+            if (_proprietarioRepository.Buscar(p => p.Cpf == proprietario.Cpf && p.Id != proprietario.Id).Result.Any())
+            {
+                Notificar("Já existe um proprietário com o CPF infomado.");
+                return false;
+            }
+            await _proprietarioRepository.Atualizar(proprietario);
+            return true;
         }
 
-        public Proprietario ObterPorId(int id)
+        public async Task<bool> Remover(int id)
         {
-            return _proprietarioRepository.ObterPorId(id);
-        }
-
-        public IEnumerable<Proprietario> ObterTodos()
-        {
-            return _proprietarioRepository.ObterTodos();
-        }
-
-        public void Remover(int id)
-        {
-            _proprietarioRepository.Remover(id);
+            if (_proprietarioRepository.ObterProprietarioVeiculos(id).Result.Veiculos.Any())
+            {
+                Notificar("O proprietário possui veiculo(s) cadastrado(s)!");
+                return false;
+            }
+            await _proprietarioRepository.Remover(id);
+            return true;
         }
     }
 }

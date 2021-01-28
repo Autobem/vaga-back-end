@@ -80,3 +80,4 @@ C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\API\bin\Debug\netcore
 C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\API\obj\Debug\netcoreapp3.1\API.csproj.CoreCompileInputs.cache
 C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\API\obj\Debug\netcoreapp3.1\API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\API\obj\Debug\netcoreapp3.1\API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\API\bin\Debug\netcoreapp3.1\FluentValidation.dll

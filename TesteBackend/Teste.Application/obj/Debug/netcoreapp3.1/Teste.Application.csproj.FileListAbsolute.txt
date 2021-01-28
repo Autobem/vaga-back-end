@@ -12,3 +12,5 @@ C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Application\obj
 C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Application\obj\Debug\netcoreapp3.1\Teste.Application.csproj.CopyComplete
 C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Application\obj\Debug\netcoreapp3.1\Teste.Application.dll
 C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Application\obj\Debug\netcoreapp3.1\Teste.Application.pdb
+C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Application\bin\Debug\netcoreapp3.1\Teste.Domain.Services.dll
+C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Application\bin\Debug\netcoreapp3.1\Teste.Domain.Services.pdb

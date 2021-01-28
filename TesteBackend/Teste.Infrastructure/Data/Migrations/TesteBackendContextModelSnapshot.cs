@@ -30,9 +30,6 @@ namespace Teste.Infrastructure.Data.Migrations
                         .IsRequired()
                         .HasColumnType("NVARCHAR(MAX)");
 
-                    b.Property<DateTime>("DataNascimento")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("NomeCompleto")
                         .IsRequired()
                         .HasColumnType("NVARCHAR(MAX)");

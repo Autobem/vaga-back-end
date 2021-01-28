@@ -8,7 +8,6 @@ namespace Teste.Domain.Entities
     public class Proprietario : Entity
     {
         public string NomeCompleto { get; set; }
-        public DateTime DataNascimento { get; set; }
         public string Cpf { get; set; }
 
         [JsonIgnore]

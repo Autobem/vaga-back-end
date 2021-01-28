@@ -1,7 +1,5 @@
 ﻿using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Text;
+
 using Teste.Application.Dtos;
 using Teste.Domain.Entities;
 
@@ -14,14 +12,12 @@ namespace Teste.Application.Configuration
             CreateMap<Proprietario, ProprietarioDto>()
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(x => x.Id))
                 .ForMember(dest => dest.NomeCompleto, opt => opt.MapFrom(x => x.NomeCompleto))
-                .ForMember(dest => dest.DataNascimento, opt => opt.MapFrom(x => x.DataNascimento))
                 .ForMember(dest => dest.Cpf, opt => opt.MapFrom(x => x.Cpf))
                 .ForMember(dest => dest.VeiculosDto, opt => opt.MapFrom(x => x.Veiculos));
             
             CreateMap<ProprietarioDto, Proprietario>()
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(x => x.Id))
                 .ForMember(dest => dest.NomeCompleto, opt => opt.MapFrom(x => x.NomeCompleto))
-                .ForMember(dest => dest.DataNascimento, opt => opt.MapFrom(x => x.DataNascimento))
                 .ForMember(dest => dest.Cpf, opt => opt.MapFrom(x => x.Cpf))
                 .ForMember(dest => dest.Veiculos, opt => opt.MapFrom(x => x.VeiculosDto));
 

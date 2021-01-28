@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "3wscwfvXZfQM91z4CDZdbGCHwm1OUslcR0jflVobMusQql3tEPhE9opcX2OqtTDU/mix/aSJGua+j4ZKMCR8vA==",
+  "dgSpecHash": "tzkElVlPZ3OIpPrCTI8lqHx0QFAiIWW5SmDHC2gz56IwLoR5eoOzsRmrx5Jsmqk/zhaLlyBjBVpBQXlmnaWC1w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Renat\\Documents\\GitHub\\vaga-back-end\\TesteBackend\\Teste.Application\\Teste.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Renat\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
     "C:\\Users\\Renat\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
+    "C:\\Users\\Renat\\.nuget\\packages\\fluentvalidation\\9.4.0\\fluentvalidation.9.4.0.nupkg.sha512",
     "C:\\Users\\Renat\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Renat\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.0.0\\microsoft.extensions.dependencyinjection.abstractions.3.0.0.nupkg.sha512",
     "C:\\Users\\Renat\\.nuget\\packages\\microsoft.extensions.options\\3.0.0\\microsoft.extensions.options.3.0.0.nupkg.sha512",

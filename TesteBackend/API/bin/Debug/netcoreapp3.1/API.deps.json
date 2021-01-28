@@ -368,6 +368,17 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
+      "FluentValidation/9.4.0": {
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.4.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentValidation.dll": {}
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {
@@ -1502,7 +1513,8 @@
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.0",
           "Teste.Domain": "1.0.0",
-          "Teste.Domain.Core": "1.0.0"
+          "Teste.Domain.Core": "1.0.0",
+          "Teste.Domain.Services": "1.0.0"
         },
         "runtime": {
           "Teste.Application.dll": {}
@@ -1512,6 +1524,9 @@
         }
       },
       "Teste.Domain/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "9.4.0"
+        },
         "runtime": {
           "Teste.Domain.dll": {}
         },
@@ -1532,6 +1547,7 @@
       },
       "Teste.Domain.Services/1.0.0": {
         "dependencies": {
+          "FluentValidation": "9.4.0",
           "Teste.Domain.Core": "1.0.0"
         },
         "runtime": {
@@ -3212,6 +3228,13 @@
       "sha512": "sha512-dQyGCAYcHbGuimVvCMu4Ea2S1oYOlgO9XfVdClmY5wgygJMZoS57emPzH0qNfknmtzMm4QbDO9i237W5IDjU1A==",
       "path": "automapper.extensions.microsoft.dependencyinjection/8.1.0",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512"
+    },
+    "FluentValidation/9.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MfOKZJoGX2B7sh0tEB8BU6pRL/ECvSKiNcrK9QsZ3aQYTVQKL9Fw0FR8qh4Wy9+DIQz9didDiMm0HfCOt6S62A==",
+      "path": "fluentvalidation/9.4.0",
+      "hashPath": "fluentvalidation.9.4.0.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",

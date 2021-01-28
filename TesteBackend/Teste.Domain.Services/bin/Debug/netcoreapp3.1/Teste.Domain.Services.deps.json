@@ -8,13 +8,25 @@
     ".NETCoreApp,Version=v3.1": {
       "Teste.Domain.Services/1.0.0": {
         "dependencies": {
+          "FluentValidation": "9.4.0",
           "Teste.Domain.Core": "1.0.0"
         },
         "runtime": {
           "Teste.Domain.Services.dll": {}
         }
       },
+      "FluentValidation/9.4.0": {
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.4.0.0"
+          }
+        }
+      },
       "Teste.Domain/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "9.4.0"
+        },
         "runtime": {
           "Teste.Domain.dll": {}
         }
@@ -34,6 +46,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "FluentValidation/9.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MfOKZJoGX2B7sh0tEB8BU6pRL/ECvSKiNcrK9QsZ3aQYTVQKL9Fw0FR8qh4Wy9+DIQz9didDiMm0HfCOt6S62A==",
+      "path": "fluentvalidation/9.4.0",
+      "hashPath": "fluentvalidation.9.4.0.nupkg.sha512"
     },
     "Teste.Domain/1.0.0": {
       "type": "project",

@@ -6,6 +6,7 @@ using Teste.Application.Interfaces;
 using Teste.Domain.Core.Interfaces.Repositories;
 using Teste.Domain.Core.Interfaces.Services;
 using Teste.Domain.Services;
+using Teste.Domain.Services.Notifications;
 using Teste.Infrastructure.Data.Repositories;
 
 namespace Teste.Infrastructure.CrossCutting.IoC
@@ -16,14 +17,16 @@ namespace Teste.Infrastructure.CrossCutting.IoC
         {
             #region IoC
 
-            builder.RegisterType<ProprietarioApplicationService>().As<IProprietarioApplicationService>();
-            builder.RegisterType<VeiculoApplicationService>().As<IVeiculoApplicationService>();
+            builder.RegisterType<ProprietarioApplicationService>().As<IProprietarioApplicationService>().InstancePerLifetimeScope(); ;
+            builder.RegisterType<VeiculoApplicationService>().As<IVeiculoApplicationService>().InstancePerLifetimeScope(); ;
 
-            builder.RegisterType<ProprietarioService>().As<IProprietarioService>();
-            builder.RegisterType<VeiculoService>().As<IVeiculoService>();
+            builder.RegisterType<ProprietarioService>().As<IProprietarioService>().InstancePerLifetimeScope(); ;
+            builder.RegisterType<VeiculoService>().As<IVeiculoService>().InstancePerLifetimeScope(); ;
+            builder.RegisterType<Notificador>().As<INotificador>().InstancePerLifetimeScope(); ;
+            
 
-            builder.RegisterType<VeiculoRepository>().As<IVeiculoRepository>();
-            builder.RegisterType<ProprietarioRepository>().As<IProprietarioRepository>();
+            builder.RegisterType<VeiculoRepository>().As<IVeiculoRepository>().InstancePerLifetimeScope(); ;
+            builder.RegisterType<ProprietarioRepository>().As<IProprietarioRepository>().InstancePerLifetimeScope(); ;
 
             builder.Register(ctx => new MapperConfiguration(cfg =>
             {

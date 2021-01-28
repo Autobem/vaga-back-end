@@ -3,7 +3,7 @@ C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain\bin\Debu
 C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain\bin\Debug\netcoreapp3.1\Teste.Domain.pdb
 C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain\obj\Debug\netcoreapp3.1\Teste.Domain.AssemblyInfoInputs.cache
 C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain\obj\Debug\netcoreapp3.1\Teste.Domain.AssemblyInfo.cs
-C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain\obj\Debug\netcoreapp3.1\Teste.Domain.csproj.CoreCompileInputs.cache
 C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain\obj\Debug\netcoreapp3.1\Teste.Domain.dll
 C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain\obj\Debug\netcoreapp3.1\Teste.Domain.pdb
+C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain\obj\Debug\netcoreapp3.1\Teste.Domain.csproj.CoreCompileInputs.cache
 C:\Users\Renat\Documents\GitHub\vaga-back-end\TesteBackend\Teste.Domain\obj\Debug\netcoreapp3.1\Teste.Domain.csprojAssemblyReference.cache

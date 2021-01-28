@@ -1,64 +1,65 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Teste.Application.Dtos;
 using Teste.Application.Interfaces;
+using Teste.Domain.Core.Interfaces.Services;
 
 namespace API.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController]
-    public class ProprietarioController : ControllerBase
+    public class ProprietarioController : MainController
     {
         private readonly IProprietarioApplicationService _proprietarioApplicationService;
 
-        public ProprietarioController(IProprietarioApplicationService proprietarioApplicationService)
+        public ProprietarioController(IProprietarioApplicationService proprietarioApplicationService,
+            INotificador notificador) : base(notificador)
         {
             _proprietarioApplicationService = proprietarioApplicationService;
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<ProprietarioDto>> Obtertodos()
+        public async Task<IEnumerable<ProprietarioDto>> Obtertodos()
         {
-            var proprietariosDto = _proprietarioApplicationService.ObterTodos();
-            return Ok(proprietariosDto);
+            return await _proprietarioApplicationService.ObterTodos();
         }
 
         [HttpGet("{id:int}")]
-        public ActionResult<ProprietarioDto> ObterPorId(int id)
+        public async Task<ActionResult<ProprietarioDto>> ObterPorId(int id)
         {
-            var proprietarioDto = _proprietarioApplicationService.ObterPorId(id);
+            var proprietarioDto = await _proprietarioApplicationService.ObterPorId(id);
             if (proprietarioDto == null) return NotFound();
-            return Ok(proprietarioDto);
+            return proprietarioDto;
         }
 
         [HttpPost]
-        public ActionResult<ProprietarioDto> Adicionar(ProprietarioDto proprietarioDto)
+        public async Task<ActionResult<ProprietarioDto>> Adicionar(ProprietarioDto proprietarioDto)
         {
-            if (!ModelState.IsValid) return BadRequest();
-            _proprietarioApplicationService.Adicionar(proprietarioDto);
-            //TODO: validar se já existe cadastro com o mesmo CPF.
-            return Ok(proprietarioDto);
+            if (!ModelState.IsValid) return CustomResponse(ModelState);
+            await _proprietarioApplicationService.Adicionar(proprietarioDto);
+            return CustomResponse(proprietarioDto);
         }
 
-        [HttpPut]
-        public ActionResult<ProprietarioDto> Atualizar(ProprietarioDto proprietarioDto)
+        [HttpPut("{id:int}")]
+        public async Task<ActionResult<ProprietarioDto>> Atualizar(int id, ProprietarioDto proprietarioDto)
         {
-            if (!ModelState.IsValid) return BadRequest();
-            _proprietarioApplicationService.Atualizar(proprietarioDto);
-            return Ok(proprietarioDto);
+            if (id != proprietarioDto.Id)
+            {
+                NotificarErro("O id informado não é o mesmo que foi passado na query");
+                return CustomResponse(proprietarioDto);
+            }
+            if (!ModelState.IsValid) return CustomResponse(ModelState);
+            await _proprietarioApplicationService.Atualizar(proprietarioDto);
+            return CustomResponse(proprietarioDto);
         }
 
         [HttpDelete("{id:int}")]
-        public ActionResult<ProprietarioDto> Remover(int id)
+        public async Task<ActionResult<ProprietarioDto>> Remover(int id)
         {
-            var proprietarioDto = _proprietarioApplicationService.ObterPorId(id);
+            var proprietarioDto = await _proprietarioApplicationService.ObterPorId(id);
             if (proprietarioDto == null) return NotFound();
-            _proprietarioApplicationService.Remover(id);
-            return Ok(proprietarioDto);
+            await _proprietarioApplicationService.Remover(id);
+            return CustomResponse(proprietarioDto);
         }
     }
 }

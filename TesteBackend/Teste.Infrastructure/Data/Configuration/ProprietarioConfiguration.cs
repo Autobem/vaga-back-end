@@ -12,7 +12,6 @@ namespace Teste.Infrastructure.Data.Configuration
             builder.HasKey(p => p.Id);
             builder.Property(p => p.NomeCompleto).HasColumnType("NVARCHAR(MAX)").IsRequired();
             builder.Property(p => p.Cpf).HasColumnType("NVARCHAR(MAX)").IsRequired();
-            builder.Property(p => p.DataNascimento).IsRequired();
         }
     }
 }

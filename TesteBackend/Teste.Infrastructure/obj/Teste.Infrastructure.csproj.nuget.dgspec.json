@@ -34,6 +34,9 @@
               "C:\\Users\\Renat\\Documents\\GitHub\\vaga-back-end\\TesteBackend\\Teste.Domain.Core\\Teste.Domain.Core.csproj": {
                 "projectPath": "C:\\Users\\Renat\\Documents\\GitHub\\vaga-back-end\\TesteBackend\\Teste.Domain.Core\\Teste.Domain.Core.csproj"
               },
+              "C:\\Users\\Renat\\Documents\\GitHub\\vaga-back-end\\TesteBackend\\Teste.Domain.Services\\Teste.Domain.Services.csproj": {
+                "projectPath": "C:\\Users\\Renat\\Documents\\GitHub\\vaga-back-end\\TesteBackend\\Teste.Domain.Services\\Teste.Domain.Services.csproj"
+              },
               "C:\\Users\\Renat\\Documents\\GitHub\\vaga-back-end\\TesteBackend\\Teste.Domain\\Teste.Domain.csproj": {
                 "projectPath": "C:\\Users\\Renat\\Documents\\GitHub\\vaga-back-end\\TesteBackend\\Teste.Domain\\Teste.Domain.csproj"
               }
@@ -174,6 +177,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[9.4.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -230,6 +239,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[9.4.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

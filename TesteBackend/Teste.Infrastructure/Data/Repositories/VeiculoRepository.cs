@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Teste.Domain.Core.Interfaces.Repositories;
 using Teste.Domain.Entities;
 using Teste.Infrastructure.Data.Context;
@@ -16,33 +17,33 @@ namespace Teste.Infrastructure.Data.Repositories
             _testeBackendContext = testeBackendContext;
         }
 
-        public void Adicionar(Veiculo veiculo)
+        public async Task Adicionar(Veiculo veiculo)
         {
             _testeBackendContext.Set<Veiculo>().Add(veiculo);
-            _testeBackendContext.SaveChanges();
+            await _testeBackendContext.SaveChangesAsync();
         }
 
-        public void Atualizar(Veiculo veiculo)
+        public async Task Atualizar(Veiculo veiculo)
         {
             _testeBackendContext.Entry(veiculo).State = EntityState.Modified;
-            _testeBackendContext.SaveChanges();
+            await _testeBackendContext.SaveChangesAsync();
         }
 
-        public Veiculo ObterPorId(int id)
+        public async Task<Veiculo> ObterPorId(int id)
         {
-            return _testeBackendContext.Set<Veiculo>().Find(id);
+            return await _testeBackendContext.Set<Veiculo>().AsNoTracking().Include(v => v.Proprietario).Where(v => v.Id == id).FirstOrDefaultAsync();
         }
 
-        public IEnumerable<Veiculo> ObterTodos()
+        public async Task<IEnumerable<Veiculo>> ObterTodos()
         {
-            return _testeBackendContext.Set<Veiculo>().Include(v => v.Proprietario).ToList();
+            return await _testeBackendContext.Set<Veiculo>().Include(v => v.Proprietario).ToListAsync();
         }
 
-        public void Remover(int id)
+        public async Task Remover(int id)
         {
-            var veiculo = ObterPorId(id);
+            var veiculo = await ObterPorId(id);
             _testeBackendContext.Set<Veiculo>().Remove(veiculo);
-            _testeBackendContext.SaveChanges();
+            await _testeBackendContext.SaveChangesAsync();
         }
     }
 }

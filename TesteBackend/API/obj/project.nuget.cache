@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TVLb78zYx1pD1b8osCHDvF7MDgJaHw59XTExMW/twEuvJHsrzlx8hHSMadad60vPa4AnpUAvnTQLBH42gZLrDQ==",
+  "dgSpecHash": "icF0mPlfgBA0wb0oYdCz0PkBDDA/uU3xVoNwmNGn3bBtnGsbNTMs4xi8fj9e3UFAurQwoHqKR6JZ834RbXAd5g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Renat\\Documents\\GitHub\\vaga-back-end\\TesteBackend\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\Renat\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.1.0\\autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",
     "C:\\Users\\Renat\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
     "C:\\Users\\Renat\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
+    "C:\\Users\\Renat\\.nuget\\packages\\fluentvalidation\\9.4.0\\fluentvalidation.9.4.0.nupkg.sha512",
     "C:\\Users\\Renat\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Renat\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Renat\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

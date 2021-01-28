@@ -1,42 +1,40 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Teste.Domain.Core.Interfaces.Repositories;
 using Teste.Domain.Core.Interfaces.Services;
 using Teste.Domain.Entities;
+using Teste.Domain.Entities.Validations;
 
 namespace Teste.Domain.Services
 {
-     public class VeiculoService : IVeiculoService
+     public class VeiculoService : ServiceBase, IVeiculoService
     {
         private readonly IVeiculoRepository _veiculoRepository;
 
-        public VeiculoService(IVeiculoRepository veiculoRepository)
+        public VeiculoService(IVeiculoRepository veiculoRepository,
+            INotificador notificador) : base(notificador)
         {
             _veiculoRepository = veiculoRepository;
         }
 
-        public void Adicionar(Veiculo veiculo)
+        public async Task<bool> Adicionar(Veiculo veiculo)
         {
-            _veiculoRepository.Adicionar(veiculo);
+            if (!ExecutarValidacao(new VeiculoValidation(), veiculo)) return false;
+            await _veiculoRepository.Adicionar(veiculo);
+            return true;
         }
 
-        public void Atualizar(Veiculo veiculo)
+        public async Task<bool> Atualizar(Veiculo veiculo)
         {
-            _veiculoRepository.Atualizar(veiculo);
+            if (!ExecutarValidacao(new VeiculoValidation(), veiculo)) return false;
+            await _veiculoRepository.Atualizar(veiculo);
+            return true;
         }
 
-        public Veiculo ObterPorId(int id)
+        public async Task<bool> Remover(int id)
         {
-            return _veiculoRepository.ObterPorId(id);
-        }
-
-        public IEnumerable<Veiculo> ObterTodos()
-        {
-            return _veiculoRepository.ObterTodos();
-        }
-
-        public void Remover(int id)
-        {
-            _veiculoRepository.Remover(id);
+            await _veiculoRepository.Remover(id);
+            return true;
         }
     }
 }

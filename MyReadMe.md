@@ -14,7 +14,8 @@
 
 <h3>Usuário de Autenticação Autobem:<h3>
 
-Email: autobem@email.com
-Senha: vagabackend
+<p>Usuário: Autobem</p>
+<p>Email: autobem@email.com<p>
+<p>Senha: vagabackend<p>
 
-Será gerado um token de autenticação através de um método POST para o caminho "/auth". É necessário este token no header Authorization de cada requisição HTTP do tipo POST, DELETE e PUT, as requisições do tipo GET estão abertas para usuários não autenticados.
+<p>A autenticação é realizada através do email e senha, será gerado um token de autenticação através de um método POST para o caminho "/auth". É necessário este token no header Authorization de cada requisição HTTP do tipo POST, DELETE e PUT, as requisições do tipo GET estão abertas para usuários não autenticados.</p>

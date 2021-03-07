@@ -11,3 +11,10 @@
   <li>JWT para autenticação via Token</li>
   <li>Swagger para documentação ( path:/swagger-ui.html )</li>
 </ul>
+
+<h3>Usuário de Autenticação Autobem:<h3>
+
+Email: autobem@email.com
+Senha: vagabackend
+
+Será gerado um token de autenticação através de um método POST para o caminho "/auth". É necessário este token no header Authorization de cada requisição HTTP do tipo POST, DELETE e PUT, as requisições do tipo GET estão abertas para usuários não autenticados.

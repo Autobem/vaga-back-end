@@ -1,0 +1,190 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\river\\Source\\Repos\\Rivera\\vaga-back-end\\TesteAutobem\\TesteAutobem\\Autobem.Services\\Autobem.Services.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\river\\Source\\Repos\\Rivera\\vaga-back-end\\TesteAutobem\\TesteAutobem\\Autobem.Domain\\Autobem.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\river\\Source\\Repos\\Rivera\\vaga-back-end\\TesteAutobem\\TesteAutobem\\Autobem.Domain\\Autobem.Domain.csproj",
+        "projectName": "Autobem.Domain",
+        "projectPath": "C:\\Users\\river\\Source\\Repos\\Rivera\\vaga-back-end\\TesteAutobem\\TesteAutobem\\Autobem.Domain\\Autobem.Domain.csproj",
+        "packagesPath": "C:\\Users\\river\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\river\\Source\\Repos\\Rivera\\vaga-back-end\\TesteAutobem\\TesteAutobem\\Autobem.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\river\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\river\\Source\\Repos\\Rivera\\vaga-back-end\\TesteAutobem\\TesteAutobem\\Autobem.Infra.Data\\Autobem.Infra.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\river\\Source\\Repos\\Rivera\\vaga-back-end\\TesteAutobem\\TesteAutobem\\Autobem.Infra.Data\\Autobem.Infra.Data.csproj",
+        "projectName": "Autobem.Infra.Data",
+        "projectPath": "C:\\Users\\river\\Source\\Repos\\Rivera\\vaga-back-end\\TesteAutobem\\TesteAutobem\\Autobem.Infra.Data\\Autobem.Infra.Data.csproj",
+        "packagesPath": "C:\\Users\\river\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\river\\Source\\Repos\\Rivera\\vaga-back-end\\TesteAutobem\\TesteAutobem\\Autobem.Infra.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\river\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\river\\Source\\Repos\\Rivera\\vaga-back-end\\TesteAutobem\\TesteAutobem\\Autobem.Domain\\Autobem.Domain.csproj": {
+                "projectPath": "C:\\Users\\river\\Source\\Repos\\Rivera\\vaga-back-end\\TesteAutobem\\TesteAutobem\\Autobem.Domain\\Autobem.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\river\\Source\\Repos\\Rivera\\vaga-back-end\\TesteAutobem\\TesteAutobem\\Autobem.Services\\Autobem.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\river\\Source\\Repos\\Rivera\\vaga-back-end\\TesteAutobem\\TesteAutobem\\Autobem.Services\\Autobem.Services.csproj",
+        "projectName": "Autobem.Services",
+        "projectPath": "C:\\Users\\river\\Source\\Repos\\Rivera\\vaga-back-end\\TesteAutobem\\TesteAutobem\\Autobem.Services\\Autobem.Services.csproj",
+        "packagesPath": "C:\\Users\\river\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\river\\Source\\Repos\\Rivera\\vaga-back-end\\TesteAutobem\\TesteAutobem\\Autobem.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\river\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\river\\Source\\Repos\\Rivera\\vaga-back-end\\TesteAutobem\\TesteAutobem\\Autobem.Domain\\Autobem.Domain.csproj": {
+                "projectPath": "C:\\Users\\river\\Source\\Repos\\Rivera\\vaga-back-end\\TesteAutobem\\TesteAutobem\\Autobem.Domain\\Autobem.Domain.csproj"
+              },
+              "C:\\Users\\river\\Source\\Repos\\Rivera\\vaga-back-end\\TesteAutobem\\TesteAutobem\\Autobem.Infra.Data\\Autobem.Infra.Data.csproj": {
+                "projectPath": "C:\\Users\\river\\Source\\Repos\\Rivera\\vaga-back-end\\TesteAutobem\\TesteAutobem\\Autobem.Infra.Data\\Autobem.Infra.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

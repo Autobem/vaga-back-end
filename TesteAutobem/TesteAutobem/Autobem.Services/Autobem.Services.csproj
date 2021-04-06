@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Autobem.Domain\Autobem.Domain.csproj" />
+    <ProjectReference Include="..\Autobem.Infra.Data\Autobem.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>

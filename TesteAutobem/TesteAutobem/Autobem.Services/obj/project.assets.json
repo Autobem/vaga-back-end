@@ -1,0 +1,116 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Autobem.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Autobem.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Autobem.Domain.dll": {}
+        }
+      },
+      "Autobem.Infra.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Autobem.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Autobem.Infra.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Autobem.Infra.Data.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Autobem.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Autobem.Domain/Autobem.Domain.csproj",
+      "msbuildProject": "../Autobem.Domain/Autobem.Domain.csproj"
+    },
+    "Autobem.Infra.Data/1.0.0": {
+      "type": "project",
+      "path": "../Autobem.Infra.Data/Autobem.Infra.Data.csproj",
+      "msbuildProject": "../Autobem.Infra.Data/Autobem.Infra.Data.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "Autobem.Domain >= 1.0.0",
+      "Autobem.Infra.Data >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\river\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\river\\Source\\Repos\\Rivera\\vaga-back-end\\TesteAutobem\\TesteAutobem\\Autobem.Services\\Autobem.Services.csproj",
+      "projectName": "Autobem.Services",
+      "projectPath": "C:\\Users\\river\\Source\\Repos\\Rivera\\vaga-back-end\\TesteAutobem\\TesteAutobem\\Autobem.Services\\Autobem.Services.csproj",
+      "packagesPath": "C:\\Users\\river\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\river\\Source\\Repos\\Rivera\\vaga-back-end\\TesteAutobem\\TesteAutobem\\Autobem.Services\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\river\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "projectReferences": {
+            "C:\\Users\\river\\Source\\Repos\\Rivera\\vaga-back-end\\TesteAutobem\\TesteAutobem\\Autobem.Domain\\Autobem.Domain.csproj": {
+              "projectPath": "C:\\Users\\river\\Source\\Repos\\Rivera\\vaga-back-end\\TesteAutobem\\TesteAutobem\\Autobem.Domain\\Autobem.Domain.csproj"
+            },
+            "C:\\Users\\river\\Source\\Repos\\Rivera\\vaga-back-end\\TesteAutobem\\TesteAutobem\\Autobem.Infra.Data\\Autobem.Infra.Data.csproj": {
+              "projectPath": "C:\\Users\\river\\Source\\Repos\\Rivera\\vaga-back-end\\TesteAutobem\\TesteAutobem\\Autobem.Infra.Data\\Autobem.Infra.Data.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

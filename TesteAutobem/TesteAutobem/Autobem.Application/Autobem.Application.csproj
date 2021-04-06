@@ -9,4 +9,9 @@
     <ProjectReference Include="..\Autobem.Services\Autobem.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="DTO\" />
+  </ItemGroup>
+
 </Project>

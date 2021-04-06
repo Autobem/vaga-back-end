@@ -8,4 +8,9 @@
     <ProjectReference Include="..\Autobem.Domain\Autobem.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Context\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
 </Project>

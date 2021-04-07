@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Autobem.Domain\Autobem.Domain.csproj" />
-    <ProjectReference Include="..\Autobem.Services\Autobem.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>

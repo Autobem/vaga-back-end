@@ -5,7 +5,7 @@ namespace Autobem.Infra.Data.Context
 {
     public class AutobemContext : DbContext
     {
-        public AutobemContext() : base("AutobemConnection")
+        public AutobemContext(DbContextOptions options) : base(options)
         {
 
         }

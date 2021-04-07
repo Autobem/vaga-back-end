@@ -4,5 +4,15 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Autobem.Application\Autobem.Application.csproj" />
+    <ProjectReference Include="..\Autobem.Domain\Autobem.Domain.csproj" />
+    <ProjectReference Include="..\Autobem.Infra.Data\Autobem.Infra.Data.csproj" />
+  </ItemGroup>
+
 
 </Project>

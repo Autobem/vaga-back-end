@@ -1,0 +1,4 @@
+C:\Users\river\Source\Repos\Rivera\vaga-back-end\TesteAutobem\TesteAutobem\Autobem.Infra.Data\bin\Debug\netcoreapp3.1\Autobem.Domain.dll
+C:\Users\river\Source\Repos\Rivera\vaga-back-end\TesteAutobem\TesteAutobem\Autobem.Infra.Data\obj\Debug\netcoreapp3.1\Autobem.Infra.Data.csprojAssemblyReference.cache
+C:\Users\river\Source\Repos\Rivera\vaga-back-end\TesteAutobem\TesteAutobem\Autobem.Infra.Data\obj\Debug\netcoreapp3.1\Autobem.Infra.Data.AssemblyInfoInputs.cache
+C:\Users\river\Source\Repos\Rivera\vaga-back-end\TesteAutobem\TesteAutobem\Autobem.Infra.Data\obj\Debug\netcoreapp3.1\Autobem.Infra.Data.AssemblyInfo.cs

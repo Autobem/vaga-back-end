@@ -8,7 +8,12 @@ namespace Autobem.Infra.Data.Repositories
 {
     public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
     {
-        protected AutobemContext Db = new AutobemContext();
+        private readonly AutobemContext _context;
+
+        public BaseRepository(AutobemContext context)
+        {
+            _context = context;
+        }
 
         public void Add(TEntity obj)
         {

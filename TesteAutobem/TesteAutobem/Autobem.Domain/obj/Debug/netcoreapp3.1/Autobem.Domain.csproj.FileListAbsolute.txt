@@ -1,0 +1,8 @@
+C:\Users\river\Source\Repos\Rivera\vaga-back-end\TesteAutobem\TesteAutobem\Autobem.Domain\bin\Debug\netcoreapp3.1\Autobem.Domain.deps.json
+C:\Users\river\Source\Repos\Rivera\vaga-back-end\TesteAutobem\TesteAutobem\Autobem.Domain\bin\Debug\netcoreapp3.1\Autobem.Domain.dll
+C:\Users\river\Source\Repos\Rivera\vaga-back-end\TesteAutobem\TesteAutobem\Autobem.Domain\bin\Debug\netcoreapp3.1\Autobem.Domain.pdb
+C:\Users\river\Source\Repos\Rivera\vaga-back-end\TesteAutobem\TesteAutobem\Autobem.Domain\obj\Debug\netcoreapp3.1\Autobem.Domain.AssemblyInfoInputs.cache
+C:\Users\river\Source\Repos\Rivera\vaga-back-end\TesteAutobem\TesteAutobem\Autobem.Domain\obj\Debug\netcoreapp3.1\Autobem.Domain.AssemblyInfo.cs
+C:\Users\river\Source\Repos\Rivera\vaga-back-end\TesteAutobem\TesteAutobem\Autobem.Domain\obj\Debug\netcoreapp3.1\Autobem.Domain.csproj.CoreCompileInputs.cache
+C:\Users\river\Source\Repos\Rivera\vaga-back-end\TesteAutobem\TesteAutobem\Autobem.Domain\obj\Debug\netcoreapp3.1\Autobem.Domain.dll
+C:\Users\river\Source\Repos\Rivera\vaga-back-end\TesteAutobem\TesteAutobem\Autobem.Domain\obj\Debug\netcoreapp3.1\Autobem.Domain.pdb

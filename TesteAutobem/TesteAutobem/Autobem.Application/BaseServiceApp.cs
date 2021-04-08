@@ -10,7 +10,7 @@ namespace Autobem.Application
 
         public BaseServiceApp(IBaseService<TEntity> service)
         {
-            _service = service
+            _service = service;
         }
 
         public void Add(TEntity obj)

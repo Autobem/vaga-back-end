@@ -1,0 +1,12 @@
+C:\Users\river\Source\Repos\Rivera\vaga-back-end\TesteAutobem\TesteAutobem\Autobem.Application\bin\Debug\netcoreapp3.1\Autobem.Application.deps.json
+C:\Users\river\Source\Repos\Rivera\vaga-back-end\TesteAutobem\TesteAutobem\Autobem.Application\bin\Debug\netcoreapp3.1\Autobem.Application.dll
+C:\Users\river\Source\Repos\Rivera\vaga-back-end\TesteAutobem\TesteAutobem\Autobem.Application\bin\Debug\netcoreapp3.1\Autobem.Application.pdb
+C:\Users\river\Source\Repos\Rivera\vaga-back-end\TesteAutobem\TesteAutobem\Autobem.Application\bin\Debug\netcoreapp3.1\Autobem.Domain.dll
+C:\Users\river\Source\Repos\Rivera\vaga-back-end\TesteAutobem\TesteAutobem\Autobem.Application\bin\Debug\netcoreapp3.1\Autobem.Domain.pdb
+C:\Users\river\Source\Repos\Rivera\vaga-back-end\TesteAutobem\TesteAutobem\Autobem.Application\obj\Debug\netcoreapp3.1\Autobem.Application.csprojAssemblyReference.cache
+C:\Users\river\Source\Repos\Rivera\vaga-back-end\TesteAutobem\TesteAutobem\Autobem.Application\obj\Debug\netcoreapp3.1\Autobem.Application.AssemblyInfoInputs.cache
+C:\Users\river\Source\Repos\Rivera\vaga-back-end\TesteAutobem\TesteAutobem\Autobem.Application\obj\Debug\netcoreapp3.1\Autobem.Application.AssemblyInfo.cs
+C:\Users\river\Source\Repos\Rivera\vaga-back-end\TesteAutobem\TesteAutobem\Autobem.Application\obj\Debug\netcoreapp3.1\Autobem.Application.csproj.CoreCompileInputs.cache
+C:\Users\river\Source\Repos\Rivera\vaga-back-end\TesteAutobem\TesteAutobem\Autobem.Application\obj\Debug\netcoreapp3.1\Autobem.Application.csproj.CopyComplete
+C:\Users\river\Source\Repos\Rivera\vaga-back-end\TesteAutobem\TesteAutobem\Autobem.Application\obj\Debug\netcoreapp3.1\Autobem.Application.dll
+C:\Users\river\Source\Repos\Rivera\vaga-back-end\TesteAutobem\TesteAutobem\Autobem.Application\obj\Debug\netcoreapp3.1\Autobem.Application.pdb

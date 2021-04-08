@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Autobem.Application/1.0.0": {
+        "dependencies": {
+          "Autobem.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Autobem.Application.dll": {}
+        }
+      },
+      "Autobem.Domain/1.0.0": {
+        "runtime": {
+          "Autobem.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Autobem.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Autobem.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

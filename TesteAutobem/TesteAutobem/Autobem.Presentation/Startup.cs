@@ -56,7 +56,8 @@ namespace Autobem.Presentation
 
             var connectionString = Configuration.GetConnectionString("AutobemConnection");
 
-            services.AddDbContext<AutobemContext>(options => options.UseSqlServer(connectionString));
+            string connection = this.Configuration.GetConnectionString("AutobemConnection");
+            services.AddDbContext<AutobemContext>(options => options.UseSqlServer(connection));
 
             AutoMapperConfig(services);
         }

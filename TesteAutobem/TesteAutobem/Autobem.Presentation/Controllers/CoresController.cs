@@ -10,7 +10,7 @@ namespace Autobem.Presentation.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CoresController : Controller
+    public class CoresController : ControllerBase
     {
         private readonly ICorServiceApp _service;
         private readonly IMapper _mapper;

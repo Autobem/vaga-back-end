@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <ItemGroup>
+        <ProjectReference Include="..\Api.Domain\Domain.csproj"/>
+        <ProjectReference Include="..\Api.Service\Service.csproj"/>
+        <ProjectReference Include="..\Api.InfraData\InfraData.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1"/>
+        <PackageReference Include="AutoMapper" Version="10.1.1"/>
+    </ItemGroup>
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+</Project>

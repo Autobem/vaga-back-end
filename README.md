@@ -1,3 +1,27 @@
+##OBS
+Primeiro quero agradecer pelo teste, não consegui resolver todo o teste no fim de semana, pois tive alguns obstaculos que imaginei não passar.
+Em meio de semana eu não consigo me dedicar mais que 2h por dia pois estou em uma jornada dupla.
+*Vamos ao que deu certo então =)
+	1-O modelo de arquitetura DDD foi aplicado
+	2-Estou utilizando o EntityFramework como code first e coloquei drive SQLServer
+	4-Conceito de DTO foi aplicado
+	5-Conceito de inversão de dependencia foi aplicado
+	6-Foi aplicado indices nas tabelas pelo mapeamento do entity
+	7-Mapeamento de entidades para não expor dados
+
+*Vamos ao que não deu certo :(
+	1-Implementar autenticação para restrigir acesso(Gostaria de ter colocado jwt, até foi instalado, mas acredito não apliquei)
+	2-DTO para a entidade "Veiculo" (Acabei focando apenas na tabela "Pessoa" para ao menos deixar uma funcionando)
+	3-Não foi criado controller para manipular os endpoits relacionado a Veiculos (Gosratia de ter criado um insert, update, selecionar veiculo por id e selecionar veiculo por pessoaId)
+	
+#Minha experiência
+Quero agradecer a oportunidade de participar deste processo e dizer que foi um grande desavio.
+Acredito que o projeto precisa de cerca de 16h +- para ser implementando e n conse isso.
+Fica o meu pedido de desculpas e espero estar um pouco melhor para a próxima.
+
+Usei como referencia https://alexalvess.medium.com/criando-uma-api-em-net-core-baseado-na-arquitetura-ddd-2c6a409c686
+E acabei repartindo o projeto Infraestrutura e até implementando CrossCutting, nunca tinha feito assim.
+
 # Teste de Backend
 
 Olá Dev!  Tudo bem?

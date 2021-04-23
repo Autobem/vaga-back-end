@@ -1,0 +1,12 @@
+D:\workspace\vaga-back-end\src\BuildingBlocks\BuildingBlocks.WebApi\bin\Debug\net5.0\BuildingBlocks.WebApi.deps.json
+D:\workspace\vaga-back-end\src\BuildingBlocks\BuildingBlocks.WebApi\bin\Debug\net5.0\BuildingBlocks.WebApi.dll
+D:\workspace\vaga-back-end\src\BuildingBlocks\BuildingBlocks.WebApi\bin\Debug\net5.0\ref\BuildingBlocks.WebApi.dll
+D:\workspace\vaga-back-end\src\BuildingBlocks\BuildingBlocks.WebApi\bin\Debug\net5.0\BuildingBlocks.WebApi.pdb
+D:\workspace\vaga-back-end\src\BuildingBlocks\BuildingBlocks.WebApi\obj\Debug\net5.0\BuildingBlocks.WebApi.csprojAssemblyReference.cache
+D:\workspace\vaga-back-end\src\BuildingBlocks\BuildingBlocks.WebApi\obj\Debug\net5.0\BuildingBlocks.WebApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\workspace\vaga-back-end\src\BuildingBlocks\BuildingBlocks.WebApi\obj\Debug\net5.0\BuildingBlocks.WebApi.AssemblyInfoInputs.cache
+D:\workspace\vaga-back-end\src\BuildingBlocks\BuildingBlocks.WebApi\obj\Debug\net5.0\BuildingBlocks.WebApi.AssemblyInfo.cs
+D:\workspace\vaga-back-end\src\BuildingBlocks\BuildingBlocks.WebApi\obj\Debug\net5.0\BuildingBlocks.WebApi.csproj.CoreCompileInputs.cache
+D:\workspace\vaga-back-end\src\BuildingBlocks\BuildingBlocks.WebApi\obj\Debug\net5.0\BuildingBlocks.WebApi.dll
+D:\workspace\vaga-back-end\src\BuildingBlocks\BuildingBlocks.WebApi\obj\Debug\net5.0\ref\BuildingBlocks.WebApi.dll
+D:\workspace\vaga-back-end\src\BuildingBlocks\BuildingBlocks.WebApi\obj\Debug\net5.0\BuildingBlocks.WebApi.pdb

@@ -1,0 +1,12 @@
+D:\workspace\vaga-back-end\src\AutoBem.Application\obj\Debug\net5.0\2- AutoBem.Application.csprojAssemblyReference.cache
+D:\workspace\vaga-back-end\src\AutoBem.Application\obj\Debug\net5.0\2- AutoBem.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\workspace\vaga-back-end\src\AutoBem.Application\obj\Debug\net5.0\2- AutoBem.Application.AssemblyInfoInputs.cache
+D:\workspace\vaga-back-end\src\AutoBem.Application\obj\Debug\net5.0\2- AutoBem.Application.AssemblyInfo.cs
+D:\workspace\vaga-back-end\src\AutoBem.Application\obj\Debug\net5.0\2- AutoBem.Application.csproj.CoreCompileInputs.cache
+D:\workspace\vaga-back-end\src\AutoBem.Application\bin\Debug\net5.0\AutoBem.Application.deps.json
+D:\workspace\vaga-back-end\src\AutoBem.Application\bin\Debug\net5.0\AutoBem.Application.dll
+D:\workspace\vaga-back-end\src\AutoBem.Application\bin\Debug\net5.0\ref\AutoBem.Application.dll
+D:\workspace\vaga-back-end\src\AutoBem.Application\bin\Debug\net5.0\AutoBem.Application.pdb
+D:\workspace\vaga-back-end\src\AutoBem.Application\obj\Debug\net5.0\AutoBem.Application.dll
+D:\workspace\vaga-back-end\src\AutoBem.Application\obj\Debug\net5.0\ref\AutoBem.Application.dll
+D:\workspace\vaga-back-end\src\AutoBem.Application\obj\Debug\net5.0\AutoBem.Application.pdb

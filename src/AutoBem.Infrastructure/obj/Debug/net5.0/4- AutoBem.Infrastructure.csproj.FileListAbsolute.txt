@@ -1,0 +1,19 @@
+D:\workspace\vaga-back-end\src\AutoBem.Infrastructure\obj\Debug\net5.0\4- AutoBem.Infrastructure.csprojAssemblyReference.cache
+D:\workspace\vaga-back-end\src\AutoBem.Infrastructure\obj\Debug\net5.0\4- AutoBem.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\workspace\vaga-back-end\src\AutoBem.Infrastructure\obj\Debug\net5.0\4- AutoBem.Infrastructure.AssemblyInfoInputs.cache
+D:\workspace\vaga-back-end\src\AutoBem.Infrastructure\obj\Debug\net5.0\4- AutoBem.Infrastructure.AssemblyInfo.cs
+D:\workspace\vaga-back-end\src\AutoBem.Infrastructure\obj\Debug\net5.0\4- AutoBem.Infrastructure.csproj.CoreCompileInputs.cache
+D:\workspace\vaga-back-end\src\AutoBem.Infrastructure\bin\Debug\net5.0\AutoBem.Infrastructure.deps.json
+D:\workspace\vaga-back-end\src\AutoBem.Infrastructure\bin\Debug\net5.0\AutoBem.Infrastructure.dll
+D:\workspace\vaga-back-end\src\AutoBem.Infrastructure\bin\Debug\net5.0\ref\AutoBem.Infrastructure.dll
+D:\workspace\vaga-back-end\src\AutoBem.Infrastructure\bin\Debug\net5.0\AutoBem.Infrastructure.pdb
+D:\workspace\vaga-back-end\src\AutoBem.Infrastructure\bin\Debug\net5.0\AutoBem.Domain.dll
+D:\workspace\vaga-back-end\src\AutoBem.Infrastructure\bin\Debug\net5.0\BuildingBlocks.Infraestructure.dll
+D:\workspace\vaga-back-end\src\AutoBem.Infrastructure\bin\Debug\net5.0\BuildingBlocks.Ioc.dll
+D:\workspace\vaga-back-end\src\AutoBem.Infrastructure\bin\Debug\net5.0\AutoBem.Domain.pdb
+D:\workspace\vaga-back-end\src\AutoBem.Infrastructure\bin\Debug\net5.0\BuildingBlocks.Infraestructure.pdb
+D:\workspace\vaga-back-end\src\AutoBem.Infrastructure\bin\Debug\net5.0\BuildingBlocks.Ioc.pdb
+D:\workspace\vaga-back-end\src\AutoBem.Infrastructure\obj\Debug\net5.0\4- AutoBem.Infrastructure.csproj.CopyComplete
+D:\workspace\vaga-back-end\src\AutoBem.Infrastructure\obj\Debug\net5.0\AutoBem.Infrastructure.dll
+D:\workspace\vaga-back-end\src\AutoBem.Infrastructure\obj\Debug\net5.0\ref\AutoBem.Infrastructure.dll
+D:\workspace\vaga-back-end\src\AutoBem.Infrastructure\obj\Debug\net5.0\AutoBem.Infrastructure.pdb

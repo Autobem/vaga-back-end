@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <AssemblyName>AutoBem.WebApi</AssemblyName>
+    <RootNamespace>AutoBem.WebApi</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AutoBem.Application\2- AutoBem.Application.csproj" />
+    <ProjectReference Include="..\AutoBem.Domain\3- AutoBem.Domain.csproj" />
+    <ProjectReference Include="..\AutoBem.Infrastructure\4- AutoBem.Infrastructure.csproj" />
+    <ProjectReference Include="..\BuildingBlocks\BuildingBlocks.Ioc\BuildingBlocks.Ioc.csproj" />
+    <ProjectReference Include="..\BuildingBlocks\BuildingBlocks.WebApi\BuildingBlocks.WebApi.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,17 +1,5 @@
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\appsettings.Development.json
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\appsettings.json
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Microsoft.OpenApi.dll
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\1- AutoBem.WebApi.csprojAssemblyReference.cache
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\1- AutoBem.WebApi.GeneratedMSBuildEditorConfig.editorconfig
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\1- AutoBem.WebApi.AssemblyInfoInputs.cache
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\1- AutoBem.WebApi.AssemblyInfo.cs
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\1- AutoBem.WebApi.csproj.CoreCompileInputs.cache
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\1- AutoBem.WebApi.RazorTargetAssemblyInfo.cache
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\1- AutoBem.WebApi.csproj.CopyComplete
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\1- AutoBem.WebApi.genruntimeconfig.cache
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\AutoBem.WebApi.exe
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\AutoBem.WebApi.deps.json
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\AutoBem.WebApi.runtimeconfig.json
@@ -19,35 +7,33 @@ D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\AutoBem.WebApi.ru
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\AutoBem.WebApi.dll
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\ref\AutoBem.WebApi.dll
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\AutoBem.WebApi.pdb
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\AutoBem.WebApi.MvcApplicationPartsAssemblyInfo.cs
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\AutoBem.WebApi.MvcApplicationPartsAssemblyInfo.cache
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\staticwebassets\AutoBem.WebApi.StaticWebAssets.Manifest.cache
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\staticwebassets\AutoBem.WebApi.StaticWebAssets.xml
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\scopedcss\bundle\AutoBem.WebApi.styles.css
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\AutoBem.WebApi.dll
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\ref\AutoBem.WebApi.dll
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\AutoBem.WebApi.pdb
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Autofac.dll
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Autofac.Extensions.DependencyInjection.dll
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Newtonsoft.Json.dll
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\BuildingBlocks.Ioc.dll
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\BuildingBlocks.Ioc.pdb
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\BuildingBlocks.WebApi.dll
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\BuildingBlocks.WebApi.pdb
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Humanizer.dll
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\MediatR.dll
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\MediatR.Extensions.dll
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\MediatR.Extensions.Autofac.DependencyInjection.dll
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Microsoft.Identity.Client.dll
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Microsoft.OpenApi.dll
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
@@ -65,13 +51,37 @@ D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\runtimes\win-x86\
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\AutoBem.Application.dll
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\AutoBem.Domain.dll
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\AutoBem.Infrastructure.dll
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\BuildingBlocks.Application.dll
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\BuildingBlocks.Domain.dll
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\BuildingBlocks.Infraestructure.dll
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\AutoBem.Infrastructure.pdb
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\AutoBem.Domain.pdb
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\BuildingBlocks.Infraestructure.pdb
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\AutoBem.Application.dll
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\BuildingBlocks.Ioc.dll
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\BuildingBlocks.Mediator.dll
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\BuildingBlocks.WebApi.dll
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\AutoBem.Application.pdb
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\MediatR.dll
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\AutoBem.Domain.pdb
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\AutoBem.Infrastructure.pdb
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\BuildingBlocks.Ioc.pdb
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\BuildingBlocks.WebApi.pdb
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\BuildingBlocks.Application.pdb
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\BuildingBlocks.Domain.pdb
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\BuildingBlocks.Infraestructure.pdb
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\BuildingBlocks.Mediator.pdb
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\1- AutoBem.WebApi.csprojAssemblyReference.cache
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\1- AutoBem.WebApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\1- AutoBem.WebApi.AssemblyInfoInputs.cache
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\1- AutoBem.WebApi.AssemblyInfo.cs
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\1- AutoBem.WebApi.csproj.CoreCompileInputs.cache
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\AutoBem.WebApi.MvcApplicationPartsAssemblyInfo.cs
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\AutoBem.WebApi.MvcApplicationPartsAssemblyInfo.cache
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\staticwebassets\AutoBem.WebApi.StaticWebAssets.Manifest.cache
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\staticwebassets\AutoBem.WebApi.StaticWebAssets.xml
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\scopedcss\bundle\AutoBem.WebApi.styles.css
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\1- AutoBem.WebApi.RazorTargetAssemblyInfo.cache
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\1- AutoBem.WebApi.csproj.CopyComplete
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\AutoBem.WebApi.dll
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\ref\AutoBem.WebApi.dll
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\AutoBem.WebApi.pdb
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\1- AutoBem.WebApi.genruntimeconfig.cache

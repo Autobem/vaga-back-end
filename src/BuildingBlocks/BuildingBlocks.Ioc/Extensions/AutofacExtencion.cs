@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Hosting;
-using Autofac.Extensions.DependencyInjection;
+﻿using Autofac.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Hosting;
 
 namespace BuildingBlocks.Ioc.Extensions
 {

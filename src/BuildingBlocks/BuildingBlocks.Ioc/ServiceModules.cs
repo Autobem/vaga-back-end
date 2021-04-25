@@ -1,10 +1,10 @@
-﻿using System;
-using System.Linq;
-using System.Reflection;
-using Autofac;
+﻿using Autofac;
 using BuildingBlocks.Ioc.Attributes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using System;
+using System.Linq;
+using System.Reflection;
 
 
 namespace BuildingBlocks.Ioc
@@ -33,7 +33,7 @@ namespace BuildingBlocks.Ioc
                             .InstancePerLifetimeScope()
                             .PropertiesAutowired(PropertySelector);
 
-                        continue;
+                        //continue;
                     }
 
                     //Inject per annotation
@@ -44,6 +44,7 @@ namespace BuildingBlocks.Ioc
                     }
                 }
             }
+
         }
 
         protected void InjectPerLigeContainer(ContainerBuilder builder, Type type, Lifecicles lifecicle)

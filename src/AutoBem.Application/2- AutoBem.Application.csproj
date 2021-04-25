@@ -1,9 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <AssemblyName>AutoBem.Application</AssemblyName>
     <RootNamespace>AutoBem.Application</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AutoBem.Domain\3- AutoBem.Domain.csproj" />
+    <ProjectReference Include="..\BuildingBlocks\BuildingBlocks.Application\BuildingBlocks.Application.csproj" />
+    <ProjectReference Include="..\BuildingBlocks\BuildingBlocks.Ioc\BuildingBlocks.Ioc.csproj" />
+    <ProjectReference Include="..\BuildingBlocks\BuildingBlocks.Mediator\BuildingBlocks.Mediator.csproj" />
+  </ItemGroup>
 
 </Project>

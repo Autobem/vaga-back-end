@@ -6,4 +6,9 @@
     <RootNamespace>AutoBem.Domain</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BuildingBlocks\BuildingBlocks.Domain\BuildingBlocks.Domain.csproj" />
+    <ProjectReference Include="..\BuildingBlocks\BuildingBlocks.Ioc\BuildingBlocks.Ioc.csproj" />
+  </ItemGroup>
+
 </Project>

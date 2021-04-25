@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\AutoBem.Domain\3- AutoBem.Domain.csproj" />
     <ProjectReference Include="..\BuildingBlocks.Ioc\BuildingBlocks.Ioc.csproj" />
   </ItemGroup>
 

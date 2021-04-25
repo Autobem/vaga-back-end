@@ -17,7 +17,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.Ioc", "Build
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.Infraestructure", "BuildingBlocks\BuildingBlocks.Infraestructure\BuildingBlocks.Infraestructure.csproj", "{61CE4934-E251-44F7-B429-BE3CD4D62FA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.WebApi", "BuildingBlocks\BuildingBlocks.WebApi\BuildingBlocks.WebApi.csproj", "{E4DA6D60-C978-4115-A61D-79AC89057AF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.WebApi", "BuildingBlocks\BuildingBlocks.WebApi\BuildingBlocks.WebApi.csproj", "{E4DA6D60-C978-4115-A61D-79AC89057AF2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.Application", "BuildingBlocks\BuildingBlocks.Application\BuildingBlocks.Application.csproj", "{5BCD54F8-EED3-4D21-954F-5BB1E97B4FF0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.Domain", "BuildingBlocks\BuildingBlocks.Domain\BuildingBlocks.Domain.csproj", "{0B3FCA80-B93A-4F0F-BF98-B3BB843B12DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.Mediator", "BuildingBlocks\BuildingBlocks.Mediator\BuildingBlocks.Mediator.csproj", "{4EB6C493-A47E-4E3A-9C20-C869D08D005F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +59,18 @@ Global
 		{E4DA6D60-C978-4115-A61D-79AC89057AF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4DA6D60-C978-4115-A61D-79AC89057AF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4DA6D60-C978-4115-A61D-79AC89057AF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BCD54F8-EED3-4D21-954F-5BB1E97B4FF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BCD54F8-EED3-4D21-954F-5BB1E97B4FF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BCD54F8-EED3-4D21-954F-5BB1E97B4FF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BCD54F8-EED3-4D21-954F-5BB1E97B4FF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B3FCA80-B93A-4F0F-BF98-B3BB843B12DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B3FCA80-B93A-4F0F-BF98-B3BB843B12DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B3FCA80-B93A-4F0F-BF98-B3BB843B12DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B3FCA80-B93A-4F0F-BF98-B3BB843B12DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EB6C493-A47E-4E3A-9C20-C869D08D005F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EB6C493-A47E-4E3A-9C20-C869D08D005F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EB6C493-A47E-4E3A-9C20-C869D08D005F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EB6C493-A47E-4E3A-9C20-C869D08D005F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +79,9 @@ Global
 		{341E9342-0272-4D6D-8B68-4E17A7DB664E} = {5679E58E-E38C-4E69-A1E4-B62658A32FBB}
 		{61CE4934-E251-44F7-B429-BE3CD4D62FA2} = {5679E58E-E38C-4E69-A1E4-B62658A32FBB}
 		{E4DA6D60-C978-4115-A61D-79AC89057AF2} = {5679E58E-E38C-4E69-A1E4-B62658A32FBB}
+		{5BCD54F8-EED3-4D21-954F-5BB1E97B4FF0} = {5679E58E-E38C-4E69-A1E4-B62658A32FBB}
+		{0B3FCA80-B93A-4F0F-BF98-B3BB843B12DB} = {5679E58E-E38C-4E69-A1E4-B62658A32FBB}
+		{4EB6C493-A47E-4E3A-9C20-C869D08D005F} = {5679E58E-E38C-4E69-A1E4-B62658A32FBB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C92D5422-2847-44B7-B972-37A73980EECF}

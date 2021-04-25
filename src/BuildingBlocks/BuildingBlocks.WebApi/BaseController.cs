@@ -1,6 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using Microsoft.AspNetCore.Mvc;
 
 namespace BuildingBlocks.WebApi
 {

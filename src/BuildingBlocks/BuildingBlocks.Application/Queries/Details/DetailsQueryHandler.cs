@@ -16,7 +16,7 @@ namespace BuildingBlocks.Application.Queries.Details
         [Inject]
         public TRepository Repository { get; set; }
 
-        public Task<TDetailsResult> Handle(TDetailsQuery request, CancellationToken cancellationToken)
+        public virtual Task<TDetailsResult> Handle(TDetailsQuery request, CancellationToken cancellationToken)
         {
             var model = this.Repository.Get(request.Id, cancellationToken);
             var result = new TDetailsResult().FromModel(model);

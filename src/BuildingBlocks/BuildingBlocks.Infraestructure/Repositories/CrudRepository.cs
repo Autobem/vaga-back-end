@@ -70,7 +70,9 @@ namespace BuildingBlocks.Infraestructure.Repositories
 
         public IEnumerable<TModel> ListAll(CancellationToken cancellationToken)
         {
-            return this.DbSet.Select(e => this.Mapper.ToModel(e));
+            return this.DbSet
+                .AsNoTracking()
+                .Select(e => this.Mapper.ToModel(e));
         }
     }
 }

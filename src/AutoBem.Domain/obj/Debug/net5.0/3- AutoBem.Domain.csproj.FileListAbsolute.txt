@@ -2,12 +2,10 @@ D:\workspace\vaga-back-end\src\AutoBem.Domain\bin\Debug\net5.0\AutoBem.Domain.de
 D:\workspace\vaga-back-end\src\AutoBem.Domain\bin\Debug\net5.0\AutoBem.Domain.dll
 D:\workspace\vaga-back-end\src\AutoBem.Domain\bin\Debug\net5.0\ref\AutoBem.Domain.dll
 D:\workspace\vaga-back-end\src\AutoBem.Domain\bin\Debug\net5.0\AutoBem.Domain.pdb
-D:\workspace\vaga-back-end\src\AutoBem.Domain\bin\Debug\net5.0\BuildingBlocks.Application.dll
 D:\workspace\vaga-back-end\src\AutoBem.Domain\bin\Debug\net5.0\BuildingBlocks.Domain.dll
 D:\workspace\vaga-back-end\src\AutoBem.Domain\bin\Debug\net5.0\BuildingBlocks.Ioc.dll
 D:\workspace\vaga-back-end\src\AutoBem.Domain\bin\Debug\net5.0\BuildingBlocks.Domain.pdb
 D:\workspace\vaga-back-end\src\AutoBem.Domain\bin\Debug\net5.0\BuildingBlocks.Ioc.pdb
-D:\workspace\vaga-back-end\src\AutoBem.Domain\bin\Debug\net5.0\BuildingBlocks.Application.pdb
 D:\workspace\vaga-back-end\src\AutoBem.Domain\obj\Debug\net5.0\3- AutoBem.Domain.csprojAssemblyReference.cache
 D:\workspace\vaga-back-end\src\AutoBem.Domain\obj\Debug\net5.0\3- AutoBem.Domain.GeneratedMSBuildEditorConfig.editorconfig
 D:\workspace\vaga-back-end\src\AutoBem.Domain\obj\Debug\net5.0\3- AutoBem.Domain.AssemblyInfoInputs.cache

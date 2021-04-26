@@ -17,7 +17,7 @@ namespace BuildingBlocks.Application.Commands.Create
         [Inject]
         public TRepository Repository { get; set; }
 
-        public Task<TCreateResult> Handle(TCreateCommand request, CancellationToken cancellationToken)
+        public virtual Task<TCreateResult> Handle(TCreateCommand request, CancellationToken cancellationToken)
         {
             var model = request.ToModel();
             var result = this.Repository.Insert(model, cancellationToken);

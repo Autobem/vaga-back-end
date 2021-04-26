@@ -10,7 +10,6 @@
     <ProjectReference Include="..\AutoBem.Domain\3- AutoBem.Domain.csproj" />
     <ProjectReference Include="..\BuildingBlocks\BuildingBlocks.Application\BuildingBlocks.Application.csproj" />
     <ProjectReference Include="..\BuildingBlocks\BuildingBlocks.Ioc\BuildingBlocks.Ioc.csproj" />
-    <ProjectReference Include="..\BuildingBlocks\BuildingBlocks.Mediator\BuildingBlocks.Mediator.csproj" />
   </ItemGroup>
 
 </Project>

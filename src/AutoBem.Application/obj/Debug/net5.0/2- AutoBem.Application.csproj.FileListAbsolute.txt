@@ -1,3 +1,8 @@
+D:\workspace\vaga-back-end\src\AutoBem.Application\obj\Debug\net5.0\2- AutoBem.Application.csprojAssemblyReference.cache
+D:\workspace\vaga-back-end\src\AutoBem.Application\obj\Debug\net5.0\2- AutoBem.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\workspace\vaga-back-end\src\AutoBem.Application\obj\Debug\net5.0\2- AutoBem.Application.AssemblyInfoInputs.cache
+D:\workspace\vaga-back-end\src\AutoBem.Application\obj\Debug\net5.0\2- AutoBem.Application.AssemblyInfo.cs
+D:\workspace\vaga-back-end\src\AutoBem.Application\obj\Debug\net5.0\2- AutoBem.Application.csproj.CoreCompileInputs.cache
 D:\workspace\vaga-back-end\src\AutoBem.Application\bin\Debug\net5.0\AutoBem.Application.deps.json
 D:\workspace\vaga-back-end\src\AutoBem.Application\bin\Debug\net5.0\AutoBem.Application.dll
 D:\workspace\vaga-back-end\src\AutoBem.Application\bin\Debug\net5.0\ref\AutoBem.Application.dll
@@ -10,13 +15,8 @@ D:\workspace\vaga-back-end\src\AutoBem.Application\bin\Debug\net5.0\BuildingBloc
 D:\workspace\vaga-back-end\src\AutoBem.Application\bin\Debug\net5.0\AutoBem.Domain.pdb
 D:\workspace\vaga-back-end\src\AutoBem.Application\bin\Debug\net5.0\BuildingBlocks.Application.pdb
 D:\workspace\vaga-back-end\src\AutoBem.Application\bin\Debug\net5.0\BuildingBlocks.Ioc.pdb
-D:\workspace\vaga-back-end\src\AutoBem.Application\bin\Debug\net5.0\BuildingBlocks.Mediator.pdb
 D:\workspace\vaga-back-end\src\AutoBem.Application\bin\Debug\net5.0\BuildingBlocks.Domain.pdb
-D:\workspace\vaga-back-end\src\AutoBem.Application\obj\Debug\net5.0\2- AutoBem.Application.csprojAssemblyReference.cache
-D:\workspace\vaga-back-end\src\AutoBem.Application\obj\Debug\net5.0\2- AutoBem.Application.GeneratedMSBuildEditorConfig.editorconfig
-D:\workspace\vaga-back-end\src\AutoBem.Application\obj\Debug\net5.0\2- AutoBem.Application.AssemblyInfoInputs.cache
-D:\workspace\vaga-back-end\src\AutoBem.Application\obj\Debug\net5.0\2- AutoBem.Application.AssemblyInfo.cs
-D:\workspace\vaga-back-end\src\AutoBem.Application\obj\Debug\net5.0\2- AutoBem.Application.csproj.CoreCompileInputs.cache
+D:\workspace\vaga-back-end\src\AutoBem.Application\bin\Debug\net5.0\BuildingBlocks.Mediator.pdb
 D:\workspace\vaga-back-end\src\AutoBem.Application\obj\Debug\net5.0\2- AutoBem.Application.csproj.CopyComplete
 D:\workspace\vaga-back-end\src\AutoBem.Application\obj\Debug\net5.0\AutoBem.Application.dll
 D:\workspace\vaga-back-end\src\AutoBem.Application\obj\Debug\net5.0\ref\AutoBem.Application.dll

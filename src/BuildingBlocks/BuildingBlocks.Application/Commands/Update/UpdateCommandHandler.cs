@@ -16,7 +16,7 @@ namespace BuildingBlocks.Application.Commands.Update
         public TRepository Repository { get; set; }
 
 
-        public Task<MediatR.Unit> Handle(TUpdateCommand request, CancellationToken cancellationToken)
+        public virtual Task<MediatR.Unit> Handle(TUpdateCommand request, CancellationToken cancellationToken)
         {
             var model = request.ToModel();
             this.Repository.Update(model, cancellationToken);

@@ -1,15 +1,16 @@
-﻿using BuildingBlocks.Infraestructure;
-using BuildingBlocks.Ioc.Attributes;
+﻿using AutoBem.Infrastructure.Clients.Entities;
+using BuildingBlocks.Infraestructure;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics.CodeAnalysis;
 
 namespace AutoBem.Infrastructure
 {
-    [Injectable]
     public class CoreDbContext : DbContext, IDbContext
     {
-        public CoreDbContext([NotNullAttribute] DbContextOptions options) : base(options)
+        public CoreDbContext([NotNull] DbContextOptions options) : base(options)
         {
         }
+
+        public DbSet<ClientEntity> Clients { get; set; }
     }
 }

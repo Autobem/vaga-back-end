@@ -2,9 +2,7 @@
 using BuildingBlocks.Domain;
 using BuildingBlocks.Domain.Models;
 using BuildingBlocks.Ioc.Attributes;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -19,10 +17,15 @@ namespace BuildingBlocks.Application.Queries.List
         [Inject]
         public TRepository Repository { get; set; }
 
-        public Task<IEnumerable<TDetailsResult>> Handle(TListQuery request, CancellationToken cancellationToken)
+        public virtual Task<IEnumerable<TDetailsResult>> Handle(TListQuery request, CancellationToken cancellationToken)
         {
-            var model = this.Repository.ListAll(cancellationToken);
-            var result = model.Select(e => new TDetailsResult().FromModel(e));
+            var allModel = this.Repository.ListAll(cancellationToken);
+            var result = new List<TDetailsResult>();
+
+            foreach (var model in allModel)
+            {
+                result.Add(new TDetailsResult().FromModel(model) as TDetailsResult);
+            }
 
             return Task.FromResult(result as IEnumerable<TDetailsResult>);
         }

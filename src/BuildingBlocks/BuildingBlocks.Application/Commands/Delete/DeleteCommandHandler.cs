@@ -15,7 +15,7 @@ namespace BuildingBlocks.Application.Commands.Delete
         [Inject]
         public TRepository Repository { get; set; }
 
-        public Task<MediatR.Unit> Handle(TDeleteCommand request, CancellationToken cancellationToken)
+        public virtual Task<MediatR.Unit> Handle(TDeleteCommand request, CancellationToken cancellationToken)
         {
             this.Repository.Delete(request.Id, cancellationToken);
 

@@ -1,3 +1,9 @@
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\1- AutoBem.WebApi.csprojAssemblyReference.cache
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\1- AutoBem.WebApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\1- AutoBem.WebApi.AssemblyInfoInputs.cache
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\1- AutoBem.WebApi.AssemblyInfo.cs
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\1- AutoBem.WebApi.csproj.CoreCompileInputs.cache
+D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\AutoBem.WebApi.MvcApplicationPartsAssemblyInfo.cache
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\appsettings.Development.json
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\appsettings.json
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\AutoBem.WebApi.exe
@@ -69,13 +75,6 @@ D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\BuildingBlocks.Ap
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\BuildingBlocks.Domain.pdb
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\BuildingBlocks.Infraestructure.pdb
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\bin\Debug\net5.0\BuildingBlocks.Mediator.pdb
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\1- AutoBem.WebApi.csprojAssemblyReference.cache
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\1- AutoBem.WebApi.GeneratedMSBuildEditorConfig.editorconfig
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\1- AutoBem.WebApi.AssemblyInfoInputs.cache
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\1- AutoBem.WebApi.AssemblyInfo.cs
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\1- AutoBem.WebApi.csproj.CoreCompileInputs.cache
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\AutoBem.WebApi.MvcApplicationPartsAssemblyInfo.cs
-D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\AutoBem.WebApi.MvcApplicationPartsAssemblyInfo.cache
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\staticwebassets\AutoBem.WebApi.StaticWebAssets.Manifest.cache
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\staticwebassets\AutoBem.WebApi.StaticWebAssets.xml
 D:\workspace\vaga-back-end\src\AutoBem.WebApi\obj\Debug\net5.0\scopedcss\bundle\AutoBem.WebApi.styles.css

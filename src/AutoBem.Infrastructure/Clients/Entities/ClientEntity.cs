@@ -1,9 +1,11 @@
 ﻿using BuildingBlocks.Infraestructure.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace AutoBem.Infrastructure.Clients.Entities
 {
+    [Index(nameof(CPF), Name = "Index_CPF")]
     public class ClientEntity : CommonEntity
     {
         [StringLength(255)]

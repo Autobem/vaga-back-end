@@ -4,6 +4,8 @@ using AutoBem.Application.Vehicles.Queries.Details;
 using AutoBem.Infrastructure.Vehicles.Entities;
 using AutoBem.Tests.Vehicle;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Xunit;
@@ -37,6 +39,39 @@ namespace AutoBem.Tests
             Assert.Equal(result.Content.Data.Color, VehicleSeed.Vehicle01.Color);
             Assert.Equal(result.Content.Data.LicensePlate, VehicleSeed.Vehicle01.LicensePlate);
             Assert.Equal(result.Content.Data.OwnerId, VehicleSeed.Vehicle01.OwnerId);
+        }
+
+        [Fact]
+        public async Task ListAllVehicle_SuccessAsync()
+        {
+            this.BeforeEachTest();
+            var seed = new VehicleSeed().GetSeed()
+                .Where(e => e is VehicleEntity)
+                .ToList();
+
+            var result = await this.Factory
+                .GetAsync<List<DetailsVehicleResult>>($"/api/Vehicles/list")
+                .ConfigureAwait(false);
+
+            Assert.Equal(result.Content.Data.Count, seed.Count);
+
+            var vehicle01 = result.Content.Data
+                .Where(e => e.Id == VehicleSeed.Vehicle01.Id)
+                .FirstOrDefault();
+
+            Assert.Equal(vehicle01.Color, VehicleSeed.Vehicle01.Color);
+            Assert.Equal(vehicle01.LicensePlate, VehicleSeed.Vehicle01.LicensePlate);
+            Assert.Equal(vehicle01.OwnerId, VehicleSeed.Vehicle01.OwnerId);
+            Assert.Equal(vehicle01.OwnerName, VehicleSeed.Vehicle01.Owner.Name);
+
+            var Vehicle02 = result.Content.Data
+                .Where(e => e.Id == VehicleSeed.Vehicle02.Id)
+                .FirstOrDefault();
+
+            Assert.Equal(Vehicle02.Color, VehicleSeed.Vehicle02.Color);
+            Assert.Equal(Vehicle02.LicensePlate, VehicleSeed.Vehicle02.LicensePlate);
+            Assert.Equal(Vehicle02.OwnerId, VehicleSeed.Vehicle02.OwnerId);
+            Assert.Equal(Vehicle02.OwnerName, VehicleSeed.Vehicle02.Owner.Name);
         }
 
         [Fact]

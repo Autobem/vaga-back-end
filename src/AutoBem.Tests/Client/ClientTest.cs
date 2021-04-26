@@ -4,6 +4,8 @@ using AutoBem.Application.Clients.Queries.Details;
 using AutoBem.Infrastructure.Clients.Entities;
 using AutoBem.Tests.Client;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Xunit;
@@ -37,6 +39,37 @@ namespace AutoBem.Tests
             Assert.Equal(result.Content.Data.CPF, ClientSeed.Everton.CPF);
             Assert.Equal(result.Content.Data.Name, ClientSeed.Everton.Name);
             Assert.Equal(result.Content.Data.Birthday, ClientSeed.Everton.Birthday);
+        }
+
+        [Fact]
+        public async Task ListAllClient_SuccessAsync()
+        {
+            this.BeforeEachTest();
+            var seed = new ClientSeed().GetSeed()
+                .Where(e => e is ClientEntity)
+                .ToList();
+
+            var result = await this.Factory
+                .GetAsync<List<DetailsClientResult>>($"/api/clients/list")
+                .ConfigureAwait(false);
+
+            Assert.Equal(result.Content.Data.Count, seed.Count);
+
+            var everton = result.Content.Data
+                .Where(e => e.Id == ClientSeed.Everton.Id)
+                .FirstOrDefault();
+
+            Assert.Equal(everton.CPF, ClientSeed.Everton.CPF);
+            Assert.Equal(everton.Name, ClientSeed.Everton.Name);
+            Assert.Equal(everton.Birthday, ClientSeed.Everton.Birthday);
+
+            var jean = result.Content.Data
+                .Where(e => e.Id == ClientSeed.Jean.Id)
+                .FirstOrDefault();
+
+            Assert.Equal(jean.CPF, ClientSeed.Jean.CPF);
+            Assert.Equal(jean.Name, ClientSeed.Jean.Name);
+            Assert.Equal(jean.Birthday, ClientSeed.Jean.Birthday);
         }
 
         [Fact]

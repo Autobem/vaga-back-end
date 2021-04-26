@@ -1,8 +1,8 @@
-using AutoBem.Application.Clients.Commands.Create;
-using AutoBem.Application.Clients.Commands.Delete;
-using AutoBem.Application.Clients.Commands.Update;
-using AutoBem.Application.Clients.Queries.Details;
-using AutoBem.Application.Clients.Queries.ListAll;
+﻿using AutoBem.Application.Vehicles.Commands.Create;
+using AutoBem.Application.Vehicles.Commands.Delete;
+using AutoBem.Application.Vehicles.Commands.Update;
+using AutoBem.Application.Vehicles.Queries.Details;
+using AutoBem.Application.Vehicles.Queries.ListAll;
 using BuildingBlocks.Mediator.Requests;
 using BuildingBlocks.WebApi;
 using BuildingBlocks.WebApi.Responses;
@@ -14,29 +14,29 @@ using System.Threading.Tasks;
 namespace AutoBem.WebApi.Controllers
 {
     [ApiController]
-    [Route("api/clients")]
-    public class ClientController : BaseController
+    [Route("api/vehicles")]
+    public class VehicleController : BaseController
     {
         public IMediator Mediator { get; set; }
 
-        public ClientController(IMediator mediator)
+        public VehicleController(IMediator mediator)
         {
             this.Mediator = mediator;
         }
 
         [HttpGet("{id}")]
-        [ProducesResponseType(typeof(IRequestResponse<DetailsClientResult>), 200)]
+        [ProducesResponseType(typeof(IRequestResponse<DetailsVehicleResult>), 200)]
         [ProducesResponseType(typeof(ExceptionResponse), 500)]
         public async Task<IActionResult> GetAsync(Guid id)
         {
-            var result = await this.Mediator.Send(new DetailsClientQuery(id));
+            var result = await this.Mediator.Send(new DetailsVehicleQuery(id));
             return this.ResponseModel(result);
         }
 
         [HttpPost()]
-        [ProducesResponseType(typeof(IRequestResponse<CreateClientResult>), 200)]
+        [ProducesResponseType(typeof(IRequestResponse<CreateVehicleResult>), 200)]
         [ProducesResponseType(typeof(ExceptionResponse), 500)]
-        public async Task<IActionResult> PostAsync(CreateClientCommand command)
+        public async Task<IActionResult> PostAsync(CreateVehicleCommand command)
         {
             var result = await this.Mediator.Send(command);
             return this.ResponseModel(result);
@@ -45,7 +45,7 @@ namespace AutoBem.WebApi.Controllers
         [HttpPut("{id}")]
         [ProducesResponseType(typeof(IRequestResponse), 200)]
         [ProducesResponseType(typeof(ExceptionResponse), 500)]
-        public async Task<IActionResult> PutAsync(Guid id, UpdateClientCommand command)
+        public async Task<IActionResult> PutAsync(Guid id, UpdateVehicleCommand command)
         {
             command.Id = id;
             var result = await this.Mediator.Send(command);
@@ -55,14 +55,14 @@ namespace AutoBem.WebApi.Controllers
         [HttpDelete("{Id}")]
         [ProducesResponseType(typeof(IRequestResponse), 200)]
         [ProducesResponseType(typeof(ExceptionResponse), 500)]
-        public async Task<IActionResult> DeleteAsync([FromRoute] DeleteClientCommand command)
+        public async Task<IActionResult> DeleteAsync([FromRoute] DeleteVehicleCommand command)
         {
             var result = await this.Mediator.Send(command);
             return this.ResponseModel(result);
         }
 
         [HttpGet("list")]
-        [ProducesResponseType(typeof(IRequestResponse<IEnumerable<ListClientResult>>), 200)]
+        [ProducesResponseType(typeof(IRequestResponse<IEnumerable<ListVehicleResult>>), 200)]
         [ProducesResponseType(typeof(ExceptionResponse), 500)]
         public async Task<IActionResult> ListAllAsync()
         {

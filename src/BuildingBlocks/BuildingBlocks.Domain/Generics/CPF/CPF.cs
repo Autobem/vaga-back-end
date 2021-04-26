@@ -14,7 +14,7 @@
             {
                 return result;
             }
-            throw new InvalidCPFException();
+            throw new InvalidCPFException(value);
         }
 
         public static bool TryParse(string value, out CPF cpf)

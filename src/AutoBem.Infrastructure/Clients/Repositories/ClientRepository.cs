@@ -4,6 +4,7 @@ using AutoBem.Infrastructure.Clients.Entities;
 using BuildingBlocks.Domain.Generics.CPF;
 using BuildingBlocks.Infraestructure.Repositories;
 using BuildingBlocks.Ioc.Attributes;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 namespace AutoBem.Infrastructure.Clients.Repositories
@@ -15,6 +16,7 @@ namespace AutoBem.Infrastructure.Clients.Repositories
         {
             return this.DbSet
                 .Where(e => e.CPF == cpf.Value)
+                .AsNoTracking()
                 .Any();
         }
     }

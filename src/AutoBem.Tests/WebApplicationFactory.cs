@@ -19,8 +19,8 @@ namespace AutoBem.Tests
             });
         }
 
-        public void InitializeTestDatabase<TSeedService, T>()
-            where TSeedService : ISeed<T>, new()
+        public void InitializeTestDatabase<TSeedService>()
+            where TSeedService : ISeed, new()
 
         {
             var context = this.Services.GetService(typeof(IDbContext)) as DbContext;

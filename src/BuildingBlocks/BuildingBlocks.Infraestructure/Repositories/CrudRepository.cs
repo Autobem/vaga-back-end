@@ -25,7 +25,7 @@ namespace BuildingBlocks.Infraestructure.Repositories
         public DbSet<TEntity> DbSet => this.Context.Set<TEntity>();
 
 
-        public TModel Get(Guid id, CancellationToken token = default)
+        public virtual TModel Get(Guid id, CancellationToken token = default)
         {
             var entity = this.DbSet
                 .Where(e => e.Id == id)
@@ -51,7 +51,7 @@ namespace BuildingBlocks.Infraestructure.Repositories
             return this.Mapper.ToModel(entity);
         }
 
-        public void Update(TModel model, CancellationToken token = default)
+        public virtual void Update(TModel model, CancellationToken token = default)
         {
             var entity = this.Mapper.ToEntity(model);
             this.DbSet.Update(entity);
@@ -60,7 +60,7 @@ namespace BuildingBlocks.Infraestructure.Repositories
             this.Context.SaveChanges();
         }
 
-        public void Delete(Guid id, CancellationToken token = default)
+        public virtual void Delete(Guid id, CancellationToken token = default)
         {
             var entity = this.DbSet
                 .Where(e => e.Id == id)
@@ -73,17 +73,18 @@ namespace BuildingBlocks.Infraestructure.Repositories
         }
 
 
-        public IEnumerable<TModel> ListAll(CancellationToken cancellationToken)
+        public virtual IEnumerable<TModel> ListAll(CancellationToken cancellationToken)
         {
             return this.DbSet
                 .AsNoTracking()
                 .Select(e => this.Mapper.ToModel(e));
         }
 
-        public bool ExistById(Guid id)
+        public virtual bool ExistById(Guid id)
         {
             return this.DbSet
                 .Where(e => e.Id == id)
+                .AsNoTracking()
                 .Any();
         }
     }

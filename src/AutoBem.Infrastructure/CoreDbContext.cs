@@ -1,4 +1,5 @@
 ﻿using AutoBem.Infrastructure.Clients.Entities;
+using AutoBem.Infrastructure.Vehicles.Entities;
 using BuildingBlocks.Infraestructure;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics.CodeAnalysis;
@@ -12,5 +13,7 @@ namespace AutoBem.Infrastructure
         }
 
         public DbSet<ClientEntity> Clients { get; set; }
+
+        public DbSet<VehicleEntity> Vehicles { get; set; }
     }
 }

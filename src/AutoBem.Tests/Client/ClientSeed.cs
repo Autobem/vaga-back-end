@@ -1,10 +1,11 @@
 ﻿using AutoBem.Infrastructure.Clients.Entities;
+using AutoBem.Infrastructure.Vehicles.Entities;
 using BuildingBlocks.Test;
 using System;
 
 namespace AutoBem.Tests.Client
 {
-    public class ClientSeed : ISeed<ClientEntity>
+    public class ClientSeed : ISeed
     {
 
         public static ClientEntity Everton { get; } = new ClientEntity()
@@ -22,13 +23,22 @@ namespace AutoBem.Tests.Client
             CPF = "42383559032",
             Birthday = DateTimeOffset.Parse("11/05/2001")
         };
-
-        public ClientEntity[] GetSeed()
+        
+        public static VehicleEntity Vehicle { get; } = new VehicleEntity()
         {
-            return new ClientEntity[]
+            Id = Guid.Parse("f7c9044f-de79-48c3-85dd-f81a722d45b0"),
+            Color = "Blue",
+            LicensePlate = "ASD-7653",
+            OwnerId = Guid.Parse("f7c9044f-de79-48c3-85dd-f81a722d45b0"),
+        };
+
+        public object[] GetSeed()
+        {
+            return new object[]
             {
                 ClientSeed.Everton,
-                ClientSeed.Jean
+                ClientSeed.Jean,
+                ClientSeed.Vehicle
             };
         }
     }

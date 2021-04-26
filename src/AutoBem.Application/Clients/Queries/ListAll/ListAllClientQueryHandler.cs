@@ -6,7 +6,7 @@ using BuildingBlocks.Ioc.Attributes;
 namespace AutoBem.Application.Clients.Queries.ListAll
 {
     [Injectable]
-    public class ListAllClientQueryHandler : ListAllQueryHandler<Client, ListAllClientQuery, ListClientResult, IClientRepository>
+    public class ListAllClientQueryHandler : ListAllQueryHandler<Client, ListAllVehicleQuery, ListClientResult, IClientRepository>
     {
     }
 }

@@ -22,7 +22,7 @@ namespace AutoBem.Tests
 
         public void BeforeEachTest()
         {
-            this.Factory.InitializeTestDatabase<ClientSeed, ClientEntity>();
+            this.Factory.InitializeTestDatabase<ClientSeed>();
         }
 
         [Fact]

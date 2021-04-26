@@ -1,7 +1,7 @@
 ﻿namespace BuildingBlocks.Test
 {
-    public interface ISeed<TModel>
+    public interface ISeed
     {
-        public TModel[] GetSeed();
+        public object[] GetSeed();
     }
 }

@@ -3,7 +3,7 @@ using BuildingBlocks.Application.Queries.List;
 
 namespace AutoBem.Application.Clients.Queries.ListAll
 {
-    public class ListAllClientQuery : ListAllQuery<Client, ListClientResult>
+    public class ListAllVehicleQuery : ListAllQuery<Client, ListClientResult>
     {
     }
 }

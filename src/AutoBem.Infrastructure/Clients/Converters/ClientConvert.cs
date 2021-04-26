@@ -23,6 +23,11 @@ namespace AutoBem.Infrastructure.Clients.Converters
 
         public Client ToModel(ClientEntity entity)
         {
+            if (entity is null)
+            {
+                return null;
+            }
+
             return new Client()
             {
                 Id = entity.Id,

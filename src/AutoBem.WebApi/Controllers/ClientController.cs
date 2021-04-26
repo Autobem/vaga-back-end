@@ -52,12 +52,12 @@ namespace AutoBem.WebApi.Controllers
             return this.ResponseModel(result);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{Id}")]
         [ProducesResponseType(typeof(IRequestResponse), 200)]
         [ProducesResponseType(typeof(ExceptionResponse), 500)]
-        public async Task<IActionResult> DeleteAsync(Guid id)
+        public async Task<IActionResult> DeleteAsync([FromRoute] DeleteClientCommand command)
         {
-            var result = await this.Mediator.Send(new DeleteClientCommand(id));
+            var result = await this.Mediator.Send(command);
             return this.ResponseModel(result);
         }
 

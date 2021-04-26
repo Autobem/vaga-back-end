@@ -1,5 +1,7 @@
 using AutoBem.Infrastructure.Extensions;
 using Autofac;
+using BuildingBlocks.Application.Extensions;
+using BuildingBlocks.Domain.Extensions;
 using BuildingBlocks.Ioc;
 using BuildingBlocks.Mediator.Extensions;
 using Microsoft.AspNetCore.Builder;
@@ -23,6 +25,10 @@ namespace AutoBem.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc()
+                .AddJsonOptions(e => e.JsonSerializerOptions.Converters.AddCustoms())
+                .AddFluentValidation();
+
             services.AddDbContext(Configuration.GetConnectionString("DefaultConnection"));
             services.AddControllers();
             services.AddMediator<Startup>();
@@ -30,6 +36,7 @@ namespace AutoBem.WebApi
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AutoBem.WebApi", Version = "v1" });
             });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -5,6 +5,8 @@ namespace BuildingBlocks.WebApi
     public interface IRequestResponse
     {
         public HttpStatusCode Status { get; set; }
+
+        public object Errors { get; set; }
     }
 
     public interface IRequestResponse<TData>
@@ -17,5 +19,13 @@ namespace BuildingBlocks.WebApi
         public HttpStatusCode Status { get; set; }
 
         public TData Data { get; set; }
+
+        public object Errors { get; set; }
+    }
+    public class RequestResponse : IRequestResponse
+    {
+        public HttpStatusCode Status { get; set; }
+
+        public object Errors { get; set; }
     }
 }

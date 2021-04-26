@@ -1,4 +1,4 @@
-﻿using BuildingBlocks.Domain.Generics;
+﻿using BuildingBlocks.Domain.Generics.CPF;
 using BuildingBlocks.Domain.Models;
 using System;
 

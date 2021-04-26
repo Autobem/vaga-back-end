@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace BuildingBlocks.Test
+﻿namespace BuildingBlocks.Test
 {
     public interface ISeed<TModel>
     {

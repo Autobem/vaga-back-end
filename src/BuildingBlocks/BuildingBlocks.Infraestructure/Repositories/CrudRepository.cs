@@ -79,5 +79,12 @@ namespace BuildingBlocks.Infraestructure.Repositories
                 .AsNoTracking()
                 .Select(e => this.Mapper.ToModel(e));
         }
+
+        public bool ExistById(Guid id)
+        {
+            return this.DbSet
+                .Where(e => e.Id == id)
+                .Any();
+        }
     }
 }

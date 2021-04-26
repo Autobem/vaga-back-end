@@ -1,5 +1,6 @@
 ﻿using AutoBem.Domain.Clients.Models;
 using BuildingBlocks.Application.Commands.Update;
+using BuildingBlocks.Domain.Generics.CPF;
 using System;
 
 namespace AutoBem.Application.Clients.Commands.Update
@@ -8,7 +9,7 @@ namespace AutoBem.Application.Clients.Commands.Update
     {
         public string Name { get; set; }
 
-        public string CPF { get; set; }
+        public CPF CPF { get; set; }
 
         public DateTimeOffset Birthday { get; set; }
 

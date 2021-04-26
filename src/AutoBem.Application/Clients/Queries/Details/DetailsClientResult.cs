@@ -16,6 +16,11 @@ namespace AutoBem.Application.Clients.Queries.Details
 
         public override DetailsResult<Client> FromModel(Client client)
         {
+            if (client is null)
+            {
+                return null;
+            }
+
             this.Id = client.Id.Value;
             this.Name = client.Name;
             this.CPF = client.CPF.Value;

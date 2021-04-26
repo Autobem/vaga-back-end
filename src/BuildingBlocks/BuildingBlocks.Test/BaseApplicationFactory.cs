@@ -1,9 +1,11 @@
+using BuildingBlocks.Domain.Generics.CPF;
 using BuildingBlocks.Test.Request;
 using BuildingBlocks.WebApi;
 using Microsoft.AspNetCore.Mvc.Testing;
-using Newtonsoft.Json;
+using System.Net;
 using System.Net.Http;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace BuildingBlocks.Test
@@ -13,9 +15,14 @@ namespace BuildingBlocks.Test
         public BaseApplicationFactory()
         {
             this.Client = this.CreateClient();
+
+            this.JsonOptions = new JsonSerializerOptions();
+            this.JsonOptions.Converters.Add(new CPFConverter());
+            this.JsonOptions.PropertyNameCaseInsensitive = true;
         }
 
         public HttpClient Client { get; set; }
+        public JsonSerializerOptions JsonOptions { get; set; }
 
         protected override void ConfigureClient(HttpClient client)
         {
@@ -40,8 +47,8 @@ namespace BuildingBlocks.Test
             var httpContent = this.CreatePayload(Payload);
             var response = await this.Client.PutAsync(requestUri, httpContent);
             return await this.DeserializeRequestAsync<object>(response);
-        } 
-        
+        }
+
         public async Task<ResponseMessage<object>> DeleteAsync(string? requestUri)
         {
             var response = await this.Client.DeleteAsync(requestUri);
@@ -50,7 +57,7 @@ namespace BuildingBlocks.Test
 
         private StringContent CreatePayload(object Payload)
         {
-            string json = JsonConvert.SerializeObject(Payload);
+            string json = JsonSerializer.Serialize(Payload, this.JsonOptions);
             var httpContent = new StringContent(json, Encoding.UTF8, "application/json");
 
             return httpContent;
@@ -59,7 +66,12 @@ namespace BuildingBlocks.Test
         private async Task<ResponseMessage<TContent>> DeserializeRequestAsync<TContent>(HttpResponseMessage response)
         {
             var jsonString = await response.Content.ReadAsStringAsync();
-            var model = JsonConvert.DeserializeObject<RequestResponse<TContent>>(jsonString);
+            RequestResponse<TContent> model = default;
+
+            if (response.StatusCode == HttpStatusCode.OK || response.StatusCode == HttpStatusCode.BadRequest)
+            {
+                model = JsonSerializer.Deserialize<RequestResponse<TContent>>(jsonString, this.JsonOptions);
+            }
 
             return new ResponseMessage<TContent>()
             {

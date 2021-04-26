@@ -11,5 +11,12 @@ namespace AutoBem.Infrastructure.Extensions
             return services.AddDbContext<IDbContext, CoreDbContext>(options =>
                  options.UseSqlServer(connectionString, b => b.MigrationsAssembly("AutoBem.WebApi")));
         }
+
+
+        public static IServiceCollection AddDbContextMemory(this IServiceCollection services)
+        {
+            return services.AddDbContext<IDbContext, CoreDbContext>(options =>
+            options.UseInMemoryDatabase("TestDB"));
+        }
     }
 }

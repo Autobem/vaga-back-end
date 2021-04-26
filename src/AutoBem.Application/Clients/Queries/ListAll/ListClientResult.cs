@@ -1,5 +1,6 @@
 ﻿using AutoBem.Domain.Clients.Models;
 using BuildingBlocks.Application.Queries.List;
+using BuildingBlocks.Domain.Generics.CPF;
 using System;
 
 namespace AutoBem.Application.Clients.Queries.ListAll
@@ -10,7 +11,7 @@ namespace AutoBem.Application.Clients.Queries.ListAll
 
         public String Name { get; set; }
 
-        public String CPF { get; set; }
+        public CPF CPF { get; set; }
 
         public DateTimeOffset Birthday { get; set; }
 

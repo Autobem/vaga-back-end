@@ -7,6 +7,8 @@ namespace BuildingBlocks.Domain
 {
     public interface ICrudRepository<TModel> where TModel : IModel, new()
     {
+        bool ExistById(Guid id);
+
         TModel Get(Guid id, CancellationToken token = default);
 
         TModel Insert(TModel model, CancellationToken token = default);

@@ -32,6 +32,11 @@ namespace BuildingBlocks.Infraestructure.Repositories
                 .AsNoTracking()
                 .FirstOrDefault();
 
+            if (entity is null)
+            {
+                return null;
+            }
+
             return this.Mapper.ToModel(entity);
         }
 

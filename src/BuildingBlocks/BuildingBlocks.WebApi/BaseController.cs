@@ -19,10 +19,10 @@ namespace BuildingBlocks.WebApi
                 return this.StatusCode((int)HttpStatusCode.NoContent);
             }
 
-            return this.StatusCode((int)status, new
+            return this.StatusCode((int)status, new RequestResponse<object>()
             {
-                status = status,
-                data = response
+                Status = status,
+                Data = response
             });
         }
 
@@ -39,10 +39,10 @@ namespace BuildingBlocks.WebApi
                 return this.StatusCode((int)HttpStatusCode.NoContent);
             }
 
-            return this.StatusCode((int)HttpStatusCode.InternalServerError, new
+            return this.StatusCode((int)HttpStatusCode.InternalServerError, new RequestResponse<object>()
             {
-                status = HttpStatusCode.InternalServerError,
-                data = response
+                Status = HttpStatusCode.InternalServerError,
+                Data = response
             });
         }
     }

@@ -4,4 +4,9 @@
         where TRequest : IRequest<TResponse>
     {
     }
+
+    public interface IRequestHandler<in TRequest> : MediatR.IRequestHandler<TRequest>
+        where TRequest : IRequest
+    {
+    }
 }

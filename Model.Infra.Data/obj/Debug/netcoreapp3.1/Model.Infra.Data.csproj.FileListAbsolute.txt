@@ -1,0 +1,15 @@
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Infra.Data\obj\Debug\netcoreapp3.1\Model.Infra.Data.csprojAssemblyReference.cache
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Infra.Data\obj\Debug\netcoreapp3.1\Model.Infra.Data.AssemblyInfoInputs.cache
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Infra.Data\obj\Debug\netcoreapp3.1\Model.Infra.Data.AssemblyInfo.cs
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Infra.Data\obj\Debug\netcoreapp3.1\Model.Infra.Data.csproj.CoreCompileInputs.cache
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Infra.Data\bin\Debug\netcoreapp3.1\Model.Domain.dll
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Infra.Data\bin\Debug\netcoreapp3.1\Model.Infra.Data.deps.json
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Infra.Data\bin\Debug\netcoreapp3.1\Model.Infra.Data.runtimeconfig.json
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Infra.Data\bin\Debug\netcoreapp3.1\Model.Infra.Data.runtimeconfig.dev.json
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Infra.Data\bin\Debug\netcoreapp3.1\Model.Infra.Data.dll
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Infra.Data\bin\Debug\netcoreapp3.1\Model.Infra.Data.pdb
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Infra.Data\bin\Debug\netcoreapp3.1\Model.Domain.pdb
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Infra.Data\obj\Debug\netcoreapp3.1\Model.Infra.Data.csproj.CopyComplete
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Infra.Data\obj\Debug\netcoreapp3.1\Model.Infra.Data.dll
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Infra.Data\obj\Debug\netcoreapp3.1\Model.Infra.Data.pdb
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Infra.Data\obj\Debug\netcoreapp3.1\Model.Infra.Data.genruntimeconfig.cache

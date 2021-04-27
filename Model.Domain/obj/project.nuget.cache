@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "MueWRxDOCmFgM0WqWLQ27Zs0HwOZBmPHyzyO2ctzi16qtg03iw368+wI2Rt6wa3VgWAbTDJmnmaEPpAsE6b18g==",
+  "success": true,
+  "projectFilePath": "D:\\ArquivosPessoais\\Autobem\\quickstart\\src\\Model.Domain\\Model.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alana\\.nuget\\packages\\fluentvalidation\\10.0.4\\fluentvalidation.10.0.4.nupkg.sha512",
+    "C:\\Users\\Alana\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.0.4\\fluentvalidation.aspnetcore.10.0.4.nupkg.sha512",
+    "C:\\Users\\Alana\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.0.4\\fluentvalidation.dependencyinjectionextensions.10.0.4.nupkg.sha512",
+    "C:\\Users\\Alana\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

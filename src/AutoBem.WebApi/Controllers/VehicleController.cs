@@ -6,6 +6,7 @@ using AutoBem.Application.Vehicles.Queries.ListAll;
 using BuildingBlocks.Mediator.Requests;
 using BuildingBlocks.WebApi;
 using BuildingBlocks.WebApi.Responses;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ using System.Threading.Tasks;
 
 namespace AutoBem.WebApi.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/vehicles")]
     public class VehicleController : BaseController

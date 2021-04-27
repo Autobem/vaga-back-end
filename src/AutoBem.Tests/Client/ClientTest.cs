@@ -1,6 +1,7 @@
 using AutoBem.Application.Clients.Commands.Create;
 using AutoBem.Application.Clients.Commands.Update;
 using AutoBem.Application.Clients.Queries.Details;
+using AutoBem.Domain.Users.Models;
 using AutoBem.Infrastructure.Clients.Entities;
 using AutoBem.Tests.Client;
 using System;
@@ -18,6 +19,8 @@ namespace AutoBem.Tests
         public ClientTest(WebApplicationFactory factory)
         {
             this.Factory = factory;
+
+            factory.Signin(User.UsernameAdmin, User.PasswordAdmin);
         }
 
         public WebApplicationFactory Factory { get; }

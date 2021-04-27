@@ -23,7 +23,7 @@ namespace AutoBem.Tests.Client
             CPF = "42383559032",
             Birthday = DateTimeOffset.Parse("11/05/2001")
         };
-        
+
         public static VehicleEntity Vehicle { get; } = new VehicleEntity()
         {
             Id = Guid.Parse("f7c9044f-de79-48c3-85dd-f81a722d45b0"),

@@ -4,6 +4,7 @@ using BuildingBlocks.Application.Extensions;
 using BuildingBlocks.Domain.Extensions;
 using BuildingBlocks.Ioc;
 using BuildingBlocks.Mediator.Extensions;
+using BuildingBlocks.WebApi.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -25,16 +26,39 @@ namespace AutoBem.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddMvc()
                 .AddJsonOptions(e => e.JsonSerializerOptions.Converters.AddCustoms())
                 .AddFluentValidation();
 
+
             services.AddDbContext(Configuration.GetConnectionString("DefaultConnection"));
             services.AddControllers();
+            services.AddAuthenticationApp(Configuration.GetValue<string>("Authentication:Secret"));
             services.AddMediator<Startup>();
+
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AutoBem.WebApi", Version = "v1" });
+                var securitySchema = new OpenApiSecurityScheme
+                {
+                    Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "bearer",
+                    Reference = new OpenApiReference
+                    {
+                        Type = ReferenceType.SecurityScheme,
+                        Id = "Bearer"
+                    }
+                };
+                c.AddSecurityDefinition("Bearer", securitySchema);
+
+                var securityRequirement = new OpenApiSecurityRequirement();
+                securityRequirement.Add(securitySchema, new[] { "Bearer" });
+                c.AddSecurityRequirement(securityRequirement);
             });
 
         }
@@ -53,7 +77,7 @@ namespace AutoBem.WebApi
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            app.UseAuthorizationApp();
 
             app.UseEndpoints(endpoints =>
             {

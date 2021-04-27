@@ -27,7 +27,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.Mediator", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.Test", "BuildingBlocks\BuildingBlocks.Test\BuildingBlocks.Test.csproj", "{AEC6F326-E0A3-4B50-8E77-C583032A4AD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoBem.Tests", "AutoBem.Tests\AutoBem.Tests.csproj", "{4C0754C4-B339-47D3-8940-4604FB2395CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoBem.Tests", "AutoBem.Tests\AutoBem.Tests.csproj", "{4C0754C4-B339-47D3-8940-4604FB2395CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1947D93F-0EF8-40EA-A02E-A538C8EE3617}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.txt = Readme.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

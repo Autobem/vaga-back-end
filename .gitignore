@@ -1,0 +1,12 @@
+
+*.dll
+*.pdb
+*.json
+*.targets
+*.props
+*.cache
+*.v2
+*.txt
+*/obj/*
+*.v2
+*.CopyComplete

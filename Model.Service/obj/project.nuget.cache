@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "6jzLtn50aqA6bWkM7Yqhj9wVC+XYsRVsBIAwRBKViS6k7TYmf+25mXX8dPHaAtjms103N43ZhC1Csh7iZj3E1w==",
+  "success": true,
+  "projectFilePath": "D:\\ArquivosPessoais\\Autobem\\quickstart\\src\\Model.Service\\Model.Service.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alana\\.nuget\\packages\\fluentvalidation\\10.0.4\\fluentvalidation.10.0.4.nupkg.sha512",
+    "C:\\Users\\Alana\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.0.4\\fluentvalidation.aspnetcore.10.0.4.nupkg.sha512",
+    "C:\\Users\\Alana\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.0.4\\fluentvalidation.dependencyinjectionextensions.10.0.4.nupkg.sha512",
+    "C:\\Users\\Alana\\.nuget\\packages\\identitymodel\\5.1.0\\identitymodel.5.1.0.nupkg.sha512",
+    "C:\\Users\\Alana\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
+    "C:\\Users\\Alana\\.nuget\\packages\\system.text.encodings.web\\5.0.1\\system.text.encodings.web.5.0.1.nupkg.sha512",
+    "C:\\Users\\Alana\\.nuget\\packages\\system.text.json\\5.0.1\\system.text.json.5.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

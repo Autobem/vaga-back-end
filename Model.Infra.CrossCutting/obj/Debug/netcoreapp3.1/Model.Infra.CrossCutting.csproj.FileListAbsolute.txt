@@ -1,0 +1,9 @@
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Infra.CrossCutting\bin\Debug\netcoreapp3.1\Model.Infra.CrossCutting.deps.json
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Infra.CrossCutting\bin\Debug\netcoreapp3.1\Model.Infra.CrossCutting.dll
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Infra.CrossCutting\bin\Debug\netcoreapp3.1\Model.Infra.CrossCutting.pdb
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Infra.CrossCutting\obj\Debug\netcoreapp3.1\Model.Infra.CrossCutting.csprojAssemblyReference.cache
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Infra.CrossCutting\obj\Debug\netcoreapp3.1\Model.Infra.CrossCutting.AssemblyInfoInputs.cache
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Infra.CrossCutting\obj\Debug\netcoreapp3.1\Model.Infra.CrossCutting.AssemblyInfo.cs
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Infra.CrossCutting\obj\Debug\netcoreapp3.1\Model.Infra.CrossCutting.csproj.CoreCompileInputs.cache
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Infra.CrossCutting\obj\Debug\netcoreapp3.1\Model.Infra.CrossCutting.dll
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Infra.CrossCutting\obj\Debug\netcoreapp3.1\Model.Infra.CrossCutting.pdb

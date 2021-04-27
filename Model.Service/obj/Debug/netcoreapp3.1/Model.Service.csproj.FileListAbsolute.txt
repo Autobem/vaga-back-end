@@ -1,0 +1,12 @@
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Service\bin\Debug\netcoreapp3.1\Model.Service.deps.json
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Service\bin\Debug\netcoreapp3.1\Model.Service.dll
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Service\bin\Debug\netcoreapp3.1\Model.Service.pdb
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Service\bin\Debug\netcoreapp3.1\Model.Domain.dll
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Service\bin\Debug\netcoreapp3.1\Model.Domain.pdb
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Service\obj\Debug\netcoreapp3.1\Model.Service.csprojAssemblyReference.cache
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Service\obj\Debug\netcoreapp3.1\Model.Service.AssemblyInfoInputs.cache
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Service\obj\Debug\netcoreapp3.1\Model.Service.AssemblyInfo.cs
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Service\obj\Debug\netcoreapp3.1\Model.Service.csproj.CoreCompileInputs.cache
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Service\obj\Debug\netcoreapp3.1\Model.Service.csproj.CopyComplete
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Service\obj\Debug\netcoreapp3.1\Model.Service.dll
+D:\ArquivosPessoais\Autobem\quickstart\src\Model.Service\obj\Debug\netcoreapp3.1\Model.Service.pdb

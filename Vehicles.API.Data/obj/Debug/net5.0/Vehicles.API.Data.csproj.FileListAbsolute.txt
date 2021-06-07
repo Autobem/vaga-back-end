@@ -1,5 +1,0 @@
-E:\Develop\dotNet\vaga-back-end\Vehicles.API.Data\bin\Debug\net5.0\Vehicles.API.Domain.dll
-E:\Develop\dotNet\vaga-back-end\Vehicles.API.Data\obj\Debug\net5.0\Vehicles.API.Data.csprojAssemblyReference.cache
-E:\Develop\dotNet\vaga-back-end\Vehicles.API.Data\obj\Debug\net5.0\Vehicles.API.Data.GeneratedMSBuildEditorConfig.editorconfig
-E:\Develop\dotNet\vaga-back-end\Vehicles.API.Data\obj\Debug\net5.0\Vehicles.API.Data.AssemblyInfoInputs.cache
-E:\Develop\dotNet\vaga-back-end\Vehicles.API.Data\obj\Debug\net5.0\Vehicles.API.Data.AssemblyInfo.cs

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Vehicles.API.Service/1.0.0": {
+        "dependencies": {
+          "Vehicles.API.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Vehicles.API.Service.dll": {}
+        }
+      },
+      "Vehicles.API.Domain/1.0.0": {
+        "runtime": {
+          "Vehicles.API.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Vehicles.API.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Vehicles.API.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

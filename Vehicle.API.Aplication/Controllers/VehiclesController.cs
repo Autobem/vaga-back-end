@@ -1,11 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Vehicles.API.Data.Context;
+using Vehicles.API.Domain.Dtos.Owner;
+using Vehicles.API.Domain.Dtos.Vehicle;
 using Vehicles.API.Domain.Entities;
+using Vehicles.API.Domain.Interfaces.Services.Owner;
+using Vehicles.API.Domain.Interfaces.Services.Vehicle;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -15,63 +20,86 @@ namespace Vehicles.API.Aplication.Controllers
     [ApiController]
     public class VehiclesController : ControllerBase
     {
+        private readonly IVehicleService _service;
         private readonly MyContext _context;
+        private readonly IMapper _mapper;
 
-        public VehiclesController(MyContext context)
+        public VehiclesController(IVehicleService service, MyContext context, IMapper mapper)
         {
+            this._service = service;
             this._context = context;
+            this._mapper = mapper;
         }
         // GET: api/<VehiclesController>
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Vehicle>>> Get()
+        public async Task<ActionResult<IEnumerable<VehicleDto>>> GetAll()
         {
-            return await _context.Vehicles.ToListAsync();
+            try
+            {
+                return Ok(await _service.GetAll());
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Error: {ex}");
+            }
         }
 
         // GET api/<VehiclesController>/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Vehicle>> Get(Guid id)
+        public async Task<ActionResult<VehicleDto>> Get(Guid id)
         {
-            var result = await _context.Vehicles.FindAsync(id);
-            if (result == null) return NotFound();
-
-            return result;
+            try
+            {
+                var vehicle = await _service.Get(id);
+                return vehicle == null ? NotFound() : Ok(vehicle);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Error: {ex}");
+            }
         }
 
         // POST api/<VehiclesController>
         [HttpPost]
-        public async Task<ActionResult<Vehicle>> Post(Vehicle vehicle)
-        {
+        public async Task<ActionResult<VehicleDto>> Post([FromBody] VehicleDtoCreate vehicle)
+        {            
+            if (vehicle.OwnerId == null)
+            {
+                var owner = new Owner
+                {
+                    Id = new Guid(),
+                    Name = "Owner",
+                    //Vehicles = _mapper.Map(vehicle),
+                };
+                
+                await _context.Owners.AddAsync(owner);
+
+                vehicle.OwnerId = owner.Id;
+            }
             try
             {
-                _context.Vehicles.Add(vehicle);
-                var result = await _context.SaveChangesAsync();
-
-                return Ok(result);
+                return Ok(await _service.Post(vehicle));
             }
             catch (Exception ex)
             {
-                throw ex;
-            }           
+                return BadRequest($"Error: {ex}");
+            } 
         }
 
         // PUT api/<VehiclesController>/5
-        [HttpPut("{id}")]
-        public async Task<ActionResult<Vehicle>> Put(Guid id, Vehicle vehicle)
+        [HttpPut]
+        public async Task<ActionResult<VehicleDto>> Put([FromBody] VehicleDtoUpdate vehicle)
         {
-            if (id != vehicle.Id) return BadRequest();
-
-            _context.Entry(vehicle).State = EntityState.Modified;
+            //if (id != vehicle.Id) return BadRequest();
 
             try
             {
-                await _context.SaveChangesAsync();
-
-                return Ok(vehicle);
+                var result = await _service.Put(vehicle);
+                return result == null ? NotFound() : Ok(result);
             }
             catch (Exception ex)
             {
-                throw ex;
+                return BadRequest($"Error: {ex}");
             }
         }
 
@@ -79,18 +107,13 @@ namespace Vehicles.API.Aplication.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<bool>> Delete(Guid id)
         {
-            var result = await _context.Vehicles.FindAsync(id);
-            if (result == null) return NotFound(false);
-
             try
             {
-                _context.Vehicles.Remove(result);
-                await _context.SaveChangesAsync();
-                return Ok(true);
+                return Ok(await _service.Delete(id));
             }
             catch (Exception ex)
             {
-               throw ex;
+                return BadRequest($"Error: {ex}");
             }
         }
     }

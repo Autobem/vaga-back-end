@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "K/3SZI+Um2X1CVfvBk19O/hmMZasCY6miNcgJ+8hnrUQmpvz31u3HSQmD72C24Oo4Z4cy6kGM5A+pYJY5CjXew==",
+  "dgSpecHash": "8rc2oebDXg43GmDSK1skZVlVR3ORqjulvXOVAZRUkUxa2uaQhux2clBOvo4r+BJ3siHkwRLSdstxdR4muGkKug==",
   "success": true,
   "projectFilePath": "E:\\Develop\\dotNet\\vaga-back-end\\Vehicle.API.Service\\Vehicles.API.Service.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Daniel\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\Daniel\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Daniel\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }

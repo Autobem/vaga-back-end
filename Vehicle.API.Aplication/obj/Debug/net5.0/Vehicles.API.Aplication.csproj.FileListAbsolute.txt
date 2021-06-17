@@ -65,3 +65,5 @@ E:\Develop\dotNet\vaga-back-end\Vehicle.API.Aplication\obj\Debug\net5.0\Vehicles
 E:\Develop\dotNet\vaga-back-end\Vehicle.API.Aplication\obj\Debug\net5.0\Vehicles.API.Aplication.genruntimeconfig.cache
 E:\Develop\dotNet\vaga-back-end\Vehicle.API.Aplication\bin\Debug\net5.0\Humanizer.dll
 E:\Develop\dotNet\vaga-back-end\Vehicle.API.Aplication\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\Develop\dotNet\vaga-back-end\Vehicle.API.Aplication\bin\Debug\net5.0\AutoMapper.dll
+E:\Develop\dotNet\vaga-back-end\Vehicle.API.Aplication\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

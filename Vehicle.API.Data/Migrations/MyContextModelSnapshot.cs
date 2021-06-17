@@ -39,6 +39,50 @@ namespace Vehicles.API.Data.Migrations
                     b.ToTable("Owners");
                 });
 
+            modelBuilder.Entity("Vehicles.API.Domain.Entities.User", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(60)
+                        .HasColumnType("nvarchar(60)");
+
+                    b.Property<string>("Password")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+                    b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("fb054ec5-ba1b-4c62-b71b-0dccfa4777f9"),
+                            CreatedAt = new DateTime(2021, 6, 17, 20, 15, 18, 97, DateTimeKind.Utc).AddTicks(7248),
+                            Email = "admin@admin.com",
+                            Name = "Administrador",
+                            Password = "12345678",
+                            UpdatedAt = new DateTime(2021, 6, 17, 20, 15, 18, 97, DateTimeKind.Utc).AddTicks(8392)
+                        });
+                });
+
             modelBuilder.Entity("Vehicles.API.Domain.Entities.Vehicle", b =>
                 {
                     b.Property<Guid>("Id")
@@ -54,7 +98,7 @@ namespace Vehicles.API.Data.Migrations
                     b.Property<string>("Model")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("OwnerId")
+                    b.Property<Guid>("OwnerId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Plate")
@@ -74,7 +118,9 @@ namespace Vehicles.API.Data.Migrations
                 {
                     b.HasOne("Vehicles.API.Domain.Entities.Owner", "Owner")
                         .WithMany("Vehicles")
-                        .HasForeignKey("OwnerId");
+                        .HasForeignKey("OwnerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Owner");
                 });

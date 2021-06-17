@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -13,6 +14,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Vehicles.API.Data.Context;
+using Vehicles.API.Data.Mappings;
+using Vehicles.API.Data.Repository;
+using Vehicles.API.Domain.Interfaces;
+using Vehicles.API.Domain.Interfaces.Services.Owner;
+using Vehicles.API.Domain.Interfaces.Services.User;
+using Vehicles.API.Domain.Interfaces.Services.Vehicle;
+using Vehicles.API.Service.Services;
 
 namespace Vehicles.API.Aplication
 {
@@ -28,6 +36,18 @@ namespace Vehicles.API.Aplication
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
+            services.AddScoped<IVehicleService, VehicleService>();
+            services.AddScoped<IOwnerService, OwnerService>();
+            services.AddScoped<IUserService, UserService>();
+
+            var config = new AutoMapper.MapperConfiguration(cfg => 
+            {
+                cfg.AddProfile(new EntityToDtoProfile());
+            });
+
+            IMapper mapper = config.CreateMapper();
+            services.AddSingleton(mapper);
 
             services.AddDbContextPool<MyContext>(options =>
             {
@@ -37,7 +57,34 @@ namespace Vehicles.API.Aplication
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Vehicle.API.Aplication", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo 
+                { 
+                    Title = "Vehicle.API.Aplication", 
+                    Version = "v1",
+                    Description = "Teste Back-end AutoBem"
+                });
+
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Description = "Entre com o Token JWT",
+                    Name = "Autorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey
+                });
+
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Id = "Bearer",
+                                Type = ReferenceType.SecurityScheme
+                            }
+                        }, new List<string>()
+                    }
+                });
             });
         }
 

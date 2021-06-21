@@ -27,6 +27,10 @@ namespace Vehicles.API.Data.Mappings
             builder.Property(u => u.Email)
                 .IsRequired()
                 .HasMaxLength(100);
+
+            builder.Property(u => u.Password)
+                .IsRequired()
+                .HasMaxLength(255);
         }        
     }
 }

@@ -20,6 +20,10 @@ namespace Vehicles.API.Data.Mappings
             builder.Property(u => u.Name)
                 .IsRequired()
                 .HasMaxLength(60);
+
+            builder.Property(u => u.CpfCnpj)
+                .IsRequired()
+                .HasMaxLength(18);
         }       
     }
 }

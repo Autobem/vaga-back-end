@@ -23,7 +23,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Vehicle.API.Domain\Vehicles.API.Domain.csproj" />
-    <ProjectReference Include="..\Vehicle.API.Service\Vehicles.API.Service.csproj" />
   </ItemGroup>
 
 </Project>

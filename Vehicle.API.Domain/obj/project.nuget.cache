@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "X8DVrFgs5K0Da31AsyEnuH7BZ6XSUft4pf7WOFs5oS8pi7tNv3Ug2skFpPQhapDde+fOBWd+olORZKB48MyEwA==",
+  "dgSpecHash": "CZc1jJlyKQfi+LOO33s22LRGr8Mc6X2Gz3O7iyR11wi1Hv0xVYjpniLR14n0J8V8s2tBZa/bjz07w3oKxe218g==",
   "success": true,
   "projectFilePath": "E:\\Develop\\dotNet\\vaga-back-end\\Vehicle.API.Domain\\Vehicles.API.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Daniel\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Daniel\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.11.1\\microsoft.identitymodel.jsonwebtokens.6.11.1.nupkg.sha512",
+    "C:\\Users\\Daniel\\.nuget\\packages\\microsoft.identitymodel.logging\\6.11.1\\microsoft.identitymodel.logging.6.11.1.nupkg.sha512",
+    "C:\\Users\\Daniel\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.11.1\\microsoft.identitymodel.tokens.6.11.1.nupkg.sha512",
+    "C:\\Users\\Daniel\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.11.1\\system.identitymodel.tokens.jwt.6.11.1.nupkg.sha512",
+    "C:\\Users\\Daniel\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }

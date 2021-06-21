@@ -24,12 +24,7 @@ namespace Vehicles.API.Service.Services
 
         public async Task<OwnerDto> Get(Guid id)
         {
-            var entity = await _repository.GetOnwer(id);
-            //var entity = await _repository.SelectAsync(id);
-
-            //var vehicles = await _repository.GetAllVehicles();
-            //vehicles;
-            //entity;
+            var entity = await _repository.GetOnwer(id);            
 
             return _mapper.Map<OwnerDto>(entity);
         }
@@ -37,14 +32,12 @@ namespace Vehicles.API.Service.Services
         public async Task<IEnumerable<OwnerDto>> GetAll()
         {
             var listEntity = await _repository.GetOnwers();
-            //var listEntity = await _repository.SelectAsync();
 
             return _mapper.Map<IEnumerable<OwnerDto>>(listEntity);
         }
 
         public async Task<OwnerDto> Post(OwnerDtoCreate owner)
         {
-            //IQueryable<Owner> query = _mapper.Map<>
             var entity = _mapper.Map<Owner>(owner);
             var result = await _repository.InsertAsync(entity);
 

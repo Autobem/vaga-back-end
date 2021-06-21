@@ -12,6 +12,7 @@ namespace Vehicles.API.Domain.Dtos.Owner
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
+        public string CpfCnpj { get; set; }
         public List<VehicleDto> Vehicles { get; set; }
     }
 }

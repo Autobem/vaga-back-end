@@ -50,6 +50,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -109,9 +113,6 @@
             "projectReferences": {
               "E:\\Develop\\dotNet\\vaga-back-end\\Vehicle.API.Domain\\Vehicles.API.Domain.csproj": {
                 "projectPath": "E:\\Develop\\dotNet\\vaga-back-end\\Vehicle.API.Domain\\Vehicles.API.Domain.csproj"
-              },
-              "E:\\Develop\\dotNet\\vaga-back-end\\Vehicle.API.Service\\Vehicles.API.Service.csproj": {
-                "projectPath": "E:\\Develop\\dotNet\\vaga-back-end\\Vehicle.API.Service\\Vehicles.API.Service.csproj"
               }
             }
           }
@@ -217,6 +218,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.11.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -260,6 +267,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "E:\\Develop\\dotNet\\vaga-back-end\\Vehicle.API.Data\\Vehicles.API.Data.csproj": {
+                "projectPath": "E:\\Develop\\dotNet\\vaga-back-end\\Vehicle.API.Data\\Vehicles.API.Data.csproj"
+              },
               "E:\\Develop\\dotNet\\vaga-back-end\\Vehicle.API.Domain\\Vehicles.API.Domain.csproj": {
                 "projectPath": "E:\\Develop\\dotNet\\vaga-back-end\\Vehicle.API.Domain\\Vehicles.API.Domain.csproj"
               }

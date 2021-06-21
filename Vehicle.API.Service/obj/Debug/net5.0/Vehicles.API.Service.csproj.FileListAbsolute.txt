@@ -13,3 +13,5 @@ E:\Develop\dotNet\vaga-back-end\Vehicle.API.Service\obj\Debug\net5.0\Vehicles.AP
 E:\Develop\dotNet\vaga-back-end\Vehicle.API.Service\obj\Debug\net5.0\Vehicles.API.Service.dll
 E:\Develop\dotNet\vaga-back-end\Vehicle.API.Service\obj\Debug\net5.0\ref\Vehicles.API.Service.dll
 E:\Develop\dotNet\vaga-back-end\Vehicle.API.Service\obj\Debug\net5.0\Vehicles.API.Service.pdb
+E:\Develop\dotNet\vaga-back-end\Vehicle.API.Service\bin\Debug\net5.0\Vehicles.API.Data.dll
+E:\Develop\dotNet\vaga-back-end\Vehicle.API.Service\bin\Debug\net5.0\Vehicles.API.Data.pdb

@@ -25,6 +25,9 @@ namespace Vehicles.API.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("CpfCnpj")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("datetime2");
 
@@ -59,7 +62,9 @@ namespace Vehicles.API.Data.Migrations
                         .HasColumnType("nvarchar(60)");
 
                     b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
@@ -74,12 +79,12 @@ namespace Vehicles.API.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("fb054ec5-ba1b-4c62-b71b-0dccfa4777f9"),
-                            CreatedAt = new DateTime(2021, 6, 17, 20, 15, 18, 97, DateTimeKind.Utc).AddTicks(7248),
+                            Id = new Guid("f222a951-9c1e-41cb-b3d8-062b43b2493b"),
+                            CreatedAt = new DateTime(2021, 6, 21, 19, 10, 4, 36, DateTimeKind.Utc).AddTicks(4859),
                             Email = "admin@admin.com",
                             Name = "Administrador",
                             Password = "12345678",
-                            UpdatedAt = new DateTime(2021, 6, 17, 20, 15, 18, 97, DateTimeKind.Utc).AddTicks(8392)
+                            UpdatedAt = new DateTime(2021, 6, 21, 19, 10, 4, 36, DateTimeKind.Utc).AddTicks(6036)
                         });
                 });
 

@@ -9,6 +9,7 @@ namespace Vehicles.API.Domain.Entities
     public class Owner : BaseEntity
     {
         public string Name { get; set; }
+        public string CpfCnpj { get; set; }
         public List<Vehicle> Vehicles { get; set; }
     }
 }

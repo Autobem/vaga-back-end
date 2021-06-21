@@ -20,7 +20,6 @@ E:\Develop\dotNet\vaga-back-end\Vehicle.API.Aplication\bin\Debug\net5.0\Microsof
 E:\Develop\dotNet\vaga-back-end\Vehicle.API.Aplication\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 E:\Develop\dotNet\vaga-back-end\Vehicle.API.Aplication\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 E:\Develop\dotNet\vaga-back-end\Vehicle.API.Aplication\bin\Debug\net5.0\Microsoft.OpenApi.dll
-E:\Develop\dotNet\vaga-back-end\Vehicle.API.Aplication\bin\Debug\net5.0\Newtonsoft.Json.dll
 E:\Develop\dotNet\vaga-back-end\Vehicle.API.Aplication\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 E:\Develop\dotNet\vaga-back-end\Vehicle.API.Aplication\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\Develop\dotNet\vaga-back-end\Vehicle.API.Aplication\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -67,3 +66,4 @@ E:\Develop\dotNet\vaga-back-end\Vehicle.API.Aplication\bin\Debug\net5.0\Humanize
 E:\Develop\dotNet\vaga-back-end\Vehicle.API.Aplication\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
 E:\Develop\dotNet\vaga-back-end\Vehicle.API.Aplication\bin\Debug\net5.0\AutoMapper.dll
 E:\Develop\dotNet\vaga-back-end\Vehicle.API.Aplication\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\Develop\dotNet\vaga-back-end\Vehicle.API.Aplication\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

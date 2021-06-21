@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -31,6 +32,7 @@ namespace Vehicles.API.Aplication.Controllers
             this._mapper = mapper;
         }
         // GET: api/<VehiclesController>
+        //[Authorize("Bearer")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<VehicleDto>>> GetAll()
         {
@@ -45,6 +47,7 @@ namespace Vehicles.API.Aplication.Controllers
         }
 
         // GET api/<VehiclesController>/5
+        //[Authorize("Bearer")]
         [HttpGet("{id}")]
         public async Task<ActionResult<VehicleDto>> Get(Guid id)
         {
@@ -60,24 +63,16 @@ namespace Vehicles.API.Aplication.Controllers
         }
 
         // POST api/<VehiclesController>
+        //[Authorize("Bearer")]
         [HttpPost]
         public async Task<ActionResult<VehicleDto>> Post([FromBody] VehicleDtoCreate vehicle)
         {            
-            if (vehicle.OwnerId == null)
-            {
-                var owner = new Owner
-                {
-                    Id = new Guid(),
-                    Name = "Owner",
-                    //Vehicles = _mapper.Map(vehicle),
-                };
-                
-                await _context.Owners.AddAsync(owner);
+            if (vehicle.OwnerId == null && vehicle.Owner == null) return StatusCode(403, "OwnerId or Owner are required!");    
+            if(vehicle.OwnerId != null && vehicle.Owner != null) return StatusCode(403, "Only OwnerId or Owner must be filled!");
 
-                vehicle.OwnerId = owner.Id;
-            }
             try
             {
+                if (vehicle.Owner != null) await _context.Owners.AddAsync(_mapper.Map<Owner>(vehicle.Owner));
                 return Ok(await _service.Post(vehicle));
             }
             catch (Exception ex)
@@ -87,6 +82,7 @@ namespace Vehicles.API.Aplication.Controllers
         }
 
         // PUT api/<VehiclesController>/5
+        //[Authorize("Bearer")]
         [HttpPut]
         public async Task<ActionResult<VehicleDto>> Put([FromBody] VehicleDtoUpdate vehicle)
         {
@@ -104,6 +100,7 @@ namespace Vehicles.API.Aplication.Controllers
         }
 
         // DELETE api/<VehiclesController>/5
+        //[Authorize("Bearer")]
         [HttpDelete("{id}")]
         public async Task<ActionResult<bool>> Delete(Guid id)
         {

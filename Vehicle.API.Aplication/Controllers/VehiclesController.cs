@@ -32,7 +32,7 @@ namespace Vehicles.API.Aplication.Controllers
             this._mapper = mapper;
         }
         // GET: api/<VehiclesController>
-        //[Authorize("Bearer")]
+        [Authorize ("Bearer")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<VehicleDto>>> GetAll()
         {
@@ -47,7 +47,7 @@ namespace Vehicles.API.Aplication.Controllers
         }
 
         // GET api/<VehiclesController>/5
-        //[Authorize("Bearer")]
+        [Authorize("Bearer")]
         [HttpGet("{id}")]
         public async Task<ActionResult<VehicleDto>> Get(Guid id)
         {
@@ -63,7 +63,7 @@ namespace Vehicles.API.Aplication.Controllers
         }
 
         // POST api/<VehiclesController>
-        //[Authorize("Bearer")]
+        [Authorize("Bearer")]
         [HttpPost]
         public async Task<ActionResult<VehicleDto>> Post([FromBody] VehicleDtoCreate vehicle)
         {            
@@ -82,7 +82,7 @@ namespace Vehicles.API.Aplication.Controllers
         }
 
         // PUT api/<VehiclesController>/5
-        //[Authorize("Bearer")]
+        [Authorize("Bearer")]
         [HttpPut]
         public async Task<ActionResult<VehicleDto>> Put([FromBody] VehicleDtoUpdate vehicle)
         {
@@ -100,7 +100,7 @@ namespace Vehicles.API.Aplication.Controllers
         }
 
         // DELETE api/<VehiclesController>/5
-        //[Authorize("Bearer")]
+        [Authorize("Bearer")]
         [HttpDelete("{id}")]
         public async Task<ActionResult<bool>> Delete(Guid id)
         {

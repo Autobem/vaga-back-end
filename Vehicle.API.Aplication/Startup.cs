@@ -105,7 +105,7 @@ namespace Vehicles.API.Aplication
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     Description = "Entre com o Token JWT",
-                    Name = "Autorization",
+                    Name = "Authorization",
                     In = ParameterLocation.Header,
                     Type = SecuritySchemeType.ApiKey
                 });
@@ -140,6 +140,7 @@ namespace Vehicles.API.Aplication
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

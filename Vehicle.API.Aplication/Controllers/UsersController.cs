@@ -22,7 +22,7 @@ namespace Vehicles.API.Aplication.Controllers
             this._service = _service;
         }
         // GET: api/<UsersController>
-        //[Authorize("Bearer")]
+        [Authorize("Bearer")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<UserDto>>> GetAll()
         {
@@ -37,7 +37,7 @@ namespace Vehicles.API.Aplication.Controllers
         }
 
         // GET api/<UsersController>/5
-        //[Authorize("Bearer")]
+        [Authorize("Bearer")]
         [HttpGet("{id}")]
         public async Task<ActionResult<UserDto>> Get(Guid id)
         {
@@ -53,7 +53,7 @@ namespace Vehicles.API.Aplication.Controllers
         }
 
         // POST api/<UsersController>
-        //[Authorize("Bearer")]
+        [Authorize("Bearer")]
         [HttpPost]
         public async Task<ActionResult<UserDto>> Post([FromBody] UserDtoCreate user)
         {
@@ -68,7 +68,7 @@ namespace Vehicles.API.Aplication.Controllers
         }
 
         // PUT api/<UsersController>/5
-        //[Authorize("Bearer")]
+        [Authorize("Bearer")]
         [HttpPut]
         public async Task<ActionResult<UserDto>> Put([FromBody] UserDto user)
         {
@@ -86,7 +86,7 @@ namespace Vehicles.API.Aplication.Controllers
         }
 
         // DELETE api/<UsersController>/5
-        //[Authorize("Bearer")]
+        [Authorize("Bearer")]
         [HttpDelete("{id}")]
         public async Task<ActionResult<bool>> Delete(Guid id)
         {

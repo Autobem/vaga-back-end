@@ -25,7 +25,7 @@ namespace Vehicles.API.Aplication.Controllers
             this._context = context;
         }
         // GET: api/<OwnerController>
-        //[Authorize("Bearer")]
+        [Authorize("Bearer")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<OwnerDto>>> GetAll()
         {
@@ -40,7 +40,7 @@ namespace Vehicles.API.Aplication.Controllers
         }
 
         // GET api/<OwnerController>/5
-        //[Authorize("Bearer")]
+        [Authorize("Bearer")]
         [HttpGet("{id}")]
         public async Task<ActionResult<OwnerDto>> Get(Guid id)
         {
@@ -56,7 +56,7 @@ namespace Vehicles.API.Aplication.Controllers
         }
 
         // POST api/<OwnerController>
-        //[Authorize("Bearer")]
+        [Authorize("Bearer")]
         [HttpPost]
         public async Task<ActionResult<OwnerDto>> Post([FromBody] OwnerDtoCreate owner)
         {            
@@ -71,7 +71,7 @@ namespace Vehicles.API.Aplication.Controllers
         }
 
         // PUT api/<OwnerController>/5
-        //[Authorize("Bearer")]
+        [Authorize("Bearer")]
         [HttpPut]
         public async Task<ActionResult<OwnerDto>> Put([FromBody] OwnerDtoUpdate owner)
         {
@@ -89,7 +89,7 @@ namespace Vehicles.API.Aplication.Controllers
         }
 
         // DELETE api/<OwnerController>/5
-        //[Authorize("Bearer")]
+        [Authorize("Bearer")]
         [HttpDelete("{id}")]
         public async Task<ActionResult<bool>> Delete(Guid id)
         {

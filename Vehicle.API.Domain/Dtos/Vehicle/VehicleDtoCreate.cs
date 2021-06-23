@@ -14,6 +14,6 @@ namespace Vehicles.API.Domain.Dtos.Vehicle
         public string Brand { get; set; }
         public string Model { get; set; }
         public Guid? OwnerId { get; set; }
-        public OwnerDto? Owner { get; set; }
+        public OwnerDtoCreate? Owner { get; set; }
     }
 }

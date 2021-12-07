@@ -1,0 +1,16 @@
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Infra.Data\bin\Debug\netcoreapp3.1\Layer.Architecture.Infra.Data.deps.json
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Infra.Data\bin\Debug\netcoreapp3.1\Layer.Architecture.Infra.Data.runtimeconfig.json
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Infra.Data\bin\Debug\netcoreapp3.1\Layer.Architecture.Infra.Data.runtimeconfig.dev.json
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Infra.Data\bin\Debug\netcoreapp3.1\Layer.Architecture.Infra.Data.dll
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Infra.Data\bin\Debug\netcoreapp3.1\Layer.Architecture.Infra.Data.pdb
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Infra.Data\bin\Debug\netcoreapp3.1\Layer.Architecture.Domain.dll
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Infra.Data\bin\Debug\netcoreapp3.1\Layer.Architecture.Domain.pdb
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Infra.Data\obj\Debug\netcoreapp3.1\Layer.Architecture.Infra.Data.csproj.AssemblyReference.cache
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Infra.Data\obj\Debug\netcoreapp3.1\Layer.Architecture.Infra.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Infra.Data\obj\Debug\netcoreapp3.1\Layer.Architecture.Infra.Data.AssemblyInfoInputs.cache
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Infra.Data\obj\Debug\netcoreapp3.1\Layer.Architecture.Infra.Data.AssemblyInfo.cs
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Infra.Data\obj\Debug\netcoreapp3.1\Layer.Architecture.Infra.Data.csproj.CoreCompileInputs.cache
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Infra.Data\obj\Debug\netcoreapp3.1\Layer.Architecture.Infra.Data.csproj.CopyComplete
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Infra.Data\obj\Debug\netcoreapp3.1\Layer.Architecture.Infra.Data.dll
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Infra.Data\obj\Debug\netcoreapp3.1\Layer.Architecture.Infra.Data.pdb
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Infra.Data\obj\Debug\netcoreapp3.1\Layer.Architecture.Infra.Data.genruntimeconfig.cache

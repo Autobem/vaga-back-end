@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "9BVO9f8tOhoWm65cB8FdEAnDWS5RJ8UQa8vxsInhPhfrhOaoqOPIPJCBLK4FQHJDUIyLH/nBno2o9B5Ln0OF4g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\antonio.santos\\Downloads\\vaga-back-end\\AUTOBEM.Domain\\AUTOBEM.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\antonio.santos\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\antonio.santos\\.nuget\\packages\\fluentvalidation\\9.5.1\\fluentvalidation.9.5.1.nupkg.sha512",
+    "C:\\Users\\antonio.santos\\.nuget\\packages\\fluentvalidation.aspnetcore\\9.5.1\\fluentvalidation.aspnetcore.9.5.1.nupkg.sha512",
+    "C:\\Users\\antonio.santos\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\9.5.1\\fluentvalidation.dependencyinjectionextensions.9.5.1.nupkg.sha512",
+    "C:\\Users\\antonio.santos\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\antonio.santos\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
+    "C:\\Users\\antonio.santos\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

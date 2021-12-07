@@ -1,0 +1,9 @@
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Infra.CrossCutting\bin\Debug\netcoreapp3.1\Layer.Architecture.Infra.CrossCutting.deps.json
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Infra.CrossCutting\bin\Debug\netcoreapp3.1\Layer.Architecture.Infra.CrossCutting.dll
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Infra.CrossCutting\bin\Debug\netcoreapp3.1\Layer.Architecture.Infra.CrossCutting.pdb
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Infra.CrossCutting\obj\Debug\netcoreapp3.1\Layer.Architecture.Infra.CrossCutting.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Infra.CrossCutting\obj\Debug\netcoreapp3.1\Layer.Architecture.Infra.CrossCutting.AssemblyInfoInputs.cache
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Infra.CrossCutting\obj\Debug\netcoreapp3.1\Layer.Architecture.Infra.CrossCutting.AssemblyInfo.cs
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Infra.CrossCutting\obj\Debug\netcoreapp3.1\Layer.Architecture.Infra.CrossCutting.csproj.CoreCompileInputs.cache
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Infra.CrossCutting\obj\Debug\netcoreapp3.1\Layer.Architecture.Infra.CrossCutting.dll
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Infra.CrossCutting\obj\Debug\netcoreapp3.1\Layer.Architecture.Infra.CrossCutting.pdb

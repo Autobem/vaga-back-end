@@ -1,0 +1,9 @@
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Domain\bin\Debug\netcoreapp3.1\Layer.Architecture.Domain.deps.json
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Domain\bin\Debug\netcoreapp3.1\Layer.Architecture.Domain.dll
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Domain\bin\Debug\netcoreapp3.1\Layer.Architecture.Domain.pdb
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Domain\obj\Debug\netcoreapp3.1\Layer.Architecture.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Domain\obj\Debug\netcoreapp3.1\Layer.Architecture.Domain.AssemblyInfoInputs.cache
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Domain\obj\Debug\netcoreapp3.1\Layer.Architecture.Domain.AssemblyInfo.cs
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Domain\obj\Debug\netcoreapp3.1\Layer.Architecture.Domain.csproj.CoreCompileInputs.cache
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Domain\obj\Debug\netcoreapp3.1\Layer.Architecture.Domain.dll
+C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\Layer.Architecture.Domain\obj\Debug\netcoreapp3.1\Layer.Architecture.Domain.pdb

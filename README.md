@@ -10,7 +10,7 @@ Vamos ao teste!
 
 ## Cadastro de veículos
 
-O objetivo é criar uma web api para cadastro de veículos utilizando .net Core 3.1 ou superior.
+O objetivo é criar uma web api para cadastro de veículos utilizando .net 5 ou superior.
 - A web api deve conter o crud básico (buscar, adicionar, atualizar e remover) de veículos e seus respectivos proprietários.
 - Seria interessante que os veículos e seus proprietários tivessem seus dados armazenados em tabelas distintas interligadas (chave estrangeira).
 - Seria interessante a utilização de Entity Framework com repositórios destinados para cada entidade ou um repositório genérico para atender todas (fica a critério).
@@ -19,10 +19,9 @@ O objetivo é criar uma web api para cadastro de veículos utilizando .net Core 
 ## Regras
 
 Para o desafio ficar mais interessante, decidimos criar umas regras básicas:
-- Deve ser usada a arquitetura DDD para a estrutura do projeto.
+- Deve ser usada a arquitetura com DDD para a estrutura do projeto.
 - É necessário conter, no mínimo, duas entidades relacionadas (podem haver mais, caso julgue necessário).
-- Não se deve receber ou retornar a própria entidade em uma requisição/resposta json. Seria interessante a utilização de DTO ou similar (Pode-se usar AutoMapper para facilitar o processo).
-- Devem ser criados casos de teste para todos os elementos da api (a escolha do framework de testes é livre).
+- Não se deve receber ou retornar a própria entidade em uma requisição/resposta json. Seria interessante a utilização de DTO ou similar (Pode-se usar AutoMapper ou similar para facilitar o processo, caso julge necessário).
 - A api deve utilizar uma base de dados para persistência de informações (SQL Server, LocalDB, SQLite, MySQL ou qualquer outro, deste que utilizando EF Core).
 - Seria interessante a utilicação de repositórios e serviços via injeção de dependências (a utilização de abstracts para agilizar o processo seria interessante).
 - A api não deve ter acesso livre. Deve ser utilizado algum método de identificação utilizando OAuth 2.0.
@@ -36,4 +35,4 @@ Após terminar o desafio, você pode solicitar um pull request para a branch mas
 
 ## Só isso?
 
-Só! Mas se estiver motivado, tente preparar o projeto para ser executado e testado de maneira prática, usando alguma ferramenta que facilite isso (ex: nuget).
+Só! Mas se estiver motivado, pode efetuar incrementos que julgue interessantes ou aprimoramentos de desempenho e organização de código.

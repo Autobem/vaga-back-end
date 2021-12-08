@@ -8,3 +8,12 @@ C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\AUTOBEM.Infra.
 C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\AUTOBEM.Infra.CrossCutting\obj\Debug\netcoreapp3.1\AUTOBEM.Infra.CrossCutting.csproj.CoreCompileInputs.cache
 C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\AUTOBEM.Infra.CrossCutting\obj\Debug\netcoreapp3.1\AUTOBEM.Infra.CrossCutting.dll
 C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\AUTOBEM.Infra.CrossCutting\obj\Debug\netcoreapp3.1\AUTOBEM.Infra.CrossCutting.pdb
+C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Infra.CrossCutting\bin\Debug\netcoreapp3.1\AUTOBEM.Infra.CrossCutting.deps.json
+C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Infra.CrossCutting\bin\Debug\netcoreapp3.1\AUTOBEM.Infra.CrossCutting.dll
+C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Infra.CrossCutting\bin\Debug\netcoreapp3.1\AUTOBEM.Infra.CrossCutting.pdb
+C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Infra.CrossCutting\obj\Debug\netcoreapp3.1\AUTOBEM.Infra.CrossCutting.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Infra.CrossCutting\obj\Debug\netcoreapp3.1\AUTOBEM.Infra.CrossCutting.AssemblyInfoInputs.cache
+C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Infra.CrossCutting\obj\Debug\netcoreapp3.1\AUTOBEM.Infra.CrossCutting.AssemblyInfo.cs
+C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Infra.CrossCutting\obj\Debug\netcoreapp3.1\AUTOBEM.Infra.CrossCutting.csproj.CoreCompileInputs.cache
+C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Infra.CrossCutting\obj\Debug\netcoreapp3.1\AUTOBEM.Infra.CrossCutting.dll
+C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Infra.CrossCutting\obj\Debug\netcoreapp3.1\AUTOBEM.Infra.CrossCutting.pdb

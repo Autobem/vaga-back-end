@@ -1,4 +1,4 @@
-using AUTOBEM.Application.Extensions;
+using AUTOBEM.Biblioteca.Extensions;
 using AUTOBEM.Application.Models;
 using AUTOBEM.Domain.Entities;
 using AUTOBEM.Domain.Interfaces;
@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 using Newtonsoft.Json.Converters;
 
 namespace AUTOBEM.Application
@@ -32,12 +33,13 @@ namespace AUTOBEM.Application
         {
             // Habilita as ferramentas de instrumentação do OpenTracing
             services.ConfigureOpenTracing();
+            services.AddMvc();
 
             services.AddControllers()
-                                .AddNewtonsoftJson(jsonOptions =>
-                                {
-                                    jsonOptions.SerializerSettings.Converters.Add(new StringEnumConverter());
-                                });
+                .AddNewtonsoftJson(jsonOptions =>
+                {
+                    jsonOptions.SerializerSettings.Converters.Add(new StringEnumConverter());
+                });
 
             services.AddDbContext<MySqlContext>(options =>
             {

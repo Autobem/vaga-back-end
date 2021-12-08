@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {
+    "net5.0": {
       "AutoMapper/10.1.1": {
         "type": "package",
         "dependencies": {
@@ -15,42 +15,42 @@
           "lib/netstandard2.0/AutoMapper.dll": {}
         }
       },
-      "FluentValidation/10.3.5": {
+      "FluentValidation/9.5.1": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.1/FluentValidation.dll": {}
+          "lib/net5.0/FluentValidation.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.1/FluentValidation.dll": {}
+          "lib/net5.0/FluentValidation.dll": {}
         }
       },
-      "FluentValidation.AspNetCore/10.3.5": {
+      "FluentValidation.AspNetCore/9.5.1": {
         "type": "package",
         "dependencies": {
-          "FluentValidation": "10.3.5",
-          "FluentValidation.DependencyInjectionExtensions": "10.3.5"
+          "FluentValidation": "9.5.1",
+          "FluentValidation.DependencyInjectionExtensions": "9.5.1"
         },
         "compile": {
-          "lib/netcoreapp3.1/FluentValidation.AspNetCore.dll": {}
+          "lib/net5.0/FluentValidation.AspNetCore.dll": {}
         },
         "runtime": {
-          "lib/netcoreapp3.1/FluentValidation.AspNetCore.dll": {}
+          "lib/net5.0/FluentValidation.AspNetCore.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
       },
-      "FluentValidation.DependencyInjectionExtensions/10.3.5": {
+      "FluentValidation.DependencyInjectionExtensions/9.5.1": {
         "type": "package",
         "dependencies": {
-          "FluentValidation": "10.3.5",
+          "FluentValidation": "9.5.1",
           "Microsoft.Extensions.Dependencyinjection.Abstractions": "2.1.0"
         },
         "compile": {
-          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {}
+          "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {}
+          "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll": {}
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -289,16 +289,13 @@
           "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll": {}
         }
       },
-      "MySqlConnector/2.1.0": {
+      "MySqlConnector/0.69.4": {
         "type": "package",
-        "dependencies": {
-          "System.Diagnostics.DiagnosticSource": "5.0.1"
-        },
         "compile": {
-          "lib/netcoreapp3.1/MySqlConnector.dll": {}
+          "lib/netcoreapp3.0/MySqlConnector.dll": {}
         },
         "runtime": {
-          "lib/netcoreapp3.1/MySqlConnector.dll": {}
+          "lib/netcoreapp3.0/MySqlConnector.dll": {}
         }
       },
       "Newtonsoft.Json/11.0.2": {
@@ -355,7 +352,7 @@
           "lib/netstandard2.1/System.ComponentModel.Annotations.dll": {}
         }
       },
-      "System.Diagnostics.DiagnosticSource/5.0.1": {
+      "System.Diagnostics.DiagnosticSource/4.7.1": {
         "type": "package",
         "compile": {
           "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
@@ -378,7 +375,7 @@
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "AutoMapper": "10.1.1",
-          "FluentValidation.AspNetCore": "10.3.5"
+          "FluentValidation.AspNetCore": "9.5.1"
         },
         "compile": {
           "bin/placeholder/AUTOBEM.Domain.dll": {}
@@ -406,61 +403,54 @@
         "lib/netstandard2.0/AutoMapper.xml"
       ]
     },
-    "FluentValidation/10.3.5": {
-      "sha512": "Mt2CnRqNA5+vXVNFY05yLuOG3OLYR7Q/ZcP/rcJZPNPbg95foVUruyQEmKl1GeXVnT2+u6rjGU2ZCdgF//QU2A==",
+    "FluentValidation/9.5.1": {
+      "sha512": "By09e2m4N3giD7Giq8NCFgkgN5Hkm8Lv/bk8AadD9Xc6jjj2WDGrD6l9keZbWbkO9aygiHQREIt47iS2sVSU7w==",
       "type": "package",
-      "path": "fluentvalidation/10.3.5",
+      "path": "fluentvalidation/9.5.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.10.3.5.nupkg.sha512",
+        "fluentvalidation.9.5.1.nupkg.sha512",
         "fluentvalidation.nuspec",
+        "lib/net461/FluentValidation.dll",
+        "lib/net461/FluentValidation.xml",
         "lib/net5.0/FluentValidation.dll",
         "lib/net5.0/FluentValidation.xml",
-        "lib/net6.0/FluentValidation.dll",
-        "lib/net6.0/FluentValidation.xml",
         "lib/netstandard2.0/FluentValidation.dll",
-        "lib/netstandard2.0/FluentValidation.xml",
-        "lib/netstandard2.1/FluentValidation.dll",
-        "lib/netstandard2.1/FluentValidation.xml"
+        "lib/netstandard2.0/FluentValidation.xml"
       ]
     },
-    "FluentValidation.AspNetCore/10.3.5": {
-      "sha512": "fHPayS6k2GbvblzFJjiHNlJT8iQhGkGbSX6Q6JsH6Od2uFDCRaZIj/qSUkCwlCE/cHldmiGbk30LrJyKav9HPg==",
+    "FluentValidation.AspNetCore/9.5.1": {
+      "sha512": "m4V/ovMBzr5kot9th5GUDMnXMI3SsnOnZB5xXR0dYdQAJPHjWlyjuCJrLeK+q83WCAet9cay0JraEnrLG4Ruew==",
       "type": "package",
-      "path": "fluentvalidation.aspnetcore/10.3.5",
+      "path": "fluentvalidation.aspnetcore/9.5.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.aspnetcore.10.3.5.nupkg.sha512",
+        "fluentvalidation.aspnetcore.9.5.1.nupkg.sha512",
         "fluentvalidation.aspnetcore.nuspec",
         "lib/net5.0/FluentValidation.AspNetCore.dll",
         "lib/net5.0/FluentValidation.AspNetCore.xml",
-        "lib/net6.0/FluentValidation.AspNetCore.dll",
-        "lib/net6.0/FluentValidation.AspNetCore.xml",
+        "lib/netcoreapp2.1/FluentValidation.AspNetCore.dll",
+        "lib/netcoreapp2.1/FluentValidation.AspNetCore.xml",
         "lib/netcoreapp3.1/FluentValidation.AspNetCore.dll",
         "lib/netcoreapp3.1/FluentValidation.AspNetCore.xml"
       ]
     },
-    "FluentValidation.DependencyInjectionExtensions/10.3.5": {
-      "sha512": "zGaFLXmf4c+kKqQpT0Ec1T97kbJMx9o25+0l6p/TYFQ99bHSLPmgpd8EjU6s7cXv9X/215mIlrazMkzvbCZFWg==",
+    "FluentValidation.DependencyInjectionExtensions/9.5.1": {
+      "sha512": "r0ckWF7AuMt3gx9HmY8UL7l/jdFvk4zarSc+pa5GzwkeDkOl7IKXSpY68bszDLT1d31Br9fv0+ap70UME13S9w==",
       "type": "package",
-      "path": "fluentvalidation.dependencyinjectionextensions/10.3.5",
+      "path": "fluentvalidation.dependencyinjectionextensions/9.5.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.dependencyinjectionextensions.10.3.5.nupkg.sha512",
+        "fluentvalidation.dependencyinjectionextensions.9.5.1.nupkg.sha512",
         "fluentvalidation.dependencyinjectionextensions.nuspec",
         "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll",
-        "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml",
-        "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll",
-        "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.xml"
+        "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -856,32 +846,31 @@
         "microsoft.extensions.primitives.nuspec"
       ]
     },
-    "MySqlConnector/2.1.0": {
-      "sha512": "5iNkOyyFeH3g3ZEh24OgIinoDlDRC6590nz6jxrcczyqLjU8Hxq2remw350CtdecNZOBH/W8zdAXXISAUSOuhA==",
+    "MySqlConnector/0.69.4": {
+      "sha512": "EnSP74me98GuQcophXSye6/KsSJ9l4E1EmViEEIn0h66I2tRIk43gce06WitzXl+beT6/69+46sbVAzKkRKdeQ==",
       "type": "package",
-      "path": "mysqlconnector/2.1.0",
+      "path": "mysqlconnector/0.69.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "README.md",
         "lib/net45/MySqlConnector.dll",
         "lib/net45/MySqlConnector.xml",
         "lib/net461/MySqlConnector.dll",
         "lib/net461/MySqlConnector.xml",
         "lib/net471/MySqlConnector.dll",
         "lib/net471/MySqlConnector.xml",
-        "lib/net5.0/MySqlConnector.dll",
-        "lib/net5.0/MySqlConnector.xml",
-        "lib/net6.0/MySqlConnector.dll",
-        "lib/net6.0/MySqlConnector.xml",
-        "lib/netcoreapp3.1/MySqlConnector.dll",
-        "lib/netcoreapp3.1/MySqlConnector.xml",
+        "lib/netcoreapp2.1/MySqlConnector.dll",
+        "lib/netcoreapp2.1/MySqlConnector.xml",
+        "lib/netcoreapp3.0/MySqlConnector.dll",
+        "lib/netcoreapp3.0/MySqlConnector.xml",
+        "lib/netstandard1.3/MySqlConnector.dll",
+        "lib/netstandard1.3/MySqlConnector.xml",
         "lib/netstandard2.0/MySqlConnector.dll",
         "lib/netstandard2.0/MySqlConnector.xml",
         "lib/netstandard2.1/MySqlConnector.dll",
         "lib/netstandard2.1/MySqlConnector.xml",
         "logo.png",
-        "mysqlconnector.2.1.0.nupkg.sha512",
+        "mysqlconnector.0.69.4.nupkg.sha512",
         "mysqlconnector.nuspec"
       ]
     },
@@ -1055,10 +1044,10 @@
         "version.txt"
       ]
     },
-    "System.Diagnostics.DiagnosticSource/5.0.1": {
-      "sha512": "uXQEYqav2V3zP6OwkOKtLv+qIi6z3m1hsGyKwXX7ZA7htT4shoVccGxnJ9kVRFPNAsi1ArZTq2oh7WOto6GbkQ==",
+    "System.Diagnostics.DiagnosticSource/4.7.1": {
+      "sha512": "j81Lovt90PDAq8kLpaJfJKV/rWdWuEk6jfV+MBkee33vzYLEUsy4gXK8laa9V2nZlLM9VM9yA/OOQxxPEJKAMw==",
       "type": "package",
-      "path": "system.diagnostics.diagnosticsource/5.0.1",
+      "path": "system.diagnostics.diagnosticsource/4.7.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1069,15 +1058,13 @@
         "lib/net45/System.Diagnostics.DiagnosticSource.xml",
         "lib/net46/System.Diagnostics.DiagnosticSource.dll",
         "lib/net46/System.Diagnostics.DiagnosticSource.xml",
-        "lib/net5.0/System.Diagnostics.DiagnosticSource.dll",
-        "lib/net5.0/System.Diagnostics.DiagnosticSource.xml",
         "lib/netstandard1.1/System.Diagnostics.DiagnosticSource.dll",
         "lib/netstandard1.1/System.Diagnostics.DiagnosticSource.xml",
         "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll",
         "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.xml",
         "lib/portable-net45+win8+wpa81/System.Diagnostics.DiagnosticSource.dll",
         "lib/portable-net45+win8+wpa81/System.Diagnostics.DiagnosticSource.xml",
-        "system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
+        "system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
         "system.diagnostics.diagnosticsource.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -1144,11 +1131,11 @@
     }
   },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": [
+    "net5.0": [
       "AUTOBEM.Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.5",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.5",
-      "MySqlConnector >= 2.1.0",
+      "MySqlConnector >= 0.69.4",
       "Pomelo.EntityFrameworkCore.MySql >= 3.1.1"
     ]
   },
@@ -1177,15 +1164,15 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "netcoreapp3.1"
+        "net5.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "projectReferences": {
             "C:\\Users\\antonio.santos\\Downloads\\vaga-back-end\\AUTOBEM.Domain\\AUTOBEM.Domain.csproj": {
               "projectPath": "C:\\Users\\antonio.santos\\Downloads\\vaga-back-end\\AUTOBEM.Domain\\AUTOBEM.Domain.csproj"
@@ -1200,8 +1187,8 @@
       }
     },
     "frameworks": {
-      "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
+      "net5.0": {
+        "targetAlias": "net5.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -1217,7 +1204,7 @@
           },
           "MySqlConnector": {
             "target": "Package",
-            "version": "[2.1.0, )"
+            "version": "[0.69.4, )"
           },
           "Pomelo.EntityFrameworkCore.MySql": {
             "target": "Package",

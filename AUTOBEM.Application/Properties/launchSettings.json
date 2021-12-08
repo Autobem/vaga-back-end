@@ -16,7 +16,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "launchBrowser": true,
-      "launchUrl": "api/user"
+      "launchUrl": "swagger"
     },
     "IIS Express": {
       "commandName": "IISExpress",

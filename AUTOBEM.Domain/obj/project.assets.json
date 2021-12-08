@@ -15,20 +15,20 @@
           "lib/netstandard2.0/AutoMapper.dll": {}
         }
       },
-      "FluentValidation/10.3.5": {
+      "FluentValidation/9.5.1": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.1/FluentValidation.dll": {}
+          "lib/netstandard2.0/FluentValidation.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.1/FluentValidation.dll": {}
+          "lib/netstandard2.0/FluentValidation.dll": {}
         }
       },
-      "FluentValidation.AspNetCore/10.3.5": {
+      "FluentValidation.AspNetCore/9.5.1": {
         "type": "package",
         "dependencies": {
-          "FluentValidation": "10.3.5",
-          "FluentValidation.DependencyInjectionExtensions": "10.3.5"
+          "FluentValidation": "9.5.1",
+          "FluentValidation.DependencyInjectionExtensions": "9.5.1"
         },
         "compile": {
           "lib/netcoreapp3.1/FluentValidation.AspNetCore.dll": {}
@@ -40,17 +40,17 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "FluentValidation.DependencyInjectionExtensions/10.3.5": {
+      "FluentValidation.DependencyInjectionExtensions/9.5.1": {
         "type": "package",
         "dependencies": {
-          "FluentValidation": "10.3.5",
+          "FluentValidation": "9.5.1",
           "Microsoft.Extensions.Dependencyinjection.Abstractions": "2.1.0"
         },
         "compile": {
-          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {}
+          "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {}
+          "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll": {}
         }
       },
       "Microsoft.CSharp/4.7.0": {
@@ -99,61 +99,54 @@
         "lib/netstandard2.0/AutoMapper.xml"
       ]
     },
-    "FluentValidation/10.3.5": {
-      "sha512": "Mt2CnRqNA5+vXVNFY05yLuOG3OLYR7Q/ZcP/rcJZPNPbg95foVUruyQEmKl1GeXVnT2+u6rjGU2ZCdgF//QU2A==",
+    "FluentValidation/9.5.1": {
+      "sha512": "By09e2m4N3giD7Giq8NCFgkgN5Hkm8Lv/bk8AadD9Xc6jjj2WDGrD6l9keZbWbkO9aygiHQREIt47iS2sVSU7w==",
       "type": "package",
-      "path": "fluentvalidation/10.3.5",
+      "path": "fluentvalidation/9.5.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.10.3.5.nupkg.sha512",
+        "fluentvalidation.9.5.1.nupkg.sha512",
         "fluentvalidation.nuspec",
+        "lib/net461/FluentValidation.dll",
+        "lib/net461/FluentValidation.xml",
         "lib/net5.0/FluentValidation.dll",
         "lib/net5.0/FluentValidation.xml",
-        "lib/net6.0/FluentValidation.dll",
-        "lib/net6.0/FluentValidation.xml",
         "lib/netstandard2.0/FluentValidation.dll",
-        "lib/netstandard2.0/FluentValidation.xml",
-        "lib/netstandard2.1/FluentValidation.dll",
-        "lib/netstandard2.1/FluentValidation.xml"
+        "lib/netstandard2.0/FluentValidation.xml"
       ]
     },
-    "FluentValidation.AspNetCore/10.3.5": {
-      "sha512": "fHPayS6k2GbvblzFJjiHNlJT8iQhGkGbSX6Q6JsH6Od2uFDCRaZIj/qSUkCwlCE/cHldmiGbk30LrJyKav9HPg==",
+    "FluentValidation.AspNetCore/9.5.1": {
+      "sha512": "m4V/ovMBzr5kot9th5GUDMnXMI3SsnOnZB5xXR0dYdQAJPHjWlyjuCJrLeK+q83WCAet9cay0JraEnrLG4Ruew==",
       "type": "package",
-      "path": "fluentvalidation.aspnetcore/10.3.5",
+      "path": "fluentvalidation.aspnetcore/9.5.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.aspnetcore.10.3.5.nupkg.sha512",
+        "fluentvalidation.aspnetcore.9.5.1.nupkg.sha512",
         "fluentvalidation.aspnetcore.nuspec",
         "lib/net5.0/FluentValidation.AspNetCore.dll",
         "lib/net5.0/FluentValidation.AspNetCore.xml",
-        "lib/net6.0/FluentValidation.AspNetCore.dll",
-        "lib/net6.0/FluentValidation.AspNetCore.xml",
+        "lib/netcoreapp2.1/FluentValidation.AspNetCore.dll",
+        "lib/netcoreapp2.1/FluentValidation.AspNetCore.xml",
         "lib/netcoreapp3.1/FluentValidation.AspNetCore.dll",
         "lib/netcoreapp3.1/FluentValidation.AspNetCore.xml"
       ]
     },
-    "FluentValidation.DependencyInjectionExtensions/10.3.5": {
-      "sha512": "zGaFLXmf4c+kKqQpT0Ec1T97kbJMx9o25+0l6p/TYFQ99bHSLPmgpd8EjU6s7cXv9X/215mIlrazMkzvbCZFWg==",
+    "FluentValidation.DependencyInjectionExtensions/9.5.1": {
+      "sha512": "r0ckWF7AuMt3gx9HmY8UL7l/jdFvk4zarSc+pa5GzwkeDkOl7IKXSpY68bszDLT1d31Br9fv0+ap70UME13S9w==",
       "type": "package",
-      "path": "fluentvalidation.dependencyinjectionextensions/10.3.5",
+      "path": "fluentvalidation.dependencyinjectionextensions/9.5.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.dependencyinjectionextensions.10.3.5.nupkg.sha512",
+        "fluentvalidation.dependencyinjectionextensions.9.5.1.nupkg.sha512",
         "fluentvalidation.dependencyinjectionextensions.nuspec",
         "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll",
-        "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml",
-        "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll",
-        "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.xml"
+        "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml"
       ]
     },
     "Microsoft.CSharp/4.7.0": {
@@ -296,7 +289,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "AutoMapper >= 10.1.1",
-      "FluentValidation.AspNetCore >= 10.3.5"
+      "FluentValidation.AspNetCore >= 9.5.1"
     ]
   },
   "packageFolders": {
@@ -352,7 +345,7 @@
           },
           "FluentValidation.AspNetCore": {
             "target": "Package",
-            "version": "[10.3.5, )"
+            "version": "[9.5.1, )"
           }
         },
         "imports": [

@@ -10,7 +10,7 @@
         "dependencies": {
           "AUTOBEM.Domain": "1.0.0",
           "AUTOBEM.Infra.Data": "1.0.0",
-          "FluentValidation.AspNetCore": "10.3.5"
+          "FluentValidation.AspNetCore": "9.5.1"
         },
         "runtime": {
           "AUTOBEM.Service.dll": {}
@@ -28,35 +28,35 @@
           }
         }
       },
-      "FluentValidation/10.3.5": {
+      "FluentValidation/9.5.1": {
         "runtime": {
           "lib/net5.0/FluentValidation.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "10.3.5.0"
+            "fileVersion": "9.5.1.0"
           }
         }
       },
-      "FluentValidation.AspNetCore/10.3.5": {
+      "FluentValidation.AspNetCore/9.5.1": {
         "dependencies": {
-          "FluentValidation": "10.3.5",
-          "FluentValidation.DependencyInjectionExtensions": "10.3.5"
+          "FluentValidation": "9.5.1",
+          "FluentValidation.DependencyInjectionExtensions": "9.5.1"
         },
         "runtime": {
           "lib/net5.0/FluentValidation.AspNetCore.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "10.3.5.0"
+            "fileVersion": "9.5.1.0"
           }
         }
       },
-      "FluentValidation.DependencyInjectionExtensions/10.3.5": {
+      "FluentValidation.DependencyInjectionExtensions/9.5.1": {
         "dependencies": {
-          "FluentValidation": "10.3.5",
+          "FluentValidation": "9.5.1",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.0"
         },
         "runtime": {
-          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {
+          "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "10.3.5.0"
+            "fileVersion": "9.5.1.0"
           }
         }
       },
@@ -215,7 +215,7 @@
       "AUTOBEM.Domain/1.0.0": {
         "dependencies": {
           "AutoMapper": "10.1.1",
-          "FluentValidation.AspNetCore": "10.3.5"
+          "FluentValidation.AspNetCore": "9.5.1"
         },
         "runtime": {
           "AUTOBEM.Domain.dll": {}
@@ -246,26 +246,26 @@
       "path": "automapper/10.1.1",
       "hashPath": "automapper.10.1.1.nupkg.sha512"
     },
-    "FluentValidation/10.3.5": {
+    "FluentValidation/9.5.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Mt2CnRqNA5+vXVNFY05yLuOG3OLYR7Q/ZcP/rcJZPNPbg95foVUruyQEmKl1GeXVnT2+u6rjGU2ZCdgF//QU2A==",
-      "path": "fluentvalidation/10.3.5",
-      "hashPath": "fluentvalidation.10.3.5.nupkg.sha512"
+      "sha512": "sha512-By09e2m4N3giD7Giq8NCFgkgN5Hkm8Lv/bk8AadD9Xc6jjj2WDGrD6l9keZbWbkO9aygiHQREIt47iS2sVSU7w==",
+      "path": "fluentvalidation/9.5.1",
+      "hashPath": "fluentvalidation.9.5.1.nupkg.sha512"
     },
-    "FluentValidation.AspNetCore/10.3.5": {
+    "FluentValidation.AspNetCore/9.5.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-fHPayS6k2GbvblzFJjiHNlJT8iQhGkGbSX6Q6JsH6Od2uFDCRaZIj/qSUkCwlCE/cHldmiGbk30LrJyKav9HPg==",
-      "path": "fluentvalidation.aspnetcore/10.3.5",
-      "hashPath": "fluentvalidation.aspnetcore.10.3.5.nupkg.sha512"
+      "sha512": "sha512-m4V/ovMBzr5kot9th5GUDMnXMI3SsnOnZB5xXR0dYdQAJPHjWlyjuCJrLeK+q83WCAet9cay0JraEnrLG4Ruew==",
+      "path": "fluentvalidation.aspnetcore/9.5.1",
+      "hashPath": "fluentvalidation.aspnetcore.9.5.1.nupkg.sha512"
     },
-    "FluentValidation.DependencyInjectionExtensions/10.3.5": {
+    "FluentValidation.DependencyInjectionExtensions/9.5.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-zGaFLXmf4c+kKqQpT0Ec1T97kbJMx9o25+0l6p/TYFQ99bHSLPmgpd8EjU6s7cXv9X/215mIlrazMkzvbCZFWg==",
-      "path": "fluentvalidation.dependencyinjectionextensions/10.3.5",
-      "hashPath": "fluentvalidation.dependencyinjectionextensions.10.3.5.nupkg.sha512"
+      "sha512": "sha512-r0ckWF7AuMt3gx9HmY8UL7l/jdFvk4zarSc+pa5GzwkeDkOl7IKXSpY68bszDLT1d31Br9fv0+ap70UME13S9w==",
+      "path": "fluentvalidation.dependencyinjectionextensions/9.5.1",
+      "hashPath": "fluentvalidation.dependencyinjectionextensions.9.5.1.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
       "type": "package",

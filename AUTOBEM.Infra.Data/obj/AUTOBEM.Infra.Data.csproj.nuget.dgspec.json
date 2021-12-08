@@ -52,7 +52,7 @@
             },
             "FluentValidation.AspNetCore": {
               "target": "Package",
-              "version": "[9.5.1, )"
+              "version": "[10.3.5, )"
             }
           },
           "imports": [
@@ -134,7 +134,7 @@
             },
             "MySqlConnector": {
               "target": "Package",
-              "version": "[0.69.4, )"
+              "version": "[2.1.0, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",

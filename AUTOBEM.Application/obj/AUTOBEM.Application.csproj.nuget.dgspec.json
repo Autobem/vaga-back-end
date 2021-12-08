@@ -61,7 +61,7 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.5, )"
+              "version": "[5.0.12, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -71,11 +71,19 @@
             },
             "MySqlConnector": {
               "target": "Package",
-              "version": "[0.69.4, )"
+              "version": "[2.1.0, )"
+            },
+            "OpenTracing.Contrib.NetCore": {
+              "target": "Package",
+              "version": "[0.8.0, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[3.1.1, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.13.0, )"
             }
           },
           "imports": [
@@ -148,7 +156,7 @@
             },
             "FluentValidation.AspNetCore": {
               "target": "Package",
-              "version": "[9.5.1, )"
+              "version": "[10.3.5, )"
             }
           },
           "imports": [
@@ -230,7 +238,7 @@
             },
             "MySqlConnector": {
               "target": "Package",
-              "version": "[0.69.4, )"
+              "version": "[2.1.0, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
@@ -307,7 +315,7 @@
           "dependencies": {
             "FluentValidation.AspNetCore": {
               "target": "Package",
-              "version": "[9.5.1, )"
+              "version": "[10.3.5, )"
             }
           },
           "imports": [

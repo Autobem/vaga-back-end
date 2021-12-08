@@ -1,21 +1,26 @@
+using AUTOBEM.Application.Extensions;
+using AUTOBEM.Application.Models;
 using AUTOBEM.Domain.Entities;
 using AUTOBEM.Domain.Interfaces;
-using AUTOBEM.Infra.Data.Repository;
-using AutoMapper;
-using AUTOBEM.Application.Models;
 using AUTOBEM.Infra.Data.Context;
+using AUTOBEM.Infra.Data.Repository;
 using AUTOBEM.Service.Services;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json.Converters;
 
 namespace AUTOBEM.Application
 {
     public class Startup
     {
+        private readonly string description = "** API para vaga back-end Autobem.";
+        private readonly string version = "v1";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -25,7 +30,14 @@ namespace AUTOBEM.Application
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            // Habilita as ferramentas de instrumentação do OpenTracing
+            services.ConfigureOpenTracing();
+
+            services.AddControllers()
+                                .AddNewtonsoftJson(jsonOptions =>
+                                {
+                                    jsonOptions.SerializerSettings.Converters.Add(new StringEnumConverter());
+                                });
 
             services.AddDbContext<MySqlContext>(options =>
             {
@@ -65,6 +77,13 @@ namespace AUTOBEM.Application
                 config.CreateMap<UpdateVehicleModel, Vehicle>();
                 config.CreateMap<Vehicle, VehicleModel>();
             }).CreateMapper());
+
+            // Habilita o Swagger            
+            services.ConfigureSwaggerDoc(description);
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc(version, new OpenApiInfo { Title = description, Version = version });
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -72,8 +91,10 @@ namespace AUTOBEM.Application
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", description));
             }
 
+            app.ConfigureSwaggerUI();
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthorization();

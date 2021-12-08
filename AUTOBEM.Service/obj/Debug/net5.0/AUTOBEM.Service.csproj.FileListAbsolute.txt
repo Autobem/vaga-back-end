@@ -1,0 +1,17 @@
+C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Service\bin\Debug\net5.0\AUTOBEM.Service.deps.json
+C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Service\bin\Debug\net5.0\AUTOBEM.Service.dll
+C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Service\bin\Debug\net5.0\ref\AUTOBEM.Service.dll
+C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Service\bin\Debug\net5.0\AUTOBEM.Service.pdb
+C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Service\bin\Debug\net5.0\AUTOBEM.Domain.dll
+C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Service\bin\Debug\net5.0\AUTOBEM.Infra.Data.dll
+C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Service\bin\Debug\net5.0\AUTOBEM.Domain.pdb
+C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Service\bin\Debug\net5.0\AUTOBEM.Infra.Data.pdb
+C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Service\obj\Debug\net5.0\AUTOBEM.Service.csproj.AssemblyReference.cache
+C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Service\obj\Debug\net5.0\AUTOBEM.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Service\obj\Debug\net5.0\AUTOBEM.Service.AssemblyInfoInputs.cache
+C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Service\obj\Debug\net5.0\AUTOBEM.Service.AssemblyInfo.cs
+C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Service\obj\Debug\net5.0\AUTOBEM.Service.csproj.CoreCompileInputs.cache
+C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Service\obj\Debug\net5.0\AUTOBEM.Service.csproj.CopyComplete
+C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Service\obj\Debug\net5.0\AUTOBEM.Service.dll
+C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Service\obj\Debug\net5.0\ref\AUTOBEM.Service.dll
+C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Service\obj\Debug\net5.0\AUTOBEM.Service.pdb

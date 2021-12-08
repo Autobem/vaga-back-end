@@ -52,7 +52,7 @@
             },
             "FluentValidation.AspNetCore": {
               "target": "Package",
-              "version": "[9.5.1, )"
+              "version": "[10.3.5, )"
             }
           },
           "imports": [

@@ -15,6 +15,7 @@ namespace AUTOBEM.Application
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.UseIISIntegration();
                 });
     }
 }

@@ -27,7 +27,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AUTOBEM.Application", "AUTO
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensions", "Extensions", "{7BCB6E15-D57B-4D95-AA48-1FA5CE7651E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AUTOBEM.Biblioteca", "AUTOBEM.Biblioteca\AUTOBEM.Biblioteca.csproj", "{267920E7-FDDA-47D8-B272-715B375B38DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AUTOBEM.Biblioteca", "AUTOBEM.Biblioteca\AUTOBEM.Biblioteca.csproj", "{267920E7-FDDA-47D8-B272-715B375B38DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JSON Postman", "JSON Postman", "{B06293A3-5FA3-4E09-8CE7-71E183D15455}"
+	ProjectSection(SolutionItems) = preProject
+		Autobem.postman_collection.json = Autobem.postman_collection.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

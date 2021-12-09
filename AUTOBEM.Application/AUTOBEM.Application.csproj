@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="3.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.5">
       <PrivateAssets>all</PrivateAssets>
@@ -31,10 +32,6 @@
     <ProjectReference Include="..\AUTOBEM.Biblioteca\AUTOBEM.Biblioteca.csproj" />
     <ProjectReference Include="..\AUTOBEM.Domain\AUTOBEM.Domain.csproj" />
     <ProjectReference Include="..\AUTOBEM.Service\AUTOBEM.Service.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Extensions\" />
   </ItemGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">

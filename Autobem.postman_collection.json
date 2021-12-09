@@ -1,0 +1,289 @@
+{
+	"info": {
+		"_postman_id": "252c9a97-5cdc-4c1c-8ae6-395b77a2451c",
+		"name": "Autobem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Geração de Token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"batman\",\r\n    \"password\":\"batman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/v1/account/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"v1",
+						"account",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teste Anônimo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/v1/account/anonimo",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"v1",
+						"account",
+						"anonimo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teste Autenticado",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InJvYmluIiwicm9sZSI6ImVtcHJlZ2FkbyIsIm5iZiI6MTYzOTA1NDY0NCwiZXhwIjoxNjM5MDYxODQ0LCJpYXQiOjE2MzkwNTQ2NDR9.Klsch-wU-3dO8RdybwFS54A06_brlDjVx7wQUumSb6M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InJvYmluIiwicm9sZSI6ImVtcHJlZ2FkbyIsIm5iZiI6MTYzOTA1NDY0NCwiZXhwIjoxNjM5MDYxODQ0LCJpYXQiOjE2MzkwNTQ2NDR9.Klsch-wU-3dO8RdybwFS54A06_brlDjVx7wQUumSb6M",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"robin\",\r\n    \"password\":\"robin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/v1/account/autenticado",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"v1",
+						"account",
+						"autenticado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teste Autenticado Owner",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InJvYmluIiwicm9sZSI6ImVtcHJlZ2FkbyIsIm5iZiI6MTYzOTA1NDY0NCwiZXhwIjoxNjM5MDYxODQ0LCJpYXQiOjE2MzkwNTQ2NDR9.Klsch-wU-3dO8RdybwFS54A06_brlDjVx7wQUumSb6M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InJvYmluIiwicm9sZSI6ImVtcHJlZ2FkbyIsIm5iZiI6MTYzOTA1NDY0NCwiZXhwIjoxNjM5MDYxODQ0LCJpYXQiOjE2MzkwNTQ2NDR9.Klsch-wU-3dO8RdybwFS54A06_brlDjVx7wQUumSb6M",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"robin\",\r\n    \"password\":\"teste\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Owner",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Owner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teste Autenticado - Role: Gerente",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImJhdG1hbiIsInJvbGUiOiJnZXJlbnRlIiwibmJmIjoxNjM5MDU1MjgxLCJleHAiOjE2MzkwNjI0ODEsImlhdCI6MTYzOTA1NTI4MX0.K9i2YgdfFv-p7obcA5Z-d5tcKJfh2jix0fRVRmpP7QE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InJvYmluIiwicm9sZSI6ImVtcHJlZ2FkbyIsIm5iZiI6MTYzOTA1NDY0NCwiZXhwIjoxNjM5MDYxODQ0LCJpYXQiOjE2MzkwNTQ2NDR9.Klsch-wU-3dO8RdybwFS54A06_brlDjVx7wQUumSb6M",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"batman\",\r\n    \"password\":\"batman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/v1/account/gerente",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"v1",
+						"account",
+						"gerente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teste Autenticado - Role: Empregado Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InJvYmluIiwicm9sZSI6ImVtcHJlZ2FkbyIsIm5iZiI6MTYzOTA1NDY0NCwiZXhwIjoxNjM5MDYxODQ0LCJpYXQiOjE2MzkwNTQ2NDR9.Klsch-wU-3dO8RdybwFS54A06_brlDjVx7wQUumSb6M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InJvYmluIiwicm9sZSI6ImVtcHJlZ2FkbyIsIm5iZiI6MTYzOTA1NDY0NCwiZXhwIjoxNjM5MDYxODQ0LCJpYXQiOjE2MzkwNTQ2NDR9.Klsch-wU-3dO8RdybwFS54A06_brlDjVx7wQUumSb6M",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"robin\",\r\n    \"password\":\"robin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/v1/account/empregado",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"v1",
+						"account",
+						"empregado"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

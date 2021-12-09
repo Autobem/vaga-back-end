@@ -1,6 +1,6 @@
-﻿using AUTOBEM.Domain.Entities;
+﻿using AUTOBEM.Application.Models;
+using AUTOBEM.Domain.Entities;
 using AUTOBEM.Domain.Interfaces;
-using AUTOBEM.Application.Models;
 using AUTOBEM.Service.Validators;
 using Microsoft.AspNetCore.Mvc;
 using System;

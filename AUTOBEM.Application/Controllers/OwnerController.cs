@@ -4,6 +4,8 @@ using AUTOBEM.Application.Models;
 using AUTOBEM.Service.Validators;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using Microsoft.AspNetCore.Authorization;
+using AUTOBEM.Application.Extensions;
 
 namespace AUTOBEM.Application.Controllers
 {
@@ -11,6 +13,7 @@ namespace AUTOBEM.Application.Controllers
     [ApiController]
     public class OwnerController : ControllerBase
     {
+        private readonly Autenticacao autentica = new();
         private IBaseService<Owner> _baseOwnerService;
 
         public OwnerController(IBaseService<Owner> baseOwnerService)
@@ -52,9 +55,12 @@ namespace AUTOBEM.Application.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
+        [Authorize]
+        public IActionResult Get([FromBody] UserModel model)
         {
-            return Execute(() => _baseOwnerService.Get<OwnerModel>());
+            return !autentica.AutenticaUsuario(model)
+                ? Ok(new { Mensagem = "Usuário não autirizado."})
+                : Execute(() => _baseOwnerService.Get<OwnerModel>());
         }
 
         [HttpGet("{id}")]

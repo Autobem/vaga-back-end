@@ -1,25 +1,29 @@
-using AUTOBEM.Biblioteca.Extensions;
+using AUTOBEM.Application.Extensions;
 using AUTOBEM.Application.Models;
+using AUTOBEM.Biblioteca.Extensions;
 using AUTOBEM.Domain.Entities;
 using AUTOBEM.Domain.Interfaces;
 using AUTOBEM.Infra.Data.Context;
 using AUTOBEM.Infra.Data.Repository;
 using AUTOBEM.Service.Services;
 using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json.Converters;
+using System.Text;
 
 namespace AUTOBEM.Application
 {
     public class Startup
     {
-        private readonly string description = "** API para vaga back-end Autobem.";
+        private readonly string description = "** API para vaga back-end Autobem. Desenvolvida com .NET CORE 5, Swagger, MySQL, OAuth 2 com geração de Authorization Token, link para teste: https://localhost:5001/v1/account/anonimo, https://localhost:5001/v1/account/autenticado, https://localhost:5001/v1/account/empregado, https://localhost:5001/v1/account/gerente, https://localhost:5001/api/Owner / Postman JSon Incluído na Solução.";
         private readonly string version = "v1";
 
         public Startup(IConfiguration configuration)
@@ -31,14 +35,34 @@ namespace AUTOBEM.Application
 
         public void ConfigureServices(IServiceCollection services)
         {
-            // Habilita as ferramentas de instrumentação do OpenTracing
             services.ConfigureOpenTracing();
             services.AddMvc();
+            services.AddCors();
 
             services.AddControllers()
                 .AddNewtonsoftJson(jsonOptions =>
                 {
                     jsonOptions.SerializerSettings.Converters.Add(new StringEnumConverter());
+                });
+
+            byte[] key = Encoding.ASCII.GetBytes(Settings.Secret);
+
+            services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+                .AddJwtBearer(x =>
+                {
+                    x.RequireHttpsMetadata = false;
+                    x.SaveToken = true;
+                    x.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(key),
+                        ValidateIssuer = false,
+                        ValidateAudience = false
+                    };
                 });
 
             services.AddDbContext<MySqlContext>(options =>
@@ -99,6 +123,13 @@ namespace AUTOBEM.Application
             app.ConfigureSwaggerUI();
             app.UseHttpsRedirection();
             app.UseRouting();
+
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
+
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

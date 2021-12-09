@@ -7,13 +7,3 @@ C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\AUTOBEM.Domain
 C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\AUTOBEM.Domain\obj\Debug\netcoreapp3.1\AUTOBEM.Domain.csproj.CoreCompileInputs.cache
 C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\AUTOBEM.Domain\obj\Debug\netcoreapp3.1\AUTOBEM.Domain.dll
 C:\Users\antonio.santos\Downloads\AUTOBEM\layer-architecture-main\AUTOBEM.Domain\obj\Debug\netcoreapp3.1\AUTOBEM.Domain.pdb
-C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Domain\bin\Debug\netcoreapp3.1\AUTOBEM.Domain.deps.json
-C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Domain\bin\Debug\netcoreapp3.1\AUTOBEM.Domain.dll
-C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Domain\bin\Debug\netcoreapp3.1\AUTOBEM.Domain.pdb
-C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Domain\obj\Debug\netcoreapp3.1\AUTOBEM.Domain.csproj.AssemblyReference.cache
-C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Domain\obj\Debug\netcoreapp3.1\AUTOBEM.Domain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Domain\obj\Debug\netcoreapp3.1\AUTOBEM.Domain.AssemblyInfoInputs.cache
-C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Domain\obj\Debug\netcoreapp3.1\AUTOBEM.Domain.AssemblyInfo.cs
-C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Domain\obj\Debug\netcoreapp3.1\AUTOBEM.Domain.csproj.CoreCompileInputs.cache
-C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Domain\obj\Debug\netcoreapp3.1\AUTOBEM.Domain.dll
-C:\Users\antonio.santos\Downloads\vaga-back-end\AUTOBEM.Domain\obj\Debug\netcoreapp3.1\AUTOBEM.Domain.pdb

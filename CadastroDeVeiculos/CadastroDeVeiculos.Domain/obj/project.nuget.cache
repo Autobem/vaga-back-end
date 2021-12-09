@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "8lx2euNXZLiyN79CGwtZTvzO8TXz9VHHkxIxUlmJ00Pg1CAdkI2veQVU41liwYhD8rZqz5gVeD7u9cDURkkd5Q==",
+  "success": true,
+  "projectFilePath": "C:\\Git\\Igor_Silva_vaga-back-end\\CadastroDeVeiculos\\CadastroDeVeiculos.Domain\\CadastroDeVeiculos.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Igorv\\.nuget\\packages\\fluentvalidation\\10.3.0\\fluentvalidation.10.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 Presentation", "1 Presentation", "{75A03AC8-0AD2-4356-888E-0B48D581DC27}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 Application", "2 Application", "{0BACA38B-AC7D-4631-B175-897E0DF47B4E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 Domain", "3 Domain", "{708A88E4-4EB0-48AC-976C-A0F2626F2C76}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 Infrastructure", "4 Infrastructure", "{3BA17E16-D6A2-4873-84C0-5EA3120F518D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 Test", "5 Test", "{579C4B91-8887-4728-8F00-89CBFEC1082B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CadastroDeVeiculos.Domain", "CadastroDeVeiculos.Domain\CadastroDeVeiculos.Domain.csproj", "{43D6E30A-77C7-49FA-839F-8B4CF4C8CA5B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CadastroDeVeiculos.Business", "CadastroDeVeiculos.Business\CadastroDeVeiculos.Business.csproj", "{6933BE2B-4A40-447F-89D6-872F76319F83}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 Data", "4.1 Data", "{203F07CD-4A9E-49B0-9DCE-0245337B53F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 CrossCutting", "4.2 CrossCutting", "{F2FADAA5-4010-407C-81A2-13AC92F889DB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CadastroDeVeiculos.Data", "CadastroDeVeiculos.Data\CadastroDeVeiculos.Data.csproj", "{C8401B85-22A4-445F-A31F-5B598439B4AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroDeVeiculos.Domain.Tests", "CadastroDeVeiculos.Domain.Tests\CadastroDeVeiculos.Domain.Tests.csproj", "{6585D5EC-C7BB-4971-A321-F402296CFBAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroDeVeiculos.Ioc", "CadastroDeVeiculos.Ioc\CadastroDeVeiculos.Ioc.csproj", "{1C028CFE-4F17-40BF-91BF-57A30B37F711}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43D6E30A-77C7-49FA-839F-8B4CF4C8CA5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43D6E30A-77C7-49FA-839F-8B4CF4C8CA5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43D6E30A-77C7-49FA-839F-8B4CF4C8CA5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43D6E30A-77C7-49FA-839F-8B4CF4C8CA5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6933BE2B-4A40-447F-89D6-872F76319F83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6933BE2B-4A40-447F-89D6-872F76319F83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6933BE2B-4A40-447F-89D6-872F76319F83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6933BE2B-4A40-447F-89D6-872F76319F83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8401B85-22A4-445F-A31F-5B598439B4AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8401B85-22A4-445F-A31F-5B598439B4AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8401B85-22A4-445F-A31F-5B598439B4AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8401B85-22A4-445F-A31F-5B598439B4AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6585D5EC-C7BB-4971-A321-F402296CFBAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6585D5EC-C7BB-4971-A321-F402296CFBAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6585D5EC-C7BB-4971-A321-F402296CFBAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6585D5EC-C7BB-4971-A321-F402296CFBAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C028CFE-4F17-40BF-91BF-57A30B37F711}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C028CFE-4F17-40BF-91BF-57A30B37F711}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C028CFE-4F17-40BF-91BF-57A30B37F711}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C028CFE-4F17-40BF-91BF-57A30B37F711}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{43D6E30A-77C7-49FA-839F-8B4CF4C8CA5B} = {708A88E4-4EB0-48AC-976C-A0F2626F2C76}
+		{6933BE2B-4A40-447F-89D6-872F76319F83} = {708A88E4-4EB0-48AC-976C-A0F2626F2C76}
+		{203F07CD-4A9E-49B0-9DCE-0245337B53F1} = {3BA17E16-D6A2-4873-84C0-5EA3120F518D}
+		{F2FADAA5-4010-407C-81A2-13AC92F889DB} = {3BA17E16-D6A2-4873-84C0-5EA3120F518D}
+		{C8401B85-22A4-445F-A31F-5B598439B4AB} = {203F07CD-4A9E-49B0-9DCE-0245337B53F1}
+		{6585D5EC-C7BB-4971-A321-F402296CFBAC} = {579C4B91-8887-4728-8F00-89CBFEC1082B}
+		{1C028CFE-4F17-40BF-91BF-57A30B37F711} = {F2FADAA5-4010-407C-81A2-13AC92F889DB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27988F24-932E-4450-9BB3-6232493E0EAF}
+	EndGlobalSection
+EndGlobal

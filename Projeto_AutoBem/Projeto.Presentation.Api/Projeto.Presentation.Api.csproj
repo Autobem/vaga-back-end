@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.18" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.21" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Projeto.Application\Projeto.Application.csproj" />
+    <ProjectReference Include="..\Projeto.CrossCutting.Cryptography\Projeto.CrossCutting.Cryptography.csproj" />
+    <ProjectReference Include="..\Projeto.Infra.Data\Projeto.Infra.Data.csproj" />
+  </ItemGroup>
+
+
+</Project>

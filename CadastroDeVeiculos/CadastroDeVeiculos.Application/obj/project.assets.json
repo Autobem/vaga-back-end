@@ -23,6 +23,15 @@
           "lib/netstandard2.1/FluentValidation.dll": {}
         }
       },
+      "MediatR/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MediatR.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MediatR.dll": {}
+        }
+      },
       "System.ValueTuple/4.5.0": {
         "type": "package",
         "compile": {
@@ -102,6 +111,19 @@
         "lib/netstandard2.1/FluentValidation.xml"
       ]
     },
+    "MediatR/8.0.0": {
+      "sha512": "cYSDJ2b/dIiwTLW/ZW/SQcXq9I3WF6KR4D0KN4hxWR08tZqcvcVS1bQXZbsANdQdTQfxx+ZFp5WkHLMyeoR5Zw==",
+      "type": "package",
+      "path": "mediatr/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/MediatR.dll",
+        "lib/netstandard2.0/MediatR.dll",
+        "mediatr.8.0.0.nupkg.sha512",
+        "mediatr.nuspec"
+      ]
+    },
     "System.ValueTuple/4.5.0": {
       "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
       "type": "package",
@@ -160,7 +182,8 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "AutoMapper >= 7.0.1",
-      "CadastroDeVeiculos.Business >= 1.0.0"
+      "CadastroDeVeiculos.Business >= 1.0.0",
+      "MediatR >= 8.0.0"
     ]
   },
   "packageFolders": {
@@ -217,6 +240,10 @@
           "AutoMapper": {
             "target": "Package",
             "version": "[7.0.1, )"
+          },
+          "MediatR": {
+            "target": "Package",
+            "version": "[8.0.0, )"
           }
         },
         "imports": [

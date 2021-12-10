@@ -8,8 +8,8 @@ namespace CadastroDeVeiculos.Application.AutoMapper.ProfileConfiguration
     {
         public ProfileConfiguration()
         {
-            CreateMap<User, ClientDTO>().ReverseMap();
-            CreateMap<Client, ClientDTO>().ReverseMap();
+            CreateMap<User, UserDTO>().ReverseMap();
+            CreateMap<Client, UserDTO>().ReverseMap();
         }
     }
 }

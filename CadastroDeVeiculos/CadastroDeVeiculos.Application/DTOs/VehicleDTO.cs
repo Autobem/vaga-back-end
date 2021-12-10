@@ -32,6 +32,6 @@ namespace CadastroDeVeiculos.Application.DTOs
 
 
         public int ClientId { get; set; }
-        public ClientDTO Client { get; set; }
+        public UserDTO Client { get; set; }
     }
 }

@@ -1,7 +1,6 @@
 C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Domain\bin\Debug\netcoreapp3.1\CadastroDeVeiculos.Domain.deps.json
 C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Domain\bin\Debug\netcoreapp3.1\CadastroDeVeiculos.Domain.dll
 C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Domain\bin\Debug\netcoreapp3.1\CadastroDeVeiculos.Domain.pdb
-C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Domain\obj\Debug\netcoreapp3.1\CadastroDeVeiculos.Domain.csproj.AssemblyReference.cache
 C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Domain\obj\Debug\netcoreapp3.1\CadastroDeVeiculos.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Domain\obj\Debug\netcoreapp3.1\CadastroDeVeiculos.Domain.AssemblyInfoInputs.cache
 C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Domain\obj\Debug\netcoreapp3.1\CadastroDeVeiculos.Domain.AssemblyInfo.cs

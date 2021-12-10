@@ -20,14 +20,14 @@ namespace CadastroDeVeiculos.Application.Services
             this._mapper = mapper;
         }
 
-        public async Task CreateAsync(ClientDTO entity)
+        public async Task CreateAsync(UserDTO entity)
         {
             var userEntity = _mapper.Map<User>(entity);
             await this._userRepository.CreateAsync(userEntity);
 
         }
 
-        public async Task UpdateAsync(ClientDTO entity)
+        public async Task UpdateAsync(UserDTO entity)
         {
                 var userEntity = this._mapper.Map<User>(entity);
                 await this._userRepository.UpdateAsync(userEntity);
@@ -39,16 +39,16 @@ namespace CadastroDeVeiculos.Application.Services
             await this._userRepository.DeleteAsync(userEntity.Id);
         }
 
-        public async Task<IEnumerable<ClientDTO>> GetAllAsync(int pageSize, int pageActual)
+        public async Task<IEnumerable<UserDTO>> GetAllAsync(int pageSize, int pageActual)
         {
             var list = await this._userRepository.GetAllAsync(pageSize, pageActual);
-            return list.MapTo<IEnumerable<User>, IEnumerable<ClientDTO>>();
+            return list.MapTo<IEnumerable<User>, IEnumerable<UserDTO>>();
         }
 
-        public async Task<ClientDTO> GetAsync(int id)
+        public async Task<UserDTO> GetAsync(int id)
         {
             var entity = await this._userRepository.GetByIdAsync(id);
-            return entity.MapTo<User, ClientDTO>();
+            return entity.MapTo<User, UserDTO>();
         }
     }
 }

@@ -28,7 +28,7 @@ namespace CadastroDeVeiculos.Api.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(int))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task Post([FromBody] ClientDTO request)
+        public async Task Post([FromBody] UserDTO request)
         {
             await this._userService.CreateAsync(request);
         }
@@ -39,7 +39,7 @@ namespace CadastroDeVeiculos.Api.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(int))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task Put([FromBody] ClientDTO request)
+        public async Task Put([FromBody] UserDTO request)
         {
             await this._userService.UpdateAsync(request);
         }
@@ -61,7 +61,7 @@ namespace CadastroDeVeiculos.Api.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(int))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ClientDTO> Get(int userId)
+        public async Task<UserDTO> Get(int userId)
         {
             return await this._userService.GetAsync(userId);
         }
@@ -72,7 +72,7 @@ namespace CadastroDeVeiculos.Api.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(int))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IEnumerable<ClientDTO>> Get(int pageSize, int pageActual)
+        public async Task<IEnumerable<UserDTO>> Get(int pageSize, int pageActual)
         {
             return await this._userService.GetAllAsync(pageSize, pageActual);
         }

@@ -27,9 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CadastroDeVeiculos.Domain.T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CadastroDeVeiculos.Ioc", "CadastroDeVeiculos.Ioc\CadastroDeVeiculos.Ioc.csproj", "{1C028CFE-4F17-40BF-91BF-57A30B37F711}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroDeVeiculos.Api", "CadastroDeVeiculos.Api\CadastroDeVeiculos.Api.csproj", "{6D41DBED-4C7C-47F9-A907-55EEB8EB7C96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CadastroDeVeiculos.Api", "CadastroDeVeiculos.Api\CadastroDeVeiculos.Api.csproj", "{6D41DBED-4C7C-47F9-A907-55EEB8EB7C96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroDeVeiculos.Application", "CadastroDeVeiculos.Application\CadastroDeVeiculos.Application.csproj", "{E6D9BB20-C8CC-4FCC-B758-19937E7E2D9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CadastroDeVeiculos.Application", "CadastroDeVeiculos.Application\CadastroDeVeiculos.Application.csproj", "{E6D9BB20-C8CC-4FCC-B758-19937E7E2D9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

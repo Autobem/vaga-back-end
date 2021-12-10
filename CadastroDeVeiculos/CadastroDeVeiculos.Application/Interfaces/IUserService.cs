@@ -2,7 +2,7 @@
 
 namespace CadastroDeVeiculos.Application.Interfaces
 {
-    public interface IUserService : IBaseService<ClientDTO>
+    public interface IUserService : IBaseService<UserDTO>
     {
 
     }

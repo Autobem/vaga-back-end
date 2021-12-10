@@ -11,13 +11,13 @@ namespace CadastroDeVeiculos.Data.EntityFramework.Mapping
             builder.ToTable("Vehicles");
             builder.HasKey(v => v.Id).HasName("Pk_Vehicle");
 
-            builder.Property(v => v.ModelName).HasColumnType("varchar(50)").IsUnicode()
+            builder.Property(v => v.ModelName).HasColumnType("varchar(50)")
                 .HasColumnName("Vehicle_Model").IsRequired();
 
-            builder.Property(v => v.Manufacturer).HasColumnType("varchar(70)").IsUnicode()
+            builder.Property(v => v.Brand).HasColumnType("varchar(70)")
                 .HasColumnName("Vehicle_Manufacture").IsRequired();
             
-            builder.Property(v => v.PlateTheVehicle).HasColumnType("varchar(7)").IsUnicode()
+            builder.Property(v => v.Plate).HasColumnType("varchar(7)").IsUnicode()
                 .HasColumnName("Vehicle_Plate").IsRequired();
 
             builder.Property(v => v.YearOfManufacturer).HasColumnName("Vehicle_Year")

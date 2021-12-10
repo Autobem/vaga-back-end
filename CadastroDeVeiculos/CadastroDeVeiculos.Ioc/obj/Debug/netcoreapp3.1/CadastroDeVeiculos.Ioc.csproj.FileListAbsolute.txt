@@ -1,0 +1,5 @@
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Ioc\obj\Debug\netcoreapp3.1\CadastroDeVeiculos.Ioc.csproj.AssemblyReference.cache
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Ioc\obj\Debug\netcoreapp3.1\CadastroDeVeiculos.Ioc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Ioc\obj\Debug\netcoreapp3.1\CadastroDeVeiculos.Ioc.AssemblyInfoInputs.cache
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Ioc\obj\Debug\netcoreapp3.1\CadastroDeVeiculos.Ioc.AssemblyInfo.cs
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Ioc\obj\Debug\netcoreapp3.1\CadastroDeVeiculos.Ioc.csproj.CoreCompileInputs.cache

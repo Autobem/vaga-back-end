@@ -5,12 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\Service\" />
-    <Folder Include="Response\" />
-    <Folder Include="Request\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\CadastroDeVeiculos.Domain\CadastroDeVeiculos.Domain.csproj" />
   </ItemGroup>
 

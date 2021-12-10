@@ -5,11 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CadastroDeVeiculos.Application\CadastroDeVeiculos.Application.csproj" />
     <ProjectReference Include="..\CadastroDeVeiculos.Business\CadastroDeVeiculos.Business.csproj" />
     <ProjectReference Include="..\CadastroDeVeiculos.Data\CadastroDeVeiculos.Data.csproj" />
   </ItemGroup>

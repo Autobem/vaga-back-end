@@ -4,6 +4,76 @@
     "C:\\Git\\Igor_Silva_vaga-back-end\\CadastroDeVeiculos\\CadastroDeVeiculos.Ioc\\CadastroDeVeiculos.Ioc.csproj": {}
   },
   "projects": {
+    "C:\\Git\\Igor_Silva_vaga-back-end\\CadastroDeVeiculos\\CadastroDeVeiculos.Application\\CadastroDeVeiculos.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Git\\Igor_Silva_vaga-back-end\\CadastroDeVeiculos\\CadastroDeVeiculos.Application\\CadastroDeVeiculos.Application.csproj",
+        "projectName": "CadastroDeVeiculos.Application",
+        "projectPath": "C:\\Git\\Igor_Silva_vaga-back-end\\CadastroDeVeiculos\\CadastroDeVeiculos.Application\\CadastroDeVeiculos.Application.csproj",
+        "packagesPath": "C:\\Users\\Igorv\\.nuget\\packages\\",
+        "outputPath": "C:\\Git\\Igor_Silva_vaga-back-end\\CadastroDeVeiculos\\CadastroDeVeiculos.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Igorv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://packagesource": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Git\\Igor_Silva_vaga-back-end\\CadastroDeVeiculos\\CadastroDeVeiculos.Business\\CadastroDeVeiculos.Business.csproj": {
+                "projectPath": "C:\\Git\\Igor_Silva_vaga-back-end\\CadastroDeVeiculos\\CadastroDeVeiculos.Business\\CadastroDeVeiculos.Business.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Git\\Igor_Silva_vaga-back-end\\CadastroDeVeiculos\\CadastroDeVeiculos.Business\\CadastroDeVeiculos.Business.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -115,6 +185,12 @@
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "None",
               "target": "Package",
               "version": "[5.0.0, )"
             },
@@ -244,6 +320,9 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
+              "C:\\Git\\Igor_Silva_vaga-back-end\\CadastroDeVeiculos\\CadastroDeVeiculos.Application\\CadastroDeVeiculos.Application.csproj": {
+                "projectPath": "C:\\Git\\Igor_Silva_vaga-back-end\\CadastroDeVeiculos\\CadastroDeVeiculos.Application\\CadastroDeVeiculos.Application.csproj"
+              },
               "C:\\Git\\Igor_Silva_vaga-back-end\\CadastroDeVeiculos\\CadastroDeVeiculos.Business\\CadastroDeVeiculos.Business.csproj": {
                 "projectPath": "C:\\Git\\Igor_Silva_vaga-back-end\\CadastroDeVeiculos\\CadastroDeVeiculos.Business\\CadastroDeVeiculos.Business.csproj"
               },
@@ -263,6 +342,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
               "version": "[6.0.0, )"

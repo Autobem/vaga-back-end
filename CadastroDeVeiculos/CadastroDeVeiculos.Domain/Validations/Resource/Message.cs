@@ -7,7 +7,7 @@ namespace CadastroDeVeiculos.Domain.Validations.Resource
 {
     public enum Message
     {
-        [Description("{0} não encontrada.")]
+        [Description("{0} não encontrado.")]
         NotFound,
 
         [Description("{0} não é válido.")]
@@ -25,7 +25,7 @@ namespace CadastroDeVeiculos.Domain.Validations.Resource
         [Description("Este {0} já existe na base de dados.")]
         Exist,
 
-        [Description("Campo {0} não permite mais que {1} caracteres.")]
+        [Description("Campo {0} permite de {1} caracteres.")]
         MoreExpected,
 
         [Description("O {0} deve ser maior que {1}.")]

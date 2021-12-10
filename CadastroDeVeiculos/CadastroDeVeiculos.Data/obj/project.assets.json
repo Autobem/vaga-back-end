@@ -5857,6 +5857,7 @@
     ".NETCoreApp,Version=v3.1": [
       "CadastroDeVeiculos.Business >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.0",
+      "Microsoft.EntityFrameworkCore.Design >= 5.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.0"
     ]
@@ -5913,6 +5914,12 @@
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[5.0.0, )"
+          },
+          "Microsoft.EntityFrameworkCore.Design": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "None",
             "target": "Package",
             "version": "[5.0.0, )"
           },

@@ -89,5 +89,10 @@ namespace CadastroDeVeiculos.Data.Repository
 
             return query;
         }
+
+        public bool Exist(Expression<Func<TEntity, bool>> where)
+        {
+            return this._dbContext.Set<TEntity>().Any(where);
+        }
     }
 }

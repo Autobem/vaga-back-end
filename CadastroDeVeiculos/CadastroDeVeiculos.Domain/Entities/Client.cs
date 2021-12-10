@@ -14,6 +14,8 @@ namespace CadastroDeVeiculos.Domain.Entities
 
         public ICollection<Vehicle> Vehicles { get; set; }
 
+        protected Client() { }
+
         public Client(Name name, string phoneNumber, string email, string document)
         {
             

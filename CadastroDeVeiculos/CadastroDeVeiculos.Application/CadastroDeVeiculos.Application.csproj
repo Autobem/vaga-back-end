@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="MediatR" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CadastroDeVeiculos.Business\CadastroDeVeiculos.Business.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Mediator\VehicleCQRS\Commands\" />
+    <Folder Include="Mediator\VehicleCQRS\Handlers\" />
+    <Folder Include="Mediator\VehicleCQRS\Queries\" />
+  </ItemGroup>
+
+</Project>

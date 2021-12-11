@@ -1,0 +1,96 @@
+﻿using CadastroDeVeiculos.Business.Interfaces.Repository;
+using CadastroDeVeiculos.Data.EntityFramework.Context;
+using CadastroDeVeiculos.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Threading.Tasks;
+
+namespace CadastroDeVeiculos.Data.Repository
+{
+    public class BaseRepository<TEntity> : IDisposable, IBaseRepository<TEntity> where TEntity : BaseEntity
+    {
+        private readonly ApplicationDbContext _dbContext;
+        protected DbSet<TEntity> Dbset => this._dbContext.Set<TEntity>();
+
+        public BaseRepository(ApplicationDbContext dbContext)
+        {
+            this._dbContext = dbContext;
+        }
+
+    
+        public async Task<TEntity> CreateAsync(TEntity entity)
+        {
+            Dbset.Add(entity);
+            this._dbContext.Entry(entity).State = EntityState.Added;
+            return entity;
+        }
+
+        public async Task<TEntity> UpdateAsync(TEntity entity)
+        {
+            Dbset.Update(entity);
+            this._dbContext.Entry(entity).State = EntityState.Modified;
+            await this._dbContext.SaveChangesAsync();
+            return entity;
+        }
+
+        public async Task<TEntity> DeleteAsync(int id)
+        {
+            var entity = await FindAsync(x => x.Id == id);
+            
+
+            if (this._dbContext.Entry(entity).State == EntityState.Detached)
+            {
+                Dbset.Attach(entity);
+            }
+
+            Dbset.Remove(entity);
+            await this._dbContext.SaveChangesAsync();
+            return entity;
+        }
+
+        public async Task<TEntity> GetByIdAsync(int id)
+        {
+            return await FindAsync(x => x.Id == id);
+        }
+
+        public async Task<IEnumerable<TEntity>> GetAllAsync()
+        {
+            return await this._dbContext.Set<TEntity>().OrderBy(x => x.Id).AsNoTracking().ToListAsync();
+        }
+
+        public async Task<TEntity> FindAsync(Expression<Func<TEntity, bool>> where, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> order = null)
+        {
+            return await Query(where, order).FirstOrDefaultAsync();
+        }
+
+        public void Dispose()
+        {
+            this._dbContext.Dispose();
+        }
+
+        private IQueryable<TEntity> Query(Expression<Func<TEntity, bool>> where, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> order = null)
+        {
+            IQueryable<TEntity> query = this._dbContext.Set<TEntity>();
+
+            if (where != null)
+            {
+                query = query.Where(where);
+            }
+
+            if (order != null)
+            {
+                return order(query);
+            }
+
+            return query;
+        }
+
+        public bool Exist(Expression<Func<TEntity, bool>> where)
+        {
+            return this._dbContext.Set<TEntity>().Any(where);
+        }
+    }
+}

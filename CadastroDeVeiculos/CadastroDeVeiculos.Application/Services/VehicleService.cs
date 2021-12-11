@@ -43,9 +43,9 @@ namespace CadastroDeVeiculos.Application.Services
             await this._vehicleRepository.DeleteAsync(userEntity.Id);
         }
 
-        public async Task<IEnumerable<VehicleDTO>> GetAllAsync(int pageSize, int pageActual)
+        public async Task<IEnumerable<VehicleDTO>> GetAllAsync()
         {
-            var list = await this._vehicleRepository.GetAllAsync(pageSize, pageActual);
+            var list = await this._vehicleRepository.GetAllAsync();
             return list.MapTo<IEnumerable<Vehicle>, IEnumerable<VehicleDTO>>();
         }
 

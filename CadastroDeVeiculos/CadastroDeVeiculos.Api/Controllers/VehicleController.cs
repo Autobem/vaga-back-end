@@ -71,9 +71,9 @@ namespace CadastroDeVeiculos.Api.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(int))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IEnumerable<VehicleDTO>> Get(int pageSize, int pageActual)
+        public async Task<IEnumerable<VehicleDTO>> Get()
         {
-            return await this._vehicleService.GetAllAsync(pageSize, pageActual);
+            return await this._vehicleService.GetAllAsync();
         }
 
     }

@@ -8,7 +8,7 @@ namespace CadastroDeVeiculos.Application.Interfaces
         Task CreateAsync(TEntity entity);
         Task UpdateAsync(TEntity entity);
         Task DeleteAsync(int id);
-        Task<IEnumerable<TEntity>> GetAllAsync(int pageSize, int pageActual);
+        Task<IEnumerable<TEntity>> GetAllAsync();
         Task<TEntity> GetAsync(int id);
     }
 }

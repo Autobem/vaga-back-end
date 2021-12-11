@@ -56,9 +56,9 @@ namespace CadastroDeVeiculos.Data.Repository
             return await FindAsync(x => x.Id == id);
         }
 
-        public async Task<IEnumerable<TEntity>> GetAllAsync(int pageSize, int pageActual)
+        public async Task<IEnumerable<TEntity>> GetAllAsync()
         {
-            return await this._dbContext.Set<TEntity>().OrderBy(x => x.Id).Skip((pageActual - 1) * pageSize).Take(pageSize).ToListAsync();
+            return await this._dbContext.Set<TEntity>().OrderBy(x => x.Id).AsNoTracking().ToListAsync();
         }
 
         public async Task<TEntity> FindAsync(Expression<Func<TEntity, bool>> where, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> order = null)

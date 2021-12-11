@@ -1,4 +1,4 @@
-﻿namespace CadastroDeVeiculos.Business.Handlers
+﻿namespace CadastroDeVeiculos.Business.NotificationHandlers
 {
     public class DomainNotification
     {

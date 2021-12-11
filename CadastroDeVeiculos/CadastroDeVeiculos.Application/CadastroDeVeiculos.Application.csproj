@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="MediatR" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -13,7 +14,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Mediator\" />
+    <Folder Include="Mediator\ClientCQRS\Handlers\" />
+    <Folder Include="Mediator\ClientCQRS\Commands\" />
+    <Folder Include="Mediator\ClientCQRS\Queries\" />
+    <Folder Include="Mediator\VehicleCQRS\Commands\" />
+    <Folder Include="Mediator\VehicleCQRS\Handlers\" />
+    <Folder Include="Mediator\VehicleCQRS\Queries\" />
   </ItemGroup>
 
 </Project>

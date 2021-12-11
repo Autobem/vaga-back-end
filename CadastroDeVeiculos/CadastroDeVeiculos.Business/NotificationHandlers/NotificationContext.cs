@@ -1,9 +1,9 @@
-﻿using CadastroDeVeiculos.Business.Interfaces.Handler;
+﻿using CadastroDeVeiculos.Business.Interfaces.NotificationHandler;
 using FluentValidation.Results;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CadastroDeVeiculos.Business.Handlers
+namespace CadastroDeVeiculos.Business.NotificationHandlers
 {
     public class NotificationContext : INotification
     {

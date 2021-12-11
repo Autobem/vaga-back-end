@@ -21,28 +21,25 @@ namespace CadastroDeVeiculos.Data.Repository
         }
 
     
-        public async Task CreateAsync(TEntity entity)
+        public async Task<TEntity> CreateAsync(TEntity entity)
         {
             Dbset.Add(entity);
             this._dbContext.Entry(entity).State = EntityState.Added;
-            await this._dbContext.SaveChangesAsync();
+            return entity;
         }
 
-        public async Task UpdateAsync(TEntity entity)
+        public async Task<TEntity> UpdateAsync(TEntity entity)
         {
             Dbset.Update(entity);
             this._dbContext.Entry(entity).State = EntityState.Modified;
             await this._dbContext.SaveChangesAsync();
+            return entity;
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task<TEntity> DeleteAsync(int id)
         {
             var entity = await FindAsync(x => x.Id == id);
             
-            if (entity == null)
-            {
-                return;
-            }
 
             if (this._dbContext.Entry(entity).State == EntityState.Detached)
             {
@@ -51,6 +48,7 @@ namespace CadastroDeVeiculos.Data.Repository
 
             Dbset.Remove(entity);
             await this._dbContext.SaveChangesAsync();
+            return entity;
         }
 
         public async Task<TEntity> GetByIdAsync(int id)

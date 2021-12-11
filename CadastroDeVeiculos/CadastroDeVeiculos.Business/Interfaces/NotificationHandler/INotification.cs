@@ -1,8 +1,8 @@
-﻿using CadastroDeVeiculos.Business.Handlers;
+﻿using CadastroDeVeiculos.Business.NotificationHandlers;
 using FluentValidation.Results;
 using System.Collections.Generic;
 
-namespace CadastroDeVeiculos.Business.Interfaces.Handler
+namespace CadastroDeVeiculos.Business.Interfaces.NotificationHandler
 {
     public interface INotification
     {

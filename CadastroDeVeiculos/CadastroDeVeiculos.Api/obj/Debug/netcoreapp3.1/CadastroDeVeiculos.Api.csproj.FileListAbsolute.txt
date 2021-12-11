@@ -11,6 +11,7 @@ C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Api\bin\De
 C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Api\bin\Debug\netcoreapp3.1\FluentValidation.dll
 C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Api\bin\Debug\netcoreapp3.1\Humanizer.dll
 C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Api\bin\Debug\netcoreapp3.1\MediatR.dll
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Api\bin\Debug\netcoreapp3.1\MediatR.Extensions.Microsoft.DependencyInjection.dll
 C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Api\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll

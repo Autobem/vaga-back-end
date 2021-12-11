@@ -2,8 +2,10 @@
 using CadastroDeVeiculos.Application.AutoMapper;
 using CadastroDeVeiculos.Application.DTOs;
 using CadastroDeVeiculos.Application.Interfaces;
-using CadastroDeVeiculos.Business.Interfaces.Repository;
+using CadastroDeVeiculos.Application.Mediator.ClientCQRS.Commands;
+using CadastroDeVeiculos.Application.Mediator.ClientCQRS.Queries;
 using CadastroDeVeiculos.Domain.Entities;
+using MediatR;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -11,45 +13,52 @@ namespace CadastroDeVeiculos.Application.Services
 {
     public class ClientService : IClientService
     {
-        private IClientRepository _clientRepository;
+        private IMediator _mediator;
         private IMapper _mapper;
 
-        public ClientService(IClientRepository clientRepository, IMapper mapper)
+        public ClientService(IMediator mediator, IMapper mapper)
         {
-            this._clientRepository = clientRepository;
+            this._mediator = mediator;
             this._mapper = mapper;
         }
 
-        public async Task CreateAsync(ClientDTO entity)
+        public async Task CreateAsync(ClientDTO entityDTO)
         {
-            var userEntity = _mapper.Map<Client>(entity);
-            await this._clientRepository.CreateAsync(userEntity);
+            var clientCreateCommand = this._mapper.Map<ClientCreateCommand>(entityDTO);
 
+            await this._mediator.Send(clientCreateCommand);
         }
 
-        public async Task UpdateAsync(ClientDTO entity)
+        public async Task UpdateAsync(ClientDTO entityDTO)
         {
+            var clientUpdateCommand = this._mapper.Map<ClientUpdateCommand>(entityDTO);
 
-            var userEntity = this._mapper.Map<Client>(entity);
-            await this._clientRepository.UpdateAsync(userEntity);
+            await this._mediator.Send(clientUpdateCommand);
         }
 
         public async Task DeleteAsync(int id)
         {
-            var userEntity = this._clientRepository.GetByIdAsync(id).Result;
-            await this._clientRepository.DeleteAsync(userEntity.Id);
+            var clientRemoveCommand = new ClientRemoveCommand(id);
+
+            await this._mediator.Send(clientRemoveCommand);
         }
 
         public async Task<IEnumerable<ClientDTO>> GetAllAsync()
         {
-            var list = await this._clientRepository.GetAllAsync();
-            return list.MapTo<IEnumerable<Client>, IEnumerable<ClientDTO>>();
+            var clientsQuery = new GetClientsQuery();
+
+            var result = await this._mediator.Send(clientsQuery);
+
+            return result.MapTo<IEnumerable<Client>, IEnumerable<ClientDTO>>();
         }
 
         public async Task<ClientDTO> GetAsync(int id)
         {
-            var entity = await this._clientRepository.GetByIdAsync(id);
-            return entity.MapTo<Client, ClientDTO>();
+            var clientQuery = new GetClientByIdQuery(id);
+
+            var result = await this._mediator.Send(clientQuery);
+
+            return result.MapTo<Client, ClientDTO>();
         }
     }
 }

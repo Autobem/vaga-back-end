@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "X5qy/VMNLSvj/FsRXncys52CPWrkH9Bix78p/2ppTnC1cMotRuXtlxRyGKz1O6MFJ3fn8vcA4HjVf/xdJ3OW4w==",
+  "dgSpecHash": "bZ0B7St7D0fq49t4g8hy47yK7jPLMIHBFKJ/en5fwnRwBvWFIHYkGbXZvZFyG+OxAXufuO4QVLsDGB7tMGRLSg==",
   "success": true,
   "projectFilePath": "C:\\Git\\Igor_Silva_vaga-back-end\\CadastroDeVeiculos\\CadastroDeVeiculos.Api\\CadastroDeVeiculos.Api.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\Igorv\\.nuget\\packages\\fluentvalidation\\10.3.0\\fluentvalidation.10.3.0.nupkg.sha512",
     "C:\\Users\\Igorv\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Igorv\\.nuget\\packages\\mediatr\\8.0.0\\mediatr.8.0.0.nupkg.sha512",
+    "C:\\Users\\Igorv\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\8.0.0\\mediatr.extensions.microsoft.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\Igorv\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.0.0\\microsoft.aspnetcore.authentication.2.0.0.nupkg.sha512",
     "C:\\Users\\Igorv\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.0.0\\microsoft.aspnetcore.authentication.abstractions.2.0.0.nupkg.sha512",
     "C:\\Users\\Igorv\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.0.0\\microsoft.aspnetcore.authentication.core.2.0.0.nupkg.sha512",

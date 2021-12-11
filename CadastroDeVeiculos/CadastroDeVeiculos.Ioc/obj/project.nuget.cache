@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TrBrnOSPUyvwNcohvyQmP7JVbkJExuUk5Zpghp8Dz1BGA92yPC4hLWNeDFEGlD139erHzahjtg8IiLQXhMRbZw==",
+  "dgSpecHash": "GN3fLMREtEAf7pm4ATUSV9vSg+eNhhGhk5/5pcFWvsp6Zse0VITlZZe2kWoNY/JTERRqumm2MAGAwqb/kIDVgw==",
   "success": true,
   "projectFilePath": "C:\\Git\\Igor_Silva_vaga-back-end\\CadastroDeVeiculos\\CadastroDeVeiculos.Ioc\\CadastroDeVeiculos.Ioc.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\Igorv\\.nuget\\packages\\fluentvalidation\\10.3.0\\fluentvalidation.10.3.0.nupkg.sha512",
     "C:\\Users\\Igorv\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Igorv\\.nuget\\packages\\mediatr\\8.0.0\\mediatr.8.0.0.nupkg.sha512",
+    "C:\\Users\\Igorv\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\8.0.0\\mediatr.extensions.microsoft.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\Igorv\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Igorv\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\Igorv\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",

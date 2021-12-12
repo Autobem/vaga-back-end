@@ -1,6 +1,6 @@
 ﻿using CadastroDeVeiculos.Application.Mediator.ClientCQRS.Commands;
+using CadastroDeVeiculos.Business.Interfaces.NotificationHandler;
 using CadastroDeVeiculos.Business.Interfaces.Repository;
-using CadastroDeVeiculos.Business.NotificationHandlers;
 using CadastroDeVeiculos.Domain.Entities;
 using CadastroDeVeiculos.Domain.Extentions;
 using CadastroDeVeiculos.Domain.Validations.Resource;
@@ -13,9 +13,9 @@ namespace CadastroDeVeiculos.Application.Mediator.ClientCQRS.Handlers
     public class ClientUpdateCommandHandler : IRequestHandler<ClientUpdateCommand, Client>
     {
         private readonly IClientRepository _clientRepository;
-        private NotificationContext _notification;
+        private readonly INotificationContext _notification;
 
-        public ClientUpdateCommandHandler(IClientRepository clientRepository, NotificationContext notification)
+        public ClientUpdateCommandHandler(IClientRepository clientRepository, INotificationContext notification)
         {
             this._clientRepository = clientRepository;
             this._notification = notification;

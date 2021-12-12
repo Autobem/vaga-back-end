@@ -26,13 +26,13 @@ namespace CadastroDeVeiculos.Domain.Entities
             Validate(this, new VehicleValidation());
         }
 
-        public void UpdateVehicle(string modelName, string manufacture, int yearOfManufacturer, string plateOfVehicle)
+        public void UpdateVehicle(string modelName, string brand, int yearOfManufacturer, string plate)
         {
             
             this.ModelName = modelName;
-            this.Brand = manufacture;
+            this.Brand = brand;
             this.YearOfManufacturer = yearOfManufacturer;
-            this.Plate = plateOfVehicle;
+            this.Plate = plate;
 
             Validate(this, new VehicleValidation());
         }

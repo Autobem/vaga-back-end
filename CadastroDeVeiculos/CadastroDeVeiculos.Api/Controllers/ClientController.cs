@@ -1,5 +1,6 @@
 ﻿using CadastroDeVeiculos.Application.DTOs;
 using CadastroDeVeiculos.Application.Interfaces;
+using CadastroDeVeiculos.Business.NotificationHandlers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -11,7 +12,7 @@ namespace CadastroDeVeiculos.Api.Controllers
 {
 
     [ApiController]
-    [Route("api/Clients")]
+    [Route("api/v1/Clients")]
     public class ClientController : ControllerBase
     {
         private IClientService _clientService;
@@ -27,7 +28,7 @@ namespace CadastroDeVeiculos.Api.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(int))]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(IEnumerable<DomainNotification>))]
         public async Task Post([FromBody] ClientDTO request)
         {
             await this._clientService.CreateAsync(request);
@@ -38,7 +39,7 @@ namespace CadastroDeVeiculos.Api.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(int))]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(IEnumerable<DomainNotification>))]
         public async Task Put([FromBody] ClientDTO request)
         {
             await this._clientService.UpdateAsync(request);
@@ -49,7 +50,7 @@ namespace CadastroDeVeiculos.Api.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(int))]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(IEnumerable<DomainNotification>))]
         public async Task Delete(int userId)
         {
             await this._clientService.DeleteAsync(userId);
@@ -60,7 +61,7 @@ namespace CadastroDeVeiculos.Api.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(int))]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(IEnumerable<DomainNotification>))]
         public async Task<ClientDTO> Get(int userId)
         {
             return await this._clientService.GetAsync(userId);
@@ -71,7 +72,7 @@ namespace CadastroDeVeiculos.Api.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(int))]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(IEnumerable<DomainNotification>))]
         public async Task<IEnumerable<ClientDTO>> Get()
         {
             return await this._clientService.GetAllAsync();

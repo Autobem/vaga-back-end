@@ -1,6 +1,6 @@
 ﻿using CadastroDeVeiculos.Application.Mediator.UserCQRS.Commands;
+using CadastroDeVeiculos.Business.Interfaces.NotificationHandler;
 using CadastroDeVeiculos.Business.Interfaces.Repository;
-using CadastroDeVeiculos.Business.NotificationHandlers;
 using CadastroDeVeiculos.Domain.Entities;
 using CadastroDeVeiculos.Domain.Extentions;
 using CadastroDeVeiculos.Domain.Validations.Resource;
@@ -13,9 +13,9 @@ namespace CadastroDeVeiculos.Application.Mediator.UserCQRS.Handlers
     public class UserRemoveCommandHandler : IRequestHandler<UserRemoveCommand, User>
     {
         private readonly IUserRepository _userRepository;
-        private NotificationContext _notification;
+        private readonly INotificationContext _notification;
 
-        public UserRemoveCommandHandler(IUserRepository userRepository, NotificationContext notification)
+        public UserRemoveCommandHandler(IUserRepository userRepository, INotificationContext notification)
         {
             this._userRepository = userRepository;
             this._notification = notification;

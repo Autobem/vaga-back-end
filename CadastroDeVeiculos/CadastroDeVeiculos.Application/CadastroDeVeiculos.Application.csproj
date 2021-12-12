@@ -13,10 +13,4 @@
     <ProjectReference Include="..\CadastroDeVeiculos.Business\CadastroDeVeiculos.Business.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Mediator\VehicleCQRS\Commands\" />
-    <Folder Include="Mediator\VehicleCQRS\Handlers\" />
-    <Folder Include="Mediator\VehicleCQRS\Queries\" />
-  </ItemGroup>
-
 </Project>

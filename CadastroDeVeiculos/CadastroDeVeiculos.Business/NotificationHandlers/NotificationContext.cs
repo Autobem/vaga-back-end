@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace CadastroDeVeiculos.Business.NotificationHandlers
 {
-    public class NotificationContext : INotification
+    public class NotificationContext : Interfaces.NotificationHandler.INotificationContext
     {
         private readonly List<DomainNotification> _notifications;
 
@@ -14,7 +14,9 @@ namespace CadastroDeVeiculos.Business.NotificationHandlers
             this._notifications = new List<DomainNotification>();
         }
 
-        public bool HasNotification() => this._notifications.Any();
+        public bool HasNotifications() => this._notifications.Any();
+
+        public List<DomainNotification> GetNotifications() => this._notifications;
 
         public void AddNotification(string key, string value)
         {

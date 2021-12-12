@@ -2,8 +2,10 @@
 using CadastroDeVeiculos.Application.AutoMapper;
 using CadastroDeVeiculos.Application.DTOs;
 using CadastroDeVeiculos.Application.Interfaces;
-using CadastroDeVeiculos.Business.Interfaces.Repository;
+using CadastroDeVeiculos.Application.Mediator.VehicleCQRS.Commands;
+using CadastroDeVeiculos.Application.Mediator.VehicleCQRS.Queries;
 using CadastroDeVeiculos.Domain.Entities;
+using MediatR;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -11,48 +13,52 @@ namespace CadastroDeVeiculos.Application.Services
 {
     public class VehicleService : IVehicleService
     {
-        private IVehicleRepository _vehicleRepository;
+        private IMediator _mediator;
         private IMapper _mapper;
 
-        public VehicleService(IVehicleRepository vehicleRepository, IMapper mapper)
+        public VehicleService(IMediator mediator, IMapper mapper)
         {
-            this._vehicleRepository = vehicleRepository;
+            this._mediator = mediator;
             this._mapper = mapper;
         }
 
-        public async Task CreateAsync(VehicleDTO entity)
+        public async Task CreateAsync(VehicleDTO entityDTO)
         {
-            var userEntity = _mapper.Map<Vehicle>(entity);
-            await this._vehicleRepository.CreateAsync(userEntity);
+            var vehicleCreateCommand = _mapper.Map<VehicleCreateCommand>(entityDTO);
 
+            await this._mediator.Send(vehicleCreateCommand);
         }
 
-        public async Task UpdateAsync(VehicleDTO entity)
+        public async Task UpdateAsync(VehicleDTO entityDTO)
         {
-            if (this._vehicleRepository.Exist(x => x.Id == entity.Id))
-            {
-                var userEntity = this._mapper.Map<Vehicle>(entity);
-                await this._vehicleRepository.UpdateAsync(userEntity);
-            }
+            var vehicleUpdateCommand = this._mapper.Map<VehicleUpdateCommand>(entityDTO);
 
+            await this._mediator.Send(vehicleUpdateCommand);
         }
 
         public async Task DeleteAsync(int id)
         {
-            var userEntity = this._vehicleRepository.GetByIdAsync(id).Result;
-            await this._vehicleRepository.DeleteAsync(userEntity.Id);
+            var vehicleRemoveCommand = new VehicleRemoveCommand(id);
+
+            await this._mediator.Send(vehicleRemoveCommand);
         }
 
         public async Task<IEnumerable<VehicleDTO>> GetAllAsync()
         {
-            var list = await this._vehicleRepository.GetAllAsync();
-            return list.MapTo<IEnumerable<Vehicle>, IEnumerable<VehicleDTO>>();
+            var vehiclesQuery = new GetVehiclesQuery();
+
+            var result = await this._mediator.Send(vehiclesQuery);
+
+            return result.MapTo<IEnumerable<Vehicle>, IEnumerable<VehicleDTO>>();
         }
 
         public async Task<VehicleDTO> GetAsync(int id)
         {
-            var entity = await this._vehicleRepository.GetByIdAsync(id);
-            return entity.MapTo<Vehicle, VehicleDTO>();
+            var vehicleQuery = new GetVehicleByIdQuery(id);
+
+            var result = await this._mediator.Send(vehicleQuery);
+
+            return result.MapTo<Vehicle, VehicleDTO>();
         }
     }
 }

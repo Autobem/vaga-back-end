@@ -1,13 +1,10 @@
 ﻿using CadastroDeVeiculos.Application.Mediator.ClientCQRS.Commands;
+using CadastroDeVeiculos.Business.Interfaces.NotificationHandler;
 using CadastroDeVeiculos.Business.Interfaces.Repository;
-using CadastroDeVeiculos.Business.NotificationHandlers;
 using CadastroDeVeiculos.Domain.Entities;
 using CadastroDeVeiculos.Domain.Extentions;
 using CadastroDeVeiculos.Domain.Validations.Resource;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -17,9 +14,9 @@ namespace CadastroDeVeiculos.Application.Mediator.ClientCQRS.Handlers
     {
 
         private readonly IClientRepository _clientRepository;
-        private NotificationContext _notification;
+        private readonly INotificationContext _notification;
 
-        public ClientRemoveCommandHandler(IClientRepository clientRepository, NotificationContext notification)
+        public ClientRemoveCommandHandler(IClientRepository clientRepository, INotificationContext notification)
         {
             this._clientRepository = clientRepository;
             this._notification = notification;

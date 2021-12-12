@@ -2,7 +2,9 @@
 using CadastroDeVeiculos.Application.AutoMapper.ProfileConfiguration;
 using CadastroDeVeiculos.Application.Interfaces;
 using CadastroDeVeiculos.Application.Services;
+using CadastroDeVeiculos.Business.Interfaces.NotificationHandler;
 using CadastroDeVeiculos.Business.Interfaces.Repository;
+using CadastroDeVeiculos.Business.NotificationHandlers;
 using CadastroDeVeiculos.Data.EntityFramework.Context;
 using CadastroDeVeiculos.Data.Repository;
 using MediatR;
@@ -26,6 +28,9 @@ namespace CadastroDeVeiculos.Ioc.DependencyConfiguration
             var handlersApplication = AppDomain.CurrentDomain.Load("CadastroDeVeiculos.Application");
             services.AddMediatR(handlersApplication);
 
+            //Notification
+            services.AddScoped<INotificationContext, INotificationContext>();
+
             //Repository
             services.AddScoped<IClientRepository, ClientRepository>();
             services.AddScoped<IVehicleRepository, VehicleRepository>();
@@ -35,7 +40,7 @@ namespace CadastroDeVeiculos.Ioc.DependencyConfiguration
             services.AddScoped<IClientService, ClientService>();
             services.AddScoped<IVehicleService, VehicleService>();
             services.AddScoped<IUserService, UserService>();
-            services.AddAutoMapper(typeof(ProfileConfiguration));
+            services.AddAutoMapper(typeof(ProfileObjectToDTO));
 
 
 

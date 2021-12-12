@@ -24,7 +24,7 @@ namespace CadastroDeVeiculos.Application.Services
 
         public async Task CreateAsync(ClientDTO entityDTO)
         {
-            var clientCreateCommand = this._mapper.Map<ClientCreateCommand>(entityDTO);
+            var clientCreateCommand = this._mapper.Map<ClientCreateCommand>(entityDTO); 
 
             await this._mediator.Send(clientCreateCommand);
         }

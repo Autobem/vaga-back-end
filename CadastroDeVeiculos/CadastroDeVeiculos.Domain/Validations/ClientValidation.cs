@@ -14,13 +14,6 @@ namespace CadastroDeVeiculos.Domain.Validations
 
         private void RuleOfProperty()
         {
-            RuleFor(c => c.Name.FirstName).NotEmpty().WithMessage(Message.Required.Description());
-            RuleFor(c => c.Name.FirstName).Length(3, 100)
-                .WithMessage(Message.MoreExpected.Description().FormatMessage("Nome", "3 a 100"));
-
-            RuleFor(c => c.Name.Lastname).NotEmpty().WithMessage(Message.Required.Description());
-            RuleFor(c => c.Name.Lastname).Length(3, 100)
-                .WithMessage(Message.MoreExpected.Description().FormatMessage("Sobrenome", "3 a 100"));
 
             RuleFor(c => c.PhoneNumber).NotEmpty().WithMessage(Message.Required.Description());
             RuleFor(c => c.PhoneNumber).Length(11)

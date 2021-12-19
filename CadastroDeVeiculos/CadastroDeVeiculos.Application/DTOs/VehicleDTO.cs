@@ -14,7 +14,7 @@ namespace CadastroDeVeiculos.Application.DTOs
         public string ModelName { get;  set; }
 
         [Required(ErrorMessage = "Required")]
-        [MinLength(5)]
+        [MinLength(2)]
         [MaxLength(70)]
         [DisplayName("Brand")]
         public string Brand { get;  set; }
@@ -32,6 +32,6 @@ namespace CadastroDeVeiculos.Application.DTOs
 
 
         public int ClientId { get; set; }
-        public UserDTO Client { get; set; }
+        public ClientDTO Client { get; set; }
     }
 }

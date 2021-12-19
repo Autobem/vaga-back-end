@@ -1,11 +1,12 @@
-﻿using CadastroDeVeiculos.Domain.Entities;
+﻿using CadastroDeVeiculos.Data.Identity;
+using CadastroDeVeiculos.Domain.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace CadastroDeVeiculos.Data.EntityFramework.Context
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public DbSet<User> Users { get; set; }
         public DbSet<Client> Clients { get; set; }
         public DbSet<Vehicle> Vehicles { get; set; }
 

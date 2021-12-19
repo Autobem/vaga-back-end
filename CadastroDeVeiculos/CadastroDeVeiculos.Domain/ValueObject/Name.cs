@@ -1,6 +1,8 @@
-﻿namespace CadastroDeVeiculos.Domain.ValueObject
+﻿using CadastroDeVeiculos.Domain.Validations.ValueObject;
+
+namespace CadastroDeVeiculos.Domain.ValueObject
 {
-    public class Name
+    public class Name : BaseValueObject
     {
         public string FirstName { get; private set; }
         public string Lastname { get; private set; }
@@ -11,6 +13,8 @@
         {
             this.FirstName = firstName;
             this.Lastname = lastName;
+
+            Validate(this, new NameValidation());
         }
     }
 }

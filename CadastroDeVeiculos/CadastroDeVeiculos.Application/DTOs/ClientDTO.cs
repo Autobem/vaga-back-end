@@ -1,5 +1,4 @@
-﻿using CadastroDeVeiculos.Application.DTOs.ValueObject;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 

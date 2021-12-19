@@ -1,0 +1,17 @@
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Application\bin\Debug\netcoreapp5.0\CadastroDeVeiculos.Application.deps.json
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Application\bin\Debug\netcoreapp5.0\CadastroDeVeiculos.Application.dll
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Application\bin\Debug\netcoreapp5.0\ref\CadastroDeVeiculos.Application.dll
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Application\bin\Debug\netcoreapp5.0\CadastroDeVeiculos.Application.pdb
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Application\bin\Debug\netcoreapp5.0\CadastroDeVeiculos.Business.dll
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Application\bin\Debug\netcoreapp5.0\CadastroDeVeiculos.Domain.dll
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Application\bin\Debug\netcoreapp5.0\CadastroDeVeiculos.Business.pdb
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Application\bin\Debug\netcoreapp5.0\CadastroDeVeiculos.Domain.pdb
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Application\obj\Debug\netcoreapp5.0\CadastroDeVeiculos.Application.csproj.AssemblyReference.cache
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Application\obj\Debug\netcoreapp5.0\CadastroDeVeiculos.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Application\obj\Debug\netcoreapp5.0\CadastroDeVeiculos.Application.AssemblyInfoInputs.cache
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Application\obj\Debug\netcoreapp5.0\CadastroDeVeiculos.Application.AssemblyInfo.cs
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Application\obj\Debug\netcoreapp5.0\CadastroDeVeiculos.Application.csproj.CoreCompileInputs.cache
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Application\obj\Debug\netcoreapp5.0\CadastroDeVeiculos.Application.csproj.CopyComplete
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Application\obj\Debug\netcoreapp5.0\CadastroDeVeiculos.Application.dll
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Application\obj\Debug\netcoreapp5.0\ref\CadastroDeVeiculos.Application.dll
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Application\obj\Debug\netcoreapp5.0\CadastroDeVeiculos.Application.pdb

@@ -1,4 +1,4 @@
-﻿using CadastroDeVeiculos.Application.DTOs;
+﻿    using CadastroDeVeiculos.Application.DTOs;
 using CadastroDeVeiculos.Application.Interfaces;
 using CadastroDeVeiculos.Business.NotificationHandlers;
 using Microsoft.AspNetCore.Http;
@@ -26,9 +26,9 @@ namespace CadastroDeVeiculos.Api.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(int))]
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(IEnumerable<DomainNotification>))]
-        public async Task Post([FromBody] VehicleDTO request)
+        public async Task Post([FromBody] VehicleDTO vehicleDTO)
         {
-            await this._vehicleService.CreateAsync(request);
+            await this._vehicleService.CreateAsync(vehicleDTO);
         }
 
         [HttpPut]
@@ -37,9 +37,9 @@ namespace CadastroDeVeiculos.Api.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(int))]
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(IEnumerable<DomainNotification>))]
-        public async Task Put([FromBody] VehicleDTO request)
+        public async Task Put([FromBody] VehicleDTO vehicleDTO)
         {
-            await this._vehicleService.UpdateAsync(request);
+            await this._vehicleService.UpdateAsync(vehicleDTO);
         }
 
         [HttpDelete]
@@ -48,9 +48,9 @@ namespace CadastroDeVeiculos.Api.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(int))]
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(IEnumerable<DomainNotification>))]
-        public async Task Delete(int userId)
+        public async Task Delete(int vehicleId)
         {
-            await this._vehicleService.DeleteAsync(userId);
+            await this._vehicleService.DeleteAsync(vehicleId);
         }
 
         [HttpGet]
@@ -59,20 +59,23 @@ namespace CadastroDeVeiculos.Api.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(int))]
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(IEnumerable<DomainNotification>))]
-        public async Task<VehicleDTO> Get(int userId)
+        public async Task<ActionResult<VehicleDTO>> Get(int vehicleId)
         {
-            return await this._vehicleService.GetAsync(userId);
+            var vehicle = await this._vehicleService.GetAsync(vehicleId);
+            return Ok(vehicle);
+
         }
 
         [HttpGet]
-        [Route("findAll/{pageSize:int}/{pageActual:int}")]
+        [Route("findAll")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(int))]
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(IEnumerable<DomainNotification>))]
-        public async Task<IEnumerable<VehicleDTO>> Get()
+        public async Task<ActionResult<IEnumerable<VehicleDTO>>> Get()
         {
-            return await this._vehicleService.GetAllAsync();
+            var vehicles = await this._vehicleService.GetAllAsync();
+            return Ok(vehicles);
         }
 
     }

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using CadastroDeVeiculos.Application.DTOs;
 using CadastroDeVeiculos.Domain.Entities;
+using CadastroDeVeiculos.Domain.ValueObject;
 
 namespace CadastroDeVeiculos.Application.AutoMapper.ProfileConfiguration
 {
@@ -8,9 +9,9 @@ namespace CadastroDeVeiculos.Application.AutoMapper.ProfileConfiguration
     {
         public ProfileObjectToDTO()
         {
-            CreateMap<User, UserDTO>().ReverseMap();
             CreateMap<Client, ClientDTO>().ReverseMap();
             CreateMap<Vehicle, VehicleDTO>().ReverseMap();
+            CreateMap<Name, NameDTO>().ReverseMap();
         }
     }
 }

@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "5Oce4YJ/wcJwuwUE/kFfWuKeUKZbbIEaYdgx+228A2FYjNyt0POoJygdWnAXa0tAodVKaj1+0lT4eCKulbfHrg==",
+  "dgSpecHash": "SsFkA4F+ZWR7EEX4nw52pK4LIkysuLOGQ8FdznPgOhl1aQYnu7hwpYD7J/ipIpYkQJcwBSCFsnG4uroENYucXw==",
   "success": true,
   "projectFilePath": "C:\\Git\\Igor_Silva_vaga-back-end\\CadastroDeVeiculos\\CadastroDeVeiculos.Application\\CadastroDeVeiculos.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Igorv\\.nuget\\packages\\automapper\\7.0.1\\automapper.7.0.1.nupkg.sha512",
-    "C:\\Users\\Igorv\\.nuget\\packages\\fluentvalidation\\10.3.0\\fluentvalidation.10.3.0.nupkg.sha512",
+    "C:\\Users\\Igorv\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
     "C:\\Users\\Igorv\\.nuget\\packages\\mediatr\\8.0.0\\mediatr.8.0.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
   ],

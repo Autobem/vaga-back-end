@@ -1,8 +1,3 @@
-C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Data\obj\Debug\netcoreapp3.1\CadastroDeVeiculos.Data.csproj.AssemblyReference.cache
-C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Data\obj\Debug\netcoreapp3.1\CadastroDeVeiculos.Data.GeneratedMSBuildEditorConfig.editorconfig
-C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Data\obj\Debug\netcoreapp3.1\CadastroDeVeiculos.Data.AssemblyInfoInputs.cache
-C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Data\obj\Debug\netcoreapp3.1\CadastroDeVeiculos.Data.AssemblyInfo.cs
-C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Data\obj\Debug\netcoreapp3.1\CadastroDeVeiculos.Data.csproj.CoreCompileInputs.cache
 C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Data\bin\Debug\netcoreapp3.1\CadastroDeVeiculos.Data.deps.json
 C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Data\bin\Debug\netcoreapp3.1\CadastroDeVeiculos.Data.runtimeconfig.json
 C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Data\bin\Debug\netcoreapp3.1\CadastroDeVeiculos.Data.runtimeconfig.dev.json
@@ -12,6 +7,11 @@ C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Data\bin\D
 C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Data\bin\Debug\netcoreapp3.1\CadastroDeVeiculos.Domain.dll
 C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Data\bin\Debug\netcoreapp3.1\CadastroDeVeiculos.Business.pdb
 C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Data\bin\Debug\netcoreapp3.1\CadastroDeVeiculos.Domain.pdb
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Data\obj\Debug\netcoreapp3.1\CadastroDeVeiculos.Data.csproj.AssemblyReference.cache
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Data\obj\Debug\netcoreapp3.1\CadastroDeVeiculos.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Data\obj\Debug\netcoreapp3.1\CadastroDeVeiculos.Data.AssemblyInfoInputs.cache
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Data\obj\Debug\netcoreapp3.1\CadastroDeVeiculos.Data.AssemblyInfo.cs
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Data\obj\Debug\netcoreapp3.1\CadastroDeVeiculos.Data.csproj.CoreCompileInputs.cache
 C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Data\obj\Debug\netcoreapp3.1\CadastroDeVeiculos.Data.csproj.CopyComplete
 C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Data\obj\Debug\netcoreapp3.1\CadastroDeVeiculos.Data.dll
 C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Data\obj\Debug\netcoreapp3.1\CadastroDeVeiculos.Data.pdb

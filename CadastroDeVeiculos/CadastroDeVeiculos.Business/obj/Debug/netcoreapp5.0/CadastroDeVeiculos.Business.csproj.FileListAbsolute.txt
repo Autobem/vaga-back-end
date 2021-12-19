@@ -1,0 +1,15 @@
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Business\bin\Debug\netcoreapp5.0\CadastroDeVeiculos.Business.deps.json
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Business\bin\Debug\netcoreapp5.0\CadastroDeVeiculos.Business.dll
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Business\bin\Debug\netcoreapp5.0\ref\CadastroDeVeiculos.Business.dll
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Business\bin\Debug\netcoreapp5.0\CadastroDeVeiculos.Business.pdb
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Business\bin\Debug\netcoreapp5.0\CadastroDeVeiculos.Domain.dll
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Business\bin\Debug\netcoreapp5.0\CadastroDeVeiculos.Domain.pdb
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Business\obj\Debug\netcoreapp5.0\CadastroDeVeiculos.Business.csproj.AssemblyReference.cache
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Business\obj\Debug\netcoreapp5.0\CadastroDeVeiculos.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Business\obj\Debug\netcoreapp5.0\CadastroDeVeiculos.Business.AssemblyInfoInputs.cache
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Business\obj\Debug\netcoreapp5.0\CadastroDeVeiculos.Business.AssemblyInfo.cs
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Business\obj\Debug\netcoreapp5.0\CadastroDeVeiculos.Business.csproj.CoreCompileInputs.cache
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Business\obj\Debug\netcoreapp5.0\CadastroDeVeiculos.Business.csproj.CopyComplete
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Business\obj\Debug\netcoreapp5.0\CadastroDeVeiculos.Business.dll
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Business\obj\Debug\netcoreapp5.0\ref\CadastroDeVeiculos.Business.dll
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Business\obj\Debug\netcoreapp5.0\CadastroDeVeiculos.Business.pdb

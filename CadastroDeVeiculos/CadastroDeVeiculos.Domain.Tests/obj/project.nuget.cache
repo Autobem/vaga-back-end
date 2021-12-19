@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "g8x8YWMUQMmReFtQQxi7lqzgaNRh9q0fyCqzd7KSvh5pk13q1TOMYpB1UUBDupib6oDh+BgxFE4ii1+c0Fhq1w==",
+  "dgSpecHash": "OurSVHwxgDlGwmAftjrvxsgFdjCyfRHBRqYrTCSwcKvR1u9op7BRz1c30eqABTPPX9/5gjyq7zTHQw5Yup8HTw==",
   "success": true,
   "projectFilePath": "C:\\Git\\Igor_Silva_vaga-back-end\\CadastroDeVeiculos\\CadastroDeVeiculos.Domain.Tests\\CadastroDeVeiculos.Domain.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Igorv\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\Igorv\\.nuget\\packages\\fluentassertions\\6.1.0\\fluentassertions.6.1.0.nupkg.sha512",
-    "C:\\Users\\Igorv\\.nuget\\packages\\fluentvalidation\\10.3.0\\fluentvalidation.10.3.0.nupkg.sha512",
+    "C:\\Users\\Igorv\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
     "C:\\Users\\Igorv\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",
     "C:\\Users\\Igorv\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\Igorv\\.nuget\\packages\\microsoft.net.test.sdk\\16.9.4\\microsoft.net.test.sdk.16.9.4.nupkg.sha512",

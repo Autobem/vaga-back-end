@@ -1,0 +1,12 @@
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Domain\bin\Debug\netcoreapp5.0\CadastroDeVeiculos.Domain.deps.json
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Domain\bin\Debug\netcoreapp5.0\CadastroDeVeiculos.Domain.dll
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Domain\bin\Debug\netcoreapp5.0\ref\CadastroDeVeiculos.Domain.dll
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Domain\bin\Debug\netcoreapp5.0\CadastroDeVeiculos.Domain.pdb
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Domain\obj\Debug\netcoreapp5.0\CadastroDeVeiculos.Domain.csproj.AssemblyReference.cache
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Domain\obj\Debug\netcoreapp5.0\CadastroDeVeiculos.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Domain\obj\Debug\netcoreapp5.0\CadastroDeVeiculos.Domain.AssemblyInfoInputs.cache
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Domain\obj\Debug\netcoreapp5.0\CadastroDeVeiculos.Domain.AssemblyInfo.cs
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Domain\obj\Debug\netcoreapp5.0\CadastroDeVeiculos.Domain.csproj.CoreCompileInputs.cache
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Domain\obj\Debug\netcoreapp5.0\CadastroDeVeiculos.Domain.dll
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Domain\obj\Debug\netcoreapp5.0\ref\CadastroDeVeiculos.Domain.dll
+C:\Git\Igor_Silva_vaga-back-end\CadastroDeVeiculos\CadastroDeVeiculos.Domain\obj\Debug\netcoreapp5.0\CadastroDeVeiculos.Domain.pdb

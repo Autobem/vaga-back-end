@@ -7,27 +7,27 @@ using System.Text;
 
 namespace CadastroDeVeiculos.Api.Security.Services
 {
-    public static class TokenService
+    public  class TokenService
     {
-        public static string GenerateToken(UserDTO user)
-        {
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(Settings.Secret);
+    //    public  string GenerateToken(UserDTO user)
+    //    {
+    //        var tokenHandler = new JwtSecurityTokenHandler();
+    //        var key = Encoding.ASCII.GetBytes(Settings.Secret);
 
-            var tokenDescriptor = new SecurityTokenDescriptor
-            {
-                Subject = new ClaimsIdentity(new Claim[]
-                {
-                    new Claim(ClaimTypes.Name, user.LoginData.ToString()),
-                    new Claim(ClaimTypes.Role, user.Password.ToString())
-                }),
-                Expires = DateTime.UtcNow.AddHours(1),
-                SigningCredentials =
-                new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
-            };
+    //        var tokenDescriptor = new SecurityTokenDescriptor
+    //        {
+    //            Subject = new ClaimsIdentity(new Claim[]
+    //            {
+    //                new Claim(ClaimTypes.Name, user.LoginData.ToString()),
+    //                new Claim(ClaimTypes.Role, user.Role.ToString())
+    //            }),
+    //            Expires = DateTime.UtcNow.AddHours(1),
+    //            SigningCredentials =
+    //            new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+    //        };
 
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-            return tokenHandler.WriteToken(token);
-        }
+    //        var token = tokenHandler.CreateToken(tokenDescriptor);
+    //        return tokenHandler.WriteToken(token);
+    //    }
     }
 }

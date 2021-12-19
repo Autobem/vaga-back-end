@@ -1,4 +1,5 @@
 using CadastroDeVeiculos.Api.Configurations;
+using CadastroDeVeiculos.Api.Filters;
 using CadastroDeVeiculos.Api.Security;
 using CadastroDeVeiculos.Application.AutoMapper;
 using CadastroDeVeiculos.Ioc.DependencyConfiguration;
@@ -25,11 +26,13 @@ namespace CadastroDeVeiculos.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
-            AutoMapperConfiguration.Initialize();
+            services.AddScoped<ErrorFilterAttribute>();
             services.AddInfrastructure(Configuration);
+            services.AddControllers();
+            AutoMapperConfiguration.Initialize();
             services.AddFilters();
             services.AddCorsConfigure();
-            services.AddControllers();
+            
 
             var key = Encoding.ASCII.GetBytes(Settings.Secret);
             services.AddAuthentication(config =>

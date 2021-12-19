@@ -6,18 +6,18 @@ namespace CadastroDeVeiculos.Api.Filters
 {
     public class ErrorFilterAttribute : ActionFilterAttribute
     {
-        private readonly INotificationContext notification;
+        private readonly INotificationContext _notification;
 
         public ErrorFilterAttribute(INotificationContext notification)
         {
-            this.notification = notification;
+            this._notification = notification;
         }
 
         public override void OnActionExecuted(ActionExecutedContext context)
         {
-            if (this.notification.HasNotifications())
+            if (this._notification.HasNotifications())
             {
-                context.Result = new BadRequestObjectResult(this.notification.GetNotifications());
+                context.Result = new BadRequestObjectResult(this._notification.GetNotifications());
             }
 
             base.OnActionExecuted(context);

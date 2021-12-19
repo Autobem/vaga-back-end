@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace CadastroDeVeiculos.Business.NotificationHandlers
 {
-    public class NotificationContext : Interfaces.NotificationHandler.INotificationContext
+    public class NotificationContext : INotificationContext
     {
         private readonly List<DomainNotification> _notifications;
 

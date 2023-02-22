@@ -1,12 +1,29 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Cars.Application.ViewModel;
+using Cars.Domain.Model.PersonAggregate;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Cars.Controllers
 {
-    public class PersonController : Controller
+    [ApiController]
+    [Route("api/person")]
+    public class PersonController : ControllerBase
     {
-        public IActionResult Index()
+        private readonly IPersonRepository _personRepository;
+
+        public PersonController(IPersonRepository personRepository)
         {
-            return View();
+            _personRepository = personRepository;
+        }
+
+        [HttpPost]
+        public IActionResult Add([FromBody] PersonViewModel personView)
+        {
+            var created_on = DateTime.Now.ToUniversalTime();
+            var car = new Person(personView.Name, personView.Email, personView.Password, created_on);
+
+            _personRepository.Add(car);
+
+            return Ok();
         }
     }
 }

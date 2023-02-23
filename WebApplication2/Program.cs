@@ -1,3 +1,4 @@
+using Cars.Application.Mapping;
 using Cars.DataBase.Repositories;
 using Cars.Domain.Model.PersonAggregate;
 
@@ -10,6 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<IPersonRepository, PersonRepository>();
+builder.Services.AddAutoMapper(typeof(DomainToDTOMapping));
 
 var app = builder.Build();
 

@@ -2,10 +2,8 @@
 {
     public class PersonDTO
     {
-        public int Id { get; set; }
-        public string NamePerson { get; set; }
-        public string email { get; set; }
-        public string password { get; set; }
-        public DateTime? created_on { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Cars.Domain.DTOs;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Cars.Domain.Model.PersonAggregate
@@ -20,12 +21,16 @@ namespace Cars.Domain.Model.PersonAggregate
 
         public DateTime created_on { get; private set; }
 
-        public Person(string name, string email, string password, DateTime created_on) 
+        public Person(string name, string email, string password, DateTime created_on)
         {
             this.name = name; 
             this.email = email;
             this.password = password;
             this.created_on = created_on;
+        }
+
+        public Person()
+        {
         }
     }
 }

@@ -8,8 +8,10 @@ namespace Cars.DataBase.Repositories
     public class PersonRepository : IPersonRepository
     {
         public readonly ConnectionContext _context = new ConnectionContext();
+
         public void Add(Person person)
         {
+   
             _context.Person.Add(person);
             _context.SaveChanges();
         }

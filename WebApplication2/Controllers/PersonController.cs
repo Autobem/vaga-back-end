@@ -23,13 +23,25 @@ namespace Cars.Controllers
         public IActionResult Add([FromBody] PersonDTO personDTO)
         {
 
-            var personMap = _mapper.Map<PersonDTO, Person>(personDTO);
+            if (_personRepository.PersonExistsByEmail(personDTO.Email))
+            {
+                return BadRequest("User already exists!");
+            }
 
-            //var car = new Person(personView.Name, personView.Email, personView.Password, created_on);
+            var personMap = _mapper.Map<PersonDTO, Person>(personDTO);
 
             _personRepository.Add(personMap);
 
             return Ok();
+        }
+
+        [HttpGet]
+        public IActionResult Get(int pageNumber, int pageQuantity)
+        {
+
+            var people = _personRepository.Get(pageNumber, pageQuantity);
+
+            return Ok(people);
         }
     }
 }

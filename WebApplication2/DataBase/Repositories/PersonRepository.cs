@@ -18,12 +18,26 @@ namespace Cars.DataBase.Repositories
 
         public List<PersonDTO> Get(int pageNumber, int pageQuantity)
         {
-            throw new NotImplementedException();
+            return _context.Person.Skip(pageNumber * pageQuantity)
+                .Take(pageQuantity)
+                .Select(b =>
+                new PersonDTO()
+                {
+                    Id = b.id,
+                    Name = b.name,
+                    Email= b.email,
+                })
+                .ToList();
         }
 
         public Person? Get(int id)
         {
             throw new NotImplementedException();
+        }
+
+        public bool PersonExistsByEmail(string email)
+        {
+            return _context.Person.Any(x => x.email == email);
         }
     }
 }

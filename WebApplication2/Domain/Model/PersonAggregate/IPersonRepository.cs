@@ -6,7 +6,8 @@ namespace Cars.Domain.Model.PersonAggregate
     {
         void Add(Person person);
         List<PersonDTO> Get(int pageNumber, int pageQuantity);
-
         Person? Get(int id);
+
+        bool PersonExistsByEmail(string email);
     }
 }

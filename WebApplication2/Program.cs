@@ -13,6 +13,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<IPersonRepository, PersonRepository>();
 builder.Services.AddAutoMapper(typeof(DomainToDTOMapping));
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

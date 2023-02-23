@@ -10,6 +10,10 @@ namespace Cars.Application.Mapping
         {
             CreateMap<PersonDTO, Person>()
                 .ForMember(dest => dest.created_on, opt => opt.MapFrom(src => DateTime.Now.ToUniversalTime()));
+
+            CreateMap<Person, PersonDTO>();
+
+            CreateMap<PersonUpdateDTO, Person>();   
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using Cars.Application.ViewModel;
-using Cars.Domain.Model.PersonAggregate;
+﻿using Cars.Domain.Model.PersonAggregate;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using Cars.Domain.DTOs;
@@ -20,15 +19,15 @@ namespace Cars.Controllers
         }
 
         [HttpPost]
-        public IActionResult Add([FromBody] PersonDTO personDTO)
+        public IActionResult Add([FromBody] PersonUpdateDTO personCreateDTO)
         {
 
-            if (_personRepository.PersonExistsByEmail(personDTO.Email))
+            if (_personRepository.PersonExistsByEmail(personCreateDTO.Email))
             {
                 return BadRequest("User already exists!");
             }
 
-            var personMap = _mapper.Map<PersonDTO, Person>(personDTO);
+            var personMap = _mapper.Map<PersonUpdateDTO, Person>(personCreateDTO);
 
             _personRepository.Add(personMap);
 
@@ -42,6 +41,60 @@ namespace Cars.Controllers
             var people = _personRepository.Get(pageNumber, pageQuantity);
 
             return Ok(people);
+        }
+
+        [HttpGet]
+        [Route("{id}")]
+        public IActionResult PersonById(int id)
+        {
+            var person = _personRepository.Get(id);
+
+            if (person == null)
+            {
+                return NotFound("User not found!");
+            }
+
+            var personMap = _mapper.Map<Person, PersonDTO>(person);
+
+            return Ok(personMap);
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Update(int id, [FromBody] PersonUpdateDTO personUpdateDTO)
+        {
+            if (personUpdateDTO == null)
+            {
+                return BadRequest("No body in request!");
+            }
+
+            var person = _personRepository.Get(id);
+            if (person == null)
+            {
+                return BadRequest("User not found!");
+            }
+
+            personUpdateDTO.Id = id;
+
+            var personMap = _mapper.Map<PersonUpdateDTO, Person>(personUpdateDTO);
+
+
+            _personRepository.UpdatePerson(personMap);
+
+            return Ok();
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id) 
+        {
+            var person = _personRepository.Get(id);
+            if (person == null)
+            {
+                return BadRequest("User not found!");
+            }
+
+            _personRepository.DeletePerson(person);
+
+            return Ok();
         }
     }
 }

@@ -9,11 +9,17 @@ namespace Cars.DataBase.Repositories
     {
         public readonly ConnectionContext _context = new ConnectionContext();
 
-        public void Add(Person person)
+        public bool Save()
+        {
+            var saved = _context.SaveChanges();
+            return saved > 0;
+        }
+
+        public bool Add(Person person)
         {
    
             _context.Person.Add(person);
-            _context.SaveChanges();
+            return Save();
         }
 
         public List<PersonDTO> Get(int pageNumber, int pageQuantity)
@@ -32,12 +38,26 @@ namespace Cars.DataBase.Repositories
 
         public Person? Get(int id)
         {
-            throw new NotImplementedException();
+            var person = _context.Person.Find(id);
+
+            return person;
         }
 
         public bool PersonExistsByEmail(string email)
         {
             return _context.Person.Any(x => x.email == email);
+        }
+
+        public bool UpdatePerson(Person person)
+        {
+            _context.Person.Update(person);
+            return Save();
+        }
+
+        public bool DeletePerson(Person person)
+        {
+            _context.Remove(person);
+            return Save();
         }
     }
 }

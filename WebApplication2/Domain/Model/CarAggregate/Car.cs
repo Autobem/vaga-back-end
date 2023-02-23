@@ -13,7 +13,7 @@ namespace Cars.Domain.Model.CarAggregate
         [Required]
         public string name { get; private set; }
 
-        public Person owner { get; set; }
+        public Person owner_id { get; set; }
 
         public DateTime created_on { get; private set; }
     }

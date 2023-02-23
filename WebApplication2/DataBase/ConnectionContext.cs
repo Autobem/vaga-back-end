@@ -12,6 +12,7 @@ namespace Car.DataBase
                 "Server=localhost;" +
                 "Port=5432;Database=cars;" +
                 "User Id=postgres;" +
-                "Password=postgres;");
+                "Password=postgres;")
+            .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
     }
 }

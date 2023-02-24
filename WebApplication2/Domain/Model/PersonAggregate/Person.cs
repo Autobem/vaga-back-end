@@ -1,8 +1,7 @@
-﻿using Cars.Domain.DTOs;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Cars.Domain.Model.PersonAggregate
+namespace Car.Domain.Model.PersonAggregate
 {
     [Table("person")]
     public class Person

@@ -1,9 +1,9 @@
 ﻿using Car.DataBase;
-using Cars.Domain.DTOs;
-using Cars.Domain.Model.PersonAggregate;
+using Car.Domain.DTOs.Person;
+using Car.Domain.Model.PersonAggregate;
 using Microsoft.EntityFrameworkCore;
 
-namespace Cars.DataBase.Repositories
+namespace Car.DataBase.Repositories
 {
     public class PersonRepository : IPersonRepository
     {
@@ -24,7 +24,7 @@ namespace Cars.DataBase.Repositories
 
         public List<PersonDTO> Get(int pageNumber, int pageQuantity)
         {
-            return _context.Person.Skip(pageNumber * pageQuantity)
+            return _context.Person.Skip((pageNumber - 1) * pageQuantity)
                 .Take(pageQuantity)
                 .Select(b =>
                 new PersonDTO()

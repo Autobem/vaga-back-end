@@ -1,9 +1,14 @@
-﻿namespace Cars.Domain.Model.CarAggregate
+﻿using Car.Domain.DTOs.Car;
+using Car.Domain.Model.PersonAggregate;
+
+namespace Car.Domain.Model.CarAggregate
 {
     public interface ICarRepository
     {
-        void Add(Car car);
-
-        List<Car> Get(int pageNumber, int pageQuantity);
+        bool Add(Vehicle car);
+        List<CarDTO> Get(int pageNumber, int pageQuantity);
+        Vehicle? Get(int id);
+        bool UpdateCar(Vehicle car);
+        bool DeleteCar(Vehicle car);
     }
 }

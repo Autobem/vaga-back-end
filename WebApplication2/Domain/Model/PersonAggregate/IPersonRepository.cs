@@ -1,6 +1,6 @@
-﻿using Cars.Domain.DTOs;
+﻿using Car.Domain.DTOs.Person;
 
-namespace Cars.Domain.Model.PersonAggregate
+namespace Car.Domain.Model.PersonAggregate
 {
     public interface IPersonRepository
     {

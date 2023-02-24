@@ -1,6 +1,7 @@
-using Cars.Application.Mapping;
-using Cars.DataBase.Repositories;
-using Cars.Domain.Model.PersonAggregate;
+using Car.Application.Mapping;
+using Car.DataBase.Repositories;
+using Car.Domain.Model.PersonAggregate;
+using Car.Domain.Model.CarAggregate;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<IPersonRepository, PersonRepository>();
+builder.Services.AddTransient<ICarRepository, CarRepository>();
 builder.Services.AddAutoMapper(typeof(DomainToDTOMapping));
 
 

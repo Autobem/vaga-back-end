@@ -1,9 +1,9 @@
-﻿using Cars.Domain.Model.PersonAggregate;
+﻿using Car.Domain.Model.PersonAggregate;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
-using Cars.Domain.DTOs;
+using Car.Domain.DTOs.Person;
 
-namespace Cars.Controllers
+namespace Car.Controllers
 {
     [ApiController]
     [Route("api/person")]
@@ -19,7 +19,7 @@ namespace Cars.Controllers
         }
 
         [HttpPost]
-        public IActionResult Add([FromBody] PersonUpdateDTO personCreateDTO)
+        public IActionResult Add([FromBody] PersonCreateDTO personCreateDTO)
         {
 
             if (_personRepository.PersonExistsByEmail(personCreateDTO.Email))
@@ -27,7 +27,7 @@ namespace Cars.Controllers
                 return BadRequest("User already exists!");
             }
 
-            var personMap = _mapper.Map<PersonUpdateDTO, Person>(personCreateDTO);
+            var personMap = _mapper.Map<PersonCreateDTO, Person>(personCreateDTO);
 
             _personRepository.Add(personMap);
 
@@ -74,6 +74,7 @@ namespace Cars.Controllers
             }
 
             personUpdateDTO.Id = id;
+            personUpdateDTO.created_on = person.created_on.ToUniversalTime();
 
             var personMap = _mapper.Map<PersonUpdateDTO, Person>(personUpdateDTO);
 

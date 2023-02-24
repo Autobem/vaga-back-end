@@ -1,19 +1,34 @@
 ﻿using AutoMapper;
-using Cars.Domain.DTOs;
-using Cars.Domain.Model.PersonAggregate;
+using Car.Domain.DTOs.Car;
+using Car.Domain.DTOs.Person;
+using Car.Domain.Model.PersonAggregate;
+using Car.Domain.Model.CarAggregate;
+using Cars.Domain.DTOs.Car;
+using APICars.Domain.DTOs.Car;
 
-namespace Cars.Application.Mapping
+namespace Car.Application.Mapping
 {
     public class DomainToDTOMapping : Profile
     {
         public DomainToDTOMapping()
         {
-            CreateMap<PersonDTO, Person>()
-                .ForMember(dest => dest.created_on, opt => opt.MapFrom(src => DateTime.Now.ToUniversalTime()));
-
+            CreateMap<PersonDTO, Person>();
+                
             CreateMap<Person, PersonDTO>();
 
-            CreateMap<PersonUpdateDTO, Person>();   
+            CreateMap<PersonCreateDTO, Person>()
+                .ForMember(dest => dest.created_on, opt => opt.MapFrom(src => DateTime.Now.ToUniversalTime()));
+
+            CreateMap<PersonUpdateDTO, Person>();
+
+            CreateMap<CarCreateDTO, Vehicle>()
+                .ForMember(dest => dest.created_on, opt => opt.MapFrom(src => DateTime.Now.ToUniversalTime()));
+
+            CreateMap<Vehicle, CarDTO>();
+
+            CreateMap<CarDTO, Vehicle>();
+
+            CreateMap<CarUpdateDTO, Vehicle>();
         }
     }
 }

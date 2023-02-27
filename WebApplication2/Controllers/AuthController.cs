@@ -27,12 +27,7 @@ namespace APICars.Controllers
 
             var personExists = _personRepository.PersonByEmail(email);
 
-            if (personExists == null)
-            {
-                return BadRequest("Invalid credentials!");
-            }
-
-            if (personExists.password != password) 
+            if (personExists == null || personExists.password != password)
             {
                 return BadRequest("Invalid credentials!");
             }

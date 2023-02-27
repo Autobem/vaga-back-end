@@ -59,5 +59,10 @@ namespace Car.DataBase.Repositories
             _context.Remove(person);
             return Save();
         }
+
+        public Person? PersonByEmail(string email)
+        {
+            return _context.Person.SingleOrDefault(p => p.email == email);
+        }
     }
 }

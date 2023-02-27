@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using Car.Domain.DTOs.Person;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Car.Controllers
 {
@@ -34,6 +35,7 @@ namespace Car.Controllers
             return Ok();
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult Get(int pageNumber, int pageQuantity)
         {
@@ -43,6 +45,7 @@ namespace Car.Controllers
             return Ok(people);
         }
 
+        [Authorize]
         [HttpGet]
         [Route("{id}")]
         public IActionResult PersonById(int id)
@@ -59,6 +62,7 @@ namespace Car.Controllers
             return Ok(personMap);
         }
 
+        [Authorize]
         [HttpPut("{id}")]
         public IActionResult Update(int id, [FromBody] PersonUpdateDTO personUpdateDTO)
         {
@@ -84,6 +88,7 @@ namespace Car.Controllers
             return Ok();
         }
 
+        [Authorize]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id) 
         {

@@ -13,7 +13,7 @@ namespace Car.DataBase
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             => optionsBuilder.UseNpgsql(
                 "Server=localhost;" +
-                "Port=5432;Database=cars;" +
+                "Port=5432;Database=auto_bem;" +
                 "User Id=postgres;" +
                 "Password=postgres;")
             .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);

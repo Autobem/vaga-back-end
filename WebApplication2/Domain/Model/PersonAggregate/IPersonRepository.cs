@@ -14,6 +14,7 @@ namespace Car.Domain.Model.PersonAggregate
         bool UpdatePerson(Person person);
 
         bool DeletePerson(Person person);
-        
+
+        Person? PersonByEmail(string email);
     }
 }

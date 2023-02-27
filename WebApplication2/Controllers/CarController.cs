@@ -6,6 +6,7 @@ using Car.Domain.DTOs.Person;
 using Car.Domain.Model.CarAggregate;
 using Car.Domain.Model.PersonAggregate;
 using Cars.Domain.DTOs.Car;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cars.Controllers
@@ -25,6 +26,7 @@ namespace Cars.Controllers
             _mapper = mapper;
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Add([FromBody] CarCreateDTO carCreateDTO)
         {
@@ -43,6 +45,7 @@ namespace Cars.Controllers
             return Ok();
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult Get(int pageNumber, int pageQuantity)
         {
@@ -50,6 +53,7 @@ namespace Cars.Controllers
             return Ok(cars);
         }
 
+        [Authorize]
         [HttpGet]
         [Route("{id}")]
         public IActionResult CarById(int id)
@@ -66,6 +70,7 @@ namespace Cars.Controllers
             return Ok(carMap);
         }
 
+        [Authorize]
         [HttpPut("{id}")]
         public IActionResult Update(int id, [FromBody] CarUpdateDTO carUpdateDTO)
         {
@@ -98,6 +103,7 @@ namespace Cars.Controllers
             return Ok();
         }
 
+        [Authorize]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

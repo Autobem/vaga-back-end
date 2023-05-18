@@ -1,4 +1,7 @@
+using AutoMapper;
+using DevAssuncaoCarros.API.Configurations;
 using DevAssuncaoCarros.Business.Interfaces;
+using DevAssuncaoCarros.Business.Services;
 using DevAssuncaoCarros.Data.Context;
 using DevAssuncaoCarros.Data.Repository;
 using Microsoft.EntityFrameworkCore;
@@ -27,8 +30,18 @@ builder.Services.AddScoped<CarroContext>();
 builder.Services.AddScoped<IProprietarioRepository, ProprietarioRepository>();
 builder.Services.AddScoped<ICarroRepository, CarroRepository>();
 builder.Services.AddScoped<IEnderecoRepository, EnderecoRepository>();
+builder.Services.AddScoped<ICarroService, CarroService>();
+builder.Services.AddScoped<IProprietarioService,  ProprietarioService>();
 
-builder.Services.AddAutoMapper(typeof(Program));
+
+var mappingConfig = new MapperConfiguration(
+    mc =>
+    {
+        mc.AddProfile(new AutoMapperConfig());
+    });
+
+IMapper mapper = mappingConfig.CreateMapper();
+builder.Services.AddSingleton(mapper);
 
 var app = builder.Build();
 

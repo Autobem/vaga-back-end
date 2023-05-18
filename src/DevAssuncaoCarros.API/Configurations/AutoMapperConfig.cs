@@ -10,6 +10,8 @@ namespace DevAssuncaoCarros.API.Configurations
         public AutoMapperConfig()
         {
             CreateMap<ProprietarioViewModel, Proprietario>().ReverseMap();
+            CreateMap<CarroViewModel, Carro>().ReverseMap();
+            CreateMap<EnderecoViewModel, Endereco>().ReverseMap();
         }
     }
 }

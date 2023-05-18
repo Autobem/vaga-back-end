@@ -28,6 +28,8 @@ builder.Services.AddScoped<IProprietarioRepository, ProprietarioRepository>();
 builder.Services.AddScoped<ICarroRepository, CarroRepository>();
 builder.Services.AddScoped<IEnderecoRepository, EnderecoRepository>();
 
+builder.Services.AddAutoMapper(typeof(Program));
+
 var app = builder.Build();
 
 

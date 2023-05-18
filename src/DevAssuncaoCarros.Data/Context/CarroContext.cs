@@ -10,6 +10,14 @@ namespace DevAssuncaoCarros.Data.Context
         public DbSet<Endereco>? Enderecos { get; set; }
         public DbSet<Proprietario>? Proprietarios { get; set;}
         public DbSet<Carro>? Carros { get; set; }
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(CarroContext).Assembly);
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
 

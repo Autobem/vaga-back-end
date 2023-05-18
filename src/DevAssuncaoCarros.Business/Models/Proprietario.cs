@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ namespace DevAssuncaoCarros.Business.Models
         public string? Documento { get; set; }
         public string? CNH { get; set; }
         public Endereco? Endereco { get; set; }
-        public virtual IEnumerable<Carro>? Carros { get; set; }
+        public virtual IEnumerable<Carro> Carros { get; set; }
 
     }
 }

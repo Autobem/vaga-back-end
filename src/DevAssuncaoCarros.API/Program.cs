@@ -1,3 +1,8 @@
+using DevAssuncaoCarros.Business.Interfaces;
+using DevAssuncaoCarros.Data.Context;
+using DevAssuncaoCarros.Data.Repository;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,7 +12,25 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+
+builder.Services.AddDbContext<CarroContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+
+
+//DI
+
+builder.Services.AddScoped<CarroContext>();
+
+builder.Services.AddScoped<IProprietarioRepository, ProprietarioRepository>();
+builder.Services.AddScoped<ICarroRepository, CarroRepository>();
+builder.Services.AddScoped<IEnderecoRepository, EnderecoRepository>();
+
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

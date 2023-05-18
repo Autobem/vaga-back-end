@@ -5,8 +5,8 @@ namespace DevAssuncaoCarros.Business.Interfaces
 {
     public interface IProprietarioRepository : IRepository<Proprietario>
     {
-        public Task<Proprietario> ObterProprietarioCarros();
-        public Task<Proprietario> ObterCarrosPorProprietarios(Guid id);
+        public Task<IEnumerable<Proprietario>> ObterProprietarioCarros();
+        public Task<IEnumerable<Proprietario>> ObterCarrosPorProprietarios(Guid id);
         public Task<Proprietario> ObterProprietarioEndereco(Guid id);
     }
 }

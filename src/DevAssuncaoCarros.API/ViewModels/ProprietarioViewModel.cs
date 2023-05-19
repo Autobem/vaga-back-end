@@ -16,8 +16,9 @@ namespace DevAssuncaoCarros.API.ViewModels
         public string? Nome { get; set; }
 
         [Required]
+        [JsonIgnore]
         [StringLength(14, ErrorMessage = "O campo {0} precisa ter entre {2} e {1} caracteres.", MinimumLength = 11)]
-        public string? Documento { set { Documento = value; } }
+        public string? Documento { get; set; } 
 
         [Required]
         [StringLength(100, ErrorMessage = "O campo {0} precisa ter {1} caracteres.")]

@@ -1,10 +1,5 @@
 ﻿using DevAssuncaoCarros.Business.Interfaces;
 using DevAssuncaoCarros.Business.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevAssuncaoCarros.Business.Services
 {
@@ -23,12 +18,6 @@ namespace DevAssuncaoCarros.Business.Services
         {
 
             if (proprietario == null)
-            {
-                return false;
-            }
-
-            var getProprietario = _propRepo.ObterPorId(proprietario.Id);
-            if (getProprietario != null)
             {
                 return false;
             }
@@ -66,7 +55,7 @@ namespace DevAssuncaoCarros.Business.Services
 
         public async Task<bool> RemoveProprietario(Guid id)
         {
-            var buscarProp = _propRepo.ObterPorId(id);
+            var buscarProp = await _propRepo.ObterPorId(id);
             if(buscarProp == null)
             {
                 throw new ArgumentException("Nao encontrado o proprietario");

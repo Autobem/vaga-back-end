@@ -1,38 +1,40 @@
-# Teste de Backend
+# Registro de Veículos
 
-Olá Dev!  Tudo bem?
+Este simples projeto consiste em um teste de API REST para cadastro de veículos e seus respectivos proprietários. Além de permitir a manipulação de registros de marcas, modelos, cores e afins. A API utiliza autenticação OAuth2 com JWT e Swagger/OpenAPI para sua documentação.
 
-Nós estamos procurando profissionais organizados, que não saibam de tudo, porém que saibam pesquisar e aprender.
+## Pre-requisitos
 
-Este teste tem como objetivo avaliar e desafiar você. Não é obrigatório realizá-lo completamente, queremos apenas reconhecer seu esforço e potencial para aprender, se adaptar e tomar decisões.
+* C#/.NET >= 7.0.0
+* Entity Framework Core >= 7.0.5
+* PostgreSQL >= 14.8.0
 
-Vamos ao teste!
+## Instalação
 
-## Cadastro de veículos
+Após instalar o .NET SDK e o PostgreSQL em seu computador, e configurar as credenciais de persistência, bem como as credenciais de autenticação para o JWT no arquivo `appsettings.[x].json` apropriado, execute o seguinte comando na raiz do projeto para instalar as dependências:
 
-O objetivo é criar uma web api para cadastro de veículos utilizando .net 5 ou superior.
-- A web api deve conter o crud básico (buscar, adicionar, atualizar e remover) de veículos e seus respectivos proprietários.
-- Seria interessante que os veículos e seus proprietários tivessem seus dados armazenados em tabelas distintas interligadas (chave estrangeira).
-- Seria interessante a utilização de Entity Framework com repositórios destinados para cada entidade ou um repositório genérico para atender todas (fica a critério).
-- Dependendo do tamanho da base, pode ser interessante uma solução de indexação para maior agilidade nas pesquisas.
+```sh
+dotnet restore
+```
 
-## Regras
+Feito isto, é necessário rodar as *migrations* e *seeders* no banco de dados:
 
-Para o desafio ficar mais interessante, decidimos criar umas regras básicas:
-- Deve ser usada a arquitetura com DDD para a estrutura do projeto.
-- É necessário conter, no mínimo, duas entidades relacionadas (podem haver mais, caso julgue necessário).
-- Não se deve receber ou retornar a própria entidade em uma requisição/resposta json. Seria interessante a utilização de DTO ou similar (Pode-se usar AutoMapper ou similar para facilitar o processo, caso julge necessário).
-- A api deve utilizar uma base de dados para persistência de informações (SQL Server, LocalDB, SQLite, MySQL ou qualquer outro, deste que utilizando EF Core).
-- Seria interessante a utilicação de repositórios e serviços via injeção de dependências (a utilização de abstracts para agilizar o processo seria interessante).
-- A api não deve ter acesso livre. Deve ser utilizado algum método de identificação utilizando OAuth 2.0.
-- É permitido utilizar pacotes nuget ou similares para agilidade (inclusive pacotes de autoria própria).
+```sh
+dotnet ef database update --context IdentityContext
+dotnet ef database update --context BusinessContext
+```
 
-## Por onde começo?
+Depois, basta executar o Kestrel para servir a API com o comando:
 
-Primeiramente, você pode fazer um fork desse repositório aqui, para sua conta do Github, depois disso crie uma branch nova com o seu nome (ex: nome_sobrenome), para podermos indentificá-lo.
+```sh
+dotnet run
+```
 
-Após terminar o desafio, você pode solicitar um pull request para a branch master do nosso repositório. Vamos receber e fazer a avaliação de todos.
+A fim de acessar a documentação da API, para saber quais *endpoints* estão disponíveis, com seus respectivos parâmetros, entre com o seguinte endereço em seu navegador:
 
-## Só isso?
+```sh
+http://localhost:5279/swagger
+```
 
-Só! Mas se estiver motivado, pode efetuar incrementos que julgue interessantes ou aprimoramentos de desempenho e organização de código.
+## Licença
+
+Este projeto é de código aberto e está licenciado sob a [Licença MIT](license.md)

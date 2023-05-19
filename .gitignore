@@ -1,0 +1,9 @@
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+
+# .NET
+bin/
+obj/

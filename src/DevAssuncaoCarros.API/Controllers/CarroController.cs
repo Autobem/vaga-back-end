@@ -2,10 +2,12 @@
 using DevAssuncaoCarros.API.ViewModels;
 using DevAssuncaoCarros.Business.Interfaces;
 using DevAssuncaoCarros.Business.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DevAssuncaoCarros.API.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CarroController : ControllerBase

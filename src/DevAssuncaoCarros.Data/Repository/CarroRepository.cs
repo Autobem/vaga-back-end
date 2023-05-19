@@ -12,10 +12,10 @@ namespace DevAssuncaoCarros.Data.Repository
         {
         }
 
-        public async Task<Carro> ObterCarroProprietario(Guid id)
+        public async Task<IEnumerable<Carro>> ObterCarrosProprietario(Guid id)
         {
             return await carroContext.Carros.AsNoTracking()
-                            .Include(x => x.Proprietario).FirstOrDefaultAsync(x => x.Id == id);
+                            .Include(x => x.Proprietario).Where(x => x.ProprietarioId == id).ToListAsync();
         }
     }
 }

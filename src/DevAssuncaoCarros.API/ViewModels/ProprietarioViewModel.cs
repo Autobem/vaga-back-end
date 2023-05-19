@@ -16,7 +16,7 @@ namespace DevAssuncaoCarros.API.ViewModels
         public string? Nome { get; set; }
 
         [Required]
-        [JsonIgnore]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [StringLength(14, ErrorMessage = "O campo {0} precisa ter entre {2} e {1} caracteres.", MinimumLength = 11)]
         public string? Documento { get; set; } 
 
@@ -24,6 +24,7 @@ namespace DevAssuncaoCarros.API.ViewModels
         [StringLength(100, ErrorMessage = "O campo {0} precisa ter {1} caracteres.")]
         public string? CNH { get; set; }
 
+        [JsonIgnore]
         public EnderecoViewModel? Endereco { get; set; }
         [JsonIgnore]
         public virtual IEnumerable<CarroViewModel>? Carros { get; set; }

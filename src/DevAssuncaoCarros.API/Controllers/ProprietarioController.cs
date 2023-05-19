@@ -83,7 +83,7 @@ namespace DevAssuncaoCarros.API.Controllers
         public async Task<ActionResult<ProprietarioViewModel>> RemoverProprietario(Guid id)
         {
 
-            var hasProprietario = _proprietarioRepository.ObterPorId(id);
+            var hasProprietario = await _proprietarioRepository.ObterPorId(id);
 
             if (hasProprietario is null)
             {
@@ -95,7 +95,7 @@ namespace DevAssuncaoCarros.API.Controllers
             return Ok(hasProprietario);
         }
 
-
+        [HttpGet("atualizar-endereco-prop/{id:guid}")]
         public async Task<ActionResult<EnderecoViewModel>> AtualizarEnderecoProp (EnderecoViewModel endereco, Guid id)
         {
             if (id != endereco.ProprietarioId)

@@ -8,64 +8,65 @@ namespace DevAssuncaoCarros.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProprietarioController : ControllerBase
+    public class CarroController : ControllerBase
     {
-        private readonly IProprietarioRepository _proprietarioRepository;
+        private readonly ICarroRepository _carroRepository;
         private readonly IMapper _mapper;
-        private readonly IProprietarioService _proprietarioService;
-        private readonly IEnderecoRepository _enderecoRepository;
+        private readonly ICarroService _carroService;
 
-
-        public ProprietarioController(IProprietarioRepository proprietarioRepository, IMapper mapper, IProprietarioService proprietarioService, IEnderecoRepository endereco)
+        public CarroController(ICarroRepository carroRepository, IMapper mapper, ICarroService carroService)
         {
-            _proprietarioRepository = proprietarioRepository;
+            _carroRepository = carroRepository;
+            _carroService = carroService;
             _mapper = mapper;
-            _proprietarioService = proprietarioService;
-            _enderecoRepository = endereco;
-
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ProprietarioViewModel>>> GetAllProprietarios()
+        public async Task<ActionResult<IEnumerable<CarroViewModel>>> GetAllCarros()
         {
-            var todosProprietarios = _mapper.Map<IEnumerable<ProprietarioViewModel>>(await _proprietarioRepository.ObterTodos());
-            return Ok(todosProprietarios);
+            var todosCarros = _mapper.Map<IEnumerable<CarroViewModel>>(await _carroRepository.ObterTodos());
+            return Ok(todosCarros);
         }
 
-        [HttpGet("carros-por-proprietarios/{id:guid}")]
-        public async Task<ActionResult<IEnumerable<ProprietarioViewModel>>> GetCarrosPorProprietarios(Guid id)
+        [HttpGet("carros-por-id/{id:guid}")]
+        public async Task<ActionResult<IEnumerable<CarroViewModel>>> GetCarroId(Guid id)
         {
-            var proprietarioCarros = await GetObterCarroPorProprietarios(id);
-            return Ok(proprietarioCarros);
+            var carro = await _carroRepository.ObterPorId(id);
+
+            if (carro is null)
+            {
+                return BadRequest("Carro nao encontrado");
+            }
+            return Ok(carro);
         }
 
-        [HttpGet("endereco/{id:guid}")]
-        public async Task<ActionResult<IEnumerable<ProprietarioViewModel>>> GetEnderecoProprietario(Guid id)
+        [HttpGet("carro-por-proprietario/{id:guid}")]
+        public async Task<ActionResult<IEnumerable<CarroViewModel>>> GetCarroProprietario(Guid id)
         {
-            var proprietarioEnde = await GetEnderecoPorProprietario(id);
-            return Ok(proprietarioEnde);
+            var carro = await GetObterCarrosPorProprietarios(id);
+            return Ok(carro);
         }
 
         [HttpPost]
-        public async Task<ActionResult<ProprietarioViewModel>> CriaProprietario(ProprietarioViewModel proprietario)
+        public async Task<ActionResult<CarroViewModel>> CriaCarro(CarroViewModel carroViewModel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState.Values);
             }
 
-            await _proprietarioService.AddProprietario(_mapper.Map<Proprietario>(proprietario));
+            await _carroService.AddCarro(_mapper.Map<Carro>(carroViewModel));
 
-            return Ok(proprietario);
+            return Ok(carroViewModel);
         }
 
 
         [HttpPut]
-        public async Task<ActionResult<ProprietarioViewModel>> AtualizarProprietario(Guid id, ProprietarioViewModel proprietario)
+        public async Task<ActionResult<CarroViewModel>> AtualizarCarro(Guid id, CarroViewModel carroView)
         {
-            if (id != proprietario.Id)
+            if (id != carroView.Id)
             {
-                return BadRequest("Proprietario não relacionado com  id passado pelo request");
+                return BadRequest("Carro não relacionado com  id passado pelo request");
             }
 
             if (!ModelState.IsValid)
@@ -73,58 +74,37 @@ namespace DevAssuncaoCarros.API.Controllers
                 return BadRequest(ModelState.Values);
             }
 
-            await _proprietarioService.AtualizarProprietario(_mapper.Map<Proprietario>(proprietario));
+            await _carroService.AtualizarCarro(_mapper.Map<Carro>(carroView));
 
-            return Ok(proprietario);
+            return Ok(carroView);
         }
 
 
         [HttpDelete]
-        public async Task<ActionResult<ProprietarioViewModel>> RemoverProprietario(Guid id)
+        public async Task<ActionResult<CarroViewModel>> RemoverCarro(Guid id)
         {
 
-            var hasProprietario = _proprietarioRepository.ObterPorId(id);
+            var hasCarro = await ObterCarroPorId(id);
 
-            if (hasProprietario is null)
+            if (hasCarro is null)
             {
-                return BadRequest("Proprietario nao encontrado");
+                return BadRequest("Carro nao encontrado");
             }
 
-            await _proprietarioService.RemoveProprietario(id);
+            await _carroService.RemoverCarro(id);
 
-            return Ok(hasProprietario);
+            return Ok(hasCarro);
         }
 
-
-        public async Task<ActionResult<EnderecoViewModel>> AtualizarEnderecoProp (EnderecoViewModel endereco, Guid id)
+        private async Task<IEnumerable<CarroViewModel>> GetObterCarrosPorProprietarios(Guid id)
         {
-            if (id != endereco.ProprietarioId)
-            {
-                return BadRequest();
-            }
-
-            if (!ModelState.IsValid)
-            {
-                return BadRequest();
-            }
-
-            await _enderecoRepository.Atualizar(_mapper.Map<Endereco>(endereco));
-
-            return Ok(endereco);
-        }
-
-
-
-        private async Task<IEnumerable<ProprietarioViewModel>> GetObterCarroPorProprietarios(Guid id)
-        {
-            var proprietariosCarros = _mapper.Map<IEnumerable<ProprietarioViewModel>>(await _proprietarioRepository.ObterCarrosPorProprietarios(id));
+            var proprietariosCarros = _mapper.Map<IEnumerable<CarroViewModel>>(await _carroRepository.ObterCarrosProprietario(id));
             return proprietariosCarros;
         }
 
-        private async Task<ProprietarioViewModel> GetEnderecoPorProprietario(Guid id)
+        private async Task<CarroViewModel> ObterCarroPorId (Guid id)
         {
-            var proprietarioEndereco = _mapper.Map<ProprietarioViewModel>(await _proprietarioRepository.ObterProprietarioEndereco(id));
-            return proprietarioEndereco;
+            return _mapper.Map<CarroViewModel>(await _carroRepository.ObterPorId(id));
         }
     }
 }

@@ -19,12 +19,6 @@ namespace DevAssuncaoCarros.Business.Services
 
         public async Task<bool> AddCarro(Carro carro)
         {
-            var encontrarCarro = await _carroRepo.ObterPorId(carro.Id);
-            if (encontrarCarro == null)
-            {
-                return false;
-            }
-
             if(carro == null)
             {
                 return false;
@@ -64,12 +58,11 @@ namespace DevAssuncaoCarros.Business.Services
         public async Task<bool> RemoverCarro(Guid id)
         {
             var buscarCarro = await _carroRepo.ObterPorId(id);
-            if(buscarCarro == null)
-            {
-                throw new ArgumentException("Nao encontrado o carro");
-            }
 
-            await _carroRepo.Remover(id);
+            if(buscarCarro != null)
+            {
+                await _carroRepo.Remover(id);
+            }
 
             return true;
 

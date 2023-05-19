@@ -19,7 +19,6 @@ namespace DevAssuncaoCarros.API.ViewModels
         public string? ModeloCarro { get; set; }
 
         [Required]
-        [StringLength(5, ErrorMessage = "O campo {0} precisa ter {1} caracteres.")]
         public int? AnoModelo { get; set; }
 
         [Required]

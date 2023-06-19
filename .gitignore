@@ -1,0 +1,12 @@
+﻿################################################################################
+# Este arquivo .gitignore foi criado automaticamente pelo Microsoft(R) Visual Studio.
+################################################################################
+
+/src/CadastroVeiculo/CadastroVeiculoApi/bin/Debug/net6.0
+/src/CadastroVeiculo/CadastroVeiculoApi/obj
+/src/CadastroVeiculo/Domain/bin/Debug/net6.0
+/src/CadastroVeiculo/Domain/obj
+/src/CadastroVeiculo/Repository/bin/Debug/net6.0
+/src/CadastroVeiculo/Repository/obj
+/src/CadastroVeiculo/Service/bin/Debug/net6.0
+/src/CadastroVeiculo/Service/obj

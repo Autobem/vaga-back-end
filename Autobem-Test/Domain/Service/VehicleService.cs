@@ -17,29 +17,34 @@ namespace Domain.Service
             _mapper = mapper;
         }
 
-        public Task Delete(Guid id)
+        public async Task Delete(Guid id)
         {
-            throw new NotImplementedException();
+            await _baseRepository.Delete(id);
         }
 
-        public Task<List<VehicleModel>> Get()
+        public async Task<List<VehicleModel>> Get()
         {
-            throw new NotImplementedException();
+            var result = await _baseRepository.Get();
+            return _mapper.Map<List<VehicleModel>>(result);
         }
 
-        public Task<VehicleModel> GetById(Guid id)
+        public async Task<VehicleModel> GetById(Guid id)
         {
-            throw new NotImplementedException();
+            var result = await _baseRepository.GetById(id);
+            return _mapper.Map<VehicleModel>(result);
         }
 
-        public Task<VehicleModel> Insert(VehicleModel vehicle)
+        public async Task<VehicleModel> Insert(VehicleModel vehicle)
         {
-            throw new NotImplementedException();
+            var insertVehicle = _mapper.Map<Vehicle>(vehicle);
+            var result = await _baseRepository.Insert(insertVehicle);
+            return _mapper.Map<VehicleModel>(result);
         }
 
-        public Task Update(VehicleModel vehicle)
+        public async Task Update(VehicleModel vehicle)
         {
-            throw new NotImplementedException();
+            var updateVehicle = _mapper.Map<Vehicle>(vehicle);
+            await _baseRepository.Update(updateVehicle);
         }
     }
 }

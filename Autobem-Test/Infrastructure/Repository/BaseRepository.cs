@@ -1,4 +1,5 @@
-﻿using Domain.Contracts.Repository;
+﻿using AutoMapper;
+using Domain.Contracts.Repository;
 using Infrastructure.Configuration;
 using Microsoft.EntityFrameworkCore;
 
@@ -6,11 +7,13 @@ namespace Infrastructure.Repository;
 
 public class BaseRepository<T> : IBaseRepository<T>, IDisposable where T : class
 {
-    private readonly DbContextOptions<BaseContext> _options;
+    private readonly BaseContext _context;
 
-    public BaseRepository(DbContextOptions<BaseContext> options)
+    public BaseRepository(BaseContext context)
     {
-        _options = new DbContextOptions<BaseContext>();
+
+        var options = new DbContextOptions<BaseContext>();
+        _context = context ?? new BaseContext(options);
     }
 
     public async Task<T> Insert(T entity)
@@ -30,7 +33,8 @@ public class BaseRepository<T> : IBaseRepository<T>, IDisposable where T : class
 
     public async Task<List<T>> Get()
     {
-        throw new NotImplementedException();
+        var result = await _context.Set<T>().ToListAsync();
+        return result;
     }
 
     public async Task<T> GetById(Guid id)

@@ -15,6 +15,7 @@ namespace WebApi.Controllers
             _ownerService = ownerService;
         }
 
+        [HttpDelete]
         public async Task<IActionResult> Delete(Guid id)
         {
             await _ownerService.Delete(id);

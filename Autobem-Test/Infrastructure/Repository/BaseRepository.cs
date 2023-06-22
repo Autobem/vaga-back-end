@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using Domain.Contracts.Repository;
+﻿using Domain.Contracts.Repository;
 using Infrastructure.Configuration;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,35 +10,37 @@ public class BaseRepository<T> : IBaseRepository<T>, IDisposable where T : class
 
     public BaseRepository(BaseContext context)
     {
-
         var options = new DbContextOptions<BaseContext>();
         _context = context ?? new BaseContext(options);
     }
 
     public async Task<T> Insert(T entity)
     {
-        throw new NotImplementedException();
+        var result = await _context.Set<T>().AddAsync(entity);
+        await _context.SaveChangesAsync();
+        return result.Entity;
     }
 
     public async Task Update(T entity)
     {
-        throw new NotImplementedException();
+        _context.Set<T>().Update(entity);
+        await _context.SaveChangesAsync();
     }
 
     public async Task Delete(Guid id)
     {
-        throw new NotImplementedException();
+        _context.Set<T>().Remove(await GetById(id));
+        await _context.SaveChangesAsync();
     }
 
     public async Task<List<T>> Get()
     {
-        var result = await _context.Set<T>().ToListAsync();
-        return result;
+        return await _context.Set<T>().ToListAsync();
     }
 
     public async Task<T> GetById(Guid id)
     {
-        throw new NotImplementedException();
+        return await _context.Set<T>().FindAsync(id);
     }
 
     #region Dispose Implementation

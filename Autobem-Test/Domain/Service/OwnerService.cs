@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Domain.Contracts.Repository;
 using Domain.Contracts.Service;
+using Domain.Models;
 using Entities.Entities;
 
 namespace Domain.Service;
@@ -16,27 +17,27 @@ public class OwnerService : IOwnerService
         _mapper = mapper;
     }
 
-    public Task Delete(Owner owner)
+    public async Task Delete(Guid id)
     {
         throw new NotImplementedException();
     }
 
-    public Task<IEnumerable<Owner>> Get()
+    public async Task<IEnumerable<OwnerModel>> Get()
     {
         throw new NotImplementedException();
     }
 
-    public Task GetById(Guid id)
+    public async Task<OwnerModel> GetById(Guid id)
     {
         throw new NotImplementedException();
     }
 
-    public Task Insert(Owner owner)
+    public async Task<OwnerModel> Insert(OwnerModel owner)
     {
         throw new NotImplementedException();
     }
 
-    public Task Update(Owner owner)
+    public async Task Update(OwnerModel owner)
     {
         throw new NotImplementedException();
     }

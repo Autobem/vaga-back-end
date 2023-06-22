@@ -1,12 +1,16 @@
-﻿using Entities.Entities;
+﻿using Domain.Models;
 
 namespace Domain.Contracts.Service;
 
 public interface IOwnerService
 {
-    Task Insert(Owner owner);
-    Task Update(Owner owner);
-    Task Delete(Owner owner);
-    Task GetById(Guid id);
-    Task<IEnumerable<Owner>> Get();
+    Task<OwnerModel> Insert(OwnerModel owner);
+
+    Task Update(OwnerModel owner);
+
+    Task Delete(Guid id);
+
+    Task<OwnerModel> GetById(Guid id);
+
+    Task<IEnumerable<OwnerModel>> Get();
 }

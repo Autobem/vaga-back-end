@@ -12,5 +12,5 @@ public interface IOwnerService
 
     Task<OwnerModel> GetById(Guid id);
 
-    Task<IEnumerable<OwnerModel>> Get();
+    Task<List<OwnerModel>> Get();
 }

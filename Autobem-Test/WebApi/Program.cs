@@ -4,6 +4,7 @@ using Domain.Contracts.Service;
 using Domain.Service;
 using Entities.Entities;
 using Infrastructure.Configuration;
+using Infrastructure.Helpers;
 using Infrastructure.Repository;
 using Microsoft.EntityFrameworkCore;
 
@@ -40,7 +41,7 @@ builder.Services.AddScoped<IBaseRepository<Vehicle>, BaseRepository<Vehicle>>();
 
 var mapperConfig = new MapperConfiguration(cfg =>
 {
-    cfg.CreateMap<Owner, Owner>();
+    cfg.AddProfile(new MapperProfile());
 });
 
 IMapper mapper = mapperConfig.CreateMapper();

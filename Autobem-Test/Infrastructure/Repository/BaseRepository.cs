@@ -13,27 +13,27 @@ public class BaseRepository<T> : IBaseRepository<T>, IDisposable where T : class
         _options = new DbContextOptions<BaseContext>();
     }
 
-    public Task Insert(T entity)
+    public async Task<T> Insert(T entity)
     {
         throw new NotImplementedException();
     }
 
-    public Task Update(T entity)
+    public async Task Update(T entity)
     {
         throw new NotImplementedException();
     }
 
-    public Task Delete(Guid id)
+    public async Task Delete(Guid id)
     {
         throw new NotImplementedException();
     }
 
-    public Task<IEnumerable<T>> Get()
+    public async Task<List<T>> Get()
     {
         throw new NotImplementedException();
     }
 
-    public Task<T> GetById(Guid id)
+    public async Task<T> GetById(Guid id)
     {
         throw new NotImplementedException();
     }

@@ -125,6 +125,7 @@ public class OwnerControllerTest
             mockService
                 .Setup(service => service.GetById(It.IsAny<Guid>()))
                 .ReturnsAsync((Guid id) => id == expected.Id ? expected : new OwnerModel());
+
             var sut = new OwnerController(mockService.Object);
 
             // Act

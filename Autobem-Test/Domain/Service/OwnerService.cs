@@ -19,26 +19,31 @@ public class OwnerService : IOwnerService
 
     public async Task Delete(Guid id)
     {
-        throw new NotImplementedException();
+        await _repository.Delete(id);
     }
 
-    public async Task<IEnumerable<OwnerModel>> Get()
+    public async Task<List<OwnerModel>> Get()
     {
-        throw new NotImplementedException();
+        var result = await _repository.Get();
+        return _mapper.Map<List<OwnerModel>>(result);
     }
 
     public async Task<OwnerModel> GetById(Guid id)
     {
-        throw new NotImplementedException();
+        var result = await _repository.GetById(id);
+        return _mapper.Map<OwnerModel>(result);
     }
 
     public async Task<OwnerModel> Insert(OwnerModel owner)
     {
-        throw new NotImplementedException();
+        var insertOnwer = _mapper.Map<Owner>(owner);
+        var result = await _repository.Insert(insertOnwer);
+        return _mapper.Map<OwnerModel>(result);
     }
 
     public async Task Update(OwnerModel owner)
     {
-        throw new NotImplementedException();
+        var updateOwner = _mapper.Map<Owner>(owner);
+        await _repository.Update(updateOwner);
     }
 }

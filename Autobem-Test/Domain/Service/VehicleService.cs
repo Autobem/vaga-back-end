@@ -21,7 +21,7 @@ namespace Domain.Service
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Vehicle>> Get(Vehicle vehicle)
+        public Task<IEnumerable<Vehicle>> Get()
         {
             throw new NotImplementedException();
         }

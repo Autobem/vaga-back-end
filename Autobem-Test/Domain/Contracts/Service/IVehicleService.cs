@@ -8,5 +8,5 @@ public interface IVehicleService
     Task Update(Vehicle vehicle);
     Task Delete(Vehicle vehicle);
     Task GetById(Guid id);
-    Task<IEnumerable<Vehicle>> Get(Vehicle vehicle);
+    Task<IEnumerable<Vehicle>> Get();
 }

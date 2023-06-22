@@ -8,5 +8,5 @@ public interface IOwnerService
     Task Update(Owner owner);
     Task Delete(Owner owner);
     Task GetById(Guid id);
-    Task<IEnumerable<Owner>> Get(Owner owner);
+    Task<IEnumerable<Owner>> Get();
 }

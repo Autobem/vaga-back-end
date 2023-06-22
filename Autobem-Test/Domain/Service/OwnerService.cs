@@ -21,7 +21,7 @@ public class OwnerService : IOwnerService
         throw new NotImplementedException();
     }
 
-    public Task<IEnumerable<Owner>> Get(Owner owner)
+    public Task<IEnumerable<Owner>> Get()
     {
         throw new NotImplementedException();
     }

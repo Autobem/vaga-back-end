@@ -32,7 +32,7 @@ namespace WebApi.Controllers
         public async Task<IActionResult> GetById(Guid id)
         {
             var result = await _ownerService.GetById(id);
-            if (result == null)
+            if (result is null)
                 return NotFound();
             return Ok(result);
         }

@@ -1,12 +1,16 @@
-﻿using Entities.Entities;
+﻿using Domain.Models;
 
 namespace Domain.Contracts.Service;
 
 public interface IVehicleService
 {
-    Task Insert(Vehicle vehicle);
-    Task Update(Vehicle vehicle);
-    Task Delete(Vehicle vehicle);
-    Task GetById(Guid id);
-    Task<IEnumerable<Vehicle>> Get();
+    Task<VehicleModel> Insert(VehicleModel vehicle);
+
+    Task Update(VehicleModel vehicle);
+
+    Task Delete(Guid id);
+
+    Task<VehicleModel> GetById(Guid id);
+
+    Task<List<VehicleModel>> Get();
 }

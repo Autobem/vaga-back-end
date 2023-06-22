@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Domain.Contracts.Repository;
 using Domain.Contracts.Service;
+using Domain.Models;
 using Entities.Entities;
 
 namespace Domain.Service
@@ -16,27 +17,27 @@ namespace Domain.Service
             _mapper = mapper;
         }
 
-        public Task Delete(Vehicle vehicle)
+        public Task Delete(Guid id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Vehicle>> Get()
+        public Task<List<VehicleModel>> Get()
         {
             throw new NotImplementedException();
         }
 
-        public Task GetById(Guid id)
+        public Task<VehicleModel> GetById(Guid id)
         {
             throw new NotImplementedException();
         }
 
-        public Task Insert(Vehicle vehicle)
+        public Task<VehicleModel> Insert(VehicleModel vehicle)
         {
             throw new NotImplementedException();
         }
 
-        public Task Update(Vehicle vehicle)
+        public Task Update(VehicleModel vehicle)
         {
             throw new NotImplementedException();
         }

@@ -1,7 +1,6 @@
 ﻿using Entities.Entities;
 using Infrastructure.Configuration;
 using Infrastructure.Repository;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Tests.Fixture;
 
@@ -13,7 +12,7 @@ public class OwnerRepositoryTest
     private const int EMPTY_OWNERS = 0;
     private const string NEW_NAME = "New Name";
 
-    [Collection("Repository Unit Tests")]
+    [Collection("Owner Repository Unit Tests")]
     public class Get : IDisposable
     {
         private readonly DbContextOptions _options;
@@ -72,7 +71,7 @@ public class OwnerRepositoryTest
         }
     }
 
-    [Collection("Repository Unit Tests")]
+    [Collection("Owner Repository Unit Tests")]
     public class GetById : IDisposable
     {
         private readonly DbContextOptions _options;
@@ -129,7 +128,7 @@ public class OwnerRepositoryTest
         }
     }
 
-    [Collection("Repository Unit Tests")]
+    [Collection("Owner Repository Unit Tests")]
     public class Insert : IDisposable
     {
         private readonly DbContextOptions _options;
@@ -188,7 +187,7 @@ public class OwnerRepositoryTest
         }
     }
 
-    [Collection("Repository Unit Tests")]
+    [Collection("Owner Repository Unit Tests")]
     public class Update : IDisposable
     {
         private readonly DbContextOptions _options;
@@ -251,7 +250,7 @@ public class OwnerRepositoryTest
         }
     }
     
-    [Collection("Repository Unit Tests")]
+    [Collection("Owner Repository Unit Tests")]
     public class Delete : IDisposable
     {
         private readonly DbContextOptions _options;

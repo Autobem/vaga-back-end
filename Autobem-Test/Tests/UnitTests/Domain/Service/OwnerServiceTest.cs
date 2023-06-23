@@ -132,7 +132,7 @@ public class OwnerServiceTest
     public class Insert
     {
         [Fact]
-        public async Task OnSuccess_ReturnOwnerModel()
+        public async Task OnValidOwnerModel_ReturnOwnerModel()
         {
             var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
             var mapper = new Mapper(configuration);
@@ -144,14 +144,14 @@ public class OwnerServiceTest
             var sut = new OwnerService(mockRepository.Object, mapper);
 
             // Act
-            var result = await sut.Insert(new OwnerModel());
+            var result = await sut.Insert(VALID_OWNER_MODEL);
 
             // Assert
             result.Should().BeOfType<OwnerModel>();
         }
 
         [Fact]
-        public async Task OnSuccess_InvokeRepository()
+        public async Task OnValidOwnerModel_InvokeRepository()
         {
             var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
             var mapper = new Mapper(configuration);
@@ -163,7 +163,7 @@ public class OwnerServiceTest
             var sut = new OwnerService(mockRepository.Object, mapper);
 
             // Act
-            var result = await sut.Insert(new OwnerModel());
+            var result = await sut.Insert(VALID_OWNER_MODEL);
 
             // Assert
             mockRepository.Verify(repo => repo.Insert(It.IsAny<Owner>()), Times.Once);

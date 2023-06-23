@@ -245,6 +245,7 @@ public class VehicleControllerTest
             mockService.Verify(service => service.Update(It.IsAny<VehicleModel>()), Times.Once);
         }
     }
+
     public class Delete
     {
         [Fact]

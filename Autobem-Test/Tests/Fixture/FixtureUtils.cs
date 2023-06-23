@@ -9,6 +9,7 @@ public static class FixtureUtils
         var date = f.Date.PastDateOnly();
         return new DateTime(date.Year, date.Month, date.Day).ToUniversalTime();
     }
+
     public static List<string> CarPlateList() => new List<string>()
     {
         "BCD-8901",

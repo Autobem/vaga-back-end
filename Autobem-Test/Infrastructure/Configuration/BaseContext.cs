@@ -13,7 +13,7 @@ public class BaseContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        if(!optionsBuilder.IsConfigured)
+        if (!optionsBuilder.IsConfigured)
         {
             optionsBuilder.UseSqlServer(GetConnectionString());
             base.OnConfiguring(optionsBuilder);

@@ -2,7 +2,9 @@
 using Domain.Contracts.Repository;
 using Domain.Contracts.Service;
 using Domain.Models;
+using Domain.Validators;
 using Entities.Entities;
+using FluentValidation;
 
 namespace Domain.Service
 {
@@ -36,6 +38,9 @@ namespace Domain.Service
 
         public async Task<VehicleModel> Insert(VehicleModel vehicle)
         {
+            var validator = new VehicleModelValidator();
+            await validator.ValidateAndThrowAsync(vehicle);
+
             var insertVehicle = _mapper.Map<Vehicle>(vehicle);
             var result = await _baseRepository.Insert(insertVehicle);
             return _mapper.Map<VehicleModel>(result);
@@ -43,6 +48,9 @@ namespace Domain.Service
 
         public async Task Update(VehicleModel vehicle)
         {
+            var validator = new UpdateVehicleModelValidator();
+            await validator.ValidateAndThrowAsync(vehicle);
+
             var updateVehicle = _mapper.Map<Vehicle>(vehicle);
             await _baseRepository.Update(updateVehicle);
         }

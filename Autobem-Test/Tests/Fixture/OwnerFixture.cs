@@ -18,7 +18,7 @@ public static class OwnerFixture
             .RuleFor(o => o.BirthDate, f => FixtureUtils.RuleForDates(f))
             .RuleFor(o => o.InclusionDate, f => FixtureUtils.RuleForDates(f))
             .RuleFor(o => o.LastChange, f => FixtureUtils.RuleForDates(f));
-            
+
         return owners.Generate(qtd);
     }
 }

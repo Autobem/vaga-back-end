@@ -28,10 +28,10 @@ public class VehicleController : ControllerBase
         return Ok(await _vehicleService.Get());
     }
 
-    [HttpGet("{id}:Guid")]
-    public async Task<IActionResult> GetById(Guid guid)
+    [HttpGet("{id:Guid}")]
+    public async Task<IActionResult> GetById(Guid id)
     {
-        var result = await _vehicleService.GetById(guid);
+        var result = await _vehicleService.GetById(id);
         if (result is null)
             return NotFound();
         return Ok(result);

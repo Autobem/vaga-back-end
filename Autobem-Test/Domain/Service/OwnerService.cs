@@ -2,7 +2,9 @@
 using Domain.Contracts.Repository;
 using Domain.Contracts.Service;
 using Domain.Models;
+using Domain.Validators;
 using Entities.Entities;
+using FluentValidation;
 
 namespace Domain.Service;
 
@@ -36,7 +38,13 @@ public class OwnerService : IOwnerService
 
     public async Task<OwnerModel> Insert(OwnerModel owner)
     {
+        var validator = new OwnerModelValidator();
+        await validator.ValidateAndThrowAsync(owner);
+        
         var insertOnwer = _mapper.Map<Owner>(owner);
+        insertOnwer.InclusionDate = DateTime.Now;
+        insertOnwer.LastChange = DateTime.Now;
+
         var result = await _repository.Insert(insertOnwer);
         return _mapper.Map<OwnerModel>(result);
     }

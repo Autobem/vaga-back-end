@@ -3,7 +3,7 @@ using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.Controllers;
 
-namespace Tests.UnitTests.API.Controllers;
+namespace Tests.UnitTests.API.Controllers.Vehicle;
 
 public class VehicleControllerTest
 {

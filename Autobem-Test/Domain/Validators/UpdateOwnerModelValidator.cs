@@ -1,15 +1,12 @@
-﻿using Domain.Models;
-using Domain.Utils;
-using FluentValidation;
+﻿using FluentValidation;
 
-namespace Domain.Validators
+namespace Domain.Validators;
+
+public class UpdateOwnerModelValidator : OwnerModelValidator
 {
-    public class UpdateOwnerModelValidator : OwnerModelValidator
+    public UpdateOwnerModelValidator()
     {
-        public UpdateOwnerModelValidator()
-        {
-            RuleFor(om => om.Id)
-                .NotEmpty().WithMessage("Invalid ID: field cannot be null");
-        }
+        RuleFor(om => om.Id)
+            .NotEmpty().WithMessage("Invalid ID: field cannot be empty");
     }
 }

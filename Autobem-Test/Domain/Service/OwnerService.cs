@@ -42,8 +42,8 @@ public class OwnerService : IOwnerService
         await validator.ValidateAndThrowAsync(owner);
         
         var insertOnwer = _mapper.Map<Owner>(owner);
-        insertOnwer.InclusionDate = DateTime.Now;
-        insertOnwer.LastChange = DateTime.Now;
+        insertOnwer.InclusionDate = DateTime.UtcNow;
+        insertOnwer.LastChange = DateTime.UtcNow;
 
         var result = await _repository.Insert(insertOnwer);
         return _mapper.Map<OwnerModel>(result);
@@ -51,7 +51,11 @@ public class OwnerService : IOwnerService
 
     public async Task Update(OwnerModel owner)
     {
+        var validator = new UpdateOwnerModelValidator();
+        await validator.ValidateAndThrowAsync(owner);
+        
         var updateOwner = _mapper.Map<Owner>(owner);
+        updateOwner.LastChange = DateTime.UtcNow;
         await _repository.Update(updateOwner);
     }
 }

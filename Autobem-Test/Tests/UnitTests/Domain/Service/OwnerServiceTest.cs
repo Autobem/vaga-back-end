@@ -5,25 +5,25 @@ using Domain.Service;
 using Entities.Entities;
 using FluentValidation;
 using Infrastructure.Helpers;
-using System;
 
 namespace Tests.UnitTests.Domain.Service;
 
 public class OwnerServiceTest
 {
-    private static OwnerModel VALID_OWNER_MODEL = new OwnerModel() 
+    private static OwnerModel VALID_OWNER_MODEL = new OwnerModel()
     {
         Id = Guid.NewGuid(),
         Name = new string('a', 8),
-        Cpf = new string('0',11),
+        Cpf = new string('0', 11),
         CNH = new string('0', 11),
-        Phone = new string('0',11),
+        Phone = new string('0', 11),
         Email = "email@email.com",
         BirthDate = DateTime.Now,
     };
+
     private static OwnerModel INVALID_OWNER_MODEL = new OwnerModel()
     {
-        Id = Guid.NewGuid(),
+        Id = new Guid()
     };
 
     public class Get
@@ -208,9 +208,9 @@ public class OwnerServiceTest
 
             // Assert
             mockRepository.Verify(repo => repo.Insert(
-                It.Is<Owner>(o => 
-                o.InclusionDate != DateTime.MinValue &&
-                o.LastChange != DateTime.MinValue
+                It.Is<Owner>(o =>
+                    o.InclusionDate != DateTime.MinValue &&
+                    o.LastChange != DateTime.MinValue
             )));
         }
 
@@ -238,7 +238,7 @@ public class OwnerServiceTest
     public class Update
     {
         [Fact]
-        public async Task OnSuccess_InvokeRepository()
+        public async Task OnValidOwnerModel_InvokeRepositoryUpdateMethod()
         {
             var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
             var mapper = new Mapper(configuration);
@@ -246,13 +246,35 @@ public class OwnerServiceTest
             var mockRepository = new Mock<IBaseRepository<Owner>>();
             mockRepository
                 .Setup(repository => repository.Update(It.IsAny<Owner>()));
+            var mockOwner = new Mock<Owner>();
             var sut = new OwnerService(mockRepository.Object, mapper);
 
             // Act
-            await sut.Update(new OwnerModel());
+            await sut.Update(VALID_OWNER_MODEL);
 
             // Assert
             mockRepository.Verify(repo => repo.Update(It.IsAny<Owner>()));
+        }
+
+        [Fact]
+        public async Task OnInvalidValidOwnerModel_ThrowsValidationException()
+        {
+            var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
+            var mapper = new Mapper(configuration);
+
+            var mockRepository = new Mock<IBaseRepository<Owner>>();
+            mockRepository
+                .Setup(repository => repository.Update(It.IsAny<Owner>()));
+
+            var sut = new OwnerService(mockRepository.Object, mapper);
+
+            // Act
+            var act = async () => await sut.Update(INVALID_OWNER_MODEL);
+
+            // Assert
+            await act
+                .Should()
+                .ThrowAsync<ValidationException>();
         }
     }
 

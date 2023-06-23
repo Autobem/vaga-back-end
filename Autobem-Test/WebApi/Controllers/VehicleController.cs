@@ -1,52 +1,52 @@
 ﻿using Domain.Contracts.Service;
 using Domain.Models;
-using Entities.Entities;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebApi.Controllers
+namespace WebApi.Controllers;
+
+[Route("api/[controller]")]
+[ApiController]
+public class VehicleController : ControllerBase
 {
-    public class VehicleController : Controller
+    private readonly IVehicleService _vehicleService;
+
+    public VehicleController(IVehicleService vehicleService)
     {
-        private readonly IVehicleService _vehicleService;
+        _vehicleService = vehicleService;
+    }
 
-        public VehicleController(IVehicleService vehicleService)
-        {
-            _vehicleService = vehicleService;
-        }
+    [HttpDelete]
+    public async Task<IActionResult> Delete(Guid guid)
+    {
+        await _vehicleService.Delete(guid);
+        return Accepted();
+    }
 
-        [HttpDelete]
-        public async Task<IActionResult> Delete(Guid guid)
-        {
-            await _vehicleService.Delete(guid);
-            return Accepted();
-        }
+    [HttpGet]
+    public async Task<IActionResult> Get()
+    {
+        return Ok(await _vehicleService.Get());
+    }
 
-        [HttpGet]
-        public async Task<IActionResult> Get()
-        {
-            return Ok(await _vehicleService.Get());
-        }
+    [HttpGet("{id}:Guid")]
+    public async Task<IActionResult> GetById(Guid guid)
+    {
+        var result = await _vehicleService.GetById(guid);
+        if (result is null)
+            return NotFound();
+        return Ok(result);
+    }
 
-        [HttpGet("{id}:Guid")]
-        public async Task<IActionResult> GetById(Guid guid)
-        {
-            var result = await _vehicleService.GetById(guid);
-            if(result is null)
-                return NotFound();
-            return Ok(result);
-        }
+    [HttpPost]
+    public async Task<IActionResult> Insert(VehicleModel vehicle)
+    {
+        return Created(nameof(VehicleModel), await _vehicleService.Insert(vehicle));
+    }
 
-        [HttpPost]
-        public async Task<IActionResult> Insert(VehicleModel vehicle)
-        {
-            return Created(nameof(VehicleModel), await _vehicleService.Insert(vehicle));
-        }
-
-        [HttpPut]
-        public async Task<IActionResult> Update(VehicleModel vehicle)
-        {
-            await _vehicleService.Update(vehicle);
-            return Accepted();
-        }
+    [HttpPut]
+    public async Task<IActionResult> Update(VehicleModel vehicle)
+    {
+        await _vehicleService.Update(vehicle);
+        return Accepted();
     }
 }

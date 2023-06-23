@@ -6,10 +6,10 @@ using Tests.Fixture;
 
 namespace Tests.UnitTests.Infrastructure.Repository;
 
-public class OwnerRepositoryTest
+public class VehicleRepositoryTest
 {
-    private const int POPULATED_OWNERS = 10;
-    private const int EMPTY_OWNERS = 0;
+    private const int POPULATED_VEHICLES = 10;
+    private const int EMPTY_VEHICLES = 0;
     private const string NEW_NAME = "New Name";
 
     [Collection("Repository Unit Tests")]
@@ -21,6 +21,7 @@ public class OwnerRepositoryTest
         {
             _options = new DbContextOptionsBuilder<BaseContext>()
                 .UseInMemoryDatabase(databaseName: "TestDatabase")
+                .EnableSensitiveDataLogging()
                 .Options;
         }
 
@@ -29,7 +30,10 @@ public class OwnerRepositoryTest
             using (var context = new BaseContext(_options))
             {
                 var owners = await context.Set<Owner>().ToListAsync();
+                var vehicles = await context.Set<Vehicle>().ToListAsync();
+
                 context.Set<Owner>().RemoveRange(owners);
+                context.Set<Vehicle>().RemoveRange(vehicles);
                 await context.SaveChangesAsync();
             }
         }
@@ -40,13 +44,13 @@ public class OwnerRepositoryTest
             using (var context = new BaseContext(_options))
             {
                 // Arrange
-                var sut = new BaseRepository<Owner>(context);
+                var sut = new BaseRepository<Vehicle>(context);
 
                 // Act
                 var result = await sut.Get();
 
                 // Assert
-                result.Count.Should().Be(EMPTY_OWNERS);
+                result.Count.Should().Be(EMPTY_VEHICLES);
             }
         }
 
@@ -56,17 +60,21 @@ public class OwnerRepositoryTest
             using (var context = new BaseContext(_options))
             {
                 // Arrange
-                var owners = OwnerFixture.GenerateOwners(POPULATED_OWNERS);
+                var owners = OwnerFixture.GenerateOwners(POPULATED_VEHICLES);
                 await context.Set<Owner>().AddRangeAsync(owners);
                 await context.SaveChangesAsync();
 
-                var sut = new BaseRepository<Owner>(context);
+                var vehicles = VehicleFixture.GenerateVehicles(POPULATED_VEHICLES, owners);
+                await context.Set<Vehicle>().AddRangeAsync(vehicles);
+                await context.SaveChangesAsync();
+
+                var sut = new BaseRepository<Vehicle>(context);
 
                 // Act
                 var result = await sut.Get();
 
                 // Assert
-                result.Count.Should().Be(POPULATED_OWNERS);
+                result.Count.Should().Be(POPULATED_VEHICLES);
             }
         }
     }
@@ -88,24 +96,27 @@ public class OwnerRepositoryTest
             using (var context = new BaseContext(_options))
             {
                 var owners = await context.Set<Owner>().ToListAsync();
+                var vehicles = await context.Set<Vehicle>().ToListAsync();
+
                 context.Set<Owner>().RemoveRange(owners);
+                context.Set<Vehicle>().RemoveRange(vehicles);
                 await context.SaveChangesAsync();
             }
         }
 
         [Fact]
-        public async Task OnOwnerNotFound_ReturnNull()
+        public async Task OnVehicleNotFound_ReturnNull()
         {
             using (var context = new BaseContext(_options))
             {
                 // Arrange
-                var sut = new BaseRepository<Owner>(context);
+                var sut = new BaseRepository<Vehicle>(context);
 
                 // Act
                 var result = await sut.GetById(new Guid());
 
                 // Assert
-                result.Should().Be(null);
+                result.Should().BeNull();
             }
         }
 
@@ -115,9 +126,11 @@ public class OwnerRepositoryTest
             using (var context = new BaseContext(_options))
             {
                 // Arrange
-                var expected = OwnerFixture.GenerateOwners(1).First();
-                await context.Set<Owner>().AddAsync(expected);
-                var sut = new BaseRepository<Owner>(context);
+                var owner = OwnerFixture.GenerateOwners(1);
+                var expected = VehicleFixture.GenerateVehicles(1, owner).FirstOrDefault();
+                await context.Set<Owner>().AddAsync(owner.FirstOrDefault());
+                await context.Set<Vehicle>().AddAsync(expected);
+                var sut = new BaseRepository<Vehicle>(context);
 
                 // Act
                 var actual = await sut.GetById(expected.Id);
@@ -145,43 +158,49 @@ public class OwnerRepositoryTest
             using (var context = new BaseContext(_options))
             {
                 var owners = await context.Set<Owner>().ToListAsync();
+                var vehicle = await context.Set<Vehicle>().ToListAsync();
                 context.Set<Owner>().RemoveRange(owners);
+                context.Set<Vehicle>().RemoveRange(vehicle);
                 await context.SaveChangesAsync();
             }
         }
 
         [Fact]
-        public async Task OnOwnerInserted_CallGetById_ReturnSameOwner()
+        public async Task OnVehicleInserted_CallGetById_ReturnSameOwner()
         {
             using (var context = new BaseContext(_options))
             {
                 // Arrange
-                var expected = OwnerFixture.GenerateOwners(1).First();
-                var sut = new BaseRepository<Owner>(context);
+                var owner = OwnerFixture.GenerateOwners(1);
+                var expected = VehicleFixture.GenerateVehicles(1, owner).FirstOrDefault();
+                await context.Set<Owner>().AddAsync(owner.FirstOrDefault());
+                await context.Set<Vehicle>().AddAsync(expected);
+                var sut = new BaseRepository<Vehicle>(context);
 
                 // Act
                 await sut.Insert(expected);
 
                 // Assert
-                var actual = await context.Set<Owner>().FindAsync(expected.Id);
+                var actual = await context.Set<Vehicle>().FindAsync(expected.Id);
                 actual.Should().BeEquivalentTo(expected);
             }
         }
 
         [Fact]
-        public async Task OnOwnerInserted_ReturnOwnerInserted()
+        public async Task OnVehicleInserted_ReturnVehicleInserted()
         {
             using (var context = new BaseContext(_options))
             {
                 // Arrange
-                var expected = OwnerFixture.GenerateOwners(1).First();
-                var sut = new BaseRepository<Owner>(context);
+                var owner = OwnerFixture.GenerateOwners(1);
+                var expected = VehicleFixture.GenerateVehicles(1, owner).First();
+                var sut = new BaseRepository<Vehicle>(context);
 
                 // Act
                 var actual = await sut.Insert(expected);
 
                 // Assert
-                actual.Should().BeOfType<Owner>();
+                actual.Should().BeOfType<Vehicle>();
                 actual.Should().BeEquivalentTo(expected);
             }
         }
@@ -204,43 +223,47 @@ public class OwnerRepositoryTest
             using (var context = new BaseContext(_options))
             {
                 var owners = await context.Set<Owner>().ToListAsync();
+                var vehicle = await context.Set<Vehicle>().ToListAsync();
                 context.Set<Owner>().RemoveRange(owners);
+                context.Set<Vehicle>().RemoveRange(vehicle);
                 await context.SaveChangesAsync();
             }
         }
 
         [Fact]
-        public async Task OnOwnerInserted_UpdateItsName_ReturnOwnerWithNewName()
+        public async Task OnVehicleInserted_UpdateItsName_ReturnVehicleWithNewName()
         {
             using (var context = new BaseContext(_options))
             {
                 // Arrange
-                var expected = OwnerFixture.GenerateOwners(1).First();
-                await context.AddAsync(expected);
+                var owner = OwnerFixture.GenerateOwners(1);
+                var expected = VehicleFixture.GenerateVehicles(1, owner).FirstOrDefault();
+                await context.Set<Owner>().AddAsync(owner.FirstOrDefault());
+                await context.Set<Vehicle>().AddAsync(expected);
                 await context.SaveChangesAsync();
-                var sut = new BaseRepository<Owner>(context);
+                var sut = new BaseRepository<Vehicle>(context);
 
                 // Act
                 expected.Name = NEW_NAME;
                 await sut.Update(expected);
 
                 // Assert
-                var actual = await context.Set<Owner>().FindAsync(expected.Id);
+                var actual = await context.Set<Vehicle>().FindAsync(expected.Id);
                 actual.Name.Should().BeEquivalentTo(NEW_NAME);
             }
         }
 
         [Fact]
-        public async Task OnUpdatingNonExistingOwner_ReturnsError()
+        public async Task OnUpdatingNonExistingVehicle_ThrowsDbUpdateConcurrencyException()
         {
             using (var context = new BaseContext(_options))
             {
                 // Arrange
-                var notInDbOwner = OwnerFixture.GenerateOwners(1).First();
-                var sut = new BaseRepository<Owner>(context);
-
+                var owner = OwnerFixture.GenerateOwners(1);
+                var vehicleNotInDb = VehicleFixture.GenerateVehicles(1, owner).FirstOrDefault();
+                var sut = new BaseRepository<Vehicle>(context);
                 // Act
-                var act = async () => await sut.Update(notInDbOwner);
+                var act = async () => await sut.Update(vehicleNotInDb);
 
                 // Assert
                 await act
@@ -267,42 +290,48 @@ public class OwnerRepositoryTest
             using (var context = new BaseContext(_options))
             {
                 var owners = await context.Set<Owner>().ToListAsync();
+                var vehicle = await context.Set<Vehicle>().ToListAsync();
                 context.Set<Owner>().RemoveRange(owners);
+                context.Set<Vehicle>().RemoveRange(vehicle);
                 await context.SaveChangesAsync();
             }
         }
 
         [Fact]
-        public async Task OnOwnerInserted_DeleteInsertedOwner_OwnerIsDeleted()
+        public async Task OnVehicleInserted_DeleteInsertedVehicle_VehicleIsDeleted()
         {
             using (var context = new BaseContext(_options))
             {
                 // Arrange
-                var expected = OwnerFixture.GenerateOwners(1).First();
-                await context.AddAsync(expected);
+                var owner = OwnerFixture.GenerateOwners(1);
+                var vehicle = VehicleFixture.GenerateVehicles(1, owner).FirstOrDefault();
+                await context.Set<Owner>().AddAsync(owner.FirstOrDefault());
+                await context.Set<Vehicle>().AddAsync(vehicle);
                 await context.SaveChangesAsync();
-                var sut = new BaseRepository<Owner>(context);
+
+                var expected = await context.Set<Vehicle>().FindAsync(vehicle.Id);
+                var sut = new BaseRepository<Vehicle>(context);
 
                 // Act
                 await sut.Delete(expected.Id);
 
                 // Assert
-                var actual = await context.Set<Owner>().FindAsync(expected.Id);
+                var actual = await context.Set<Vehicle>().FindAsync(expected.Id);
                 actual.Should().BeNull();
             }
         }
 
         [Fact]
-        public async Task OnDeletingNonExistingOwner_ReturnsError()
+        public async Task OnDeletingNonExistingVehicle_ThrowsArgumentNullException()
         {
             using (var context = new BaseContext(_options))
             {
                 // Arrange
-                var notInDbOwner = OwnerFixture.GenerateOwners(1).First();
-                var sut = new BaseRepository<Owner>(context);
-
+                var owner = OwnerFixture.GenerateOwners(1);
+                var vehicleNotInDb = VehicleFixture.GenerateVehicles(1, owner).FirstOrDefault();
+                var sut = new BaseRepository<Vehicle>(context);
                 // Act
-                var act = async () => await sut.Delete(new Guid());
+                var act = async () => await sut.Delete(vehicleNotInDb.Id);
 
                 // Assert
                 await act

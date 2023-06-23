@@ -20,6 +20,16 @@ public class BaseContext : DbContext
         }
     }
 
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Vehicle>()
+            .HasKey(v => v.Id);
+        modelBuilder.Entity<Vehicle>()
+            .HasOne(o => o.Owner)
+            .WithMany(o => o.Vehicles)
+            .HasForeignKey(o => o.OwnerId);
+    }
+
     public string GetConnectionString()
     {
         return "Data Source=DESKTOP-3AH0O3V;Initial Catalog=AutobemDB;Integrated Security=False;User ID=thyerry;Password=1234;Connection Timeout=15;Encrypt=False;TrustServerCertificate=False";

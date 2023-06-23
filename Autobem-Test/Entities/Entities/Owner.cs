@@ -14,4 +14,5 @@ public class Owner
     public DateTime BirthDate { get; set; }
     public DateTime InclusionDate { get; set; }
     public DateTime LastChange { get; set; }
+    public ICollection<Vehicle> Vehicles { get; set; }
 }

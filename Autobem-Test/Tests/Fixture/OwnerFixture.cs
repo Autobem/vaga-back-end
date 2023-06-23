@@ -15,15 +15,10 @@ public static class OwnerFixture
             .RuleFor(o => o.Cpf, f => f.Person.Cpf())
             .RuleFor(o => o.CNH, f => f.Person.Cpf())
             .RuleFor(o => o.Email, f => f.Internet.Email())
-            .RuleFor(o => o.BirthDate, f => RuleForDates(f))
-            .RuleFor(o => o.InclusionDate, f => RuleForDates(f))
-            .RuleFor(o => o.LastChange, f => RuleForDates(f));
+            .RuleFor(o => o.BirthDate, f => FixtureUtils.RuleForDates(f))
+            .RuleFor(o => o.InclusionDate, f => FixtureUtils.RuleForDates(f))
+            .RuleFor(o => o.LastChange, f => FixtureUtils.RuleForDates(f));
             
         return owners.Generate(qtd);
-    }
-    private static DateTime RuleForDates(Faker f)
-    {
-        var date = f.Date.PastDateOnly();
-        return new DateTime(date.Year, date.Month, date.Day).ToUniversalTime();
     }
 }

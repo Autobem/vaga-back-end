@@ -1,7 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Entities.Entities;
 
+[PrimaryKey("Id")]
 public class Vehicle
 {
     public Guid Id { get; set; }
@@ -12,7 +13,6 @@ public class Vehicle
     public string City { get; set; }
     public string State { get; set; }
     public string Year { get; set; }
-
-    [ForeignKey("Owner")]
     public Guid OwnerId { get; set; }
+    public Owner Owner { get; set; }
 }

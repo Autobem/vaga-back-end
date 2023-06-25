@@ -1,5 +1,6 @@
 ﻿using Domain.Contracts.Service;
 using Domain.Models;
+using Domain.Models.UserModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers;
@@ -44,7 +45,7 @@ public class UserController : ControllerBase
     }
 
     [HttpPut]
-    public async Task<IActionResult> Update(CreateUserModel user)
+    public async Task<IActionResult> Update(UpdateUserModel user)
     {
         await _userService.Update(user);
         return Accepted();

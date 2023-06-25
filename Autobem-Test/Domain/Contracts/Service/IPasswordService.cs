@@ -4,6 +4,7 @@ namespace Domain.Contracts.Service
 {
     public interface IPasswordService
     {
-        string HashPassword(string password, string salt, int iteration);
+        string HashPassword(string password, string salt = "", int iteration = 3);
+        string GenerateSalt();
     }
 }

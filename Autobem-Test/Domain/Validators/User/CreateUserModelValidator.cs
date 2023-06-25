@@ -1,13 +1,13 @@
 ﻿using Domain.Models;
 using FluentValidation;
 
-namespace Domain.Validators;
+namespace Domain.Validators.User;
 
 public class CreateUserModelValidator : AbstractValidator<CreateUserModel>
 {
-	public CreateUserModelValidator()
-	{
-		RuleFor(u => u.Name)
+    public CreateUserModelValidator()
+    {
+        RuleFor(u => u.Name)
             .NotEmpty().WithMessage("Invalid Name: field cannot be empty");
         RuleFor(u => u.Email)
             .NotEmpty().WithMessage("Invalid Email: field cannot be empty")

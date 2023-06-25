@@ -1,6 +1,7 @@
 ﻿using Domain.Service;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Primitives;
+using Tests.Fixture;
 
 namespace Tests.UnitTests.Domain.Service;
 
@@ -11,53 +12,9 @@ public class PasswordServiceTest
     private const int ZERO_ITERATIONS = 0;
     private const int TWO_ITERATIONS = 2;
     private const int THREE_ITERATIONS = 3;
-    private const string CONFIGURATION_KEY = "Key";
 
-    public class FakeConfiguration : IConfiguration
-    {
-        public string? this[string key] { get => CONFIGURATION_KEY; set => throw new NotImplementedException(); }
 
-        public IEnumerable<IConfigurationSection> GetChildren()
-        {
-            return new List<FakeConfigurationSection>();
-        }
 
-        public IChangeToken GetReloadToken()
-        {
-            return null;
-        }
-
-        public IConfigurationSection GetSection(string key)
-        {
-            return new FakeConfigurationSection();
-        }
-    }
-
-    public class FakeConfigurationSection : IConfigurationSection
-    {
-        public string? this[string key] { get => CONFIGURATION_KEY; set => throw new NotImplementedException(); }
-
-        public string Key => "";
-
-        public string Path => "";
-
-        public string? Value { get => "string"; set => throw new NotImplementedException(); }
-
-        public IEnumerable<IConfigurationSection> GetChildren()
-        {
-            return new List<FakeConfigurationSection>();
-        }
-
-        public IChangeToken GetReloadToken()
-        {
-            return null;
-        }
-
-        public IConfigurationSection GetSection(string key)
-        {
-            return new FakeConfigurationSection();
-        }
-    }
 
     #region HashPassword
 
@@ -65,7 +22,7 @@ public class PasswordServiceTest
     public void HashPassword_OnOnlyPassingPassword_ReturnString()
     {
         // Arrange
-        var sut = new PasswordService(new FakeConfiguration());
+        var sut = new PasswordService(new ConfigurationFixture());
 
         // Act
         var result = sut.HashPassword(PASSWORD);
@@ -78,7 +35,7 @@ public class PasswordServiceTest
     public void HashPassword_OnOnlyPassingPassword_ReturnStringMustBeDifferentFromPassword()
     {
         // Arrange
-        var mockService = new Mock<PasswordService>(new FakeConfiguration());
+        var mockService = new Mock<PasswordService>(new ConfigurationFixture());
         mockService
             .Setup(p => p.HashPassword(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()))
             .CallBase();
@@ -98,7 +55,7 @@ public class PasswordServiceTest
     public void HashPassword_OnNotPassingIterationCount_ShouldBeCalledFourTimes()
     {
         // Arrange
-        var mockService = new Mock<PasswordService>(new FakeConfiguration());
+        var mockService = new Mock<PasswordService>(new ConfigurationFixture());
         mockService
             .Setup(p => p.HashPassword(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()))
             .CallBase();
@@ -119,7 +76,7 @@ public class PasswordServiceTest
     public void HashPassword_OnPassingIterationCount_ShouldBeCalledIterationPlusOneTimes()
     {
         // Arrange
-        var mockService = new Mock<PasswordService>(new FakeConfiguration());
+        var mockService = new Mock<PasswordService>(new ConfigurationFixture());
         mockService
             .Setup(p => p.HashPassword(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()))
             .CallBase();
@@ -140,7 +97,7 @@ public class PasswordServiceTest
     public void HashPassword_OnPassingIterationCountEqualsZero_ShouldReturnSamePassword()
     {
         // Arrange
-        var sut = new PasswordService(new FakeConfiguration());
+        var sut = new PasswordService(new ConfigurationFixture());
 
         // Act
         var result = sut.HashPassword(PASSWORD, iteration: ZERO_ITERATIONS);
@@ -153,7 +110,7 @@ public class PasswordServiceTest
     public void HashPassword_OnPassingNoSalt_ShouldCallGenerateSaltMethod()
     {
         // Arrange
-        var mockService = new Mock<PasswordService>(new FakeConfiguration());
+        var mockService = new Mock<PasswordService>(new ConfigurationFixture());
         mockService
             .Setup(p => p.HashPassword(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()))
             .CallBase();
@@ -174,7 +131,7 @@ public class PasswordServiceTest
     public void HashPassword_OnPassingSalt_ShouldNotCallGenerateSaltMethod()
     {
         // Arrange
-        var mockService = new Mock<PasswordService>(new FakeConfiguration());
+        var mockService = new Mock<PasswordService>(new ConfigurationFixture());
         mockService
             .Setup(p => p.HashPassword(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()))
             .CallBase();
@@ -199,7 +156,7 @@ public class PasswordServiceTest
     public void GenerateSalt_ReturnString()
     {
         // Arrange
-        var sut = new PasswordService(new FakeConfiguration());
+        var sut = new PasswordService(new ConfigurationFixture());
 
         // Act
         var result = sut.GenerateSalt();
@@ -212,7 +169,7 @@ public class PasswordServiceTest
     public void GenerateSalt_CallingTwoTimes_ReturnDifferentString()
     {
         // Arrange
-        var sut = new PasswordService(new FakeConfiguration());
+        var sut = new PasswordService(new ConfigurationFixture());
 
         // Act
         var resultOne = sut.GenerateSalt();

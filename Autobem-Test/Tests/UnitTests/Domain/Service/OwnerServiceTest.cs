@@ -31,6 +31,7 @@ public class OwnerServiceTest
     [Fact]
     public async Task Get_OnSuccess_ReturnOwnerModelsList()
     {
+        // Arrange
         var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
         var mapper = new Mapper(configuration);
 
@@ -50,6 +51,7 @@ public class OwnerServiceTest
     [Fact]
     public async Task Get_OnSuccess_InvokeRepository()
     {
+        // Arrange
         var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
         var mapper = new Mapper(configuration);
 
@@ -73,6 +75,7 @@ public class OwnerServiceTest
     [Fact]
     public async Task GetById_OnSuccess_ReturnOwnerModel()
     {
+        // Arrange
         var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
         var mapper = new Mapper(configuration);
 
@@ -92,6 +95,7 @@ public class OwnerServiceTest
     [Fact]
     public async Task GetById_OnSuccess_InvokeRepository()
     {
+        // Arrange
         var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
         var mapper = new Mapper(configuration);
 
@@ -111,6 +115,7 @@ public class OwnerServiceTest
     [Fact]
     public async Task GetById_OnSuccess_ReturnTheRightOwner()
     {
+        // Arrange
         var expected = new Owner() { Id = Guid.NewGuid() };
 
         var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
@@ -122,7 +127,7 @@ public class OwnerServiceTest
             .ReturnsAsync((Guid id) => id == expected.Id ? expected : new Owner());
         var sut = new OwnerService(mockRepository.Object, mapper);
 
-        // Acts
+        // Act
         var actual = await sut.GetById(expected.Id);
 
         // Assert
@@ -136,6 +141,7 @@ public class OwnerServiceTest
     [Fact]
     public async Task Insert_OnValidOwnerModel_ReturnOwnerModel()
     {
+        // Arrange
         var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
         var mapper = new Mapper(configuration);
 
@@ -155,6 +161,7 @@ public class OwnerServiceTest
     [Fact]
     public async Task Insert_OnValidOwnerModel_InvokeRepository()
     {
+        // Arrange
         var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
         var mapper = new Mapper(configuration);
 
@@ -174,6 +181,7 @@ public class OwnerServiceTest
     [Fact]
     public async Task Insert_OnSuccess_ReturnTheRightOwner()
     {
+        // Arrange
         var expected = VALID_OWNER_MODEL;
         var aux = new Owner() { Id = expected.Id };
         var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
@@ -185,7 +193,7 @@ public class OwnerServiceTest
             .ReturnsAsync((Owner on) => on.Id == aux.Id ? aux : new Owner());
         var sut = new OwnerService(mockRepository.Object, mapper);
 
-        // Acts
+        // Act
         var actual = await sut.Insert(expected);
 
         // Assert
@@ -205,7 +213,7 @@ public class OwnerServiceTest
             .ReturnsAsync(new Owner());
         var sut = new OwnerService(mockRepository.Object, mapper);
 
-        // Acts
+        // Act
         await sut.Insert(VALID_OWNER_MODEL);
 
         // Assert
@@ -229,7 +237,7 @@ public class OwnerServiceTest
             .ReturnsAsync(new Owner());
         var sut = new OwnerService(mockRepository.Object, mapper);
 
-        // Acts
+        // Act
         var act = async () => await sut.Insert(INVALID_OWNER_MODEL);
 
         // Assert
@@ -243,6 +251,7 @@ public class OwnerServiceTest
     [Fact]
     public async Task Update_OnValidOwnerModel_InvokeRepositoryUpdateMethod()
     {
+        // Arrange
         var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
         var mapper = new Mapper(configuration);
 
@@ -262,6 +271,7 @@ public class OwnerServiceTest
     [Fact]
     public async Task Update_OnInvalidValidOwnerModel_ThrowsValidationException()
     {
+        // Arrange
         var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
         var mapper = new Mapper(configuration);
 
@@ -287,6 +297,7 @@ public class OwnerServiceTest
     [Fact]
     public async Task Delete_OnSuccess_InvokeRepository()
     {
+        // Arrange
         var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
         var mapper = new Mapper(configuration);
 

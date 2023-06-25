@@ -33,6 +33,7 @@ public class VehicleServiceTest
     [Fact]
     public async Task Get_OnSuccess_ReturnVehicleModelsList()
     {
+        // Arrange
         var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
         var mapper = new Mapper(configuration);
 
@@ -52,6 +53,7 @@ public class VehicleServiceTest
     [Fact]
     public async Task Get_OnSuccess_InvokeRepository()
     {
+        // Arrange
         var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
         var mapper = new Mapper(configuration);
 
@@ -75,6 +77,7 @@ public class VehicleServiceTest
     [Fact]
     public async Task GetById_OnSuccess_ReturnVehicleModel()
     {
+        // Arrange
         var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
         var mapper = new Mapper(configuration);
 
@@ -94,6 +97,7 @@ public class VehicleServiceTest
     [Fact]
     public async Task GetById_OnSuccess_InvokeRepository()
     {
+        // Arrange
         var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
         var mapper = new Mapper(configuration);
 
@@ -113,6 +117,7 @@ public class VehicleServiceTest
     [Fact]
     public async Task GetById_OnSuccess_ReturnTheRightVehicle()
     {
+        // Arrange
         var expected = new Vehicle() { Id = Guid.NewGuid() };
 
         var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
@@ -124,7 +129,7 @@ public class VehicleServiceTest
             .ReturnsAsync((Guid id) => id == expected.Id ? expected : new Vehicle());
         var sut = new VehicleService(mockRepository.Object, mapper);
 
-        // Acts
+        // Act
         var actual = await sut.GetById(expected.Id);
 
         // Assert
@@ -138,6 +143,7 @@ public class VehicleServiceTest
     [Fact]
     public async Task Insert_OnValidVehicleModel_ReturnVehicleModel()
     {
+        // Arrange
         var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
         var mapper = new Mapper(configuration);
 
@@ -157,6 +163,7 @@ public class VehicleServiceTest
     [Fact]
     public async Task Insert_OnValidVehicleModel_InvokeRepository()
     {
+        // Arrange
         var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
         var mapper = new Mapper(configuration);
 
@@ -176,6 +183,7 @@ public class VehicleServiceTest
     [Fact]
     public async Task Insert_OnValidVehicleModel_ReturnTheRightVehicle()
     {
+        // Arrange
         var expected = VALID_VEHICLE_MODEL;
         var aux = new Vehicle() { Id = expected.Id };
         var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
@@ -187,7 +195,7 @@ public class VehicleServiceTest
             .ReturnsAsync((Vehicle on) => on.Id == aux.Id ? aux : new Vehicle());
         var sut = new VehicleService(mockRepository.Object, mapper);
 
-        // Acts
+        // Act
         var actual = await sut.Insert(expected);
 
         // Assert
@@ -197,6 +205,7 @@ public class VehicleServiceTest
     [Fact]
     public async Task Insert_OnInvalidVehicleModel_ThrowsValidationException()
     {
+        // Arrange
         var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
         var mapper = new Mapper(configuration);
 
@@ -220,6 +229,7 @@ public class VehicleServiceTest
     [Fact]
     public async Task Update_OnValidVehicleModel_InvokeRepository()
     {
+        // Arrange
         var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
         var mapper = new Mapper(configuration);
 
@@ -238,6 +248,7 @@ public class VehicleServiceTest
     [Fact]
     public async Task Update_OnInvalidVehicleModel_ThrowsValidationException()
     {
+        // Arrange
         var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
         var mapper = new Mapper(configuration);
 
@@ -262,6 +273,7 @@ public class VehicleServiceTest
     [Fact]
     public async Task Delete_OnSuccess_InvokeRepository()
     {
+        // Arrange
         var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
         var mapper = new Mapper(configuration);
 

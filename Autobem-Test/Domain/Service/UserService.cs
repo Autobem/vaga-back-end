@@ -1,7 +1,12 @@
-﻿using Domain.Contracts.Repository;
+﻿using AutoMapper;
+using Domain.Contracts.Repository;
 using Domain.Contracts.Service;
 using Domain.Models;
+using Domain.Models.UserModels;
+using Domain.Validators.User;
 using Entities.Entities;
+using Entities.Enums;
+using FluentValidation;
 
 namespace Domain.Service;
 
@@ -9,35 +14,65 @@ public class UserService : IUserService
 {
     private readonly IBaseRepository<User> _repository;
     private readonly IPasswordService _passwordService;
+    private readonly IMapper _mapper;
 
-    public UserService(IBaseRepository<User> repository, IPasswordService passwordService)
+    public UserService(IBaseRepository<User> repository, IPasswordService passwordService, IMapper mapper)
     {
         _repository = repository;
         _passwordService = passwordService;
+        _mapper = mapper;
     }
 
-    public Task Delete(Guid id)
+    public async Task Delete(Guid id)
     {
-        throw new NotImplementedException();
+        await _repository.Delete(id);
     }
 
-    public Task<List<CreateUserModel>> Get()
+    public async Task<List<GetUserModel>> Get()
     {
-        throw new NotImplementedException();
+        var users = await _repository.Get();
+        return _mapper.Map<List<GetUserModel>>(users);
     }
 
-    public Task<CreateUserModel> GetById(Guid id)
+    public async Task<GetUserModel> GetById(Guid id)
     {
-        throw new NotImplementedException();
+        var user = await _repository.GetById(id);
+        return _mapper.Map<GetUserModel>(user);
     }
 
-    public Task<CreateUserModel> Insert(CreateUserModel user)
+    public async Task<GetUserModel> Insert(CreateUserModel user)
     {
-        throw new NotImplementedException();
+        var validator = new CreateUserModelValidator();
+        await validator.ValidateAndThrowAsync(user);
+
+        var insertUser = _mapper.Map<User>(user);
+
+        insertUser.PasswordSalt = _passwordService.GenerateSalt();
+        insertUser.Password = _passwordService.HashPassword(insertUser.Password);
+        insertUser.Status = StatusEnum.ACTIVE;
+
+        var result = await _repository.Insert(insertUser);
+        return _mapper.Map<GetUserModel>(result);
     }
 
-    public Task Update(CreateUserModel user)
+    public async Task Update(UpdateUserModel user)
     {
-        throw new NotImplementedException();
+        var validator = new UpdateUserModelValidator();
+        await validator.ValidateAndThrowAsync(user);
+
+        var updateUser = _mapper.Map<User>(user);
+
+        var actualUser = await _repository.GetById(updateUser.Id);
+        updateUser.Password = actualUser.Password;
+        updateUser.PasswordSalt = actualUser.PasswordSalt;
+
+        await _repository.Update(updateUser);
+    }
+
+    private (string, string) GeneratePassword(string pass)
+    {
+        var passwordSalt = _passwordService.GenerateSalt();
+        var passwordHash = _passwordService.HashPassword(pass, passwordSalt);
+        return (passwordHash, passwordSalt);
     }
 }

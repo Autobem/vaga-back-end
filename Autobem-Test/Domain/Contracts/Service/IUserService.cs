@@ -1,16 +1,17 @@
 ﻿using Domain.Models;
+using Domain.Models.UserModels;
 
 namespace Domain.Contracts.Service;
 
 public interface IUserService
 {
-    Task<CreateUserModel> Insert(CreateUserModel user);
+    Task<GetUserModel> Insert(CreateUserModel user);
 
-    Task Update(CreateUserModel user);
+    Task Update(UpdateUserModel user);
 
     Task Delete(Guid id);
 
-    Task<CreateUserModel> GetById(Guid id);
+    Task<GetUserModel> GetById(Guid id);
 
-    Task<List<CreateUserModel>> Get();
+    Task<List<GetUserModel>> Get();
 }

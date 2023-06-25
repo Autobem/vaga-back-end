@@ -15,10 +15,10 @@ public class VehicleController : ControllerBase
         _vehicleService = vehicleService;
     }
 
-    [HttpDelete]
-    public async Task<IActionResult> Delete(Guid guid)
+    [HttpDelete("{id:Guid}")]
+    public async Task<IActionResult> Delete(Guid id)
     {
-        await _vehicleService.Delete(guid);
+        await _vehicleService.Delete(id);
         return Accepted();
     }
 

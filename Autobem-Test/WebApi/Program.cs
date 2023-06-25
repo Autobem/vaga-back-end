@@ -7,6 +7,8 @@ using Infrastructure.Configuration;
 using Infrastructure.Helpers;
 using Infrastructure.Repository;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,7 +17,20 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "Autobem C# Test Api",
+        Description = "An ASP.NET Core Web API for Autobem selective process",
+        Contact = new OpenApiContact
+        {
+            Name = "Access Autobem main site",
+            Url = new Uri("https://www.autobembrasil.com.br/")
+        },
+    });
+
+});
 
 #region Database
 
@@ -30,10 +45,12 @@ builder.Services.AddDbContext<BaseContext>(options =>
 // Service
 builder.Services.AddScoped<IOwnerService, OwnerService>();
 builder.Services.AddScoped<IVehicleService, VehicleService>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 // Repository
 builder.Services.AddScoped<IBaseRepository<Owner>, BaseRepository<Owner>>();
 builder.Services.AddScoped<IBaseRepository<Vehicle>, BaseRepository<Vehicle>>();
+builder.Services.AddScoped<IBaseRepository<User>, BaseRepository<User>>();
 
 #endregion Dependency Injection
 

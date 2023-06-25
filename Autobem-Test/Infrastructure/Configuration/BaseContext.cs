@@ -10,6 +10,7 @@ public class BaseContext : DbContext
 
     public DbSet<Owner> Owners { get; set; }
     public DbSet<Vehicle> Vehicles { get; set; }
+    public DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -28,6 +29,9 @@ public class BaseContext : DbContext
             .HasOne(o => o.Owner)
             .WithMany(o => o.Vehicles)
             .HasForeignKey(o => o.OwnerId);
+        modelBuilder.Entity<User>()
+            .Property(u => u.Status)
+            .HasConversion<string>();
     }
 
     public string GetConnectionString()

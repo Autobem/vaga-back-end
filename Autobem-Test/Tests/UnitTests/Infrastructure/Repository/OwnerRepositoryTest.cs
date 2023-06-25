@@ -6,309 +6,234 @@ using Tests.Fixture;
 
 namespace Tests.UnitTests.Infrastructure.Repository;
 
-public class OwnerRepositoryTest
+[Collection("Repository Unit Tests")]
+public class OwnerRepositoryTest : IDisposable
 {
+    private readonly DbContextOptions _options;
+
     private const int POPULATED_OWNERS = 10;
     private const int EMPTY_OWNERS = 0;
     private const string NEW_NAME = "New Name";
 
-    [Collection("Repository Unit Tests")]
-    public class Get : IDisposable
+    public OwnerRepositoryTest()
     {
-        private readonly DbContextOptions _options;
+        _options = new DbContextOptionsBuilder<BaseContext>()
+            .UseInMemoryDatabase(databaseName: "TestDatabase")
+            .Options;
+    }
 
-        public Get()
+    public async void Dispose()
+    {
+        using (var context = new BaseContext(_options))
         {
-            _options = new DbContextOptionsBuilder<BaseContext>()
-                .UseInMemoryDatabase(databaseName: "TestDatabase")
-                .Options;
-        }
-
-        public async void Dispose()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                var owners = await context.Set<Owner>().ToListAsync();
-                context.Set<Owner>().RemoveRange(owners);
-                await context.SaveChangesAsync();
-            }
-        }
-
-        [Fact]
-        public async Task OnEmptyDatabase_ReturnEmptyList()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                // Arrange
-                var sut = new BaseRepository<Owner>(context);
-
-                // Act
-                var result = await sut.Get();
-
-                // Assert
-                result.Count.Should().Be(EMPTY_OWNERS);
-            }
-        }
-
-        [Fact]
-        public async Task OnPopulatedDatabase_ReturnAllEntities()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                // Arrange
-                var owners = OwnerFixture.GenerateOwners(POPULATED_OWNERS);
-                await context.Set<Owner>().AddRangeAsync(owners);
-                await context.SaveChangesAsync();
-
-                var sut = new BaseRepository<Owner>(context);
-
-                // Act
-                var result = await sut.Get();
-
-                // Assert
-                result.Count.Should().Be(POPULATED_OWNERS);
-            }
+            var owners = await context.Set<Owner>().ToListAsync();
+            context.Set<Owner>().RemoveRange(owners);
+            await context.SaveChangesAsync();
         }
     }
 
-    [Collection("Repository Unit Tests")]
-    public class GetById : IDisposable
+    #region Get
+
+    [Fact]
+    public async Task Get_OnEmptyDatabase_ReturnEmptyList()
     {
-        private readonly DbContextOptions _options;
-
-        public GetById()
+        using (var context = new BaseContext(_options))
         {
-            _options = new DbContextOptionsBuilder<BaseContext>()
-                .UseInMemoryDatabase(databaseName: "TestDatabase")
-                .Options;
-        }
+            // Arrange
+            var sut = new BaseRepository<Owner>(context);
 
-        public async void Dispose()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                var owners = await context.Set<Owner>().ToListAsync();
-                context.Set<Owner>().RemoveRange(owners);
-                await context.SaveChangesAsync();
-            }
-        }
+            // Act
+            var result = await sut.Get();
 
-        [Fact]
-        public async Task OnOwnerNotFound_ReturnNull()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                // Arrange
-                var sut = new BaseRepository<Owner>(context);
-
-                // Act
-                var result = await sut.GetById(new Guid());
-
-                // Assert
-                result.Should().Be(null);
-            }
-        }
-
-        [Fact]
-        public async Task OnOwnerFound_ReturnOwner()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                // Arrange
-                var expected = OwnerFixture.GenerateOwners(1).First();
-                await context.Set<Owner>().AddAsync(expected);
-                var sut = new BaseRepository<Owner>(context);
-
-                // Act
-                var actual = await sut.GetById(expected.Id);
-
-                // Assert
-                actual.Should().BeEquivalentTo(expected);
-            }
+            // Assert
+            result.Count.Should().Be(EMPTY_OWNERS);
         }
     }
 
-    [Collection("Repository Unit Tests")]
-    public class Insert : IDisposable
+    [Fact]
+    public async Task Get_OnPopulatedDatabase_ReturnAllEntities()
     {
-        private readonly DbContextOptions _options;
-
-        public Insert()
+        using (var context = new BaseContext(_options))
         {
-            _options = new DbContextOptionsBuilder<BaseContext>()
-                .UseInMemoryDatabase(databaseName: "TestDatabase")
-                .Options;
-        }
+            // Arrange
+            var owners = OwnerFixture.GenerateOwners(POPULATED_OWNERS);
+            await context.Set<Owner>().AddRangeAsync(owners);
+            await context.SaveChangesAsync();
 
-        public async void Dispose()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                var owners = await context.Set<Owner>().ToListAsync();
-                context.Set<Owner>().RemoveRange(owners);
-                await context.SaveChangesAsync();
-            }
-        }
+            var sut = new BaseRepository<Owner>(context);
 
-        [Fact]
-        public async Task OnOwnerInserted_CallGetById_ReturnSameOwner()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                // Arrange
-                var expected = OwnerFixture.GenerateOwners(1).First();
-                var sut = new BaseRepository<Owner>(context);
+            // Act
+            var result = await sut.Get();
 
-                // Act
-                await sut.Insert(expected);
-
-                // Assert
-                var actual = await context.Set<Owner>().FindAsync(expected.Id);
-                actual.Should().BeEquivalentTo(expected);
-            }
-        }
-
-        [Fact]
-        public async Task OnOwnerInserted_ReturnOwnerInserted()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                // Arrange
-                var expected = OwnerFixture.GenerateOwners(1).First();
-                var sut = new BaseRepository<Owner>(context);
-
-                // Act
-                var actual = await sut.Insert(expected);
-
-                // Assert
-                actual.Should().BeOfType<Owner>();
-                actual.Should().BeEquivalentTo(expected);
-            }
+            // Assert
+            result.Count.Should().Be(POPULATED_OWNERS);
         }
     }
 
-    [Collection("Repository Unit Tests")]
-    public class Update : IDisposable
+    #endregion Get
+
+    #region GetById
+
+    [Fact]
+    public async Task GetById_OnOwnerNotFound_ReturnNull()
     {
-        private readonly DbContextOptions _options;
-
-        public Update()
+        using (var context = new BaseContext(_options))
         {
-            _options = new DbContextOptionsBuilder<BaseContext>()
-                .UseInMemoryDatabase(databaseName: "TestDatabase")
-                .Options;
-        }
+            // Arrange
+            var sut = new BaseRepository<Owner>(context);
 
-        public async void Dispose()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                var owners = await context.Set<Owner>().ToListAsync();
-                context.Set<Owner>().RemoveRange(owners);
-                await context.SaveChangesAsync();
-            }
-        }
+            // Act
+            var result = await sut.GetById(new Guid());
 
-        [Fact]
-        public async Task OnOwnerInserted_UpdateItsName_ReturnOwnerWithNewName()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                // Arrange
-                var expected = OwnerFixture.GenerateOwners(1).First();
-                await context.AddAsync(expected);
-                await context.SaveChangesAsync();
-                var sut = new BaseRepository<Owner>(context);
-
-                // Act
-                expected.Name = NEW_NAME;
-                await sut.Update(expected);
-
-                // Assert
-                var actual = await context.Set<Owner>().FindAsync(expected.Id);
-                actual.Name.Should().BeEquivalentTo(NEW_NAME);
-            }
-        }
-
-        [Fact]
-        public async Task OnUpdatingNonExistingOwner_ReturnsError()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                // Arrange
-                var notInDbOwner = OwnerFixture.GenerateOwners(1).First();
-                var sut = new BaseRepository<Owner>(context);
-
-                // Act
-                var act = async () => await sut.Update(notInDbOwner);
-
-                // Assert
-                await act
-                    .Should()
-                    .ThrowAsync<DbUpdateConcurrencyException>();
-            }
+            // Assert
+            result.Should().Be(null);
         }
     }
 
-    [Collection("Repository Unit Tests")]
-    public class Delete : IDisposable
+    [Fact]
+    public async Task GetById_OnOwnerFound_ReturnOwner()
     {
-        private readonly DbContextOptions _options;
-
-        public Delete()
+        using (var context = new BaseContext(_options))
         {
-            _options = new DbContextOptionsBuilder<BaseContext>()
-                .UseInMemoryDatabase(databaseName: "TestDatabase")
-                .Options;
-        }
+            // Arrange
+            var expected = OwnerFixture.GenerateOwners(1).First();
+            await context.Set<Owner>().AddAsync(expected);
+            var sut = new BaseRepository<Owner>(context);
 
-        public async void Dispose()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                var owners = await context.Set<Owner>().ToListAsync();
-                context.Set<Owner>().RemoveRange(owners);
-                await context.SaveChangesAsync();
-            }
-        }
+            // Act
+            var actual = await sut.GetById(expected.Id);
 
-        [Fact]
-        public async Task OnOwnerInserted_DeleteInsertedOwner_OwnerIsDeleted()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                // Arrange
-                var expected = OwnerFixture.GenerateOwners(1).First();
-                await context.AddAsync(expected);
-                await context.SaveChangesAsync();
-                var sut = new BaseRepository<Owner>(context);
-
-                // Act
-                await sut.Delete(expected.Id);
-
-                // Assert
-                var actual = await context.Set<Owner>().FindAsync(expected.Id);
-                actual.Should().BeNull();
-            }
-        }
-
-        [Fact]
-        public async Task OnDeletingNonExistingOwner_ReturnsError()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                // Arrange
-                var notInDbOwner = OwnerFixture.GenerateOwners(1).First();
-                var sut = new BaseRepository<Owner>(context);
-
-                // Act
-                var act = async () => await sut.Delete(new Guid());
-
-                // Assert
-                await act
-                    .Should()
-                    .ThrowAsync<ArgumentNullException>();
-            }
+            // Assert
+            actual.Should().BeEquivalentTo(expected);
         }
     }
+
+    #endregion GetById
+
+    #region Insert
+
+    [Fact]
+    public async Task Insert_OnOwnerInserted_CallGetById_ReturnSameOwner()
+    {
+        using (var context = new BaseContext(_options))
+        {
+            // Arrange
+            var expected = OwnerFixture.GenerateOwners(1).First();
+            var sut = new BaseRepository<Owner>(context);
+
+            // Act
+            await sut.Insert(expected);
+
+            // Assert
+            var actual = await context.Set<Owner>().FindAsync(expected.Id);
+            actual.Should().BeEquivalentTo(expected);
+        }
+    }
+
+    [Fact]
+    public async Task Insert_OnOwnerInserted_ReturnOwnerInserted()
+    {
+        using (var context = new BaseContext(_options))
+        {
+            // Arrange
+            var expected = OwnerFixture.GenerateOwners(1).First();
+            var sut = new BaseRepository<Owner>(context);
+
+            // Act
+            var actual = await sut.Insert(expected);
+
+            // Assert
+            actual.Should().BeOfType<Owner>();
+            actual.Should().BeEquivalentTo(expected);
+        }
+    }
+
+    #endregion Insert
+
+    #region Update
+
+    [Fact]
+    public async Task Update_OnOwnerInserted_UpdateItsName_ReturnOwnerWithNewName()
+    {
+        using (var context = new BaseContext(_options))
+        {
+            // Arrange
+            var expected = OwnerFixture.GenerateOwners(1).First();
+            await context.AddAsync(expected);
+            await context.SaveChangesAsync();
+            var sut = new BaseRepository<Owner>(context);
+
+            // Act
+            expected.Name = NEW_NAME;
+            await sut.Update(expected);
+
+            // Assert
+            var actual = await context.Set<Owner>().FindAsync(expected.Id);
+            actual.Name.Should().BeEquivalentTo(NEW_NAME);
+        }
+    }
+
+    [Fact]
+    public async Task Update_OnUpdatingNonExistingOwner_ReturnsError()
+    {
+        using (var context = new BaseContext(_options))
+        {
+            // Arrange
+            var notInDbOwner = OwnerFixture.GenerateOwners(1).First();
+            var sut = new BaseRepository<Owner>(context);
+
+            // Act
+            var act = async () => await sut.Update(notInDbOwner);
+
+            // Assert
+            await act
+                .Should()
+                .ThrowAsync<DbUpdateConcurrencyException>();
+        }
+    }
+
+    #endregion Update
+
+    #region Delete
+
+    [Fact]
+    public async Task Delete_OnOwnerInserted_DeleteInsertedOwner_OwnerIsDeleted()
+    {
+        using (var context = new BaseContext(_options))
+        {
+            // Arrange
+            var expected = OwnerFixture.GenerateOwners(1).First();
+            await context.AddAsync(expected);
+            await context.SaveChangesAsync();
+            var sut = new BaseRepository<Owner>(context);
+
+            // Act
+            await sut.Delete(expected.Id);
+
+            // Assert
+            var actual = await context.Set<Owner>().FindAsync(expected.Id);
+            actual.Should().BeNull();
+        }
+    }
+
+    [Fact]
+    public async Task Delete_OnDeletingNonExistingOwner_ReturnsError()
+    {
+        using (var context = new BaseContext(_options))
+        {
+            // Arrange
+            var notInDbOwner = OwnerFixture.GenerateOwners(1).First();
+            var sut = new BaseRepository<Owner>(context);
+
+            // Act
+            var act = async () => await sut.Delete(new Guid());
+
+            // Assert
+            await act
+                .Should()
+                .ThrowAsync<ArgumentNullException>();
+        }
+    }
+
+    #endregion Delete
 }

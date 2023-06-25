@@ -2,342 +2,266 @@
 using Infrastructure.Configuration;
 using Infrastructure.Repository;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
 using Tests.Fixture;
 
 namespace Tests.UnitTests.Infrastructure.Repository;
 
-public class VehicleRepositoryTest
+[Collection("Repository Unit Tests")]
+public class VehicleRepositoryTest : IDisposable
 {
+    private readonly DbContextOptions _options;
+
     private const int POPULATED_VEHICLES = 10;
     private const int EMPTY_VEHICLES = 0;
     private const string NEW_NAME = "New Name";
 
-    [Collection("Repository Unit Tests")]
-    public class Get : IDisposable
+    public VehicleRepositoryTest()
     {
-        private readonly DbContextOptions _options;
+        _options = new DbContextOptionsBuilder<BaseContext>()
+            .UseInMemoryDatabase(databaseName: "TestDatabase")
+            .EnableSensitiveDataLogging()
+            .Options;
+    }
 
-        public Get()
+    public async void Dispose()
+    {
+        using (var context = new BaseContext(_options))
         {
-            _options = new DbContextOptionsBuilder<BaseContext>()
-                .UseInMemoryDatabase(databaseName: "TestDatabase")
-                .EnableSensitiveDataLogging()
-                .Options;
-        }
-
-        public async void Dispose()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                var owners = await context.Set<Owner>().ToListAsync();
-                var vehicles = await context.Set<Vehicle>().ToListAsync();
-
-                context.Set<Owner>().RemoveRange(owners);
-                context.Set<Vehicle>().RemoveRange(vehicles);
-                await context.SaveChangesAsync();
-            }
-        }
-
-        [Fact]
-        public async Task OnEmptyDatabase_ReturnEmptyList()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                // Arrange
-                var sut = new BaseRepository<Vehicle>(context);
-
-                // Act
-                var result = await sut.Get();
-
-                // Assert
-                result.Count.Should().Be(EMPTY_VEHICLES);
-            }
-        }
-
-        [Fact]
-        public async Task OnPopulatedDatabase_ReturnAllEntities()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                // Arrange
-                var owners = OwnerFixture.GenerateOwners(POPULATED_VEHICLES);
-                await context.Set<Owner>().AddRangeAsync(owners);
-                await context.SaveChangesAsync();
-
-                var vehicles = VehicleFixture.GenerateVehicles(POPULATED_VEHICLES, owners);
-                await context.Set<Vehicle>().AddRangeAsync(vehicles);
-                await context.SaveChangesAsync();
-
-                var sut = new BaseRepository<Vehicle>(context);
-
-                // Act
-                var result = await sut.Get();
-
-                // Assert
-                result.Count.Should().Be(POPULATED_VEHICLES);
-            }
+            var owners = await context.Set<Owner>().ToListAsync();
+            var vehicles = await context.Set<Vehicle>().ToListAsync();
+            
+            context.Set<Owner>().RemoveRange(owners);
+            context.Set<Vehicle>().RemoveRange(vehicles);
+            await context.SaveChangesAsync();
         }
     }
 
-    [Collection("Repository Unit Tests")]
-    public class GetById : IDisposable
+    #region Get
+
+    [Fact]
+    public async Task Get_OnEmptyDatabase_ReturnEmptyList()
     {
-        private readonly DbContextOptions _options;
-
-        public GetById()
+        using (var context = new BaseContext(_options))
         {
-            _options = new DbContextOptionsBuilder<BaseContext>()
-                .UseInMemoryDatabase(databaseName: "TestDatabase")
-                .Options;
-        }
+            // Arrange
+            var sut = new BaseRepository<Vehicle>(context);
 
-        public async void Dispose()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                var owners = await context.Set<Owner>().ToListAsync();
-                var vehicles = await context.Set<Vehicle>().ToListAsync();
+            // Act
+            var result = await sut.Get();
 
-                context.Set<Owner>().RemoveRange(owners);
-                context.Set<Vehicle>().RemoveRange(vehicles);
-                await context.SaveChangesAsync();
-            }
-        }
-
-        [Fact]
-        public async Task OnVehicleNotFound_ReturnNull()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                // Arrange
-                var sut = new BaseRepository<Vehicle>(context);
-
-                // Act
-                var result = await sut.GetById(new Guid());
-
-                // Assert
-                result.Should().BeNull();
-            }
-        }
-
-        [Fact]
-        public async Task OnOwnerFound_ReturnOwner()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                // Arrange
-                var owner = OwnerFixture.GenerateOwners(1);
-                var expected = VehicleFixture.GenerateVehicles(1, owner).FirstOrDefault();
-                await context.Set<Owner>().AddAsync(owner.FirstOrDefault());
-                await context.Set<Vehicle>().AddAsync(expected);
-                var sut = new BaseRepository<Vehicle>(context);
-
-                // Act
-                var actual = await sut.GetById(expected.Id);
-
-                // Assert
-                actual.Should().BeEquivalentTo(expected);
-            }
+            // Assert
+            result.Count.Should().Be(EMPTY_VEHICLES);
         }
     }
 
-    [Collection("Repository Unit Tests")]
-    public class Insert : IDisposable
+    [Fact]
+    public async Task Get_OnPopulatedDatabase_ReturnAllEntities()
     {
-        private readonly DbContextOptions _options;
-
-        public Insert()
+        using (var context = new BaseContext(_options))
         {
-            _options = new DbContextOptionsBuilder<BaseContext>()
-                .UseInMemoryDatabase(databaseName: "TestDatabase")
-                .Options;
-        }
+            // Arrange
+            var owners = OwnerFixture.GenerateOwners(POPULATED_VEHICLES);
+            await context.Set<Owner>().AddRangeAsync(owners);
+            await context.SaveChangesAsync();
 
-        public async void Dispose()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                var owners = await context.Set<Owner>().ToListAsync();
-                var vehicle = await context.Set<Vehicle>().ToListAsync();
-                context.Set<Owner>().RemoveRange(owners);
-                context.Set<Vehicle>().RemoveRange(vehicle);
-                await context.SaveChangesAsync();
-            }
-        }
+            var vehicles = VehicleFixture.GenerateVehicles(POPULATED_VEHICLES, owners);
+            await context.Set<Vehicle>().AddRangeAsync(vehicles);
+            await context.SaveChangesAsync();
 
-        [Fact]
-        public async Task OnVehicleInserted_CallGetById_ReturnSameOwner()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                // Arrange
-                var owner = OwnerFixture.GenerateOwners(1);
-                var expected = VehicleFixture.GenerateVehicles(1, owner).FirstOrDefault();
-                await context.Set<Owner>().AddAsync(owner.FirstOrDefault());
-                await context.Set<Vehicle>().AddAsync(expected);
-                var sut = new BaseRepository<Vehicle>(context);
+            var sut = new BaseRepository<Vehicle>(context);
+            
+            // Act
+            var result = await sut.Get();
 
-                // Act
-                await sut.Insert(expected);
 
-                // Assert
-                var actual = await context.Set<Vehicle>().FindAsync(expected.Id);
-                actual.Should().BeEquivalentTo(expected);
-            }
-        }
+            Debug.WriteLine("Expected Vehicles");
+            vehicles.ForEach(v => Debug.WriteLine($"{v.Id} {v.Name}"));
 
-        [Fact]
-        public async Task OnVehicleInserted_ReturnVehicleInserted()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                // Arrange
-                var owner = OwnerFixture.GenerateOwners(1);
-                var expected = VehicleFixture.GenerateVehicles(1, owner).First();
-                var sut = new BaseRepository<Vehicle>(context);
+            Debug.WriteLine("\nActual Vehicles");
+            result.ForEach(v => Debug.WriteLine($"{v.Id} {v.Name}"));
 
-                // Act
-                var actual = await sut.Insert(expected);
-
-                // Assert
-                actual.Should().BeOfType<Vehicle>();
-                actual.Should().BeEquivalentTo(expected);
-            }
+            // Assert
+            result.Count.Should().Be(POPULATED_VEHICLES);
         }
     }
 
-    [Collection("Repository Unit Tests")]
-    public class Update : IDisposable
+    #endregion Get
+
+    #region GetById
+
+    [Fact]
+    public async Task GetById_OnVehicleNotFound_ReturnNull()
     {
-        private readonly DbContextOptions _options;
-
-        public Update()
+        using (var context = new BaseContext(_options))
         {
-            _options = new DbContextOptionsBuilder<BaseContext>()
-                .UseInMemoryDatabase(databaseName: "TestDatabase")
-                .Options;
-        }
+            // Arrange
+            var sut = new BaseRepository<Vehicle>(context);
 
-        public async void Dispose()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                var owners = await context.Set<Owner>().ToListAsync();
-                var vehicle = await context.Set<Vehicle>().ToListAsync();
-                context.Set<Owner>().RemoveRange(owners);
-                context.Set<Vehicle>().RemoveRange(vehicle);
-                await context.SaveChangesAsync();
-            }
-        }
+            // Act
+            var result = await sut.GetById(new Guid());
 
-        [Fact]
-        public async Task OnVehicleInserted_UpdateItsName_ReturnVehicleWithNewName()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                // Arrange
-                var owner = OwnerFixture.GenerateOwners(1);
-                var expected = VehicleFixture.GenerateVehicles(1, owner).FirstOrDefault();
-                await context.Set<Owner>().AddAsync(owner.FirstOrDefault());
-                await context.Set<Vehicle>().AddAsync(expected);
-                await context.SaveChangesAsync();
-                var sut = new BaseRepository<Vehicle>(context);
-
-                // Act
-                expected.Name = NEW_NAME;
-                await sut.Update(expected);
-
-                // Assert
-                var actual = await context.Set<Vehicle>().FindAsync(expected.Id);
-                actual.Name.Should().BeEquivalentTo(NEW_NAME);
-            }
-        }
-
-        [Fact]
-        public async Task OnUpdatingNonExistingVehicle_ThrowsDbUpdateConcurrencyException()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                // Arrange
-                var owner = OwnerFixture.GenerateOwners(1);
-                var vehicleNotInDb = VehicleFixture.GenerateVehicles(1, owner).FirstOrDefault();
-                var sut = new BaseRepository<Vehicle>(context);
-                // Act
-                var act = async () => await sut.Update(vehicleNotInDb);
-
-                // Assert
-                await act
-                    .Should()
-                    .ThrowAsync<DbUpdateConcurrencyException>();
-            }
+            // Assert
+            result.Should().BeNull();
         }
     }
 
-    [Collection("Repository Unit Tests")]
-    public class Delete : IDisposable
+    [Fact]
+    public async Task GetById_OnOwnerFound_ReturnOwner()
     {
-        private readonly DbContextOptions _options;
-
-        public Delete()
+        using (var context = new BaseContext(_options))
         {
-            _options = new DbContextOptionsBuilder<BaseContext>()
-                .UseInMemoryDatabase(databaseName: "TestDatabase")
-                .Options;
-        }
+            // Arrange
+            var owner = OwnerFixture.GenerateOwners(1);
+            var expected = VehicleFixture.GenerateVehicles(1, owner).FirstOrDefault();
+            await context.Set<Owner>().AddAsync(owner.FirstOrDefault());
+            await context.Set<Vehicle>().AddAsync(expected);
+            var sut = new BaseRepository<Vehicle>(context);
 
-        public async void Dispose()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                var owners = await context.Set<Owner>().ToListAsync();
-                var vehicle = await context.Set<Vehicle>().ToListAsync();
-                context.Set<Owner>().RemoveRange(owners);
-                context.Set<Vehicle>().RemoveRange(vehicle);
-                await context.SaveChangesAsync();
-            }
-        }
+            // Act
+            var actual = await sut.GetById(expected.Id);
 
-        [Fact]
-        public async Task OnVehicleInserted_DeleteInsertedVehicle_VehicleIsDeleted()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                // Arrange
-                var owner = OwnerFixture.GenerateOwners(1);
-                var vehicle = VehicleFixture.GenerateVehicles(1, owner).FirstOrDefault();
-                await context.Set<Owner>().AddAsync(owner.FirstOrDefault());
-                await context.Set<Vehicle>().AddAsync(vehicle);
-                await context.SaveChangesAsync();
-
-                var expected = await context.Set<Vehicle>().FindAsync(vehicle.Id);
-                var sut = new BaseRepository<Vehicle>(context);
-
-                // Act
-                await sut.Delete(expected.Id);
-
-                // Assert
-                var actual = await context.Set<Vehicle>().FindAsync(expected.Id);
-                actual.Should().BeNull();
-            }
-        }
-
-        [Fact]
-        public async Task OnDeletingNonExistingVehicle_ThrowsArgumentNullException()
-        {
-            using (var context = new BaseContext(_options))
-            {
-                // Arrange
-                var owner = OwnerFixture.GenerateOwners(1);
-                var vehicleNotInDb = VehicleFixture.GenerateVehicles(1, owner).FirstOrDefault();
-                var sut = new BaseRepository<Vehicle>(context);
-                // Act
-                var act = async () => await sut.Delete(vehicleNotInDb.Id);
-
-                // Assert
-                await act
-                    .Should()
-                    .ThrowAsync<ArgumentNullException>();
-            }
+            // Assert
+            actual.Should().BeEquivalentTo(expected);
         }
     }
+
+    #endregion GetById
+
+    #region Insert
+
+    [Fact]
+    public async Task Insert_OnVehicleInserted_CallGetById_ReturnSameOwner()
+    {
+        using (var context = new BaseContext(_options))
+        {
+            // Arrange
+            var owner = OwnerFixture.GenerateOwners(1);
+            var expected = VehicleFixture.GenerateVehicles(1, owner).FirstOrDefault();
+            await context.Set<Owner>().AddAsync(owner.FirstOrDefault());
+            await context.Set<Vehicle>().AddAsync(expected);
+            var sut = new BaseRepository<Vehicle>(context);
+
+            // Act
+            await sut.Insert(expected);
+
+            // Assert
+            var actual = await context.Set<Vehicle>().FindAsync(expected.Id);
+            actual.Should().BeEquivalentTo(expected);
+        }
+    }
+
+    [Fact]
+    public async Task Insert_OnVehicleInserted_ReturnVehicleInserted()
+    {
+        using (var context = new BaseContext(_options))
+        {
+            // Arrange
+            var owner = OwnerFixture.GenerateOwners(1);
+            var expected = VehicleFixture.GenerateVehicles(1, owner).First();
+            var sut = new BaseRepository<Vehicle>(context);
+
+            // Act
+            var actual = await sut.Insert(expected);
+
+            // Assert
+            actual.Should().BeOfType<Vehicle>();
+            actual.Should().BeEquivalentTo(expected);
+        }
+    }
+
+    #endregion Insert
+
+    #region Update
+
+    [Fact]
+    public async Task Update_OnVehicleInserted_UpdateItsName_ReturnVehicleWithNewName()
+    {
+        using (var context = new BaseContext(_options))
+        {
+            // Arrange
+            var owner = OwnerFixture.GenerateOwners(1);
+            var expected = VehicleFixture.GenerateVehicles(1, owner).FirstOrDefault();
+            await context.Set<Owner>().AddAsync(owner.FirstOrDefault());
+            await context.Set<Vehicle>().AddAsync(expected);
+            await context.SaveChangesAsync();
+            var sut = new BaseRepository<Vehicle>(context);
+
+            // Act
+            expected.Name = NEW_NAME;
+            await sut.Update(expected);
+
+            // Assert
+            var actual = await context.Set<Vehicle>().FindAsync(expected.Id);
+            actual.Name.Should().BeEquivalentTo(NEW_NAME);
+        }
+    }
+
+    [Fact]
+    public async Task Update_OnUpdatingNonExistingVehicle_ThrowsDbUpdateConcurrencyException()
+    {
+        using (var context = new BaseContext(_options))
+        {
+            // Arrange
+            var owner = OwnerFixture.GenerateOwners(1);
+            var vehicleNotInDb = VehicleFixture.GenerateVehicles(1, owner).FirstOrDefault();
+            var sut = new BaseRepository<Vehicle>(context);
+            // Act
+            var act = async () => await sut.Update(vehicleNotInDb);
+
+            // Assert
+            await act
+                .Should()
+                .ThrowAsync<DbUpdateConcurrencyException>();
+        }
+    }
+
+    #endregion Update
+
+    #region Delete
+
+    [Fact]
+    public async Task Delete_OnVehicleInserted_DeleteInsertedVehicle_VehicleIsDeleted()
+    {
+        using (var context = new BaseContext(_options))
+        {
+            // Arrange
+            var owner = OwnerFixture.GenerateOwners(1);
+            var vehicle = VehicleFixture.GenerateVehicles(1, owner).FirstOrDefault();
+            await context.Set<Owner>().AddAsync(owner.FirstOrDefault());
+            await context.Set<Vehicle>().AddAsync(vehicle);
+            await context.SaveChangesAsync();
+
+            var expected = await context.Set<Vehicle>().FindAsync(vehicle.Id);
+            var sut = new BaseRepository<Vehicle>(context);
+
+            // Act
+            await sut.Delete(expected.Id);
+
+            // Assert
+            var actual = await context.Set<Vehicle>().FindAsync(expected.Id);
+            actual.Should().BeNull();
+        }
+    }
+
+    [Fact]
+    public async Task Delete_OnDeletingNonExistingVehicle_ThrowsArgumentNullException()
+    {
+        using (var context = new BaseContext(_options))
+        {
+            // Arrange
+            var owner = OwnerFixture.GenerateOwners(1);
+            var vehicleNotInDb = VehicleFixture.GenerateVehicles(1, owner).FirstOrDefault();
+            var sut = new BaseRepository<Vehicle>(context);
+            // Act
+            var act = async () => await sut.Delete(vehicleNotInDb.Id);
+
+            // Assert
+            await act
+                .Should()
+                .ThrowAsync<ArgumentNullException>();
+        }
+    }
+
+    #endregion Delete
 }

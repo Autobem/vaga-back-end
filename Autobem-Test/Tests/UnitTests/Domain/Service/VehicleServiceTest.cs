@@ -28,249 +28,254 @@ public class VehicleServiceTest
         Id = new Guid(),
     };
 
-    public class Get
+    #region Get
+
+    [Fact]
+    public async Task Get_OnSuccess_ReturnVehicleModelsList()
     {
-        [Fact]
-        public async Task OnSuccess_ReturnVehicleModelsList()
-        {
-            var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
-            var mapper = new Mapper(configuration);
+        var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
+        var mapper = new Mapper(configuration);
 
-            var mockRepository = new Mock<IBaseRepository<Vehicle>>();
-            mockRepository
-                .Setup(repository => repository.Get())
-                .ReturnsAsync(new List<Vehicle>());
-            var sut = new VehicleService(mockRepository.Object, mapper);
+        var mockRepository = new Mock<IBaseRepository<Vehicle>>();
+        mockRepository
+            .Setup(repository => repository.Get())
+            .ReturnsAsync(new List<Vehicle>());
+        var sut = new VehicleService(mockRepository.Object, mapper);
 
-            // Act
-            var result = await sut.Get();
+        // Act
+        var result = await sut.Get();
 
-            // Assert
-            result.Should().BeOfType<List<VehicleModel>>();
-        }
-
-        [Fact]
-        public async Task OnSuccess_InvokeRepository()
-        {
-            var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
-            var mapper = new Mapper(configuration);
-
-            var mockRepository = new Mock<IBaseRepository<Vehicle>>();
-            mockRepository
-                .Setup(repository => repository.Get())
-                .ReturnsAsync(new List<Vehicle>());
-            var sut = new VehicleService(mockRepository.Object, mapper);
-
-            // Act
-            await sut.Get();
-
-            // Assert
-            mockRepository.Verify(repo => repo.Get(), Times.Once);
-        }
+        // Assert
+        result.Should().BeOfType<List<VehicleModel>>();
     }
 
-    public class GetById
+    [Fact]
+    public async Task Get_OnSuccess_InvokeRepository()
     {
-        [Fact]
-        public async Task OnSuccess_ReturnVehicleModel()
-        {
-            var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
-            var mapper = new Mapper(configuration);
+        var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
+        var mapper = new Mapper(configuration);
 
-            var mockRepository = new Mock<IBaseRepository<Vehicle>>();
-            mockRepository
-                .Setup(repository => repository.GetById(new Guid()))
+        var mockRepository = new Mock<IBaseRepository<Vehicle>>();
+        mockRepository
+            .Setup(repository => repository.Get())
+            .ReturnsAsync(new List<Vehicle>());
+        var sut = new VehicleService(mockRepository.Object, mapper);
+
+        // Act
+        await sut.Get();
+
+        // Assert
+        mockRepository.Verify(repo => repo.Get(), Times.Once);
+    }
+
+    #endregion Get
+
+    #region GetById
+
+    [Fact]
+    public async Task GetById_OnSuccess_ReturnVehicleModel()
+    {
+        var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
+        var mapper = new Mapper(configuration);
+
+        var mockRepository = new Mock<IBaseRepository<Vehicle>>();
+        mockRepository
+            .Setup(repository => repository.GetById(new Guid()))
+            .ReturnsAsync(new Vehicle());
+        var sut = new VehicleService(mockRepository.Object, mapper);
+
+        // Act
+        var result = await sut.GetById(new Guid());
+
+        // Assert
+        result.Should().BeOfType<VehicleModel>();
+    }
+
+    [Fact]
+    public async Task GetById_OnSuccess_InvokeRepository()
+    {
+        var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
+        var mapper = new Mapper(configuration);
+
+        var mockRepository = new Mock<IBaseRepository<Vehicle>>();
+        mockRepository
+            .Setup(repository => repository.GetById(new Guid()))
                 .ReturnsAsync(new Vehicle());
-            var sut = new VehicleService(mockRepository.Object, mapper);
+        var sut = new VehicleService(mockRepository.Object, mapper);
 
-            // Act
-            var result = await sut.GetById(new Guid());
+        // Act
+        var result = await sut.GetById(new Guid());
 
-            // Assert
-            result.Should().BeOfType<VehicleModel>();
-        }
-
-        [Fact]
-        public async Task OnSuccess_InvokeRepository()
-        {
-            var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
-            var mapper = new Mapper(configuration);
-
-            var mockRepository = new Mock<IBaseRepository<Vehicle>>();
-            mockRepository
-                .Setup(repository => repository.GetById(new Guid()))
-                    .ReturnsAsync(new Vehicle());
-            var sut = new VehicleService(mockRepository.Object, mapper);
-
-            // Act
-            var result = await sut.GetById(new Guid());
-
-            // Assert
-            mockRepository.Verify(repo => repo.GetById(new Guid()), Times.Once);
-        }
-
-        [Fact]
-        public async Task OnSuccess_ReturnTheRightVehicle()
-        {
-            var expected = new Vehicle() { Id = Guid.NewGuid() };
-
-            var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
-            var mapper = new Mapper(configuration);
-
-            var mockRepository = new Mock<IBaseRepository<Vehicle>>();
-            mockRepository
-                .Setup(repository => repository.GetById(It.IsAny<Guid>()))
-                .ReturnsAsync((Guid id) => id == expected.Id ? expected : new Vehicle());
-            var sut = new VehicleService(mockRepository.Object, mapper);
-
-            // Acts
-            var actual = await sut.GetById(expected.Id);
-
-            // Assert
-            actual.Id.Should().Be(expected.Id);
-        }
+        // Assert
+        mockRepository.Verify(repo => repo.GetById(new Guid()), Times.Once);
     }
 
-    public class Insert
+    [Fact]
+    public async Task GetById_OnSuccess_ReturnTheRightVehicle()
     {
-        [Fact]
-        public async Task OnValidVehicleModel_ReturnVehicleModel()
-        {
-            var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
-            var mapper = new Mapper(configuration);
+        var expected = new Vehicle() { Id = Guid.NewGuid() };
 
-            var mockRepository = new Mock<IBaseRepository<Vehicle>>();
-            mockRepository
-                .Setup(repository => repository.Insert(It.IsAny<Vehicle>()))
-                .ReturnsAsync(new Vehicle());
-            var sut = new VehicleService(mockRepository.Object, mapper);
+        var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
+        var mapper = new Mapper(configuration);
 
-            // Act
-            var result = await sut.Insert(VALID_VEHICLE_MODEL);
+        var mockRepository = new Mock<IBaseRepository<Vehicle>>();
+        mockRepository
+            .Setup(repository => repository.GetById(It.IsAny<Guid>()))
+            .ReturnsAsync((Guid id) => id == expected.Id ? expected : new Vehicle());
+        var sut = new VehicleService(mockRepository.Object, mapper);
 
-            // Assert
-            result.Should().BeOfType<VehicleModel>();
-        }
+        // Acts
+        var actual = await sut.GetById(expected.Id);
 
-        [Fact]
-        public async Task OnValidVehicleModel_InvokeRepository()
-        {
-            var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
-            var mapper = new Mapper(configuration);
-
-            var mockRepository = new Mock<IBaseRepository<Vehicle>>();
-            mockRepository
-                .Setup(repository => repository.Insert(It.IsAny<Vehicle>()))
-                .ReturnsAsync(new Vehicle());
-            var sut = new VehicleService(mockRepository.Object, mapper);
-
-            // Act
-            var result = await sut.Insert(VALID_VEHICLE_MODEL);
-
-            // Assert
-            mockRepository.Verify(repo => repo.Insert(It.IsAny<Vehicle>()), Times.Once);
-        }
-
-        [Fact]
-        public async Task OnValidVehicleModel_ReturnTheRightVehicle()
-        {
-            var expected = VALID_VEHICLE_MODEL;
-            var aux = new Vehicle() { Id = expected.Id };
-            var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
-            var mapper = new Mapper(configuration);
-
-            var mockRepository = new Mock<IBaseRepository<Vehicle>>();
-            mockRepository
-                .Setup(repository => repository.Insert(It.IsAny<Vehicle>()))
-                .ReturnsAsync((Vehicle on) => on.Id == aux.Id ? aux : new Vehicle());
-            var sut = new VehicleService(mockRepository.Object, mapper);
-
-            // Acts
-            var actual = await sut.Insert(expected);
-
-            // Assert
-            actual.Id.Should().Be(expected.Id);
-        }
-
-        [Fact]
-        public async Task OnInvalidVehicleModel_ThrowsValidationException()
-        {
-            var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
-            var mapper = new Mapper(configuration);
-
-            var mockRepository = new Mock<IBaseRepository<Vehicle>>();
-            mockRepository
-                .Setup(repository => repository.Insert(It.IsAny<Vehicle>()))
-                .ReturnsAsync(new Vehicle());
-            var sut = new VehicleService(mockRepository.Object, mapper);
-
-            // Act
-            var act = async () => await sut.Insert(INVALID_VEHICLE_MODEL);
-
-            // Assert
-            await act.Should().ThrowAsync<ValidationException>();
-        }
+        // Assert
+        actual.Id.Should().Be(expected.Id);
     }
 
-    public class Update
+    #endregion GetById
+
+    #region Insert
+
+    [Fact]
+    public async Task Insert_Insert_OnValidVehicleModel_ReturnVehicleModel()
     {
-        [Fact]
-        public async Task OnValidVehicleModel_InvokeRepository()
-        {
-            var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
-            var mapper = new Mapper(configuration);
+        var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
+        var mapper = new Mapper(configuration);
 
-            var mockRepository = new Mock<IBaseRepository<Vehicle>>();
-            mockRepository
-                .Setup(repository => repository.Update(It.IsAny<Vehicle>()));
-            var sut = new VehicleService(mockRepository.Object, mapper);
+        var mockRepository = new Mock<IBaseRepository<Vehicle>>();
+        mockRepository
+            .Setup(repository => repository.Insert(It.IsAny<Vehicle>()))
+            .ReturnsAsync(new Vehicle());
+        var sut = new VehicleService(mockRepository.Object, mapper);
 
-            // Act
-            await sut.Update(VALID_VEHICLE_MODEL);
+        // Act
+        var result = await sut.Insert(VALID_VEHICLE_MODEL);
 
-            // Assert
-            mockRepository.Verify(repo => repo.Update(It.IsAny<Vehicle>()));
-        }
-
-        [Fact]
-        public async Task OnInvalidVehicleModel_ThrowsValidationException()
-        {
-            var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
-            var mapper = new Mapper(configuration);
-
-            var mockRepository = new Mock<IBaseRepository<Vehicle>>();
-            mockRepository
-                .Setup(repository => repository.Update(It.IsAny<Vehicle>()));
-            var sut = new VehicleService(mockRepository.Object, mapper);
-
-            // Act
-            var act = async () => await sut.Update(INVALID_VEHICLE_MODEL);
-
-            // Assert
-            await act
-                .Should()
-                .ThrowAsync<ValidationException>();
-        }
+        // Assert
+        result.Should().BeOfType<VehicleModel>();
     }
 
-    public class Delete
+    [Fact]
+    public async Task Insert_OnValidVehicleModel_InvokeRepository()
     {
-        [Fact]
-        public async Task OnSuccess_InvokeRepository()
-        {
-            var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
-            var mapper = new Mapper(configuration);
+        var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
+        var mapper = new Mapper(configuration);
 
-            var mockRepository = new Mock<IBaseRepository<Vehicle>>();
-            mockRepository
-                .Setup(repository => repository.Delete(It.IsAny<Guid>()));
-            var sut = new VehicleService(mockRepository.Object, mapper);
+        var mockRepository = new Mock<IBaseRepository<Vehicle>>();
+        mockRepository
+            .Setup(repository => repository.Insert(It.IsAny<Vehicle>()))
+            .ReturnsAsync(new Vehicle());
+        var sut = new VehicleService(mockRepository.Object, mapper);
 
-            // Act
-            await sut.Delete(new Guid());
+        // Act
+        var result = await sut.Insert(VALID_VEHICLE_MODEL);
 
-            // Assert
-            mockRepository.Verify(repo => repo.Delete(It.IsAny<Guid>()));
-        }
+        // Assert
+        mockRepository.Verify(repo => repo.Insert(It.IsAny<Vehicle>()), Times.Once);
     }
+
+    [Fact]
+    public async Task Insert_OnValidVehicleModel_ReturnTheRightVehicle()
+    {
+        var expected = VALID_VEHICLE_MODEL;
+        var aux = new Vehicle() { Id = expected.Id };
+        var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
+        var mapper = new Mapper(configuration);
+
+        var mockRepository = new Mock<IBaseRepository<Vehicle>>();
+        mockRepository
+            .Setup(repository => repository.Insert(It.IsAny<Vehicle>()))
+            .ReturnsAsync((Vehicle on) => on.Id == aux.Id ? aux : new Vehicle());
+        var sut = new VehicleService(mockRepository.Object, mapper);
+
+        // Acts
+        var actual = await sut.Insert(expected);
+
+        // Assert
+        actual.Id.Should().Be(expected.Id);
+    }
+
+    [Fact]
+    public async Task Insert_OnInvalidVehicleModel_ThrowsValidationException()
+    {
+        var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
+        var mapper = new Mapper(configuration);
+
+        var mockRepository = new Mock<IBaseRepository<Vehicle>>();
+        mockRepository
+            .Setup(repository => repository.Insert(It.IsAny<Vehicle>()))
+            .ReturnsAsync(new Vehicle());
+        var sut = new VehicleService(mockRepository.Object, mapper);
+
+        // Act
+        var act = async () => await sut.Insert(INVALID_VEHICLE_MODEL);
+
+        // Assert
+        await act.Should().ThrowAsync<ValidationException>();
+    }
+
+    #endregion Insert
+
+    #region Update
+
+    [Fact]
+    public async Task Update_OnValidVehicleModel_InvokeRepository()
+    {
+        var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
+        var mapper = new Mapper(configuration);
+
+        var mockRepository = new Mock<IBaseRepository<Vehicle>>();
+        mockRepository
+            .Setup(repository => repository.Update(It.IsAny<Vehicle>()));
+        var sut = new VehicleService(mockRepository.Object, mapper);
+
+        // Act
+        await sut.Update(VALID_VEHICLE_MODEL);
+
+        // Assert
+        mockRepository.Verify(repo => repo.Update(It.IsAny<Vehicle>()));
+    }
+
+    [Fact]
+    public async Task Update_OnInvalidVehicleModel_ThrowsValidationException()
+    {
+        var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
+        var mapper = new Mapper(configuration);
+
+        var mockRepository = new Mock<IBaseRepository<Vehicle>>();
+        mockRepository
+            .Setup(repository => repository.Update(It.IsAny<Vehicle>()));
+        var sut = new VehicleService(mockRepository.Object, mapper);
+
+        // Act
+        var act = async () => await sut.Update(INVALID_VEHICLE_MODEL);
+
+        // Assert
+        await act
+            .Should()
+            .ThrowAsync<ValidationException>();
+    }
+
+    #endregion Update
+
+    #region Delete
+
+    [Fact]
+    public async Task Delete_OnSuccess_InvokeRepository()
+    {
+        var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
+        var mapper = new Mapper(configuration);
+
+        var mockRepository = new Mock<IBaseRepository<Vehicle>>();
+        mockRepository
+            .Setup(repository => repository.Delete(It.IsAny<Guid>()));
+        var sut = new VehicleService(mockRepository.Object, mapper);
+
+        // Act
+        await sut.Delete(new Guid());
+
+        // Assert
+        mockRepository.Verify(repo => repo.Delete(It.IsAny<Guid>()));
+    }
+
+    #endregion Delete
 }

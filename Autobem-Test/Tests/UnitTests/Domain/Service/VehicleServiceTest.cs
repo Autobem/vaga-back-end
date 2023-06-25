@@ -136,7 +136,7 @@ public class VehicleServiceTest
     #region Insert
 
     [Fact]
-    public async Task Insert_Insert_OnValidVehicleModel_ReturnVehicleModel()
+    public async Task Insert_OnValidVehicleModel_ReturnVehicleModel()
     {
         var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
         var mapper = new Mapper(configuration);

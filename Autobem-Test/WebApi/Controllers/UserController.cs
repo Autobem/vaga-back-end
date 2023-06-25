@@ -38,13 +38,13 @@ public class UserController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> Insert(UserModel user)
+    public async Task<IActionResult> Insert(CreateUserModel user)
     {
-        return Created(nameof(UserModel), await _userService.Insert(user));
+        return Created(nameof(CreateUserModel), await _userService.Insert(user));
     }
 
     [HttpPut]
-    public async Task<IActionResult> Update(UserModel user)
+    public async Task<IActionResult> Update(CreateUserModel user)
     {
         await _userService.Update(user);
         return Accepted();

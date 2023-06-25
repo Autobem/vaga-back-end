@@ -16,7 +16,7 @@ public class UserControllerTest
         var mockService = new Mock<IUserService>();
         mockService
             .Setup(service => service.Get())
-            .ReturnsAsync(new List<UserModel>());
+            .ReturnsAsync(new List<CreateUserModel>());
         var sut = new UserController(mockService.Object);
 
         // Act
@@ -33,7 +33,7 @@ public class UserControllerTest
         var mockService = new Mock<IUserService>();
         mockService
             .Setup(service => service.Get())
-            .ReturnsAsync(new List<UserModel>());
+            .ReturnsAsync(new List<CreateUserModel>());
         var sut = new UserController(mockService.Object);
 
         // Act
@@ -41,7 +41,7 @@ public class UserControllerTest
 
         // Assert
         result.Should().BeOfType<OkObjectResult>();
-        result.Value.Should().BeOfType<List<UserModel>>();
+        result.Value.Should().BeOfType<List<CreateUserModel>>();
     }
 
     [Fact]
@@ -51,7 +51,7 @@ public class UserControllerTest
         var mockService = new Mock<IUserService>();
         mockService
             .Setup(service => service.Get())
-            .ReturnsAsync(new List<UserModel>());
+            .ReturnsAsync(new List<CreateUserModel>());
         var sut = new UserController(mockService.Object);
 
         // Act
@@ -72,7 +72,7 @@ public class UserControllerTest
         var mockService = new Mock<IUserService>();
         mockService
             .Setup(service => service.GetById(It.IsAny<Guid>()))
-            .ReturnsAsync(new UserModel());
+            .ReturnsAsync(new CreateUserModel());
         var sut = new UserController(mockService.Object);
 
         // Act
@@ -89,7 +89,7 @@ public class UserControllerTest
         var mockService = new Mock<IUserService>();
         mockService
             .Setup(service => service.GetById(It.IsAny<Guid>()))
-            .ReturnsAsync(new UserModel());
+            .ReturnsAsync(new CreateUserModel());
         var sut = new UserController(mockService.Object);
 
         // Act
@@ -97,7 +97,7 @@ public class UserControllerTest
 
         // Assert
         result.Should().BeOfType<OkObjectResult>();
-        result.Value.Should().BeOfType<UserModel>();
+        result.Value.Should().BeOfType<CreateUserModel>();
     }
 
     [Fact]
@@ -107,7 +107,7 @@ public class UserControllerTest
         var mockService = new Mock<IUserService>();
         mockService
             .Setup(service => service.GetById(It.IsAny<Guid>()))
-            .ReturnsAsync(new UserModel());
+            .ReturnsAsync(new CreateUserModel());
         var sut = new UserController(mockService.Object);
 
         // Act
@@ -121,11 +121,11 @@ public class UserControllerTest
     public async Task GetById_OnSuccess_ReturnOnwerModelObject_WithSameId()
     {
         // Arrange
-        var expected = new UserModel() { Id = Guid.NewGuid() };
+        var expected = new CreateUserModel() { Id = Guid.NewGuid() };
         var mockService = new Mock<IUserService>();
         mockService
             .Setup(service => service.GetById(It.IsAny<Guid>()))
-            .ReturnsAsync((Guid id) => id == expected.Id ? expected : new UserModel());
+            .ReturnsAsync((Guid id) => id == expected.Id ? expected : new CreateUserModel());
 
         var sut = new UserController(mockService.Object);
 
@@ -133,7 +133,7 @@ public class UserControllerTest
         var result = (OkObjectResult)await sut.GetById(expected.Id);
 
         // Assert
-        var actual = (UserModel)result.Value!;
+        var actual = (CreateUserModel)result.Value!;
         actual.Id.Should().Be(expected.Id);
     }
 
@@ -144,7 +144,7 @@ public class UserControllerTest
         var mockService = new Mock<IUserService>();
         mockService
             .Setup(service => service.GetById(It.IsAny<Guid>()))
-            .Returns(Task.FromResult<UserModel>(null));
+            .Returns(Task.FromResult<CreateUserModel>(null));
         var sut = new UserController(mockService.Object);
 
         // Act
@@ -166,12 +166,12 @@ public class UserControllerTest
         // Arrange
         var mockService = new Mock<IUserService>();
         mockService
-            .Setup(service => service.Insert(It.IsAny<UserModel>()))
-            .ReturnsAsync(new UserModel());
+            .Setup(service => service.Insert(It.IsAny<CreateUserModel>()))
+            .ReturnsAsync(new CreateUserModel());
         var sut = new UserController(mockService.Object);
 
         // Act
-        var result = (CreatedResult)await sut.Insert(new UserModel());
+        var result = (CreatedResult)await sut.Insert(new CreateUserModel());
 
         // Assert
         result.StatusCode.Should().Be(201);
@@ -183,16 +183,16 @@ public class UserControllerTest
         // Arrange
         var mockService = new Mock<IUserService>();
         mockService
-            .Setup(service => service.Insert(It.IsAny<UserModel>()))
-            .ReturnsAsync(new UserModel());
+            .Setup(service => service.Insert(It.IsAny<CreateUserModel>()))
+            .ReturnsAsync(new CreateUserModel());
         var sut = new UserController(mockService.Object);
 
         // Act
-        var result = (CreatedResult)await sut.Insert(new UserModel());
+        var result = (CreatedResult)await sut.Insert(new CreateUserModel());
 
         // Assert
         result.Should().BeOfType<CreatedResult>();
-        result.Value.Should().BeOfType<UserModel>();
+        result.Value.Should().BeOfType<CreateUserModel>();
     }
 
     [Fact]
@@ -201,15 +201,15 @@ public class UserControllerTest
         // Arrange
         var mockService = new Mock<IUserService>();
         mockService
-            .Setup(service => service.Insert(It.IsAny<UserModel>()))
-            .ReturnsAsync(new UserModel());
+            .Setup(service => service.Insert(It.IsAny<CreateUserModel>()))
+            .ReturnsAsync(new CreateUserModel());
         var sut = new UserController(mockService.Object);
 
         // Act
-        var result = (CreatedResult)await sut.Insert(new UserModel());
+        var result = (CreatedResult)await sut.Insert(new CreateUserModel());
 
         // Assert
-        mockService.Verify(service => service.Insert(It.IsAny<UserModel>()), Times.Once);
+        mockService.Verify(service => service.Insert(It.IsAny<CreateUserModel>()), Times.Once);
     }
 
     #endregion Insert
@@ -223,11 +223,11 @@ public class UserControllerTest
         // Arrange
         var mockService = new Mock<IUserService>();
         mockService
-            .Setup(service => service.Update(It.IsAny<UserModel>()));
+            .Setup(service => service.Update(It.IsAny<CreateUserModel>()));
         var sut = new UserController(mockService.Object);
 
         // Act
-        var result = (AcceptedResult)await sut.Update(new UserModel());
+        var result = (AcceptedResult)await sut.Update(new CreateUserModel());
 
         // Assert
         result.StatusCode.Should().Be(202);
@@ -239,14 +239,14 @@ public class UserControllerTest
         // Arrange
         var mockService = new Mock<IUserService>();
         mockService
-            .Setup(service => service.Update(It.IsAny<UserModel>()));
+            .Setup(service => service.Update(It.IsAny<CreateUserModel>()));
         var sut = new UserController(mockService.Object);
 
         // Act
-        var result = (AcceptedResult)await sut.Update(new UserModel());
+        var result = (AcceptedResult)await sut.Update(new CreateUserModel());
 
         // Assert
-        mockService.Verify(service => service.Update(It.IsAny<UserModel>()), Times.Once);
+        mockService.Verify(service => service.Update(It.IsAny<CreateUserModel>()), Times.Once);
     }
 
     #endregion Update

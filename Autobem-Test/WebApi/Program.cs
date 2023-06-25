@@ -46,6 +46,7 @@ builder.Services.AddDbContext<BaseContext>(options =>
 builder.Services.AddScoped<IOwnerService, OwnerService>();
 builder.Services.AddScoped<IVehicleService, VehicleService>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IPasswordService, PasswordService>();
 
 // Repository
 builder.Services.AddScoped<IBaseRepository<Owner>, BaseRepository<Owner>>();

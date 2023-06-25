@@ -30,7 +30,7 @@ public class VehicleRepositoryTest : IDisposable
         {
             var owners = await context.Set<Owner>().ToListAsync();
             var vehicles = await context.Set<Vehicle>().ToListAsync();
-            
+
             context.Set<Owner>().RemoveRange(owners);
             context.Set<Vehicle>().RemoveRange(vehicles);
             await context.SaveChangesAsync();
@@ -61,19 +61,18 @@ public class VehicleRepositoryTest : IDisposable
         using (var context = new BaseContext(_options))
         {
             // Arrange
-            var owners = OwnerFixture.GenerateOwners(POPULATED_VEHICLES);
+            var owners = EntityFixtures.GenerateOwners(POPULATED_VEHICLES);
             await context.Set<Owner>().AddRangeAsync(owners);
             await context.SaveChangesAsync();
 
-            var vehicles = VehicleFixture.GenerateVehicles(POPULATED_VEHICLES, owners);
+            var vehicles = EntityFixtures.GenerateVehicles(POPULATED_VEHICLES, owners);
             await context.Set<Vehicle>().AddRangeAsync(vehicles);
             await context.SaveChangesAsync();
 
             var sut = new BaseRepository<Vehicle>(context);
-            
+
             // Act
             var result = await sut.Get();
-
 
             Debug.WriteLine("Expected Vehicles");
             vehicles.ForEach(v => Debug.WriteLine($"{v.Id} {v.Name}"));
@@ -112,8 +111,8 @@ public class VehicleRepositoryTest : IDisposable
         using (var context = new BaseContext(_options))
         {
             // Arrange
-            var owner = OwnerFixture.GenerateOwners(1);
-            var expected = VehicleFixture.GenerateVehicles(1, owner).FirstOrDefault();
+            var owner = EntityFixtures.GenerateOwners(1);
+            var expected = EntityFixtures.GenerateVehicles(1, owner).FirstOrDefault();
             await context.Set<Owner>().AddAsync(owner.FirstOrDefault());
             await context.Set<Vehicle>().AddAsync(expected);
             var sut = new BaseRepository<Vehicle>(context);
@@ -136,8 +135,8 @@ public class VehicleRepositoryTest : IDisposable
         using (var context = new BaseContext(_options))
         {
             // Arrange
-            var owner = OwnerFixture.GenerateOwners(1);
-            var expected = VehicleFixture.GenerateVehicles(1, owner).FirstOrDefault();
+            var owner = EntityFixtures.GenerateOwners(1);
+            var expected = EntityFixtures.GenerateVehicles(1, owner).FirstOrDefault();
             await context.Set<Owner>().AddAsync(owner.FirstOrDefault());
             await context.Set<Vehicle>().AddAsync(expected);
             var sut = new BaseRepository<Vehicle>(context);
@@ -157,8 +156,8 @@ public class VehicleRepositoryTest : IDisposable
         using (var context = new BaseContext(_options))
         {
             // Arrange
-            var owner = OwnerFixture.GenerateOwners(1);
-            var expected = VehicleFixture.GenerateVehicles(1, owner).First();
+            var owner = EntityFixtures.GenerateOwners(1);
+            var expected = EntityFixtures.GenerateVehicles(1, owner).First();
             var sut = new BaseRepository<Vehicle>(context);
 
             // Act
@@ -180,8 +179,8 @@ public class VehicleRepositoryTest : IDisposable
         using (var context = new BaseContext(_options))
         {
             // Arrange
-            var owner = OwnerFixture.GenerateOwners(1);
-            var expected = VehicleFixture.GenerateVehicles(1, owner).FirstOrDefault();
+            var owner = EntityFixtures.GenerateOwners(1);
+            var expected = EntityFixtures.GenerateVehicles(1, owner).FirstOrDefault();
             await context.Set<Owner>().AddAsync(owner.FirstOrDefault());
             await context.Set<Vehicle>().AddAsync(expected);
             await context.SaveChangesAsync();
@@ -203,8 +202,8 @@ public class VehicleRepositoryTest : IDisposable
         using (var context = new BaseContext(_options))
         {
             // Arrange
-            var owner = OwnerFixture.GenerateOwners(1);
-            var vehicleNotInDb = VehicleFixture.GenerateVehicles(1, owner).FirstOrDefault();
+            var owner = EntityFixtures.GenerateOwners(1);
+            var vehicleNotInDb = EntityFixtures.GenerateVehicles(1, owner).FirstOrDefault();
             var sut = new BaseRepository<Vehicle>(context);
             // Act
             var act = async () => await sut.Update(vehicleNotInDb);
@@ -226,8 +225,8 @@ public class VehicleRepositoryTest : IDisposable
         using (var context = new BaseContext(_options))
         {
             // Arrange
-            var owner = OwnerFixture.GenerateOwners(1);
-            var vehicle = VehicleFixture.GenerateVehicles(1, owner).FirstOrDefault();
+            var owner = EntityFixtures.GenerateOwners(1);
+            var vehicle = EntityFixtures.GenerateVehicles(1, owner).FirstOrDefault();
             await context.Set<Owner>().AddAsync(owner.FirstOrDefault());
             await context.Set<Vehicle>().AddAsync(vehicle);
             await context.SaveChangesAsync();
@@ -250,8 +249,8 @@ public class VehicleRepositoryTest : IDisposable
         using (var context = new BaseContext(_options))
         {
             // Arrange
-            var owner = OwnerFixture.GenerateOwners(1);
-            var vehicleNotInDb = VehicleFixture.GenerateVehicles(1, owner).FirstOrDefault();
+            var owner = EntityFixtures.GenerateOwners(1);
+            var vehicleNotInDb = EntityFixtures.GenerateVehicles(1, owner).FirstOrDefault();
             var sut = new BaseRepository<Vehicle>(context);
             // Act
             var act = async () => await sut.Delete(vehicleNotInDb.Id);

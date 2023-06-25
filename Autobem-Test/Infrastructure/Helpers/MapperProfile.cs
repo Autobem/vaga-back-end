@@ -14,5 +14,6 @@ public class MapperProfile : Profile
         CreateMap<User, CreateUserModel>().ReverseMap();
         CreateMap<User, GetUserModel>().ReverseMap();
         CreateMap<User, UpdateUserModel>().ReverseMap();
+        CreateMap<User, UserModel>().ReverseMap();
     }
 }

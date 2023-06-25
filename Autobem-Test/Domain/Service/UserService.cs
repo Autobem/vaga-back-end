@@ -40,6 +40,12 @@ public class UserService : IUserService
         return _mapper.Map<GetUserModel>(user);
     }
 
+    public async Task<UserModel> GetUserLogin(string userEmail)
+    {
+        var user = (await _repository.Get()).Where(u => u.Email == userEmail).FirstOrDefault();
+        return _mapper.Map<UserModel>(user);
+    }
+
     public async Task<GetUserModel> Insert(CreateUserModel user)
     {
         var validator = new CreateUserModelValidator();
@@ -48,7 +54,7 @@ public class UserService : IUserService
         var insertUser = _mapper.Map<User>(user);
 
         insertUser.PasswordSalt = _passwordService.GenerateSalt();
-        insertUser.Password = _passwordService.HashPassword(insertUser.Password);
+        insertUser.Password = _passwordService.HashPassword(insertUser.Password, insertUser.PasswordSalt);
         insertUser.Status = StatusEnum.ACTIVE;
 
         var result = await _repository.Insert(insertUser);
@@ -60,11 +66,11 @@ public class UserService : IUserService
         var validator = new UpdateUserModelValidator();
         await validator.ValidateAndThrowAsync(user);
 
-        var updateUser = _mapper.Map<User>(user);
+        var updateUser = await _repository.GetById(user.Id);
 
-        var actualUser = await _repository.GetById(updateUser.Id);
-        updateUser.Password = actualUser.Password;
-        updateUser.PasswordSalt = actualUser.PasswordSalt;
+        updateUser.Name = user.Name;
+        updateUser.Email = user.Email;
+        updateUser.Status = user.Status;
 
         await _repository.Update(updateUser);
     }

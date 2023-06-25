@@ -50,11 +50,12 @@ public class UserServiceTest
         PasswordSalt = "salt"
     };
 
+    private static string USER_EMAIL = "email@email.com";
+
     #region Get
 
     [Fact]
     public async Task Get_OnSuccess_ReturnGetUserModelList()
-
     {
         // Arrange
         var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
@@ -168,6 +169,77 @@ public class UserServiceTest
     }
 
     #endregion GetById
+
+    #region GetUserLogin
+
+    [Fact]
+    public async Task GetUserLogin_OnSuccess_ReturnUserModel()
+    {
+        // Arrange
+        var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
+        var mapper = new Mapper(configuration);
+        var getReturn = new List<User> { USER_WITH_PASSWORD_AND_SALT };
+
+        var mockRepository = new Mock<IBaseRepository<User>>();
+        var mockPasswordService = new Mock<PasswordService>(new ConfigurationFixture());
+        mockRepository
+            .Setup(repository => repository.Get())
+            .ReturnsAsync(getReturn);
+
+        var sut = new UserService(mockRepository.Object, mockPasswordService.Object, mapper);
+
+        // Act
+        var result = await sut.GetUserLogin(USER_EMAIL);
+
+        // Assert
+        result.Should().BeOfType<UserModel>();
+    }
+
+    [Fact]
+    public async Task GetUserLogin_OnSuccess_InvokeRepository()
+    {
+        var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
+        var mapper = new Mapper(configuration);
+        var getReturn = new List<User> { USER_WITH_PASSWORD_AND_SALT };
+
+        var mockRepository = new Mock<IBaseRepository<User>>();
+        var mockPasswordService = new Mock<PasswordService>(new ConfigurationFixture());
+        mockRepository
+            .Setup(repository => repository.Get())
+            .ReturnsAsync(getReturn);
+
+        var sut = new UserService(mockRepository.Object, mockPasswordService.Object, mapper);
+
+        // Act
+        var result = await sut.GetUserLogin(USER_EMAIL);
+
+        // Assert
+        mockRepository.Verify(repo => repo.Get(), Times.Once);
+    }
+
+    [Fact]
+    public async Task GetUserLogin_OnInvokeRepository_EmptyUserList_ReturnNull()
+    {
+        var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
+        var mapper = new Mapper(configuration);
+        var getReturn = new List<User> { };
+
+        var mockRepository = new Mock<IBaseRepository<User>>();
+        var mockPasswordService = new Mock<PasswordService>(new ConfigurationFixture());
+        mockRepository
+            .Setup(repository => repository.Get())
+            .ReturnsAsync(getReturn);
+
+        var sut = new UserService(mockRepository.Object, mockPasswordService.Object, mapper);
+
+        // Act
+        var result = await sut.GetUserLogin(USER_EMAIL);
+
+        // Assert
+        result.Should().BeNull();
+    }
+
+    #endregion GetUserLogin
 
     #region Insert
 
@@ -351,7 +423,7 @@ public class UserServiceTest
     }
 
     [Fact]
-    public async Task Update_OnValidUpdateUserModel_FetchTheUserPassword_ShouldUpdateUserWithThePasswordFromFetchedUser()
+    public async Task Update_OnValidUpdateUserModel_FetchTheUserById_ShouldUpdateFetchedUserWithUserModelValues()
     {
         // Arrange
         var configuration = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));

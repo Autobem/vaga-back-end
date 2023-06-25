@@ -14,4 +14,5 @@ public interface IUserService
     Task<GetUserModel> GetById(Guid id);
 
     Task<List<GetUserModel>> Get();
+    Task<UserModel> GetUserLogin(string userEmail);
 }

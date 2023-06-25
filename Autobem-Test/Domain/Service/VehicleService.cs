@@ -52,6 +52,7 @@ namespace Domain.Service
             await validator.ValidateAndThrowAsync(vehicle);
 
             var updateVehicle = _mapper.Map<Vehicle>(vehicle);
+
             await _baseRepository.Update(updateVehicle);
         }
     }

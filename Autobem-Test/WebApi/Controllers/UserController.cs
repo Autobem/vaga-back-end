@@ -1,12 +1,14 @@
 ﻿using Domain.Contracts.Service;
 using Domain.Models;
 using Domain.Models.UserModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[Authorize]
 public class UserController : ControllerBase
 {
     private readonly IUserService _userService;
@@ -39,6 +41,7 @@ public class UserController : ControllerBase
     }
 
     [HttpPost]
+    [AllowAnonymous]
     public async Task<IActionResult> Insert(CreateUserModel user)
     {
         return Created(nameof(CreateUserModel), await _userService.Insert(user));

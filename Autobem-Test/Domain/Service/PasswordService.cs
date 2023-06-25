@@ -11,12 +11,12 @@ public class PasswordService : IPasswordService
 
     public PasswordService(IConfiguration configuration)
     {
-        _pepper = configuration.GetSection("PasswordPepper")["pepper"];
+        _pepper = configuration["PasswordHashValues:pepper"];
     }
 
-    public virtual string HashPassword(string password, string salt = "", int iteration = 3)
+    public virtual string HashPassword(string password, string salt = "", int iterations = 3)
     {
-        if (iteration <= 0)
+        if (iterations <= 0)
             return password;
 
         if (string.IsNullOrWhiteSpace(salt))
@@ -28,7 +28,7 @@ public class PasswordService : IPasswordService
             var byteValue = Encoding.UTF8.GetBytes(passwordSaltPepper);
             var byteHash = sha256.ComputeHash(byteValue);
             var hash = Convert.ToBase64String(byteHash);
-            return HashPassword(hash, salt, iteration - 1);
+            return HashPassword(hash, salt, iterations - 1);
         };
     }
 

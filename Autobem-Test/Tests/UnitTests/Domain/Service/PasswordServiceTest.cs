@@ -84,7 +84,7 @@ public class PasswordServiceTest
         var sut = mockService.Object;
 
         // Act
-        sut.HashPassword(PASSWORD, iteration: TWO_ITERATIONS);
+        sut.HashPassword(PASSWORD, iterations: TWO_ITERATIONS);
 
         // Assert
         mockService.Verify(service =>
@@ -100,7 +100,7 @@ public class PasswordServiceTest
         var sut = new PasswordService(new ConfigurationFixture());
 
         // Act
-        var result = sut.HashPassword(PASSWORD, iteration: ZERO_ITERATIONS);
+        var result = sut.HashPassword(PASSWORD, iterations: ZERO_ITERATIONS);
 
         // Assert
         result.Should().BeEquivalentTo(PASSWORD);
